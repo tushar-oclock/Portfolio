@@ -1,0 +1,889 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tushar Arora</title>
+    <link rel="shortcut icon" href="images/image.png" type="image/x-icon">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/typed.js/2.0.11/typed.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/waypoints/4.0.1/jquery.waypoints.min.js">
+
+    </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css" />
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href='https://fonts.googleapis.com/css?family=JetBrains Mono' rel='stylesheet'>
+    <link href='https://fonts.googleapis.com/css?family=Space Grotesk' rel='stylesheet'>
+    <link rel="stylesheet" href="https://unpkg.com/kursor/dist/kursor.css">
+    <script src="https://cdn.jsdelivr.net/npm/kursor@0.0.14/dist/kursor.js"></script>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+
+
+
+    <script type="module" src="https://cdn.jsdelivr.net/npm/@google/model-viewer/dist/model-viewer.min.js"></script>
+
+
+
+
+</head>
+
+
+
+
+<body>
+
+    <!-- Extras -->
+    <audio id="clickSound">
+        <source src="images/sound.wav" type="audio/wav">
+        Your browser does not support the audio element.
+    </audio>
+
+
+    <div class="video-container">
+        <video autoplay loop muted id="background-video">
+            <source src="images/video8.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+    </div>
+
+
+    <audio id="myAudio" autoplay>
+        <source src="bgaud.mp3" type="audio/mp3">
+        Your browser does not support the audio element.
+    </audio>
+
+
+
+
+
+
+
+
+    <!---navbar------->
+    <div class="scroll-up-btn">
+        <i class="fas fa-angle-up"></i>
+    </div>
+
+    <nav class="navbar">
+        <div class="max-width">
+            <div class="logo"><a href="#"><span><i class="fa fa-terminal" aria-hidden="true"></i>
+                    </span>TUSHAR<span>-PERSPECTIVE</span></a></div>
+
+            <ul class="menu">
+                <li><a href="#home" class="menu-btn"> / </a></li>
+                <li><a href="#ab" class="menu-btn"><i class="fa fa-user"> </i> Dev. </a></li>
+                <li><a href="#work" class="menu-btn"><i class="fa fa-code-fork"></i> Fork</a></li>
+
+                <li> <a href="https://github.com/TUSHAR-PERSPECTIVE" target="_blank"> <i class="fa fa-github"></i> </a>
+                </li>
+
+                <li> <a href="https://www.linkedin.com/in/tushar-perspective/" target="_blank"> <i
+                            class="fa fa-linkedin"></i> </a> </li>
+
+                <li><a href="#" onclick="playAudio()"> <i class="fa fa-play" aria-hidden="true"></i></a> </li>
+                <li><a href="#" onclick="stopAudio()"> <i class="fa fa-stop" aria-hidden="true"></i></a> </li>
+
+
+
+            </ul>
+            <div class="menu-btn">
+                <i class="fas fa-bars"></i>
+            </div>
+        </div>
+    </nav>
+    <!----------------->
+
+    <!---Home----->
+    <section class="home" id="home">
+        <div class="max-width">
+            <div class="home-content">
+                <div class="model-image">
+                    <!-- <model-viewer id="model" camera-controls touch-action="pan-y" autoplay ar
+                        ar-modes="webxr scene-viewer" scale="0.2 0.2 0.2" shadow-intensity="1"
+                        src="model/kawaii__cute_flying_robot.glb" alt="A 3D model" animation auto-rotate
+                        camera-controls>
+                    </model-viewer> -->
+
+
+                    <model-viewer id="model" camera-controls touch-action="none" autoplay ar ar-modes="webxr scene-viewer" scale="0.2 0.2 0.2" shadow-intensity="1" src="model/kawaii__cute_flying_robot.glb" alt="A 3D model" animation auto-rotate camera-controls>
+                    </model-viewer>
+                    
+
+
+
+
+
+                </div>
+                <div class="text-1"> Do you know? </div>
+                <div class="text-2"> "Why do data scientists prefer dark mode? Because light attracts too many
+                    outliers." </div>
+                <a href="#intern"> 🗂️ Discover My Work</a>
+                <a href="#ab"> 📋 Resume </a>
+            </div>
+        </div>
+    </section>
+    <!----------------->
+
+
+    <!---INFO---------->
+    <section class="info" id="ab">
+        <div class="max-width">
+            <h2 class="titles">About <span style="color: #BDA3A1;">:ME </span>
+                <a style=" color: inherit; " href="https://github.com/Thinkliketushar" target="_blank"> </a>
+            </h2>
+            <div class="info-content">
+                <div class="column left" id="tilt">
+                    <img src="images/tushar.png" alt="">
+                </div>
+                <div class="column right">
+                    <div class="text"> I'm Tushar :] As a
+                        <span class="typing-2"></span>
+                    </div>
+                    <p>I'm a <span style="color: orange;">22 </span> year old Data Scientist and freelancer based in
+                        India. I've taken coding seriously since 2021, and have been freelancing since 2024. Recently,
+                        however, I've grown a knack for giving back to community. I like contributing to <span
+                            style="color: orange;">OPEN SOURCE </span>as a Data Science, which is probably the reason
+                        why you've ended up here.</p> <br>
+                    <p>📞 +91 8851084852</p>
+                    <p>📨 Tushar.aka.datascientist @ gmail.com</p> <br>
+
+
+                    <p id="ex"> 🔹 Esport Valorant & PUBG Player🔹 Blogathon 🔹 Commentary 🔹 Discord Management 🔹 CR
+                        🔹
+                        Volunteer 🔹Crypto Mining 🔹 Hackathon 🔹 Kaggle Competitions 🔹 Gaming 🔹Treveling 🔹 Updated
+                        with latest Trend</p>
+                </div>
+            </div>
+    </section>
+    <!----------------->
+
+
+    <!----Education----->
+    <section class="content2" id="content2">
+        <div class="max-width">
+            <h2 class="titles"> Education <span style="color: #eed1c7;">:Certificate</span></h2>
+
+            <div class="serv-content">
+                <div class="card" id="services2">
+                    <div class="box">
+                        <img class="imgs" src="images/internship/ITS.png">
+
+                        <h3> 🏫 ITS College
+                        </h3>
+
+                        <span class="probcon2">
+                            📚 Bachelor of Computer Applications
+                        </span> <br>
+                        <span class="probcon2">
+                            📆 2019-2022
+                        </span>
+                    </div>
+                </div>
+
+                <div class="card" id="services3">
+                    <div class="box">
+                        <img class="imgs" src="images/internship/data sc.png">
+                        <h3> 🏫 INeuron & Applied Root
+                        </h3>
+
+                        <span class="probcon2">
+                            📚 Full Stack Data Science
+                        </span> <br>
+                        <span class="probcon2">
+                            📆 2022-2023
+                        </span>
+
+                    </div>
+                </div>
+
+                <div class="card" id="services3">
+                    <div class="box">
+                        <img class="imgs" src="images/internship/jain.png">
+
+
+                        <h3> 🏫 Jain (Deemed-to-be University)
+                        </h3>
+
+                        <span class="probcon2">
+                            📚 Master in Computer Applications (AI)
+                        </span> <br>
+                        <span id="intern" class="probcon2">
+                            📆 2023-2025
+                        </span>
+
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+    <!------------------>
+
+
+    <!--INTERNSHIP-->
+    <section class="content3" id="content3">
+        <div class="max-width">
+            <h2 class="titles"> Internship <span style="color: #eed1c7;">:Experience</span></h2>
+
+            <div class="serv-content">
+                <div class="card" id="services3">
+                    <div class="box">
+                        <img class="imgs" src="images/internship/feynn.png">
+                        <h3> <b> 💼 Feynn Lab
+                            </b> </h3>
+                        <h6>👔 ML Engineer Intern </h6>
+                        <h6>🕗 Feb 2022 - Apr 2022 <a target="_blank" href="https://github.com/TUSHAR-PERSPECTIVE">REPO
+                            </a>
+                        </h6>
+                        <h6>Medical Market Segmentation in the Biotech startup.</h6>
+                    </div>
+                </div>
+
+                <div class="card" id="services3">
+                    <div class="box">
+                        <img class="imgs" src="images/internship/global.png">
+                        <h3> <b> 💼 Globalshala
+                            </b> </h3>
+                        <h6>👔 Data Analyst Intern </h6>
+                        <h6>🕗 May 2022 - Jun 2022 <a target="_blank" href="https://github.com/TUSHAR-PERSPECTIVE">REPO
+                            </a>
+
+                        </h6>
+                        <h6>Review ad campaign for discontinuation.</h6>
+                    </div>
+                </div>
+
+                <div class="card" id="services3">
+                    <div class="box">
+                        <img class="imgs" src="images/internship/ineuron.png">
+                        <h3> <b> 💼 INeuron
+                            </b> </h3>
+                        <h6>👔 Project Based Internship </h6>
+                        <h6>🕗 Feb 2022 - Apr 2022 <a target="_blank" href="https://github.com/TUSHAR-PERSPECTIVE">REPO
+                            </a>
+
+                        </h6>
+                        <h6>Developing a predictive model for thyroid disease.</h6>
+                    </div>
+                </div>
+
+                <div class="card" id="services3">
+                    <div class="box">
+                        <img class="imgs" src="images/internship/nitrado.png">
+                        <h3> <b> 💼 Nitrado
+                            </b> </h3>
+                        <h6>👔 Data Analyst Intern </h6>
+                        <h6>🕗 Dec 2023 - Jan 2024 <a target="_blank" href="https://github.com/TUSHAR-PERSPECTIVE">REPO
+                            </a>
+
+                        </h6>
+                        <h6>Analyzing player data from Game Rust’s server.</h6>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <section class="content3" id="content3">
+        <div class="max-width">
+            <div class="serv-content">
+                <div class="card" id="services3">
+                    <div class="box">
+                        <img class="imgs" src="images/internship/accenture.png">
+                        <h3> <b> 💼 Accenture
+                            </b> </h3>
+
+                        <h6>👔 Data Analytics Job Simulation </h6>
+                        <h6>🕗 <span style="color: #BDA3A1;
+                                ">Mar 2024 - Apr 2024 </span> <a target="_blank"
+                                href="https://github.com/TUSHAR-PERSPECTIVE">REPO </a>
+
+                        </h6>
+                        <h6>Analyzing User Insights of Social Buzz Application.</h6>
+                    </div>
+                </div>
+
+                <div class="card" id="services3">
+                    <div class="box">
+                        <img class="imgs" src="images/internship/tata.png">
+                        <h3> <b> 💼 TATA
+                            </b> </h3>
+
+                        <h6>👔 Data Analytics Job Simulation </h6>
+                        <h6>🕗 Mar 2024 - Apr 2024 <a target="_blank" href="https://github.com/TUSHAR-PERSPECTIVE">REPO
+                            </a>
+
+                        </h6>
+                        <h6>Sales Insights in Online retail store.</h6>
+                    </div>
+                </div>
+
+                <div class="card" id="services3">
+                    <div class="box">
+                        <img class="imgs" src="images/internship/bcgx.png">
+                        <h3> <b> 💼 BCGX
+                            </b> </h3>
+                        <h6>👔 GenAI Job Simulation </h6>
+                        <h6>🕗 Apr 2024 - Jun 2024 <a target="_blank" href="https://github.com/TUSHAR-PERSPECTIVE">REPO
+                            </a>
+
+                        </h6>
+                        <h6>Develop a chatbot to assist with financial inquiries.</h6>
+                    </div>
+                </div>
+
+                <div class="card" id="services3">
+                    <div class="box">
+                        <img class="imgs" src="images/internship/cognizent.png">
+                        <h3> <b> 💼 Cognizant
+                            </b> </h3>
+                        <h6>👔 AI Engineer Job Simulation </h6>
+                        <h6> 🕗 Apr 2024 - Jun 2024 <a target="_blank" href="https://github.com/TUSHAR-PERSPECTIVE">REPO
+                            </a>
+
+                        </h6>
+                        <h6>Solve Gala Groceries supply chain issues using AI Model.</h6>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+    <!-------------->
+
+
+    <!---Technical Stack--->
+    <section class="slide" id="slide">
+
+        <h2 class="titles"> Technical <span style="color: #eed1c7">:Stack</span></h2>
+        <div class="max-width" data-interval="3000">
+            <div class="carousel owl-carousel" data-interval="3000">
+                <div class="card" data-interval="3000">
+                    <div class="box" data-interval="3000">
+                        <img src="images/Skills/python.png" alt="">
+                        <div class="text">Python</div>
+
+                    </div>
+                </div>
+
+                <div class="card" data-interval="3000">
+                    <div class="box" data-interval="3000">
+                        <img src="images/Skills/numpy.png" alt="">
+                        <div class="text">Numpy</div>
+
+                    </div>
+                </div>
+
+                <div class="card" data-interval="3000">
+                    <div class="box" data-interval="3000">
+                        <img src="images/Skills/pandas.png" alt="">
+                        <div class="text">Pandas</div>
+
+                    </div>
+                </div>
+
+                <div class="card" data-interval="3000">
+                    <div class="box" data-interval="3000">
+                        <img src="images/Skills/matplotlib.png" alt="">
+                        <div class="text">Matplotlib</div>
+
+                    </div>
+                </div>
+
+                <div class="card" data-interval="3000">
+                    <div class="box" data-interval="3000">
+                        <img src="images/Skills/flask.png" alt="">
+                        <div class="text">Flask</div>
+
+                    </div>
+                </div>
+                <div class="card" data-interval="3000">
+                    <div class="box" data-interval="3000">
+                        <img src="images/Skills/django.png" alt="">
+                        <div class="text">Django</div>
+
+                    </div>
+                </div>
+                <div class="card" data-interval="3000">
+                    <div class="box" data-interval="3000">
+                        <img src="images/Skills/streamlit.png" alt="">
+                        <div class="text">Streamlit</div>
+
+                    </div>
+                </div>
+
+                <div class="card" data-interval="3000">
+                    <div class="box" data-interval="3000">
+                        <img src="images/Skills/tensorlfow.png" alt="">
+                        <div class="text">Tensorflow</div>
+
+                    </div>
+                </div>
+
+                <div class="card" data-interval="3000">
+                    <div class="box" data-interval="3000">
+                        <img src="images/Skills/keras.png" alt="">
+                        <div class="text">Keras</div>
+
+                    </div>
+                </div>
+
+                <div class="card" data-interval="3000">
+                    <div class="box" data-interval="3000">
+                        <img src="images/Skills/pytorch.png" alt="">
+                        <div class="text">Pytorch</div>
+
+                    </div>
+                </div>
+
+                <div class="card" data-interval="3000">
+                    <div class="box" data-interval="3000">
+                        <img src="images/Skills/sklearn.png" alt="">
+                        <div class="text">Sklearn</div>
+
+                    </div>
+                </div>
+
+
+
+            </div>
+        </div>
+    </section>
+
+    <section class="content" id="content">
+        <div class="max-width">
+            <div class="serv-content">
+                <div class="card">
+                    <div class="box">
+                        <img class="imgs" src="images/internship/skill1.png">
+
+                        <h3>🎯 Programming Language :- <span class="prob1"> Python & SQL </span></h3>
+
+                        <h3>🎯 Machine learning & Deep learning :- <span class="prob1"> Algorithms, libraries (e.g.,
+                                sci-kit-learn, TensorFlow, Keras, PyTorch), Web scraping, Data Engineering, Fast API,
+                                etc. </span> </h3>
+
+                        <h3>🎯 Data Analysis & Visualization :- <span class="prob1"> Statistical method, Power BI,
+                                Tableau, Excel, Numpy, Pandas, Matplotlib & more. </span> </h3>
+
+                    </div>
+                </div>
+
+
+                <div class="card">
+                    <div class="box">
+
+                        <img class="imgs" src="images/internship/skill2.png">
+
+                        <h3>🎯 Web development & Database :- <span class="prob1"> HTML, CSS, javascript, Flask, Django,
+                                WordPress, Bootstrap, Mysql & MongoDB. </span></h3>
+
+                        <h3>🎯 AIOPS & LLMOPS :- <span class="prob1"> Linux, Github, AWS(EC2, Bedrock), GCP, Azure,
+                                Heroku & Python Anywhere. </span></h3>
+
+                        <h3>🎯 GenAI :-<span class="prob1"> Prompt Engineering, RAG, Langchain, Ollama, LMstudio,
+                                Unslot. </span> </h3>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+        </div>
+    </section>
+
+    <section class="slide" id="work">
+        <div class="max-width" data-interval="3000">
+
+            <div class="carousel owl-carousel" data-interval="3000">
+                <div class="card" data-interval="3000">
+                    <div class="box" data-interval="3000">
+                        <img src="images/Skills/Github.png" alt="">
+                        <div class="text">Github</div>
+
+                    </div>
+                </div>
+
+                <div class="card" data-interval="3000">
+                    <div class="box" data-interval="3000">
+                        <img src="images/Skills/git.png" alt="">
+                        <div class="text">Git</div>
+
+                    </div>
+                </div>
+
+                <div class="card" data-interval="3000">
+                    <div class="box" data-interval="3000">
+                        <img src="images/Skills/Heroku.png" alt="">
+                        <div class="text">Heroku</div>
+
+                    </div>
+                </div>
+
+                <div class="card" data-interval="3000">
+                    <div class="box" data-interval="3000">
+                        <img src="images/Skills/linux.png" alt="">
+                        <div class="text">Linux</div>
+
+                    </div>
+                </div>
+
+                <div class="card" data-interval="3000">
+                    <div class="box" data-interval="3000">
+                        <img src="images/Skills/zenml.png" alt="">
+                        <div class="text">ZenML</div>
+
+                    </div>
+                </div>
+
+                <div class="card" data-interval="3000">
+                    <div class="box" data-interval="3000">
+                        <img src="images/Skills/gcp.png" alt="">
+                        <div class="text">GCP</div>
+
+                    </div>
+                </div>
+
+                <div class="card" data-interval="3000">
+                    <div class="box" data-interval="3000">
+                        <img src="images/Skills/azure.png" alt="">
+                        <div class="text">Azure</div>
+
+                    </div>
+                </div>
+
+                <div class="card" data-interval="3000">
+                    <div class="box" data-interval="3000">
+                        <img src="images/Skills/aws.png" alt="">
+                        <div class="text">AWS</div>
+
+                    </div>
+                </div>
+
+                <div class="card" data-interval="3000">
+                    <div class="box" data-interval="3000">
+                        <img src="images/Skills/kafka.png" alt="">
+                        <div class="text">Kafka</div>
+
+                    </div>
+                </div>
+
+                <div class="card" data-interval="3000">
+                    <div class="box" data-interval="3000">
+                        <img src="images/Skills/hadoop.png" alt="">
+                        <div class="text">Hadoop</div>
+
+                    </div>
+                </div>
+
+                <div class="card" data-interval="3000">
+                    <div class="box" data-interval="3000">
+                        <img src="images/Skills/spark.png" alt="">
+                        <div class="text">Spark</div>
+
+                    </div>
+                </div>
+
+                <div class="card" data-interval="3000">
+                    <div class="box" data-interval="3000">
+                        <img src="images/Skills/MongoDB.png" alt="">
+                        <div class="text">MongoDB</div>
+
+                    </div>
+                </div>
+
+                <div class="card" data-interval="3000">
+                    <div class="box" data-interval="3000">
+                        <img src="images/Skills/casndra.png" alt="">
+                        <div class="text">Cassendra</div>
+
+                    </div>
+                </div>
+
+                <div class="card" data-interval="3000">
+                    <div class="box" data-interval="3000">
+                        <img src="images/Skills/mysql.png" alt="">
+                        <div class="text">MySQL</div>
+
+                    </div>
+                </div>
+
+                <div class="card" data-interval="3000">
+                    <div class="box" data-interval="3000">
+                        <img src="images/Skills/vmware.png" alt="">
+                        <div class="text">VMware</div>
+
+                    </div>
+                </div>
+
+
+
+
+            </div>
+        </div>
+    </section>
+    <!----------------->
+
+
+    <!--Project--------->
+    <section class="content2" id="content2">
+        <div class="max-width">
+            <h2 class="titles"> Showcase <span style="color: #eed1c7;">:Projects</span></h2>
+
+            <div class="serv-content">
+                <div class="card" id="services2">
+                    <div class="box">
+                        <img class="imgs" src="images/internship/1.png"> <br>
+
+                        <span class="probcon2">🚀 PhonePe Transaction Analysis Dashboard & Andorid Application </span>
+                        <br>
+                        <span class="probcon2">🚀 Self-Autonomous Driving Car </span> <br>
+                        <span class="probcon2">🚀 Diet Recommendation System </span>
+
+
+                    </div>
+                </div>
+
+                <div class="card" id="services3">
+                    <div class="box">
+                        <img class="imgs" src="images/internship/2.png"> <br>
+
+
+                        <span class="probcon2">🚀 Product Chatbot Assistant for E-commerce in Browser Extension.
+                        </span> <br>
+
+                        <span class="probcon2">🚀 Voice Summarizer for Discord, Zoom, and more.
+                        </span> <br>
+
+                        <span class="probcon2">🚀 Virtual Dressing Room: Try before you buy with our virtual try-on
+                            experience.
+                        </span> <br>
+
+                        <span class="probcon2">🚀 AI-Generated Child Images - Perfect for Enhancing Websites Like
+                            Shadi.com.
+                        </span> <br>
+                        <span class="probcon2">🚀 Chatbot that do fraud!
+                        </span> <br>
+
+                    </div>
+                </div>
+
+                <div class="card" id="services3">
+                    <div class="box">
+                        <img class="imgs" src="images/internship/3.png"> <br>
+
+
+                        <span class="probcon2">🚀 Discord Chat Analysis Bot
+                        </span> <br>
+                        <span class="probcon2">🚀 P<span class="probcon2">ornographic Content Classificatispan. <br>
+                                </h6>
+                                <span class="probcon2">🚀 GTA5 Races Recommendation System.
+                                </span> <br>
+                                <span class="probcon2">🚀 Smart Parental Alert System for Gaming.
+                                </span> <br>
+
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+    <!------------------->
+
+    <!-----MORE-------->
+    <section class="slide" id="slide">
+        <h2 class="titles"> Interpersonal <span style="color: #eed1c7">:Skills</span></h2>
+
+        <div class="max-width" data-interval="3000">
+            <div class="carousel owl-carousel" data-interval="3000">
+                <div class="card" data-interval="3000">
+                    <div class="box" data-interval="3000">
+                        <img src="images/skill/sk1.png" alt="">
+                        <div class="text">C</div>
+
+                    </div>
+                </div>
+
+                <div class="card" data-interval="3000">
+                    <div class="box" data-interval="3000">
+                        <img src="images/skill/sk2.png" alt="">
+                        <div class="text">Cplus+</div>
+
+                    </div>
+                </div>
+
+                <div class="card" data-interval="3000">
+                    <div class="box" data-interval="3000">
+                        <img src="images/skill/sk3.png" alt="">
+                        <div class="text">CSS</div>
+
+                    </div>
+                </div>
+
+                <div class="card" data-interval="3000">
+                    <div class="box" data-interval="3000">
+                        <img src="images/skill/sk4.png" alt="">
+                        <div class="text">HTML</div>
+
+                    </div>
+                </div>
+
+                <div class="card" data-interval="3000">
+                    <div class="box" data-interval="3000">
+                        <img src="images/skill/sk5.png" alt="">
+                        <div class="text">PHP</div>
+
+                    </div>
+                </div>
+
+                <div class="card" data-interval="3000">
+                    <div class="box" data-interval="3000">
+                        <img src="images/skill/sk6.png" alt="">
+                        <div class="text">JAVA</div>
+
+                    </div>
+                </div>
+
+                <div class="card" data-interval="3000">
+                    <div class="box" data-interval="3000">
+                        <img src="images/skill/sk7.png" alt="">
+                        <div class="text">R</div>
+
+                    </div>
+                </div>
+
+                <div class="card" data-interval="3000">
+                    <div class="box" data-interval="3000">
+                        <img src="images/skill/sk8.png" alt="">
+                        <div class="text">Script</div>
+
+                    </div>
+                </div>
+
+                <div class="card" data-interval="3000">
+                    <div class="box" data-interval="3000">
+                        <img src="images/skill/sk9.png" alt="">
+                        <div class="text">Wordpress</div>
+
+                    </div>
+                </div>
+
+                <div class="card" data-interval="3000">
+                    <div class="box" data-interval="3000">
+                        <img src="images/skill/sk10.png" alt="">
+                        <div class="text">Audacity</div>
+
+                    </div>
+                </div>
+
+                <div class="card" data-interval="3000">
+                    <div class="box" data-interval="3000">
+                        <img src="images/skill/sk11.png" alt="">
+                        <div class="text">Filmora</div>
+
+                    </div>
+                </div>
+
+                <div class="card" data-interval="3000">
+                    <div class="box" data-interval="3000">
+                        <img src="images/skill/sk12.png" alt="">
+                        <div class="text">Canva</div>
+
+                    </div>
+                </div>
+
+
+            </div>
+        </div>
+    </section>
+    <!----------------->
+
+
+
+    
+    <section class="content3" id="content3">
+        <div class="max-width">
+            <h2 class="titles"> Blog <span style="color: #eed1c7;">:s</span></h2>
+
+            <div class="serv-content">
+                <div class="card" id="services3">
+                    <div class="box">
+                        <a target="_blank" href="blogs/GenerativeAI.html">
+                        <img class="imgs" src="images/blogs/genai.png">
+                        <h3> <b> 📰 Genrative AI Basics
+                        </b> </h3></a>
+
+                    </div>
+                </div>
+
+                <div class="card" id="services3">
+                    <div class="box">
+
+                        <a target="_blank" href="blogs/promptEnginnering.html">
+                        <img class="imgs" src="images/blogs/prompt enginnering.png">
+                        <h3> <b> 📰 Prompt Engineering
+                            </b> </h3> </a>
+
+                    </div>
+                </div>
+
+                <div class="card" id="services3">
+                    <div class="box">
+                        <a target="_blank" href="blogs/transformerarch.html">
+                        <img class="imgs" src="images/blogs/Transformer&llm.png">
+
+                        <h3> <b> 📰 Transformer & LLM 
+                            </b> </h3></a>
+                    </div>
+                </div>
+
+                <div class="card" id="services3">
+                    <div class="box">
+                        <a target="_blank" href="blogs/finetuningLLM.html">
+                        <img class="imgs" src="images/blogs/finetuning LLm.png">
+                        <h3> <b> 📰 Finetuning LLM 
+                            </b> </h3> </a>
+
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+
+
+
+
+
+
+
+
+
+
+    <!-- footer section start -->
+    <footer>
+        <span>Created By <a style="color: orange;" href="">TUSHAR-PERSPECTIVE</a> | <span
+                class="far fa-copyright"></span>
+            2024 All rights
+            reserved.</span>
+    </footer>
+
+
+
+
+
+
+
+
+    <script src="script.js"></script>
+</body>
+
+
+
+</html>

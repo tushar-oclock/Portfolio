@@ -1,0 +1,385 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tushar-Perspective</title>
+    <link rel="shortcut icon" href="../images/tushar.png" type="image/x-icon">
+    <link rel="stylesheet" href="../style.css">
+    <link href='https://fonts.googleapis.com/css?family=JetBrains Mono' rel='stylesheet'>
+    <link href='https://fonts.googleapis.com/css?family=Space Grotesk' rel='stylesheet'>
+
+
+
+
+
+
+
+</head>
+
+
+
+
+<body>
+
+
+    <div class="video-container">
+        <video autoplay loop muted id="background-video">
+            <source src="../images/video8.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+    </div>
+
+
+
+    <footer>
+        <span>Created By <a style="color: orange;" target="_blank"
+                href="https://tushar-perspective.github.io/Portfolio/">TUSHAR-PERSPECTIVE</a> | <span
+                class="far fa-copyright"></span>
+            2024 All rights
+            reserved.</span>
+    </footer>
+
+
+
+
+    <!---INFO---------->
+    <section class="info2" id="ab">
+        <div class="max-width">
+            <h2 class="titles">Fine tuning LLM<span style="color: #BDA3A1;">:(Large langauge Model) </span>
+                <a style=" color: inherit; " href="https://github.com/Thinkliketushar" target="_blank"> </a>
+            </h2>
+            <div class="info-content">
+                <div class="column right">
+
+                    <h1> INTRODUCTION: </h1>
+                    <ul>
+                        <li>Definition: Fine-tuning adjusts parameters of pre-trained models for specific tasks or
+                            domains.</li>
+                        <li>Purpose: Enhances model accuracy and effectiveness for targeted applications.</li>
+                        <li>Example: GPT for chatbots, GitHub Copilot for code generation.</li>
+                        <li>Benefits: Reduces random answers, increases consistency, and reduces unwanted information.
+                        </li>
+                        <li>Tools: PyTorch, Hugging Face, Llama library (Lamini), Unsloth.</li>
+                    </ul>
+
+                    <h1> How to Fine-Tune a Model: </h1>
+                    <ul>
+                        <li>Choose a pre-trained model and a dataset.</li>
+                        <li>Load the data to use.</li>
+                        <li>Tokenizer.</li>
+                        <li>Initialize our base model.</li>
+                        <li>Evaluate method.</li>
+                        <li>Fine-tune using the Trainer Method.</li>
+                    </ul>
+
+                    <h1> Use Cases for Fine-Tuned Models : </h1>
+                    <ul>
+                        <li>Content generation: Fine-tune on a company's documentation to automatically generate content
+                            adhering to their voice and style.</li>
+                        <li>Translation: Fine-tune translation models on industry-specific data like medical or legal
+                            documents.</li>
+                        <li>Information retrieval: Fine-tune a QA model to answer domain-specific questions.</li>
+                        <li>Sentiment analysis: Fine-tune a classifier to identify sentiment in social media related to
+                            your products.</li>
+                    </ul>
+
+                    <h1> When to Fine-tune a Model: </h1>
+                    <ul>
+                        <li>Adapting to new domain: Specialize a general model on technical documents.</li>
+                        <li>Improving task performance: Enhance model for better poetry or translations.</li>
+                        <li>Customizing output: Adjust tone, personality, or detail level.</li>
+                        <li>Adapting to new data: Fine-tune to match changing data distribution.</li>
+                        <li>Customization for domains: Tailor model to understand unique language patterns.</li>
+                        <li>Limited labeled data: Effectively use existing labeled data.</li>
+                        <li>Disadvantages: Risk of overfitting, loss of original model, underfitting, lack of
+                            transferability, and reduced generalization.</li>
+                    </ul>
+
+                    <h1> When Not to Fine-Tune: </h1>
+                    <ul>
+                        <li>Small dataset: Fine-tuning requires hundreds to thousands of quality examples.</li>
+                        <li>Extremely dissimilar task: The model may struggle to connect its existing knowledge to this
+                            new domain.</li>
+                        <li>Frequent updates: Retraining from scratch allows for more flexibility.</li>
+                        <li>Simpler solutions: Fine-tuning large models can be overkill.</li>
+                    </ul>
+
+                    <h1> Primary fine-tuning approaches : </h1>
+                    <ul>
+                        <li><strong>Feature extraction (repurposing):</strong> The pre-trained LLM is treated as a fixed
+                            feature extractor. The final layers are trained on the task-specific data while the rest of
+                            the model remains frozen.</li>
+                        <li><strong>Full fine-tuning:</strong> Involves training the entire model on the task-specific
+                            data.</li>
+                        <li><strong>Parameter Efficient Fine-Tuning (PEFT):</strong> PEFT updates only a subset of
+                            parameters, effectively "freezing" the rest, making it more efficient than full fine-tuning.
+                        </li>
+                    </ul>
+
+                    <h1> Parameter Efficient Fine-Tuning PEFT: </h1>
+                    <ul>
+                        <li>Reduced Computational Costs: PEFT requires fewer GPUs and GPU time.</li>
+                        <li>Faster Training Times: Models finish training faster with PEFT.</li>
+                        <li>Lower Hardware Requirements: PEFT works efficiently with smaller GPUs and requires less
+                            memory.</li>
+                        <li>Improved Modeling Performance: PEFT reduces overfitting, leading to more robust models.</li>
+                        <li>Space-Efficient Storage: PEFT minimizes storage requirements.</li>
+                    </ul>
+
+                    <h1> LORA & QLORA: </h1>
+                    <ul>
+                        <li><strong>LoRA (Low Rank Adaptation):</strong>
+                            <ul>
+                                <li>Reduces memory footprint by representing the weight update matrix as the product of
+                                    two smaller matrices.</li>
+                                <li>Offers faster training times compared to traditional methods.</li>
+                                <li>Maintains performance close to traditional methods in several tasks.</li>
+                            </ul>
+                        </li>
+                        <li><strong>QLoRA (Quantized LoRA):</strong>
+                            <ul>
+                                <li>Enhances parameter efficiency by quantizing weights to lower precision.</li>
+                                <li>More memory efficient than LoRA.</li>
+                                <li>Maintains similar performance to LoRA while offering significant memory advantages.
+                                </li>
+                            </ul>
+                        </li>
+                    </ul>
+
+                    <h1> Choosing between LoRA and QLoRA: </h1>
+                    <ul>
+                        <li><strong>Memory Priority:</strong> QLoRA for efficiency.</li>
+                        <li><strong>Speed Priority:</strong> LoRA for faster training.</li>
+                        <li><strong>Balanced Priority:</strong> QLoRA for a good balance.</li>
+                    </ul>
+
+                    <h1> Supervised fine-tuning: </h1>
+                    <ul>
+                        <li><strong>Basic Hyperparameter Tuning:</strong> Manually adjust hyperparameters.</li>
+                        <li><strong>Transfer Learning:</strong> Adapt pre-trained model to new data.</li>
+                        <li><strong>Multi-Task Learning:</strong> Train on multiple related tasks.</li>
+                        <li><strong>Few-Shot Learning:</strong> Adapt to new tasks with minimal data.</li>
+                        <li><strong>Task-Specific Fine-Tuning:</strong> Optimize for specific task requirements.</li>
+                    </ul>
+
+                    <h1> Reinforcement learning from human feedback
+                        RLHF: </h1>
+                    <ul>
+                        <li><strong>Reward Modeling:</strong> Human evaluators rank outputs for model adjustment.</li>
+                        <li><strong>PPO:</strong> Updates model policy for maximum reward while ensuring stability.</li>
+                        <li><strong>Comparative Ranking:</strong> Model learns from relative rankings of outputs.</li>
+                        <li><strong>Preference Learning:</strong> Models learn from human preferences between outputs.
+                        </li>
+                        <li><strong>PEFT:</strong> Improves pre-trained LLM performance with minimal parameter updates.
+                        </li>
+                    </ul>
+
+                    <h1> Instruction Fine tuning: </h1>
+                    <ul>
+                        <li><strong>Definition:</strong> Instruction fine-tuning tailors large language models for
+                            specific tasks based on explicit instructions.</li>
+                        <li><strong>Process:</strong> It goes beyond traditional fine-tuning by incorporating high-level
+                            instructions or demonstrations to guide the model's behavior.</li>
+                        <li><strong>Purpose:</strong> To improve performance for specific use cases by providing clear
+                            guidance to the model, even with limited task-specific data.</li>
+                    </ul>
+
+                    <h1> Instruction Tuning and Its Significance: </h1>
+                    <ul>
+                        <li><strong>Significance:</strong> Instruction fine-tuning enhances LLM performance by improving
+                            response to specific instructions.</li>
+                        <li><strong>Comparison:</strong> Unlike pre-training, which helps LLMs learn broadly,
+                            fine-tuning tailors them to excel at specific tasks.</li>
+                        <li><strong>Process:</strong> Fine-tuning involves training the model on a smaller,
+                            task-specific dataset to adapt its behavior.</li>
+                        <li><strong>Examples:</strong> Instructions can include sentiment analysis, text generation, or
+                            text summarization tasks.</li>
+                        <li><strong>Implementation:</strong> Fine-tuning requires training the model with an instruction
+                            dataset and a pretrained model, labeling data, and measuring loss for single-task
+                            optimization.</li>
+                    </ul>
+
+
+                    <h1> Avoid Catastropphic Forgetiing: </h1>
+                    <ul>
+                        <li><strong>Definition:</strong> Catastrophic forgetting is when a model excels at one task but
+                            loses its ability in others, reducing its overall performance.</li>
+                        <li><strong>Handling:</strong> To avoid this, fine-tune the model on multiple tasks
+                            simultaneously or use parameter-efficient fine-tuning methods like PEFT.</li>
+                    </ul>
+
+
+                    <h1> Multitask finetuning: </h1>
+                    <ul>
+                        <li><strong>Definition:</strong> Multitask fine-tuning enhances language models by training them
+                            on diverse datasets containing examples from various tasks simultaneously.</li>
+                        <li><strong>Benefits:</strong> Helps avoid catastrophic forgetting and improves model
+                            performance across multiple tasks.</li>
+                        <li><strong>Challenges:</strong> Requires a large amount of data (50,000 to 100,000 examples)
+                            and high computational resources.</li>
+                        <li><strong>Models:</strong> FLAN (Fine-tuned Language Net) family of models, including FLAN T5
+                            and FLAN PaLM, trained on 473 datasets across 146 task categories.</li>
+                    </ul>
+
+                    <h1> Padding / Truncation: </h1>
+                    <ul>
+                        <li><strong>FLAN-T5 Customization:</strong> FLAN-T5, while versatile, may need further tuning
+                            for specific tasks like domain-specific dialogue summarization.</li>
+                        <li><strong>Padding:</strong> Adding extra tokens (e.g., [PAD]) to shorter sequences to make
+                            them equal in length to longer sequences for batch processing.</li>
+                        <li><strong>Truncation:</strong> Cutting off the end of longer sequences to match the length of
+                            shorter sequences, reducing computational overhead.</li>
+                        <li><strong>Example:</strong> Sequences "The cat sat on the mat" and "The dog chased the cat"
+                            padded to match the length of "The mouse ran away from the cat and the dog".</li>
+                    </ul>
+
+                    <h1> Evaluating Fine-Tuned Models: </h1>
+                    <ul>
+                        <li><strong>LLM Evaluation Challenges:</strong> Evaluating large language models is challenging
+                            due to their nondeterministic nature. Automated methods like Rouge and BLEU Score are used
+                            for assessment.</li>
+                        <li><strong>Model Evaluation Metrics:</strong> Rouge evaluates summaries, while BLEU Score
+                            assesses translations, comparing them to human references using recall, precision, F1 score,
+                            and n-grams.</li>
+                        <li><strong>ROUGE Score:</strong> Measures the longest common subsequence between reference and
+                            generated outputs, considering word ordering for a more comprehensive evaluation.</li>
+                    </ul>
+
+
+                    <h1> BLEU: Bilingual Evaluation Understudy: </h1>
+                    <ul>
+                        <li>BLEU evaluates machine-translated text by comparing n-gram matches with a reference
+                            translation.</li>
+                        <li>It calculates scores for different n-gram sizes and averages them to determine the overall
+                            BLEU score.</li>
+                        <li>BLEU is quick to calculate, easy to understand, and language-independent.</li>
+                        <li>It is widely used in NLP for tasks like summarization and translation.</li>
+                    </ul>
+
+                    <h1> Benchmarking Language Models: </h1>
+                    <ul>
+                        <li>GLUE and SuperGLUE benchmarks evaluate language models with diverse tasks.</li>
+                        <li>HELM framework enhances model transparency and measures multiple metrics.</li>
+                        <li>MMLU focuses on modern LLMs, emphasizing extensive world knowledge.</li>
+                    </ul>
+
+                    <h1> PEFT: Parameter Efficient FineTuning: </h1>
+                    <ul>
+                        <li>PEFT updates a small subset of parameters, reducing memory and storage requirements.</li>
+                        <li>Types include Additive, Partial, Re-parameterized, and Hybrid Fine-tuning.</li>
+                        <li>Advantages include memory management, avoiding catastrophic forgetting, and reduced storage
+                            overheads.</li>
+                        <li>PEFT reduces computational demands, enables faster inference, and improves deployment on
+                            resource-constrained devices.</li>
+                        <li>It also saves costs and maintains or improves performance on downstream tasks.</li>
+                    </ul>
+
+                    <h1> PEFT Techniques: </h1>
+                    <ul>
+                        <li><strong>Knowledge Distillation:</strong> Transfer knowledge from a large model to a smaller
+                            one, improving performance and generalization.</li>
+                        <li><strong>Pruning:</strong> Remove unnecessary weights to reduce model size and computational
+                            requirements.</li>
+                        <li><strong>Quantization:</strong> Reduce parameter precision to lower memory and computational
+                            needs.</li>
+                        <li><strong>Low-Rank Factorization:</strong> Approximate weight matrices with low-rank matrices
+                            to reduce parameters and complexity.</li>
+                        <li><strong>Knowledge Injection:</strong> Enhance performance by adding task-specific
+                            information without modifying original parameters.</li>
+                        <li><strong>Adapter Modules:</strong> Lightweight modules added to pre-trained models for
+                            specific tasks, allowing efficient fine-tuning.</li>
+                    </ul>
+
+                    <h1> LORA PROCESS: </h1>
+                    <ul>
+                        <li>LoRA reduces trainable parameters by introducing low-rank matrices alongside frozen model
+                            weights.</li>
+                        <li>During training, these matrices are optimized using the same supervised learning process.
+                        </li>
+                        <li>For inference, the low-rank matrices are combined with the frozen weights to minimize impact
+                            on latency.</li>
+                    </ul>
+
+                    <h1> Prompt Engineering & Prompt Tuning: </h1>
+                    <ul>
+                        <li>
+                            <strong>Prompt Engineering</strong>:
+                            <ol>
+                                <li>Identify the task: Clearly define the task for the LLM.</li>
+                                <li>Analyze the LLM: Understand the LLM's capabilities and limitations.</li>
+                                <li>Design the prompt: Craft a concise and specific prompt.</li>
+                                <li>Provide examples: Show examples of desired outputs or task demonstrations.</li>
+                                <li>Iterate and refine: Test different prompts and refine based on feedback.</li>
+                            </ol>
+                        </li>
+                        <li>
+                            <strong>Prompt Tuning</strong>:
+                            <ol>
+                                <li>Define the task: Clearly define the task for the LLM.</li>
+                                <li>Initialize the prompt: Start with a baseline prompt.</li>
+                                <li>Choose an optimization method: Select an optimization method.</li>
+                                <li>Fine-tune the prompt: Adjust the prompt parameters iteratively.</li>
+                                <li>Evaluate and refine: Continuously evaluate and refine the prompt.</li>
+                            </ol>
+                        </li>
+                    </ul>
+
+                    <h1> QLORA: </h1>
+                    <ul>
+                        <li>QLORA (Quantized Low-Rank Adaptation) aims to efficiently fine-tune massive models on
+                            limited GPU memory without compromising performance. It uses 4-bit NF4 quantization and Low
+                            Rank Adapters (LoRA) to reduce trainable parameters and computational costs.</li>
+                        <li>It leverages a frozen, 4-bit quantized pretrained language model and backpropagates
+                            gradients into LoRA, optimizing computation and parameter count.</li>
+                        <li>QLORA injects trainable low-rank matrices into Transformer layers, reducing trainable
+                            parameters and costs.</li>
+                        <li>It uses quantization for higher memory efficiency, employing 4-bit NF4 quantization to
+                            efficiently quantify weights.</li>
+                        <li>QLORA minimizes memory use during fine-tuning of large models without compromising
+                            performance.</li>
+                    </ul>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                </div>
+            </div>
+    </section>
+    <!----------------->
+
+
+
+
+
+
+
+
+
+
+    <script src="script.js"></script>
+</body>
+
+
+
+</html>
