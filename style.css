@@ -966,16 +966,6 @@ footer span a:hover {
 
 
 
-model-viewer::part(camera) {
-    pointer-events: none;
-}
-
-model-viewer::part(poster) {
-    display: none;
-} */
-
-
-
 @media (max-width: 768px) {
     #model {
         display: none;
