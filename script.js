@@ -265,11 +265,3 @@ function stopAudio() {
 }
 
 
-// const modelViewer = document.getElementById('model');
-
-// modelViewer.addEventListener('wheel', (event) => {
-//   // Check if event originated within model viewer (implementation depends on your library)
-//   if (isEventWithinModelViewer(event)) {
-//     event.preventDefault(); // Prevent zoom
-//   }
-// });

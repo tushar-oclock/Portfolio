@@ -966,16 +966,6 @@ footer span a:hover {
 
 
 
-model-viewer::part(camera) {
-    pointer-events: none;
-}
-
-model-viewer::part(poster) {
-    display: none;
-} */
-
-
-
 @media (max-width: 768px) {
     #model {
         display: none;
@@ -1225,6 +1215,23 @@ model-viewer::part(poster) {
     color: orange;
     text-align: center;
 }
+
+.front {
+    padding: 15px 23px;
+    color: #eed1c7;
+    text-align: center;
+    font-size: 15px;
+}
+
+.front span a {
+    color: orange;
+    text-decoration: none;
+}
+
+.front span a:hover {
+    text-decoration: underline;
+}
+
 
 
 @media (max-width: 1104px) {
