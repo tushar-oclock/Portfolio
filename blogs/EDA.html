@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tushar-Perspective</title>
+    <link rel="shortcut icon" href="../images/tushar.png" type="image/x-icon">
+    <link rel="stylesheet" href="../style.css">
+    <link href='https://fonts.googleapis.com/css?family=JetBrains Mono' rel='stylesheet'>
+    <link href='https://fonts.googleapis.com/css?family=Space Grotesk' rel='stylesheet'>
+
+
+
+
+
+
+
+</head>
+
+<body>
+    <div class="video-container">
+        <video autoplay loop muted id="background-video">
+            <source src="../images/video8.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+    </div>
+
+
+    <div class="front">
+        <span>Created By <a style="color: orange;" target="_blank"
+                href="https://tushar-perspective.github.io/Portfolio/">TUSHAR-PERSPECTIVE</a> | <span
+                class="far fa-copyright"></span>
+            2024 All rights
+            reserved.</span>
+
+    </div>
+
+
+
+
+    <!---INFO---------->
+    <section class="info2" id="ab">
+        <div class="max-width">
+            <h2 class="titles">ML Project<span style="color: #BDA3A1;"> :Architecture</span>
+                <a style=" color: inherit; " href="https://github.com/Thinkliketushar" target="_blank"> </a>
+            </h2>
+            <div class="info-content">
+                <div class="column right">
+
+                    <h1>Exploratory Data Analysis</h1>
+                    <ul>
+                        <li>Understanding Errors:
+                            <ul>
+                                <li>False Positive (FP): Model predicts positive class (1) for a negative case (0)
+                                    (e.g., medical test saying you have disease when you don't).</li>
+                                <li>False Negative (FN): Model predicts negative class (0) for a positive case (1)
+                                    (e.g., medical test saying you're healthy but you have a disease).</li>
+                            </ul>
+                        </li>
+                        <li>Dealing with Missing Data: Many missing values require handling before building models
+                            (imputation, deletion, etc.).</li>
+                        <li>Project Considerations:
+                            <ul>
+                                <li>No urgency for fast predictions allows focusing on accuracy over speed.</li>
+                                <li>Interpretability unimportant: complex models like deep learning are suitable.</li>
+                                <li>Misclassification cost: high cost associated with both false positives and negatives
+                                    (e.g., unnecessary repairs).</li>
+                            </ul>
+                        </li>
+                    </ul>
+
+                    <h1>KNN imputer</h1>
+                    <ul>
+                        <li>KNN Imputer: Fills missing values using k-nearest neighbors' feature values.</li>
+                        <li>Scalers (for normalizing features):
+                            <ul>
+                                <li>StandardScaler (good for normal distributions): Removes mean and scales to unit
+                                    variance (sensitive to outliers).</li>
+                                <li>RobustScaler (good for outliers or skewed data): Uses median and IQR for scaling
+                                    (less sensitive to outliers than StandardScaler).</li>
+                                <li>MinMaxScaler (scales to a range, often 0-1): Preserves distribution shape but
+                                    sensitive to outliers (uses min and max values).</li>
+                            </ul>
+                        </li>
+                        <li>Oversampling and Undersampling Techniques (for imbalanced datasets):
+                            <ul>
+                                <li>SMOTE (Synthetic Minority Over-sampling Technique): Creates synthetic samples for
+                                    the minority class using k-nearest neighbors.</li>
+                                <li>Tomek Links (removes noisy instances): Identifies and removes instance pairs from
+                                    different classes that are very close (potentially noisy or misclassified).</li>
+                                <li>SMOTE+TOMEK (combination): Oversamples minority with SMOTE first, then removes noisy
+                                    instances from both classes using Tomek Links.</li>
+                            </ul>
+                        </li>
+                    </ul>
+
+
+
+
+
+
+                </div>
+            </div>
+    </section>
+    <!----------------->
+
+
+
+
+
+
+
+
+
+
+    <script src="script.js"></script>
+</body>
+
+
+
+</html>

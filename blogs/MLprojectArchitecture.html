@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tushar-Perspective</title>
+    <link rel="shortcut icon" href="../images/tushar.png" type="image/x-icon">
+    <link rel="stylesheet" href="../style.css">
+    <link href='https://fonts.googleapis.com/css?family=JetBrains Mono' rel='stylesheet'>
+    <link href='https://fonts.googleapis.com/css?family=Space Grotesk' rel='stylesheet'>
+
+
+
+
+
+
+
+</head>
+
+<body>
+    <div class="video-container">
+        <video autoplay loop muted id="background-video">
+            <source src="../images/video8.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+    </div>
+
+
+    <div class="front">
+        <span>Created By <a style="color: orange;" target="_blank"
+                href="https://tushar-perspective.github.io/Portfolio/">TUSHAR-PERSPECTIVE</a> | <span
+                class="far fa-copyright"></span>
+            2024 All rights
+            reserved.</span>
+
+    </div>
+
+
+
+
+    <!---INFO---------->
+    <section class="info2" id="ab">
+        <div class="max-width">
+            <h2 class="titles">ML Project<span style="color: #BDA3A1;"> :Architecture</span>
+                <a style=" color: inherit; " href="https://github.com/Thinkliketushar" target="_blank"> </a>
+            </h2>
+            <div class="info-content">
+                <div class="column right">
+
+                    <h1>Components of machine learining project:</h1>
+
+                    <ul>
+                        <ul>
+                            <li>Data Ingestion: Get data from various sources (e.g., sensor readings, databases).
+                            </li>
+                            <li>Data Validation: Clean and check the data quality (e.g., missing values, errors).
+                            </li>
+                            <li>Data Transformation: Prepare the data for modeling (e.g., feature engineering,
+                                scaling).</li>
+                            <li>Model Training: Train a machine learning model on the processed data.</li>
+                            <li>Model Evaluation: Test the model's performance on unseen data (e.g., accuracy,
+                                precision, recall).</li>
+                        </ul>
+                    </ul>
+
+                    <h1>Data Ingestion: Config vs. Artifacts:</h1>
+                    <ul>
+                        <ul>
+                            <li>Data Ingestion Config (Configuration): Think of it as the recipe that defines how
+                                data is collected, transformed, and loaded.</li>
+                            <ul>
+                                <li>Components:
+                                    <ul>
+                                        <li>Data Sources: Where the data comes from (databases, APIs, files, etc.).</li>
+                                        <li>Data Collection Methods: How the data is collected (batch processing,
+                                            streaming, polling).</li>
+                                        <li>Data Transformation Rules: Instructions for cleaning and preparing the data.
+                                        </li>
+                                        <li>Data Loading Settings: Where and how the processed data is stored.</li>
+                                        <li>Connection Details: Credentials needed to access data sources.</li>
+                                    </ul>
+                                </li>
+                            </ul>
+                            <li>Data Ingestion Artifacts: Think of it as the ingredients and the final dish - the actual
+                                data and byproducts of the ingestion process.</li>
+                            <ul>
+                                <li>Components:
+                                    <ul>
+                                        <li>Raw Data: The unprocessed data collected from the sources.</li>
+                                        <li>Processed Data: The cleaned and transformed data ready for use.</li>
+                                        <li>Ingestion Logs: Records of the ingestion process, including any errors.</li>
+                                        <li>Metadata: Information about the data (schema, data types, source details).
+                                        </li>
+                                        <li>Data Quality Reports: Summaries of the data quality (completeness,
+                                            integrity).</li>
+                                        <li>(Optional) Configuration Files: Files containing the config settings used
+                                            for reproducibility.</li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </ul>
+                    </ul>
+
+                    <h1>Reading Url from .env file:</h1>
+                    <ul>
+                        <li>Securely Accessing URLs:</li>
+                        <ul>
+                            <li>This approach separates sensitive information (URLs) from your code, enhancing code
+                                security and maintainability by storing them in a dedicated .env file.</li>
+                        </ul>
+                        <li>Steps:</li>
+                        <ul>
+                            <li>Installation:</li>
+                            <li>Execute the following command in your terminal:</li>
+                            <li>
+                                <xmp>pip install python-dotenv</xmp>
+                            </li>
+                            <li>Create .env File (Not Version Controlled):</li>
+                            <li>Create a file named .env in your project's root directory. This file should not be
+                                included in version control systems like Git to prevent exposing sensitive data.</li>
+                            <li>Inside the .env file, add a line in the format MY_URL=https://example.com, replacing
+                                https://example.com with your actual URL.</li>
+                            <li>Read URL in Python:</li>
+                            <ul>
+                                <li>Import the necessary libraries and load environment variables using load_dotenv():
+                                </li>
+                                <li>
+                                    <xmp>
+                                        from dotenv import load_dotenv
+                                        import os
+
+                                        load_dotenv()
+                                    </xmp>
+                                </li>
+                                <li>Retrieve the URL value using os.getenv():</li>
+                                <li>
+                                    <xmp>
+                                        my_url = os.getenv("MY_URL")
+                                        print(f"The URL is: {my_url}")
+                                    </xmp>
+                                </li>
+                            </ul>
+                        </ul>
+                    </ul>
+
+                    <h1>Why Use .env Files?</h1>
+                    <ul>
+                        <ul>
+                            <li>Security: Keeps secrets (passwords, keys) safe by storing them separately from code.
+                            </li>
+                            <li>Configuration: Simplifies managing different configurations for development,
+                                testing, and production.</li>
+                        </ul>
+                    </ul>
+
+                    <h1>Data Ingestion File System:</h1>
+                    <ul>
+                        <ul>
+                            <li>Constant - Training-pipeline - init : its contain constant value related to data
+                                ingestion, filename. Data ingestion constant : collection name, dir name, feature store
+                                dir, ingested dir and train test split value.</li>
+                            </li>
+                            <li>Entity (Config, Artifacts) : Need Constant File for creating path of training pipeline
+                                and data ingestion Config
+                            </li>
+                            <li>Components (data ingestion) : Need Entity & MongoDB : Export data to feature store in
+                                ingestion folder, train test split
+                            </li>
+                            <li>Pipeline (Training-pipeline) : Connecting all of these component function and run in
+                                Pipeline
+                            </li>
+                            <li>Main.py : For Running Training
+                            </li>
+                            <li>Mongodb File - .env, constant (env_variable), configurations ( Mongodb Connection(load,
+                                read, client, database, collection, etc.)), data access (sensor data (send, Extract))
+                            </li>
+                            <li>OUTPUT : Feaure store and Ingested train and test csv</li>
+                        </ul>
+                    </ul>
+
+
+                    <h1>Joining Path Components:</h1>
+                    <ul>
+                        <li>Imagine building a complete file path by combining directory names and the filename.</li>
+                        <li>The `os.path.join` function helps create these paths for both Windows and Unix-like systems
+                            (handling backslashes and forward slashes).</li>
+                        <li>Code Snippet Breakdown:</li>
+                        <li>Joins three path components ('data', 'feature_store', 'file.csv') using `os.path.join`.</li>
+                        <li>Stores the resulting path (e.g., 'data/feature_store/file.csv') in a class variable
+                            `self.feature_store_file_path`.</li>
+                        <li>Other class variables likely hold:</li>
+                        <ul>
+                            <li>Base directory (`self.data_ingestion_dir`) for feature store files.</li>
+                            <li>Sub-directory (`training_pipeline.DATA_INGESTION_FEATURE_STORE_DIR`) within the base
+                                directory.</li>
+                            <li>Filename itself (`training_pipeline.FILE_NAME`).</li>
+                        </ul>
+                    </ul>
+
+
+                </div>
+            </div>
+    </section>
+    <!----------------->
+
+
+
+
+
+
+
+
+
+
+    <script src="script.js"></script>
+</body>
+
+
+
+</html>

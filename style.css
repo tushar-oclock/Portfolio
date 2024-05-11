@@ -1298,4 +1298,8 @@ footer span a:hover {
     .info2 h2 {
         font-size: 20px;
     }
+
+    .front {
+        position: absolute;
+    }
 }
