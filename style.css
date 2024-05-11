@@ -1248,7 +1248,7 @@ footer span a:hover {
 
 
     .info2 .title {
-        font-size: 16px !important;
+        font-size: 14px !important;
     }
 
     .info2 .title::after {
@@ -1274,7 +1274,7 @@ footer span a:hover {
     }
 
     .info2 li {
-        font-size: 15px;
+        font-size: 14px;
         text-align: justify;
     }
 
