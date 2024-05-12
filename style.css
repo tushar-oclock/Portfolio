@@ -21,7 +21,6 @@ body {
     height: 100px;
     font-family: 'JetBrains Mono';
     font-size: 22px;
-    background-color: black; 
 }
 
 
@@ -1266,7 +1265,7 @@ footer span a:hover {
 
 
     .info2 .title {
-        font-size: 14px !important;
+        font-size: 16px !important;
     }
 
     .info2 .title::after {
@@ -1292,7 +1291,7 @@ footer span a:hover {
     }
 
     .info2 li {
-        font-size: 14px;
+        font-size: 15px;
         text-align: justify;
     }
 

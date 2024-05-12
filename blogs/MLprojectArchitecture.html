@@ -154,7 +154,7 @@
                         </ul>
                     </ul>
 
-                    <h1>Data Ingestion File System:</h1>
+                    <h1>Data Ingestion File:</h1>
                     <ul>
                         <ul>
                             <li>Constant - Training-pipeline - init : its contain constant value related to data
@@ -179,7 +179,6 @@
                         </ul>
                     </ul>
 
-
                     <h1>Joining Path Components:</h1>
                     <ul>
                         <li>Imagine building a complete file path by combining directory names and the filename.</li>
@@ -197,6 +196,26 @@
                             <li>Filename itself (`training_pipeline.FILE_NAME`).</li>
                         </ul>
                     </ul>
+
+                    <h1>Data Validation:</h1>
+                    <ul>
+                        <li><strong>Data Reading:</strong> Reads trained and test datasets.</li>
+                        <li><strong>Column Validation:</strong> Validates presence of required columns in datasets.</li>
+                        <li><strong>Numerical Column Validation:</strong> Ensures required numerical columns are
+                            present.</li>
+                        <li><strong>Data Drift Detection:</strong> Detects data drift between trained and test datasets.
+                        </li>
+                        <li><strong>Artifacts Creation:</strong> Constructs DataValidation Artifacts object with
+                            validation results and file paths.</li>
+                        <li><strong>Output will Report.yaml</li>
+                    </ul>
+
+                    <h1>Data Validation Files:</h1>
+                    <ul>
+                        <li>Constant, entity(artifact, config), component, training Pipeline, validation Artifact</li>
+                        <li>Ingestion artifact, validation config, Schema file data</li>
+                    </ul>
+
 
 
                 </div>

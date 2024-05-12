@@ -29,10 +29,10 @@
 
     <div class="front">
         <span>Created By <a style="color: orange;" target="_blank"
-            href="https://tushar-perspective.github.io/Portfolio/">TUSHAR-PERSPECTIVE</a> | <span
-            class="far fa-copyright"></span>
-        2024 All rights
-        reserved.</span>
+                href="https://tushar-perspective.github.io/Portfolio/">TUSHAR-PERSPECTIVE</a> | <span
+                class="far fa-copyright"></span>
+            2024 All rights
+            reserved.</span>
 
     </div>
 
@@ -52,33 +52,103 @@
                     <ul>
                         <li>MLOPS, LLMOPS, AIOPS</li>
                         <li>Project Architecture</li>
+                        <li>Configuration of Template and Setup file</li>
+                        <li>pyproject.toml / setup.cfg : Configuration python project</li>
+                        <li>pytest:- tox.ini with Unit testing and Integration testing.</li>
                         <li>Docker Configuration</li>
-                        <li>AWS Bendrock, ECR, API GATEWAY, Lambda, S3, E2E, Sagemaker, Iamuser & More</li>
-                    </ul>
-
-                    <h1>Github</h1>
-                    <ul>
                         <li>Configure Main.yaml</li>
                         <li>Continuous Integration and Deployment</li>
                     </ul>
 
-                    <h1>Amazon Web Service</h1>
+                    <h1>Github:</h1>
+                    <ul>
+                        <li>Repo: Project files & history (`git init`) </li>
+                        <li>Commit: Snapshot of changes (`git commit -m "message"`)</li>
+                        <li>Branch: Separate development line (`git branch new-branch-name`)</li>
+                        <li>Merge: Combine changes from branches (`git merge branch-to-merge`)</li>
+                        <li>Remote: Shared repo for collaboration (`git remote add origin <url>`) </li>
+                        <li>Pull: Get changes from remote (`git pull origin main`)</li>
+                        <li>Push: Send changes to remote (`git push origin main`)</li>
+                        <li>Clone: Copy remote repo (`git clone <url>`) </li>
+                        <li>Status: Check repo state (`git status`)</li>
+                        <li>Log: View commit history (`git log`)</li>
+                    </ul>
+
+                    <ul>
+                        <li>Branch: Create <code>git branch</code>, Switch <code>git checkout</code>, (Create & Switch)
+                            <code>git checkout -b</code>, Delete <code>git branch -d</code>, Rename
+                            <code>git branch -m</code>
+                        </li>
+                        <li>Stage: Add file <code>git add</code>, Add all <code>git add .</code>, Remove file
+                            <code>git reset</code>, Unstage all <code>git reset</code>
+                        </li>
+                        <li>Compare: Changes <code>git diff</code>, Staged <code>git diff --staged</code></li>
+                        <li>Undo: Discard file <code>git checkout --</code>, Discard all <code>git reset --hard</code>,
+                            Undo commit <code>git reset HEAD~</code>, (Undo & Discard)
+                            <code>git reset --hard HEAD~</code>
+                        </li>
+                        <li>History: View <code>git log</code>, (Short) <code>git log --oneline</code>, Details
+                            <code>git show</code>
+                        </li>
+                        <li>Remote: Fetch <code>git fetch</code>, Pull <code>git pull</code>, Push <code>git push</code>
+                        </li>
+                        <li>Rebase/Merge: Choose wisely! Fetch <code>git fetch origin</code>, Rebase
+                            <code>git rebase origin/main</code>, Merge
+                            <code>git merge origin/main && git push origin main</code>
+                        </li>
+                    </ul>
+
+                    <h1>Docker:</h1>
+
+                    <ul>
+                        <li><strong>docker build -t &lt;imagename&gt; .</strong>: Build a Docker image with the
+                            specified name.</li>
+                        <li><strong>docker run -d -p 5000:5000 helloapp</strong>: Run a Docker container in detached
+                            mode with port mapping.</li>
+                        <li><strong>docker login</strong>: Log in to a Docker registry.</li>
+                        <li><strong>docker tag myhelloapp username/reponame or imagename</strong>: Tag a Docker image
+                            with a new name.</li>
+                        <li><strong>docker push username/reponame or imagename</strong>: Push a Docker image to a
+                            registry/repository.</li>
+                        <li><strong>docker run -it ubuntu /bin/bash</strong>: Run a new Docker container interactively
+                            with a Bash shell.</li>
+                        <li><strong>docker images</strong>: List all Docker images.</li>
+                        <li><strong>docker ps</strong>: List all running Docker containers.</li>
+                        <li><strong>docker ps -a</strong>: List all Docker containers, including those that are not
+                            running.</li>
+                        <li><strong>docker rmi -f jenkins/jenkins</strong>: Remove a Docker image.</li>
+                        <li><strong>docker rm -f jenkins/jenkins</strong>: Remove a Docker container.</li>
+                        <li><strong>docker run -p 8080:8080 jenkins/jenkins:lts</strong>: Run a Docker container with
+                            port mapping.</li>
+                        <li><strong>FROM ubuntu</strong>: Specify the base image as Ubuntu in a Dockerfile.</li>
+                        <li><strong>WORKDIR /tmp</strong>: Set the working directory inside the Docker container.</li>
+                        <li><strong>RUN echo "Subscribe the ineuron intelligence"</strong>: Execute a command during the
+                            image build process.</li>
+                        <li><strong>ENV myname sunny</strong>: Set an environment variable inside the Docker container.
+                        </li>
+                        <li><strong>COPY testfile /tmp</strong>: Copy a file into the Docker container.</li>
+                        <li><strong>ADD test.tar.gz /tmp</strong>: Add and extract an archive into the Docker container.
+                        </li>
+                    </ul>
+
+                    <h1>Amazon Web Service:</h1>
                     <ul>
                         <li>AWS bedrock : CLI, Configure, Run Model in Local Machine </li>
-                        <li>AWS Elastic Contain Repository : For image</li>
+                        <li>AWS Elastic Contain Repository (ECR) : For Docker image</li>
                         <li>AWS I am user : Access key, secret Access Key, Region</li>
-                        <li>AWS S3</li>
-
+                        <li>AWS Lambda : Serverless Code runner, Custom Logic, Layers</li>
+                        <li>AWS Cloud9 : Code Running, Execute</li>
+                        <li>Amazon Elastic Compute Cloud (EC2) : Cloud Service</li>
+                        <li>AWS App Runner: To run Project with user and ECR</li>
+                        <li>AWS CloudWatch: Monitoring</li>
+                        <li>AWS Sagemaker: ML platform, Run & Deploy</li>
+                        <li>AWS S3: Scailiblity , Security Performance, Connect with Segemaker</li>
                     </ul>
 
-                    <h1>Google Cloud Services</h1>
+                    <h1>Google Cloud Services:</h1>
                     <ul>
-                        <li>Vertex AI</li>
+                        <li>Vertex AI : Connecting Notebook</li>
                     </ul>
-
-
-
-
 
                 </div>
             </div>
