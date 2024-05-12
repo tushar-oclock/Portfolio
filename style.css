@@ -1281,6 +1281,10 @@ footer span a:hover {
 @media (max-width: 500px) {
 
 
+    .front{
+        background-color: black;
+    }
+
     .info2 .info-content .right .text {
         /* font-size: 15px; */
         padding: 30px;

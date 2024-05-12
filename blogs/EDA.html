@@ -42,15 +42,109 @@
     <!---INFO---------->
     <section class="info2" id="ab">
         <div class="max-width">
-            <h2 class="titles">ML Project<span style="color: #BDA3A1;"> :Architecture</span>
+            <h2 class="titles">Exploratory Data<span style="color: #BDA3A1;"> :Analysis</span>
                 <a style=" color: inherit; " href="https://github.com/Thinkliketushar" target="_blank"> </a>
             </h2>
             <div class="info-content">
                 <div class="column right">
 
 
+                    <h1>Why do EDA?</h1>
+                    <ul>
+                        <li><strong>Modeling:</strong> Build predictive or descriptive models.</li>
+                        <li><strong>Analysis:</strong> Interpret data for trends.</li>
+                        <li><strong>Validation:</strong> Confirm data assumptions.</li>
+                        <li><strong>Missing Values:</strong> Manage and impute missing data.</li>
+                        <li><strong>Feature Engineering:</strong> Create new data features.</li>
+                        <li><strong>Outlier Detection:</strong> Identify unusual data points.</li>
+                    </ul>
 
 
+                    <h1> Column Types:</h1>
+                    <ul>
+                        <li>Numerical - Age,Fare,PassengerId</li>
+                        <li>Categorical - Survived, Pclass, Sex, SibSp, Parch,Embarked</li>
+                        <li> Mixed - Name, Ticket, Cabin</li>
+
+                    </ul>
+
+
+                    <h1>Univeriate Analysis</h1>
+                    <ul>
+                        <li>Univariate analysis focuses on analyzing each feature in the dataset independently.</li>
+                        <li>Distribution analysis: The distribution of each feature is examined to identify its shape,
+                            central tendency, and dispersion.</li>
+                        <li>Identifying potential issues: Univariate analysis helps in identifying potential problems
+                            with the data such as outliers, skewness, and missing values.</li>
+                    </ul>
+                    <ul>
+                        <li>The shape of a data distribution refers to its pattern on a graph, such as Normal, Skewed,
+                            Bimodal, or Uniform.</li>
+                        <li>Dispersion measures, including Range, Variance, Standard Deviation, and Interquartile Range
+                            (IQR), describe the spread of data.</li>
+                        <li>These characteristics help identify outliers, skewness, and inform statistical tests and
+                            models.</li>
+                    </ul>
+
+
+                    <h1>Steps of doing Univariate Analysis on Numerical columns:</h1>
+                    <ul>
+                        <li><strong>Descriptive Statistics:</strong> Compute summary statistics (mean, median, mode,
+                            etc.) to understand the data's distribution and identify outliers or skewness.</li>
+                        <li><strong>Visualizations:</strong> Use histograms, box plots, and density plots to visualize
+                            the data distribution and identify outliers or skewness visually.</li>
+                        <li><strong>Identifying Outliers:</strong> Examine outliers to determine if they're errors or
+                            valid data points, deciding whether to include or exclude them.</li>
+                        <li><strong>Skewness:</strong> Check for skewness and consider transforming the data or using
+                            robust statistical methods if skewness is present.</li>
+                        <li><strong>Conclusion:</strong> Summarize findings and decide on further analysis steps based
+                            on the exploration.</li>
+                    </ul>
+
+                    <h1>Steps of doing Univariate Analysis on Categorical columns:</h1>
+                    <ul>
+                        <li><strong>Descriptive Statistics:</strong> Compute the frequency distribution of categories to
+                            understand their distribution and relative frequencies.</li>
+                        <li><strong>Visualizations:</strong> Use count plots and pie charts to visualize the category
+                            distribution and identify patterns or anomalies.</li>
+                        <li><strong>Missing Values:</strong> Check for missing values and decide whether to impute or
+                            exclude them based on the research question and dataset.</li>
+                        <li><strong>Conclusion:</strong> Summarize the findings and decide on further analysis steps
+                            based on the exploration.</li>
+                    </ul>
+
+                    
+                    <h1>Steps of doing Bivariate Analysis:</h1>
+                    <ul>
+                        <li><strong>Select 2 columns:</strong> Choose two columns from your dataset for analysis.</li>
+                        <li><strong>Understand type of relationship:</strong>
+                            <ul>
+                                <li><strong>Numerical - Numerical:</strong>
+                                    <ul>
+                                        <li>Plot graphs like scatterplot (including regression plots), 2D histplot, 2D
+                                            KDEplots.</li>
+                                        <li>Check correlation coefficient to assess linear relationship.</li>
+                                    </ul>
+                                </li>
+                                <li><strong>Numerical - Categorical:</strong>
+                                    <ul>
+                                        <li>Create visualizations comparing the distribution of numerical data across
+                                            different categories of the categorical data.</li>
+                                        <li>Plot graphs like barplot, boxplot, kdeplot, violinplot, and scatterplots.
+                                        </li>
+                                    </ul>
+                                </li>
+                                <li><strong>Categorical - Categorical:</strong>
+                                    <ul>
+                                        <li>Create cross-tabulations or contingency tables showing the distribution of
+                                            values in one categorical column, grouped by values in the other categorical
+                                            column.</li>
+                                        <li>Use plots like heatmap, stacked barplots, treemaps.</li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </li>
+                    </ul>
 
 
 
