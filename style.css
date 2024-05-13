@@ -21,6 +21,7 @@ body {
     height: 100px;
     font-family: 'JetBrains Mono';
     font-size: 22px;
+    /* background-color: black; */
 }
 
 
@@ -933,7 +934,7 @@ footer span a:hover {
     width: auto;
     height: auto;
     z-index: -1000;
-    overflow: hidden;
+    /* overflow: hidden; */
     background: black;
 }
 
@@ -1280,11 +1281,6 @@ footer span a:hover {
 
 @media (max-width: 500px) {
 
-
-    .front{
-        background-color: black;
-    }
-
     .info2 .info-content .right .text {
         /* font-size: 15px; */
         padding: 30px;
@@ -1303,7 +1299,5 @@ footer span a:hover {
         font-size: 20px;
     }
 
-    .front {
-        position: absolute;
-    }
+
 }
