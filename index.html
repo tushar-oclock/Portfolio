@@ -2,887 +2,1648 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Tushar Arora</title>
-    <link rel="shortcut icon" href="images/image.png" type="image/x-icon">
-    <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
-    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/typed.js/2.0.11/typed.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/waypoints/4.0.1/jquery.waypoints.min.js">
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>TUSHAR-PERSPECTIVE</title>
 
-    </script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
-    <link rel="stylesheet"
-        href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css" />
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
-    <link href='https://fonts.googleapis.com/css?family=JetBrains Mono' rel='stylesheet'>
-    <link href='https://fonts.googleapis.com/css?family=Space Grotesk' rel='stylesheet'>
-    <link rel="stylesheet" href="https://unpkg.com/kursor/dist/kursor.css">
-    <script src="https://cdn.jsdelivr.net/npm/kursor@0.0.14/dist/kursor.js"></script>
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+  <!--
+    - favicon
+  -->
+  <link rel="shortcut icon" href="/assets/images/logo.png" type="image/x-icon">
 
-
-
-    <script type="module" src="https://cdn.jsdelivr.net/npm/@google/model-viewer/dist/model-viewer.min.js"></script>
+  <!--
+    - custom css link
+  -->
+  <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@400;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@400;500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="./assets/css/style.css">
+  <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;700&display=swap">
 
 
 
 
+  <!--
+    - google font link
+  -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
 </head>
-
-
-
 
 <body>
 
-    <!-- Extras -->
-    <audio id="clickSound">
-        <source src="images/sound.wav" type="audio/wav">
-        Your browser does not support the audio element.
-    </audio>
 
-
-    <div class="video-container">
-        <video autoplay loop muted id="background-video">
-            <source src="images/video8.mp4" type="video/mp4">
-            Your browser does not support the video tag.
-        </video>
-    </div>
-
-
-    <audio id="myAudio" autoplay>
-        <source src="bgaud.mp3" type="audio/mp3">
-        Your browser does not support the audio element.
-    </audio>
+  <div class="video-container">
+    <video autoplay loop muted id="background-video">
+      <source src="assets/images/video/bg2.mp4" type="video/mp4">
+      Your browser does not support the video tag.
+    </video>
+  </div>
 
 
 
+  <!--
+    - #MAIN
+  -->
+
+  <main>
+
+    <!--
+      - #SIDEBAR
+    -->
+
+    <aside class="sidebar" data-sidebar>
+      <div class="sidebar-info">
+
+        <figure class="avatar-box">
+          <img src="./assets/images/TusharArora.png" alt="tushar arora" width="80">
+        </figure>
 
 
 
 
 
-    <!---navbar------->
-    <div class="scroll-up-btn">
-        <i class="fas fa-angle-up"></i>
-    </div>
-
-    <nav class="navbar">
-        <div class="max-width">
-            <div class="logo"><a href="#"><span><i class="fa fa-terminal" aria-hidden="true"></i>
-                    </span>TUSHAR<span>-PERSPECTIVE</span></a></div>
-
-            <ul class="menu">
-                <li><a href="#home" class="menu-btn"> / </a></li>
-                <li><a href="#ab" class="menu-btn"><i class="fa fa-user"> </i> Dev. </a></li>
-                <li><a href="#work" class="menu-btn"><i class="fa fa-code-fork"></i> Fork</a></li>
-
-                <li> <a href="https://github.com/TUSHAR-PERSPECTIVE" target="_blank"> <i class="fa fa-github"></i> </a>
-                </li>
-
-                <li> <a href="https://www.linkedin.com/in/tushar-perspective/" target="_blank"> <i
-                            class="fa fa-linkedin"></i> </a> </li>
-
-                <li><a href="#" onclick="playAudio()"> <i class="fa fa-play" aria-hidden="true"></i></a> </li>
-                <li><a href="#" onclick="stopAudio()"> <i class="fa fa-stop" aria-hidden="true"></i></a> </li>
 
 
+
+        <div class="info-content">
+          <h1 class="name" title="Tushar Arora">📛TUSHAR-PERSPECTIVE</h1>
+
+
+
+
+
+
+          <div style="display: flex; justify-content: center; font-family:  Ubuntu;">
+            <div id="badge-container" style="display: inline-block;"></div>
+          </div>
+
+          <style>
+            @media (max-width: 768px) {
+              #badge-container {
+                margin-left: 0;
+                /* Reset margin for mobile view */
+                margin-right: auto;
+                /* Align to the left */
+              }
+            }
+          </style>
+
+
+
+
+
+
+
+
+
+
+        </div>
+
+
+
+
+
+        <button class="info_more-btn" data-sidebar-btn>
+          <span>Show Contacts</span>
+
+          <ion-icon name="chevron-down"></ion-icon>
+        </button>
+
+      </div>
+
+      <div class="sidebar-info_more">
+        <div class="separator"></div>
+        <ul class="contacts-list">
+
+
+
+
+
+
+          <li class="contact-item">
+            <div class="service-icon-box">
+              <img src="./assets/images/sidebar/mailsvg.svg" alt="design icon" width="40">
+            </div>
+            <div class="contact-info">
+              <p class="contact-title">Email</p>
+              <a href="mailto:tushar.aka.datascientist@gmail.com"
+                class="contact-link">Tushar.aka.datascientist@gmail.com</a>
+            </div>
+          </li>
+
+          <li class="contact-item">
+            <div class="service-icon-box">
+              <img src="./assets/images/sidebar/phonesvg.svg" alt="design icon" width="40">
+            </div>
+            <div class="contact-info">
+              <p class="contact-title">Phone</p>
+              <a href="tel:+12133522795" class="contact-link">+91 8851084852</a>
+            </div>
+          </li>
+
+        </ul>
+
+        <div class="separator"></div>
+
+        <ul class="social-list">
+
+          <li class="social-item">
+            <a href="#" class="social-link">
+              <img src="./assets/images/sidebar/github.png" alt="design icon" width="40">
+
+            </a>
+          </li>
+
+          <li class="social-item">
+            <a href="#" class="social-link">
+              <img src="./assets/images/sidebar/linkedin.png" alt="design icon" width="40">
+
+            </a>
+          </li>
+
+          <li class="social-item">
+            <a href="#" class="social-link">
+              <img src="./assets/images/sidebar/instagram.png" alt="design icon" width="40">
+
+            </a>
+          </li>
+
+
+        </ul>
+
+      </div>
+
+    </aside>
+
+
+
+
+
+    <!--
+      - #main-content
+    -->
+
+    <div class="main-content">
+
+      <!--
+        - #NAVBAR
+      -->
+
+      <nav class="navbar">
+
+        <ul class="navbar-list">
+
+          <li class="navbar-item">
+            <button class="navbar-link  active" data-nav-link>About</button>
+          </li>
+
+          <li class="navbar-item">
+            <button class="navbar-link" data-nav-link>Resume</button>
+          </li>
+
+          <li class="navbar-item">
+            <button class="navbar-link" data-nav-link>Portfolio</button>
+          </li>
+
+          <li class="navbar-item">
+            <button class="navbar-link" data-nav-link>Blog</button>
+          </li>
+
+          <li class="navbar-item">
+            <button class="navbar-link" data-nav-link>Contact</button>
+          </li>
+
+        </ul>
+
+      </nav>
+
+      <!--
+        - #ABOUT
+      -->
+
+      <article class="about  active" data-page="about">
+
+        <header>
+          <h2 class="h2 article-title">🎯 About me</h2>
+        </header>
+
+        <section class="about-text">
+
+          <p>
+            <span class=" badge badge-Amber">👔 24/7 Dev. Player</span><br> <br>
+            23 year old
+
+            <span style="color: var(--orange-yellow-crayola);">Data Scientist </span>
+            & freelancer from India. I've taken coding seriously since
+            <span style="color: var(--orange-yellow-crayola);">2021</span> and have been freelancing since
+            <span style="color: var(--orange-yellow-crayola);">2024</span>. Recently, however, I've grown a knack for
+            giving back to community. I like contributing to
+            <span style="color: var(--orange-yellow-crayola);">Open Source</span>
+            as a Data Science, which is probably the reason why you've ended up here.
+          </p>
+        </section>
+
+
+        <!--
+          - service
+        -->
+
+        <section class="service">
+
+          <h3 class="h3 service-title">🚀 What i'm doing</h3>
+
+          <ul class="service-list">
+
+
+            <li class="service-item">
+
+              <div class="service-icon-box">
+                <img src="./assets/images/Skills/analysvg.svg" alt="design icon" width="80">
+              </div>
+
+              <div class="service-content-box">
+                <h4 class="h4 service-item-title">Data Analytics</h4>
+
+                <p class="service-item-text">
+                  Extracting actionable insights from raw data sets.
+                </p>
+              </div>
+
+            </li>
+
+            <li class="service-item">
+
+              <div class="service-icon-box">
+                <img src="./assets/images/Skills/machinesvg.svg" alt="design icon" width="80">
+              </div>
+
+              <div class="service-content-box">
+                <h4 class="h4 service-item-title">Machine Learning</h4>
+
+                <p class="service-item-text">
+                  Teaching computers to learn from data.
+                </p>
+              </div>
+
+            </li>
+
+            <li class="service-item">
+
+              <div class="service-icon-box">
+                <img src="./assets/images/Skills/deepsvg.svg" alt="Web development icon" width="80">
+              </div>
+
+              <div class="service-content-box">
+                <h4 class="h4 service-item-title">Deep Learning</h4>
+
+                <p class="service-item-text">
+                  Teaching computers to mimicking human brain.
+                </p>
+              </div>
+
+            </li>
+
+            <li class="service-item">
+
+              <div class="service-icon-box">
+                <img src="./assets/images/Skills/computersvg.svg" alt="mobile app icon" width="80">
+              </div>
+
+              <div class="service-content-box">
+                <h4 class="h4 service-item-title">Computer Vision</h4>
+
+                <p class="service-item-text">
+                  Teaching computers to interpret visual information.
+                </p>
+              </div>
+
+            </li>
+
+            <li class="service-item">
+
+              <div class="service-icon-box">
+                <img src="./assets/images/Skills/nlpsvg.svg" alt="camera icon" width="80">
+              </div>
+
+              <div class="service-content-box">
+                <h4 class="h4 service-item-title">Language Processing</h4>
+
+                <p class="service-item-text">
+                  Teaching computers to understand human language.
+                </p>
+              </div>
+
+            </li>
+
+            <li class="service-item">
+
+              <div class="service-icon-box">
+                <img src="./assets/images/Skills/Gensvg.svg" alt="camera icon" width="80">
+              </div>
+
+              <div class="service-content-box">
+                <h4 class="h4 service-item-title">Generative AI</h4>
+
+                <p class="service-item-text">
+                  Teaching computers to generate new content.
+                </p>
+              </div>
+
+            </li>
+
+            <li class="service-item">
+
+              <div class="service-icon-box">
+                <img src="./assets/images/Skills/bigsvg.svg" alt="camera icon" width="80">
+              </div>
+
+              <div class="service-content-box">
+                <h4 class="h4 service-item-title">Big Data</h4>
+
+                <p class="service-item-text">
+                  Managing and analyzing large-scale datasets.
+                </p>
+              </div>
+
+            </li>
+
+            <li class="service-item">
+
+              <div class="service-icon-box">
+                <img src="./assets/images/Skills/deploysvg.svg" alt="camera icon" width="80">
+              </div>
+
+              <div class="service-content-box">
+                <h4 class="h4 service-item-title">MLOPS & AIOPS</h4>
+
+                <p class="service-item-text">
+                  Applying AI to IT Operations management.
+                </p>
+              </div>
+
+            </li>
+
+
+
+
+
+          </ul>
+
+        </section>
+
+
+        <!--
+          - testimonials
+        -->
+
+        <section class="testimonials">
+
+          <h3 class="h3 testimonials-title">🛠️ Technical Stack</h3>
+
+          <ul class="testimonials-list has-scrollbar">
+
+            <li class="testimonials-item">
+              <div class="content-card" data-testimonials-item>
+
+                <figure class="testimonials-avatar-box">
+                  <img src="./assets/images/Skills/analysisskills.png" alt="Data Analysis" width="60"
+                    data-testimonials-avatar>
+                </figure>
+
+                <h4 class="h4 testimonials-item-title" data-testimonials-title>Data Analysis and Visualization</h4>
+
+                <div class="testimonials-text" data-testimonials-text>
+                  <p>
+
+                    <span class="badge badge-primary">Python</span>
+                    <span class="badge badge-secondary">SQl</span>
+                    <span class="badge badge-success">Statistics</span>
+                    <span class="badge badge-danger">PowerBI</span>
+                    <span class="badge badge-warning">Tableau</span>
+                    <span class="badge badge-info">Excel</span>
+                    <span class="badge badge-light">Numpy</span>
+                    <span class="badge badge-teal">Pandas</span>
+                    <span class="badge badge-deeporange">Matplotlib</span>
+                    <span class="badge badge-gray">Seaborn</span>
+                    <span class="badge badge-yellow">Bokeh</span>
+                    <span class="badge badge-purple">Plotly</span>
+                    <span class="badge badge-cyan">Autowiz</span>
+                    <span class="badge badge-red">Profiling</span>
+                    <span class="badge badge-orange">D-Tale</span>
+                    <span class="badge badge-Amber">Sweetwiz</span>
+
+
+
+                  </p>
+                </div>
+
+              </div>
+            </li>
+
+            <li class="testimonials-item">
+              <div class="content-card" data-testimonials-item>
+
+                <figure class="testimonials-avatar-box">
+                  <img src="./assets/images/Skills/machinesvg.png" alt="machine learning" width="60"
+                    data-testimonials-avatar>
+                </figure>
+
+                <h4 class="h4 testimonials-item-title" data-testimonials-title>Machine learning & Deep learning</h4>
+
+                <div class="testimonials-text" data-testimonials-text>
+                  <p>
+
+                    <span class="badge badge-primary">AutoML</span>
+                    <span class="badge badge-secondary">SKlearn</span>
+                    <span class="badge badge-success">Tensorflow</span>
+                    <span class="badge badge-danger">Keras</span>
+                    <span class="badge badge-warning">Pytorch</span>
+                    <span class="badge badge-info">OpenCV</span>
+                    <span class="badge badge-light">FastAPI</span>
+                    <span class="badge badge-teal">BS4</span>
+                    <span class="badge badge-deeporange">Scrapy</span>
+                    <span class="badge badge-gray">Selenium</span>
+                    <span class="badge badge-yellow">Octaparse</span>
+                    <span class="badge badge-purple">Scipy</span>
+                    <span class="badge badge-cyan">LightGBM</span>
+                    <span class="badge badge-red">ELI5</span>
+                    <span class="badge badge-orange">Theano</span>
+                    <span class="badge badge-Amber">Pybrain</span>
+                    <span class="badge badge-maron">Xgboost</span>
+
+
+
+                  </p>
+                </div>
+
+              </div>
+            </li>
+
+            <li class="testimonials-item">
+              <div class="content-card" data-testimonials-item>
+
+                <figure class="testimonials-avatar-box">
+                  <img src="./assets/images/Skills/websvg.png" alt="Emily evans" width="60" data-testimonials-avatar>
+                </figure>
+
+                <h4 class="h4 testimonials-item-title" data-testimonials-title>Web development & Database</h4>
+
+                <div class="testimonials-text" data-testimonials-text>
+                  <p>
+
+                    <span class="badge badge-primary">HTML</span>
+                    <span class="badge badge-secondary">CSS</span>
+                    <span class="badge badge-success">Javascript</span>
+                    <span class="badge badge-danger">Flask</span>
+                    <span class="badge badge-warning">Django</span>
+                    <span class="badge badge-info">Wordpress</span>
+                    <span class="badge badge-light">Bootsrap</span>
+                    <span class="badge badge-teal">MySQL</span>
+                    <span class="badge badge-deeporange">MongoDB</span>
+                  </p>
+                </div>
+
+              </div>
+            </li>
+
+            <li class="testimonials-item">
+              <div class="content-card" data-testimonials-item>
+
+                <figure class="testimonials-avatar-box">
+                  <img src="./assets/images/Skills/mlopsvg.png" alt="Henry william" width="60" data-testimonials-avatar>
+                </figure>
+
+                <h4 class="h4 testimonials-item-title" data-testimonials-title>Artificial intelligence Operations </h4>
+
+                <div class="testimonials-text" data-testimonials-text>
+                  <p>
+
+                    <span class="badge badge-primary">linux</span>
+                    <span class="badge badge-secondary">Github</span>
+                    <span class="badge badge-success">Git</span>
+                    <span class="badge badge-danger">Docker</span>
+                    <span class="badge badge-warning">EC2</span>
+                    <span class="badge badge-info">ECR</span>
+                    <span class="badge badge-light">Bedrock</span>
+                    <span class="badge badge-teal">BS4</span>
+                    <span class="badge badge-deeporange">VertexAI</span>
+                    <span class="badge badge-gray">AWS</span>
+                    <span class="badge badge-yellow">GCP</span>
+                    <span class="badge badge-purple">Azure</span>
+                    <span class="badge badge-cyan">Heroku</span>
+                    <span class="badge badge-red">Python Anywhere</span>
+                    <span class="badge badge-orange">Sagemaker</span>
+                    <span class="badge badge-Amber">Lambda</span>
+                    <span class="badge badge-maron">DVC</span>
+                  </p>
+                </div>
+
+              </div>
+            </li>
+
+            <li class="testimonials-item">
+              <div class="content-card" data-testimonials-item>
+
+                <figure class="testimonials-avatar-box">
+                  <img src="./assets/images/Skills/genaisvg.png" alt="Henry william" width="60"
+                    data-testimonials-avatar>
+                </figure>
+
+                <h4 class="h4 testimonials-item-title" data-testimonials-title>Generative AI & LLM Operations</h4>
+
+                <div class="testimonials-text" data-testimonials-text>
+                  <p>
+
+                    <span class="badge badge-primary">OpenAI</span>
+                    <span class="badge badge-secondary">Langchain</span>
+                    <span class="badge badge-success">Ollama</span>
+                    <span class="badge badge-danger">LMstudio</span>
+                    <span class="badge badge-warning">Unsloth</span>
+                    <span class="badge badge-info">Lamini</span>
+                    <span class="badge badge-light">HugginFace</span>
+                    <span class="badge badge-teal">Boto3</span>
+                    <span class="badge badge-deeporange">FAISS</span>
+                    <span class="badge badge-gray">Pinecone</span>
+                  </p>
+                </div>
+
+              </div>
+            </li>
+
+          </ul>
+
+        </section>
+
+
+        <!--
+          - testimonials modal
+        -->
+
+        <div class="modal-container" data-modal-container>
+
+          <div class="overlay" data-overlay></div>
+
+          <section class="testimonials-modal">
+
+            <button class="modal-close-btn" data-modal-close-btn>
+              <ion-icon name="close-outline"></ion-icon>
+            </button>
+
+            <div class="modal-img-wrapper">
+              <figure class="modal-avatar-box">
+                <img src="./assets/images/avatar-1.png" alt="Daniel lewis" width="80" data-modal-img>
+              </figure>
+
+              <img src="./assets/images/icon-quote.svg" alt="quote icon">
+            </div>
+
+            <div class="modal-content">
+
+              <h4 class="h3 modal-title" data-modal-title>Daniel lewis</h4>
+
+              <time datetime="2021-06-14">14 June, 2021</time>
+
+              <div data-modal-text>
+                <p>
+                  Richard was hired to create a corporate identity. We were very pleased with the work done. She has a
+                  lot of experience
+                  and is very concerned about the needs of client. Lorem ipsum dolor sit amet, ullamcous cididt
+                  consectetur adipiscing
+                  elit, seds do et eiusmod tempor incididunt ut laborels dolore magnarels alia.
+                </p>
+              </div>
+
+            </div>
+
+          </section>
+
+        </div>
+
+      </article>
+
+
+
+
+
+
+
+
+      <!--
+        - #RESUME
+      -->
+
+      <article class="resume" data-page="resume">
+
+        <header>
+          <h2 class="h2 article-title">📋 Resume</h2>
+        </header>
+
+        <section class="timeline">
+
+          <div class="title-wrapper">
+            <div class="icon-box">
+
+              <img src="./assets/images/resume/schoolsvg.svg" alt="design icon" width="40">
+            </div>
+
+            <h3 class="h3">Education</h3>
+          </div>
+
+          <ol class="timeline-list">
+
+            <li class="timeline-item">
+
+              <h4 class="h4 timeline-item-title">Master’s in Computer Application</h4>
+              <span class="badge badge-darkorange" style="color: white;">📆 2023 — 2025</span>
+
+
+              <p class="timeline-text">
+                Jain (Deemed-to-be University) in Elective Artificial Intelligence.
+              </p>
+
+            </li>
+
+            <li class="timeline-item">
+
+              <h4 class="h4 timeline-item-title">Full stack Data Science</h4>
+
+              <span class="badge badge-darkorange" style="color: white;">📆 2022 — 2024</span>
+
+              <p class="timeline-text">
+                INeuron & Applied Roots.
+              </p>
+
+            </li>
+
+            <li class="timeline-item">
+
+              <h4 class="h4 timeline-item-title">Bachelor's in Computer Application</h4>
+
+              <span class="badge badge-darkorange" style="color: white;">📆 2019 — 2022</span>
+
+              <p class="timeline-text">
+                Institute of Technology & Science.
+              </p>
+
+            </li>
+
+          </ol>
+
+        </section>
+
+
+
+
+
+
+
+
+
+        <section class="service">
+
+          <h3 class="h3 service-title">✨ Internship & Experience</h3>
+
+          <ul class="service-list">
+
+
+            <li class="service-item">
+
+              <div class="service-icon-box">
+                <img src="./assets/images/resume/cognizent.png" alt="design icon" width="80">
+              </div>
+
+              <div class="service-content-box">
+                <h4 class="h4 service-item-title">AI Engineer Job Simulation, COGNIZANT</h4>
+                <p class="service-item-text">04/2024 - 05/2024</p>
+                <p class="service-item-text">
+                  Developed AI model to reduce supply chain costs by
+                  15% for Gala Groceries
+                </p>
+              </div>
+
+            </li>
+
+            <li class="service-item">
+
+              <div class="service-icon-box">
+                <img src="./assets/images/resume/bcgx.png" alt="design icon" width="80">
+              </div>
+
+              <div class="service-content-box">
+                <h4 class="h4 service-item-title">GenAI Job Simulation, BCGX</h4>
+
+                <p class="service-item-text">
+                  04/2024 - 05/2024
+                </p>
+                <p class="service-item-text">
+                  Integrated financial data from 10-K and 10-Q reports to
+                  create a user-friendly financial insights chatbot.
+                </p>
+              </div>
+
+            </li>
+
+            <li class="service-item">
+
+              <div class="service-icon-box">
+                <img src="./assets/images/resume/tata.png" alt="Web development icon" width="80">
+              </div>
+
+              <div class="service-content-box">
+                <h4 class="h4 service-item-title">Data Analytics Job Simulation, TATA
+                </h4>
+                <p class="service-item-text">
+                  03/2024 - 04/2024
+                </p>
+                <p class="service-item-text">
+                  Reviewed & visualized to address 4 key questions for an
+                  online retail store as requested by the CMO and CEO.
+                </p>
+              </div>
+
+            </li>
+
+            <li class="service-item">
+
+              <div class="service-icon-box">
+                <img src="./assets/images/resume/Accenture.png" alt="mobile app icon" width="80">
+              </div>
+
+              <div class="service-content-box">
+                <h4 class="h4 service-item-title">Data Analytics Job Simulation, ACCENTURE</h4>
+                <p class="service-item-text">
+                  03/2024 - 04/2024
+                </p>
+                <p class="service-item-text">
+                  Analyzed 7 datasets for content trends in a social buzz
+                  application to guide strategic decisions.
+                </p>
+              </div>
+
+            </li>
+
+            <li class="service-item">
+
+              <div class="service-icon-box">
+                <img src="./assets/images/resume/nitrado.png" alt="camera icon" width="80">
+              </div>
+
+              <div class="service-content-box">
+                <h4 class="h4 service-item-title">Data Analyst Intern, NITRADO</h4>
+                <p class="service-item-text">
+                  12/2023 - 01/2024
+                </p>
+                <p class="service-item-text">
+                  Analyzing player data from Game Rust’s server.
+                </p>
+              </div>
+
+            </li>
+
+            <li class="service-item">
+
+              <div class="service-icon-box">
+                <img src="./assets/images/resume/ineuron.png" alt="camera icon" width="80">
+              </div>
+
+              <div class="service-content-box">
+                <h4 class="h4 service-item-title">Project Based Internship, INEURON</h4>
+                <p class="service-item-text">
+                  02/2022 - 04/2022
+                </p>
+
+                <p class="service-item-text">
+                  Developing a predictive model for thyroid disease.
+                </p>
+              </div>
+
+            </li>
+
+            <li class="service-item">
+
+              <div class="service-icon-box">
+                <img src="./assets/images/resume/globalshala.png" alt="camera icon" width="80">
+              </div>
+
+              <div class="service-content-box">
+                <h4 class="h4 service-item-title">Data Analyst Intern, GLOBALSHALA</h4>
+                <p class="service-item-text">
+                  05/2022 - 06/2022
+                </p>
+                <p class="service-item-text">
+                  Review ad campaign for discontinuation.
+                </p>
+              </div>
+
+            </li>
+
+            <li class="service-item">
+
+              <div class="service-icon-box">
+                <img src="./assets/images/resume/feynn lab.png" alt="camera icon" width="80">
+              </div>
+
+              <div class="service-content-box">
+                <h4 class="h4 service-item-title">ML Engineer Intern, FEYNN LAB</h4>
+                <p class="service-item-text">
+                  02/2022 - 04/2022
+                </p>
+                <p class="service-item-text">
+                  Medical Market Segmentation in the Biotech startup.
+                </p>
+              </div>
+
+            </li>
+
+
+
+
+
+          </ul>
+
+        </section>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        <section class="skill">
+
+          <h3 class="h3 skills-title">🤹 My skills</h3>
+
+          <ul class="skills-list content-card">
+
+            <li class="skills-item">
+
+              <div class="title-wrapper">
+                <h5 class="h5">Data Analysis</h5>
+                <data value="80">80%</data>
+              </div>
+
+              <div class="skill-progress-bg">
+                <div class="skill-progress-fill" style="width: 80%;"></div>
+              </div>
+
+            </li>
+
+            <li class="skills-item">
+
+              <div class="title-wrapper">
+                <h5 class="h5">Machine Learning</h5>
+                <data value="70">70%</data>
+              </div>
+
+              <div class="skill-progress-bg">
+                <div class="skill-progress-fill" style="width: 70%;"></div>
+              </div>
+
+            </li>
+
+            <li class="skills-item">
+
+              <div class="title-wrapper">
+                <h5 class="h5">Deep Learning</h5>
+                <data value="90">70%</data>
+              </div>
+
+              <div class="skill-progress-bg">
+                <div class="skill-progress-fill" style="width: 70%;"></div>
+              </div>
+
+            </li>
+
+            <li class="skills-item">
+
+              <div class="title-wrapper">
+                <h5 class="h5">Computer Vision</h5>
+                <data value="50">60%</data>
+              </div>
+
+              <div class="skill-progress-bg">
+                <div class="skill-progress-fill" style="width: 60%;"></div>
+              </div>
+
+            </li>
+
+            <li class="skills-item">
+
+              <div class="title-wrapper">
+                <h5 class="h5">Genrative AI & NLP</h5>
+                <data value="50">60%</data>
+              </div>
+
+              <div class="skill-progress-bg">
+                <div class="skill-progress-fill" style="width: 60%;"></div>
+              </div>
+
+            </li>
+
+          </ul>
+
+        </section>
+
+
+
+
+        <section class="clients">
+
+
+
+          <ul class="clients-list has-scrollbar">
+
+
+            
+
+            
+            <li class="clients-item">
+              <a href="#">
+                <img src="./assets/images/icon/python.svg" alt="design icon" class="white-svg" width="80">
+              </a>
+            </li>
+            
+            <li class="clients-item">
+              <a href="#">
+                <img src="./assets/images/icon/pythonanywhere.svg" alt="design icon" class="white-svg" width="80">
+              </a>
+            </li>
+
+            <li class="clients-item">
+              <a href="#">
+                <img src="./assets/images/icon/python.svg" alt="design icon" class="white-svg" width="80">
+              </a>
+            </li>
+
+            <li class="clients-item">
+              <a href="#">
+                <img src="./assets/images/icon/python.svg" alt="design icon" class="white-svg" width="80">
+              </a>
+            </li>
+
+            <li class="clients-item">
+              <a href="#">
+                <img src="./assets/images/icon/python.svg" alt="design icon" class="white-svg" width="80">
+              </a>
+            </li>
+
+
+            <li class="clients-item">
+              <a href="#">
+                <img src="./assets/images/icon/python.svg" alt="design icon" class="white-svg" width="80">
+              </a>
+            </li>
+
+
+
+          </ul>
+
+        </section>
+
+
+
+
+      </article>
+
+
+
+
+
+      <!--
+        - #PORTFOLIO
+      -->
+
+      <article class="portfolio" data-page="portfolio">
+
+        <header>
+          <h2 class="h2 article-title">Portfolio</h2>
+        </header>
+
+        <section class="projects">
+
+          <ul class="filter-list">
+
+            <li class="filter-item">
+              <button class="active" data-filter-btn>All</button>
+            </li>
+
+            <li class="filter-item">
+              <button data-filter-btn>Web design</button>
+            </li>
+
+            <li class="filter-item">
+              <button data-filter-btn>Applications</button>
+            </li>
+
+            <li class="filter-item">
+              <button data-filter-btn>Web development</button>
+            </li>
+
+          </ul>
+
+          <div class="filter-select-box">
+
+            <button class="filter-select" data-select>
+
+              <div class="select-value" data-selecct-value>Select category</div>
+
+              <div class="select-icon">
+                <ion-icon name="chevron-down"></ion-icon>
+              </div>
+
+            </button>
+
+            <ul class="select-list">
+
+              <li class="select-item">
+                <button data-select-item>All</button>
+              </li>
+
+              <li class="select-item">
+                <button data-select-item>Web design</button>
+              </li>
+
+              <li class="select-item">
+                <button data-select-item>Applications</button>
+              </li>
+
+              <li class="select-item">
+                <button data-select-item>Web development</button>
+              </li>
 
             </ul>
-            <div class="menu-btn">
-                <i class="fas fa-bars"></i>
-            </div>
-        </div>
-    </nav>
-    <!----------------->
 
-    <!---Home----->
-    <section class="home" id="home">
-        <div class="max-width">
-            <div class="home-content">
-                <div class="model-image">
-                    <model-viewer id="model" camera-controls touch-action="pan-y" autoplay ar
-                        ar-modes="webxr scene-viewer" scale="0.2 0.2 0.2" shadow-intensity="1"
-                        src="model/kawaii__cute_flying_robot.glb" alt="A 3D model" animation auto-rotate
-                        camera-controls>
-                    </model-viewer>
+          </div>
+
+          <ul class="project-list">
+
+            <li class="project-item  active" data-filter-item data-category="web development">
+              <a href="#">
+
+                <figure class="project-img">
+                  <div class="project-item-icon-box">
+                    <ion-icon name="eye-outline"></ion-icon>
+                  </div>
+
+                  <img src="./assets/images/project-1.jpg" alt="finance" loading="lazy">
+                </figure>
+
+                <h3 class="project-title">Finance</h3>
+
+                <p class="project-category">Web development</p>
+
+              </a>
+            </li>
+
+            <li class="project-item  active" data-filter-item data-category="web development">
+              <a href="#">
+
+                <figure class="project-img">
+                  <div class="project-item-icon-box">
+                    <ion-icon name="eye-outline"></ion-icon>
+                  </div>
+
+                  <img src="./assets/images/project-2.png" alt="orizon" loading="lazy">
+                </figure>
+
+                <h3 class="project-title">Orizon</h3>
+
+                <p class="project-category">Web development</p>
+
+              </a>
+            </li>
+
+            <li class="project-item  active" data-filter-item data-category="web design">
+              <a href="#">
+
+                <figure class="project-img">
+                  <div class="project-item-icon-box">
+                    <ion-icon name="eye-outline"></ion-icon>
+                  </div>
+
+                  <img src="./assets/images/project-3.jpg" alt="fundo" loading="lazy">
+                </figure>
+
+                <h3 class="project-title">Fundo</h3>
+
+                <p class="project-category">Web design</p>
+
+              </a>
+            </li>
+
+            <li class="project-item  active" data-filter-item data-category="applications">
+              <a href="#">
+
+                <figure class="project-img">
+                  <div class="project-item-icon-box">
+                    <ion-icon name="eye-outline"></ion-icon>
+                  </div>
+
+                  <img src="./assets/images/project-4.png" alt="brawlhalla" loading="lazy">
+                </figure>
+
+                <h3 class="project-title">Brawlhalla</h3>
+
+                <p class="project-category">Applications</p>
+
+              </a>
+            </li>
+
+            <li class="project-item  active" data-filter-item data-category="web design">
+              <a href="#">
+
+                <figure class="project-img">
+                  <div class="project-item-icon-box">
+                    <ion-icon name="eye-outline"></ion-icon>
+                  </div>
+
+                  <img src="./assets/images/project-5.png" alt="dsm." loading="lazy">
+                </figure>
+
+                <h3 class="project-title">DSM.</h3>
+
+                <p class="project-category">Web design</p>
+
+              </a>
+            </li>
+
+            <li class="project-item  active" data-filter-item data-category="web design">
+              <a href="#">
+
+                <figure class="project-img">
+                  <div class="project-item-icon-box">
+                    <ion-icon name="eye-outline"></ion-icon>
+                  </div>
+
+                  <img src="./assets/images/project-6.png" alt="metaspark" loading="lazy">
+                </figure>
+
+                <h3 class="project-title">MetaSpark</h3>
+
+                <p class="project-category">Web design</p>
+
+              </a>
+            </li>
+
+            <li class="project-item  active" data-filter-item data-category="web development">
+              <a href="#">
+
+                <figure class="project-img">
+                  <div class="project-item-icon-box">
+                    <ion-icon name="eye-outline"></ion-icon>
+                  </div>
+
+                  <img src="./assets/images/project-7.png" alt="summary" loading="lazy">
+                </figure>
+
+                <h3 class="project-title">Summary</h3>
+
+                <p class="project-category">Web development</p>
+
+              </a>
+            </li>
+
+            <li class="project-item  active" data-filter-item data-category="applications">
+              <a href="#">
+
+                <figure class="project-img">
+                  <div class="project-item-icon-box">
+                    <ion-icon name="eye-outline"></ion-icon>
+                  </div>
+
+                  <img src="./assets/images/project-8.jpg" alt="task manager" loading="lazy">
+                </figure>
+
+                <h3 class="project-title">Task Manager</h3>
+
+                <p class="project-category">Applications</p>
+
+              </a>
+            </li>
+
+            <li class="project-item  active" data-filter-item data-category="web development">
+              <a href="#">
+
+                <figure class="project-img">
+                  <div class="project-item-icon-box">
+                    <ion-icon name="eye-outline"></ion-icon>
+                  </div>
+
+                  <img src="./assets/images/project-9.png" alt="arrival" loading="lazy">
+                </figure>
+
+                <h3 class="project-title">Arrival</h3>
+
+                <p class="project-category">Web development</p>
+
+              </a>
+            </li>
+
+          </ul>
+
+        </section>
+
+      </article>
 
 
 
-                    
 
 
+      <!--
+        - #BLOG
+      -->
+
+      <article class="blog" data-page="blog">
+
+        <header>
+          <h2 class="h2 article-title">📚 Blogs</h2>
+        </header>
+
+        <section class="blog-posts">
+
+          <ul class="blog-posts-list">
 
 
+            <li class="blog-post-item">
+              <a href="Blogs/diffusion.html" target="_blank">
+
+                <figure class="blog-banner-box">
+                  <img class="no-hover-effect" src="./assets/images/blogs/diffusion.png" alt="Best fonts every designer"
+                    loading="lazy">
+                </figure>
+
+                <div class="blog-content">
+
+                  <div class="blog-meta">
+                    <p class="blog-category">Genrative AI</p>
+
+                    <span class="dot"></span>
+
+                    <time datetime="2022-02-23">May 18, 2024</time>
+                  </div>
+
+                  <h3 class="h3 blog-item-title">How Diffusion Models Work?</h3>
+
+                  <p class="blog-text">
+                    Add noise, learn to remove it, generate new data.
+                  </p>
 
                 </div>
-                <div class="text-1"> Do you know? </div>
-                <div class="text-2"> "Why do data scientists prefer dark mode? Because light attracts too many
-                    outliers." </div>
-                <a href="#intern"> 🗂️ Discover My Work</a>
-                <a href="#ab"> 📋 Resume </a>
-            </div>
-        </div>
-    </section>
-    <!----------------->
+
+              </a>
+            </li>
 
 
-    <!---INFO---------->
-    <section class="info" id="ab">
-        <div class="max-width">
-            <h2 class="titles">About <span style="color: #BDA3A1;">:ME </span>
-                <a style=" color: inherit; " href="https://github.com/Thinkliketushar" target="_blank"> </a>
-            </h2>
-            <div class="info-content">
-                <div class="column left" id="tilt">
-                    <img src="images/tushar.png" alt="">
-                </div>
-                <div class="column right">
-                    <div class="text"> I'm Tushar :] As a
-                        <span class="typing-2"></span>
-                    </div>
-                    <p>I'm a <span style="color: orange;">22 </span> year old Data Scientist and freelancer based in
-                        India. I've taken coding seriously since 2021, and have been freelancing since 2024. Recently,
-                        however, I've grown a knack for giving back to community. I like contributing to <span
-                            style="color: orange;">OPEN SOURCE </span>as a Data Science, which is probably the reason
-                        why you've ended up here.</p> <br>
-                    <p>📞 +91 8851084852</p>
-                    <p>📨 Tushar.aka.datascientist @ gmail.com</p> <br>
+            <li class="blog-post-item">
+              <a href="Blogs/langserversmith.html" target="_blank">
 
+                <figure class="blog-banner-box">
+                  <img class="no-hover-effect" src="./assets/images/blogs/langserver and langsmith.png"
+                    alt="Best fonts every designer" loading="lazy">
+                </figure>
 
-                    <p id="ex"> 🔹 Esport Valorant & PUBG Player🔹 Blogathon 🔹 Commentary 🔹 Discord Management 🔹 CR
-                        🔹
-                        Volunteer 🔹Crypto Mining 🔹 Hackathon 🔹 Kaggle Competitions 🔹 Gaming 🔹Treveling 🔹 Updated
-                        with latest Trend</p>
-                </div>
-            </div>
-    </section>
-    <!----------------->
+                <div class="blog-content">
 
+                  <div class="blog-meta">
+                    <p class="blog-category">Genrative AI</p>
 
-    <!----Education----->
-    <section class="content2" id="content2">
-        <div class="max-width">
-            <h2 class="titles"> Education <span style="color: #eed1c7;">:Certificate</span></h2>
+                    <span class="dot"></span>
 
-            <div class="serv-content">
-                <div class="card" id="services2">
-                    <div class="box">
-                        <img class="imgs" src="images/internship/ITS.png">
+                    <time datetime="2022-02-23">May 17, 2024</time>
+                  </div>
 
-                        <h3> 🏫 ITS College
-                        </h3>
+                  <h3 class="h3 blog-item-title">LangServe and LangSmith</h3>
 
-                        <span class="probcon2">
-                            📚 Bachelor of Computer Applications
-                        </span> <br>
-                        <span class="probcon2">
-                            📆 2019-2022
-                        </span>
-                    </div>
+                  <p class="blog-text">
+                    LangSmith is a companion technology to LangChain.
+                  </p>
+
                 </div>
 
-                <div class="card" id="services3">
-                    <div class="box">
-                        <img class="imgs" src="images/internship/data sc.png">
-                        <h3> 🏫 INeuron & Applied Root
-                        </h3>
+              </a>
+            </li>
 
-                        <span class="probcon2">
-                            📚 Full Stack Data Science
-                        </span> <br>
-                        <span class="probcon2">
-                            📆 2022-2023
-                        </span>
+            <li class="blog-post-item">
+              <a href="Blogs/3llmbasedpro.html" target="_blank">
 
-                    </div>
+
+                <figure class="blog-banner-box">
+                  <img class="no-hover-effect" src="./assets/images/blogs/3 LLM based Project.png"
+                    alt="Design conferences in 2022" loading="lazy">
+                </figure>
+
+                <div class="blog-content">
+
+                  <div class="blog-meta">
+                    <p class="blog-category">Generative AI</p>
+
+                    <span class="dot"></span>
+
+                    <time datetime="2022-02-23">May 17, 2024</time>
+                  </div>
+
+                  <h3 class="h3 blog-item-title">3 LLM based Project</h3>
+
+                  <p class="blog-text">
+                    Chatbot, Synonyms Generator, Chatbot through PDF.
+                  </p>
+
                 </div>
 
-                <div class="card" id="services3">
-                    <div class="box">
-                        <img class="imgs" src="images/internship/jain.png">
+              </a>
+            </li>
 
+            <li class="blog-post-item">
+              <a href="Blogs/chainagentmemory.html" target="_blank">
 
-                        <h3> 🏫 Jain (Deemed-to-be University)
-                        </h3>
+                <figure class="blog-banner-box">
+                  <img class="no-hover-effect" src="./assets/images/blogs/Chain Agent Memory.png"
+                    alt="Best fonts every designer" loading="lazy">
+                </figure>
 
-                        <span class="probcon2">
-                            📚 Master in Computer Applications (AI)
-                        </span> <br>
-                        <span id="intern" class="probcon2">
-                            📆 2023-2025
-                        </span>
+                <div class="blog-content">
 
-                    </div>
-                </div>
-            </div>
+                  <div class="blog-meta">
+                    <p class="blog-category">Genrative AI</p>
 
-        </div>
-    </section>
-    <!------------------>
+                    <span class="dot"></span>
 
+                    <time datetime="2022-02-23">May 17, 2024</time>
+                  </div>
 
-    <!--INTERNSHIP-->
-    <section class="content3" id="content3">
-        <div class="max-width">
-            <h2 class="titles"> Internship <span style="color: #eed1c7;">:Experience</span></h2>
+                  <h3 class="h3 blog-item-title">Chain Agent Memory</h3>
 
-            <div class="serv-content">
-                <div class="card" id="services3">
-                    <div class="box">
-                        <img class="imgs" src="images/internship/feynn.png">
-                        <h3> <b> 💼 Feynn Lab
-                            </b> </h3>
-                        <h6>👔 ML Engineer Intern </h6>
-                        <h6>🕗 Feb 2022 - Apr 2022 <a target="_blank" href="https://github.com/TUSHAR-PERSPECTIVE">REPO
-                            </a>
-                        </h6>
-                        <h6>Medical Market Segmentation in the Biotech startup.</h6>
-                    </div>
+                  <p class="blog-text">
+                    The Memory Challenge in Large Language Models.
+                  </p>
+
                 </div>
 
-                <div class="card" id="services3">
-                    <div class="box">
-                        <img class="imgs" src="images/internship/global.png">
-                        <h3> <b> 💼 Globalshala
-                            </b> </h3>
-                        <h6>👔 Data Analyst Intern </h6>
-                        <h6>🕗 May 2022 - Jun 2022 <a target="_blank" href="https://github.com/TUSHAR-PERSPECTIVE">REPO
-                            </a>
+              </a>
+            </li>
 
-                        </h6>
-                        <h6>Review ad campaign for discontinuation.</h6>
-                    </div>
+
+            <li class="blog-post-item">
+              <a href="Blogs/chainagentmemory.html" target="_blank">
+
+                <figure class="blog-banner-box">
+                  <img class="no-hover-effect" src="./assets/images/blogs/langchain.png" alt="Best fonts every designer"
+                    loading="lazy">
+                </figure>
+
+                <div class="blog-content">
+
+                  <div class="blog-meta">
+                    <p class="blog-category">Genrative AI</p>
+
+                    <span class="dot"></span>
+
+                    <time datetime="2022-02-23">May 17, 2024</time>
+                  </div>
+
+                  <h3 class="h3 blog-item-title">Chain Agent Memory</h3>
+
+                  <p class="blog-text">
+                    The Memory Challenge in Large Language Models.
+                  </p>
+
                 </div>
 
-                <div class="card" id="services3">
-                    <div class="box">
-                        <img class="imgs" src="images/internship/ineuron.png">
-                        <h3> <b> 💼 INeuron
-                            </b> </h3>
-                        <h6>👔 Project Based Internship </h6>
-                        <h6>🕗 Feb 2022 - Apr 2022 <a target="_blank" href="https://github.com/TUSHAR-PERSPECTIVE">REPO
-                            </a>
+              </a>
+            </li>
 
-                        </h6>
-                        <h6>Developing a predictive model for thyroid disease.</h6>
-                    </div>
+            <li class="blog-post-item">
+              <a href="Blogs/aiops.html" target="_blank">
+
+                <figure class="blog-banner-box">
+                  <img class="no-hover-effect" src="./assets/images/blogs/aiops.png" alt="Best fonts every designer"
+                    loading="lazy">
+                </figure>
+
+                <div class="blog-content">
+
+                  <div class="blog-meta">
+                    <p class="blog-category">Deployment</p>
+
+                    <span class="dot"></span>
+
+                    <time datetime="2022-02-23">May 17, 2024</time>
+                  </div>
+
+                  <h3 class="h3 blog-item-title">MLOPS, AIOPS & LLMOPS</h3>
+
+                  <p class="blog-text">
+                    Strategic deployment for efficient operational management.
+                  </p>
+
                 </div>
 
-                <div class="card" id="services3">
-                    <div class="box">
-                        <img class="imgs" src="images/internship/nitrado.png">
-                        <h3> <b> 💼 Nitrado
-                            </b> </h3>
-                        <h6>👔 Data Analyst Intern </h6>
-                        <h6>🕗 Dec 2023 - Jan 2024 <a target="_blank" href="https://github.com/TUSHAR-PERSPECTIVE">REPO
-                            </a>
+              </a>
+            </li>
 
-                        </h6>
-                        <h6>Analyzing player data from Game Rust’s server.</h6>
-                    </div>
-                </div>
-            </div>
 
-        </div>
-    </section>
+            <li class="blog-post-item">
+              <a href="Blogs/aiops.html" target="_blank">
 
-    <section class="content3" id="content3">
-        <div class="max-width">
-            <div class="serv-content">
-                <div class="card" id="services3">
-                    <div class="box">
-                        <img class="imgs" src="images/internship/accenture.png">
-                        <h3> <b> 💼 Accenture
-                            </b> </h3>
+                <figure class="blog-banner-box">
+                  <img class="no-hover-effect" src="./assets/images/blogs/rag.png" alt="Best fonts every designer"
+                    loading="lazy">
+                </figure>
 
-                        <h6>👔 Data Analytics Job Simulation </h6>
-                        <h6>🕗 <span style="color: #BDA3A1;
-                                ">Mar 2024 - Apr 2024 </span> <a target="_blank"
-                                href="https://github.com/TUSHAR-PERSPECTIVE">REPO </a>
+                <div class="blog-content">
 
-                        </h6>
-                        <h6>Analyzing User Insights of Social Buzz Application.</h6>
-                    </div>
+                  <div class="blog-meta">
+                    <p class="blog-category">Deployment</p>
+
+                    <span class="dot"></span>
+
+                    <time datetime="2022-02-23">May 17, 2024</time>
+                  </div>
+
+                  <h3 class="h3 blog-item-title">MLOPS, AIOPS & LLMOPS</h3>
+
+                  <p class="blog-text">
+                    Strategic deployment for efficient operational management.
+                  </p>
+
                 </div>
 
-                <div class="card" id="services3">
-                    <div class="box">
-                        <img class="imgs" src="images/internship/tata.png">
-                        <h3> <b> 💼 TATA
-                            </b> </h3>
+              </a>
+            </li>
 
-                        <h6>👔 Data Analytics Job Simulation </h6>
-                        <h6>🕗 Mar 2024 - Apr 2024 <a target="_blank" href="https://github.com/TUSHAR-PERSPECTIVE">REPO
-                            </a>
+            <li class="blog-post-item">
+              <a href="Blogs/aiops.html" target="_blank">
 
-                        </h6>
-                        <h6>Sales Insights in Online retail store.</h6>
-                    </div>
+                <figure class="blog-banner-box">
+                  <img class="no-hover-effect" src="./assets/images/blogs/EDA.png" alt="Best fonts every designer"
+                    loading="lazy">
+                </figure>
+
+                <div class="blog-content">
+
+                  <div class="blog-meta">
+                    <p class="blog-category">Deployment</p>
+
+                    <span class="dot"></span>
+
+                    <time datetime="2022-02-23">May 17, 2024</time>
+                  </div>
+
+                  <h3 class="h3 blog-item-title">MLOPS, AIOPS & LLMOPS</h3>
+
+                  <p class="blog-text">
+                    Strategic deployment for efficient operational management.
+                  </p>
+
                 </div>
 
-                <div class="card" id="services3">
-                    <div class="box">
-                        <img class="imgs" src="images/internship/bcgx.png">
-                        <h3> <b> 💼 BCGX
-                            </b> </h3>
-                        <h6>👔 GenAI Job Simulation </h6>
-                        <h6>🕗 Apr 2024 - Jun 2024 <a target="_blank" href="https://github.com/TUSHAR-PERSPECTIVE">REPO
-                            </a>
+              </a>
+            </li>
 
-                        </h6>
-                        <h6>Develop a chatbot to assist with financial inquiries.</h6>
-                    </div>
+
+            <li class="blog-post-item">
+              <a href="Blogs/aiops.html" target="_blank">
+
+                <figure class="blog-banner-box">
+                  <img class="no-hover-effect" src="./assets/images/blogs/aws.png" alt="Best fonts every designer"
+                    loading="lazy">
+                </figure>
+
+                <div class="blog-content">
+
+                  <div class="blog-meta">
+                    <p class="blog-category">Deployment</p>
+
+                    <span class="dot"></span>
+
+                    <time datetime="2022-02-23">May 17, 2024</time>
+                  </div>
+
+                  <h3 class="h3 blog-item-title">MLOPS, AIOPS & LLMOPS</h3>
+
+                  <p class="blog-text">
+                    Strategic deployment for efficient operational management.
+                  </p>
+
                 </div>
 
-                <div class="card" id="services3">
-                    <div class="box">
-                        <img class="imgs" src="images/internship/cognizent.png">
-                        <h3> <b> 💼 Cognizant
-                            </b> </h3>
-                        <h6>👔 AI Engineer Job Simulation </h6>
-                        <h6> 🕗 Apr 2024 - Jun 2024 <a target="_blank" href="https://github.com/TUSHAR-PERSPECTIVE">REPO
-                            </a>
-
-                        </h6>
-                        <h6>Solve Gala Groceries supply chain issues using AI Model.</h6>
-                    </div>
-                </div>
-            </div>
-
-        </div>
-    </section>
-    <!-------------->
-
-
-    <!---Technical Stack--->
-    <section class="slide" id="slide">
-
-        <h2 class="titles"> Technical <span style="color: #eed1c7">:Stack</span></h2>
-        <div class="max-width" data-interval="3000">
-            <div class="carousel owl-carousel" data-interval="3000">
-                <div class="card" data-interval="3000">
-                    <div class="box" data-interval="3000">
-                        <img src="images/Skills/python.png" alt="">
-                        <div class="text">Python</div>
-
-                    </div>
-                </div>
-
-                <div class="card" data-interval="3000">
-                    <div class="box" data-interval="3000">
-                        <img src="images/Skills/numpy.png" alt="">
-                        <div class="text">Numpy</div>
-
-                    </div>
-                </div>
-
-                <div class="card" data-interval="3000">
-                    <div class="box" data-interval="3000">
-                        <img src="images/Skills/pandas.png" alt="">
-                        <div class="text">Pandas</div>
+              </a>
+            </li>
 
-                    </div>
-                </div>
 
-                <div class="card" data-interval="3000">
-                    <div class="box" data-interval="3000">
-                        <img src="images/Skills/matplotlib.png" alt="">
-                        <div class="text">Matplotlib</div>
+          </ul>
 
-                    </div>
-                </div>
-
-                <div class="card" data-interval="3000">
-                    <div class="box" data-interval="3000">
-                        <img src="images/Skills/flask.png" alt="">
-                        <div class="text">Flask</div>
+        </section>
 
-                    </div>
-                </div>
-                <div class="card" data-interval="3000">
-                    <div class="box" data-interval="3000">
-                        <img src="images/Skills/django.png" alt="">
-                        <div class="text">Django</div>
-
-                    </div>
-                </div>
-                <div class="card" data-interval="3000">
-                    <div class="box" data-interval="3000">
-                        <img src="images/Skills/streamlit.png" alt="">
-                        <div class="text">Streamlit</div>
+      </article>
 
-                    </div>
-                </div>
 
-                <div class="card" data-interval="3000">
-                    <div class="box" data-interval="3000">
-                        <img src="images/Skills/tensorlfow.png" alt="">
-                        <div class="text">Tensorflow</div>
 
-                    </div>
-                </div>
 
-                <div class="card" data-interval="3000">
-                    <div class="box" data-interval="3000">
-                        <img src="images/Skills/keras.png" alt="">
-                        <div class="text">Keras</div>
 
-                    </div>
-                </div>
+      <!--
+        - #CONTACT
+      -->
 
-                <div class="card" data-interval="3000">
-                    <div class="box" data-interval="3000">
-                        <img src="images/Skills/pytorch.png" alt="">
-                        <div class="text">Pytorch</div>
+      <article class="contact" data-page="contact">
 
-                    </div>
-                </div>
+        <header>
+          <h2 class="h2 article-title">📩 Contact</h2>
+        </header>
 
-                <div class="card" data-interval="3000">
-                    <div class="box" data-interval="3000">
-                        <img src="images/Skills/sklearn.png" alt="">
-                        <div class="text">Sklearn</div>
+        <section class="mapbox" data-mapbox>
+          <figure>
 
-                    </div>
-                </div>
 
 
+            <iframe
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d33281.54518176889!2d77.29029972239029!3d28.740712368662763!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390cf95ab45c8c6b%3A0x4594542a1e25111e!2sLoni%2C%20Ghaziabad%2C%20Uttar%20Pradesh%20201102!5e0!3m2!1sen!2sin!4v1715943858367!5m2!1sen!2sin&maptype=satellite"
+              width="400" height="300" loading="lazy"></iframe>
+          </figure>
 
-            </div>
-        </div>
-    </section>
 
-    <section class="content" id="content">
-        <div class="max-width">
-            <div class="serv-content">
-                <div class="card">
-                    <div class="box">
-                        <img class="imgs" src="images/internship/skill1.png">
 
-                        <h3>🎯 Programming Language :- <span class="prob1"> Python & SQL </span></h3>
 
-                        <h3>🎯 Machine learning & Deep learning :- <span class="prob1"> Algorithms, libraries (e.g.,
-                                sci-kit-learn, TensorFlow, Keras, PyTorch), Web scraping, Data Engineering, Fast API,
-                                etc. </span> </h3>
 
-                        <h3>🎯 Data Analysis & Visualization :- <span class="prob1"> Statistical method, Power BI,
-                                Tableau, Excel, Numpy, Pandas, Matplotlib & more. </span> </h3>
 
-                    </div>
-                </div>
 
+        </section>
 
-                <div class="card">
-                    <div class="box">
+        <section class="contact-form">
 
-                        <img class="imgs" src="images/internship/skill2.png">
+          <h3 class="h3 form-title">Contact Form</h3>
 
-                        <h3>🎯 Web development & Database :- <span class="prob1"> HTML, CSS, javascript, Flask, Django,
-                                WordPress, Bootstrap, Mysql & MongoDB. </span></h3>
+          <form action="#" class="form" data-form>
 
-                        <h3>🎯 AIOPS & LLMOPS :- <span class="prob1"> Linux, Github, AWS(EC2, Bedrock), GCP, Azure,
-                                Heroku & Python Anywhere. </span></h3>
+            <div class="input-wrapper">
+              <input type="text" name="fullname" class="form-input" placeholder="Full name" required data-form-input>
 
-                        <h3>🎯 GenAI :-<span class="prob1"> Prompt Engineering, RAG, Langchain, Ollama, LMstudio,
-                                Unslot. </span> </h3>
-
-                    </div>
-                </div>
-            </div>
-        </div>
-        </div>
-    </section>
-
-    <section class="slide" id="work">
-        <div class="max-width" data-interval="3000">
-
-            <div class="carousel owl-carousel" data-interval="3000">
-                <div class="card" data-interval="3000">
-                    <div class="box" data-interval="3000">
-                        <img src="images/Skills/Github.png" alt="">
-                        <div class="text">Github</div>
-
-                    </div>
-                </div>
-
-                <div class="card" data-interval="3000">
-                    <div class="box" data-interval="3000">
-                        <img src="images/Skills/git.png" alt="">
-                        <div class="text">Git</div>
-
-                    </div>
-                </div>
-
-                <div class="card" data-interval="3000">
-                    <div class="box" data-interval="3000">
-                        <img src="images/Skills/Heroku.png" alt="">
-                        <div class="text">Heroku</div>
-
-                    </div>
-                </div>
-
-                <div class="card" data-interval="3000">
-                    <div class="box" data-interval="3000">
-                        <img src="images/Skills/linux.png" alt="">
-                        <div class="text">Linux</div>
-
-                    </div>
-                </div>
-
-                <div class="card" data-interval="3000">
-                    <div class="box" data-interval="3000">
-                        <img src="images/Skills/zenml.png" alt="">
-                        <div class="text">ZenML</div>
-
-                    </div>
-                </div>
-
-                <div class="card" data-interval="3000">
-                    <div class="box" data-interval="3000">
-                        <img src="images/Skills/gcp.png" alt="">
-                        <div class="text">GCP</div>
-
-                    </div>
-                </div>
-
-                <div class="card" data-interval="3000">
-                    <div class="box" data-interval="3000">
-                        <img src="images/Skills/azure.png" alt="">
-                        <div class="text">Azure</div>
-
-                    </div>
-                </div>
-
-                <div class="card" data-interval="3000">
-                    <div class="box" data-interval="3000">
-                        <img src="images/Skills/aws.png" alt="">
-                        <div class="text">AWS</div>
-
-                    </div>
-                </div>
-
-                <div class="card" data-interval="3000">
-                    <div class="box" data-interval="3000">
-                        <img src="images/Skills/kafka.png" alt="">
-                        <div class="text">Kafka</div>
-
-                    </div>
-                </div>
-
-                <div class="card" data-interval="3000">
-                    <div class="box" data-interval="3000">
-                        <img src="images/Skills/hadoop.png" alt="">
-                        <div class="text">Hadoop</div>
-
-                    </div>
-                </div>
-
-                <div class="card" data-interval="3000">
-                    <div class="box" data-interval="3000">
-                        <img src="images/Skills/spark.png" alt="">
-                        <div class="text">Spark</div>
-
-                    </div>
-                </div>
-
-                <div class="card" data-interval="3000">
-                    <div class="box" data-interval="3000">
-                        <img src="images/Skills/MongoDB.png" alt="">
-                        <div class="text">MongoDB</div>
-
-                    </div>
-                </div>
-
-                <div class="card" data-interval="3000">
-                    <div class="box" data-interval="3000">
-                        <img src="images/Skills/casndra.png" alt="">
-                        <div class="text">Cassendra</div>
-
-                    </div>
-                </div>
-
-                <div class="card" data-interval="3000">
-                    <div class="box" data-interval="3000">
-                        <img src="images/Skills/mysql.png" alt="">
-                        <div class="text">MySQL</div>
-
-                    </div>
-                </div>
-
-                <div class="card" data-interval="3000">
-                    <div class="box" data-interval="3000">
-                        <img src="images/Skills/vmware.png" alt="">
-                        <div class="text">VMware</div>
-
-                    </div>
-                </div>
-
-
-
-
-            </div>
-        </div>
-    </section>
-    <!----------------->
-
-
-    <!--Project--------->
-    <section class="content2" id="content2">
-        <div class="max-width">
-            <h2 class="titles"> Showcase <span style="color: #eed1c7;">:Projects</span></h2>
-
-            <div class="serv-content">
-                <div class="card" id="services2">
-                    <div class="box">
-                        <img class="imgs" src="images/internship/1.png"> <br>
-
-                        <span class="probcon2">🚀 PhonePe Transaction Analysis Dashboard & Andorid Application </span>
-                        <br>
-                        <span class="probcon2">🚀 Self-Autonomous Driving Car </span> <br>
-                        <span class="probcon2">🚀 Diet Recommendation System </span>
-
-
-                    </div>
-                </div>
-
-                <div class="card" id="services3">
-                    <div class="box">
-                        <img class="imgs" src="images/internship/2.png"> <br>
-
-
-                        <span class="probcon2">🚀 Product Chatbot Assistant for E-commerce in Browser Extension.
-                        </span> <br>
-
-                        <span class="probcon2">🚀 Voice Summarizer for Discord, Zoom, and more.
-                        </span> <br>
-
-                        <span class="probcon2">🚀 Virtual Dressing Room: Try before you buy with our virtual try-on
-                            experience.
-                        </span> <br>
-
-                        <span class="probcon2">🚀 AI-Generated Child Images - Perfect for Enhancing Websites Like
-                            Shadi.com.
-                        </span> <br>
-                        <span class="probcon2">🚀 Chatbot that do fraud!
-                        </span> <br>
-
-                    </div>
-                </div>
-
-                <div class="card" id="services3">
-                    <div class="box">
-                        <img class="imgs" src="images/internship/3.png"> <br>
-
-
-                        <span class="probcon2">🚀 Discord Chat Analysis Bot
-                        </span> <br>
-                        <span class="probcon2">🚀 P<span class="probcon2">ornographic Content Classificatispan. <br>
-                                </h6>
-                                <span class="probcon2">🚀 GTA5 Races Recommendation System.
-                                </span> <br>
-                                <span class="probcon2">🚀 Smart Parental Alert System for Gaming.
-                                </span> <br>
-
-                    </div>
-                </div>
+              <input type="email" name="email" class="form-input" placeholder="Email address" required data-form-input>
             </div>
 
-        </div>
-    </section>
-    <!------------------->
+            <textarea name="message" class="form-input" placeholder="Your Message" required data-form-input></textarea>
 
-    <!-----MORE-------->
-    <section class="slide" id="slide">
-        <h2 class="titles"> Interpersonal <span style="color: #eed1c7">:Skills</span></h2>
-
-        <div class="max-width" data-interval="3000">
-            <div class="carousel owl-carousel" data-interval="3000">
-                <div class="card" data-interval="3000">
-                    <div class="box" data-interval="3000">
-                        <img src="images/skill/sk1.png" alt="">
-                        <div class="text">C</div>
-
-                    </div>
-                </div>
-
-                <div class="card" data-interval="3000">
-                    <div class="box" data-interval="3000">
-                        <img src="images/skill/sk2.png" alt="">
-                        <div class="text">Cplus+</div>
-
-                    </div>
-                </div>
-
-                <div class="card" data-interval="3000">
-                    <div class="box" data-interval="3000">
-                        <img src="images/skill/sk3.png" alt="">
-                        <div class="text">CSS</div>
-
-                    </div>
-                </div>
-
-                <div class="card" data-interval="3000">
-                    <div class="box" data-interval="3000">
-                        <img src="images/skill/sk4.png" alt="">
-                        <div class="text">HTML</div>
-
-                    </div>
-                </div>
-
-                <div class="card" data-interval="3000">
-                    <div class="box" data-interval="3000">
-                        <img src="images/skill/sk5.png" alt="">
-                        <div class="text">PHP</div>
-
-                    </div>
-                </div>
-
-                <div class="card" data-interval="3000">
-                    <div class="box" data-interval="3000">
-                        <img src="images/skill/sk6.png" alt="">
-                        <div class="text">JAVA</div>
-
-                    </div>
-                </div>
-
-                <div class="card" data-interval="3000">
-                    <div class="box" data-interval="3000">
-                        <img src="images/skill/sk7.png" alt="">
-                        <div class="text">R</div>
-
-                    </div>
-                </div>
-
-                <div class="card" data-interval="3000">
-                    <div class="box" data-interval="3000">
-                        <img src="images/skill/sk8.png" alt="">
-                        <div class="text">Script</div>
-
-                    </div>
-                </div>
-
-                <div class="card" data-interval="3000">
-                    <div class="box" data-interval="3000">
-                        <img src="images/skill/sk9.png" alt="">
-                        <div class="text">Wordpress</div>
-
-                    </div>
-                </div>
-
-                <div class="card" data-interval="3000">
-                    <div class="box" data-interval="3000">
-                        <img src="images/skill/sk10.png" alt="">
-                        <div class="text">Audacity</div>
-
-                    </div>
-                </div>
-
-                <div class="card" data-interval="3000">
-                    <div class="box" data-interval="3000">
-                        <img src="images/skill/sk11.png" alt="">
-                        <div class="text">Filmora</div>
-
-                    </div>
-                </div>
-
-                <div class="card" data-interval="3000">
-                    <div class="box" data-interval="3000">
-                        <img src="images/skill/sk12.png" alt="">
-                        <div class="text">Canva</div>
-
-                    </div>
-                </div>
-
-
-            </div>
-        </div>
-    </section>
-    <!----------------->
+            <button class="form-btn" type="submit" disabled data-form-btn>
+              <ion-icon name="paper-plane"></ion-icon>
+              <span>Send Message
+                <div id="badge-container" style="display: inline-block;"></div>
 
 
 
-    
-    <section class="content3" id="content3">
-        <div class="max-width">
-            <h2 class="titles"> Blog <span style="color: #eed1c7;">:s</span></h2>
+              </span>
+            </button>
 
-            <div class="serv-content">
-                <div class="card" id="services3">
-                    <div class="box">
-                        <a target="_blank" href="blogs/GenerativeAI.html">
-                        <img class="imgs" src="images/blogs/genai.png">
-                        <h3> <b> 📰 Genrative AI Basics
-                        </b> </h3></a>
+          </form>
 
-                    </div>
-                </div>
+        </section>
 
-                <div class="card" id="services3">
-                    <div class="box">
+      </article>
 
-                        <a target="_blank" href="blogs/promptEnginnering.html">
-                        <img class="imgs" src="images/blogs/prompt enginnering.png">
-                        <h3> <b> 📰 Prompt Engineering
-                            </b> </h3> </a>
+    </div>
 
-                    </div>
-                </div>
 
-                <div class="card" id="services3">
-                    <div class="box">
-                        <a target="_blank" href="blogs/transformerarch.html">
-                        <img class="imgs" src="images/blogs/Transformer&llm.png">
 
-                        <h3> <b> 📰 Transformer & LLM 
-                            </b> </h3></a>
-                    </div>
-                </div>
-
-                <div class="card" id="services3">
-                    <div class="box">
-                        <a target="_blank" href="blogs/finetuningLLM.html">
-                        <img class="imgs" src="images/blogs/finetuning LLm.png">
-                        <h3> <b> 📰 Finetuning LLM 
-                            </b> </h3> </a>
-
-                    </div>
-                </div>
-            </div>
-
-        </div>
-    </section>
+  </main>
 
 
 
 
 
 
+  <!--
+    - custom js link
+  -->
+  <script src="./assets/js/script.js"></script>
+  <!--
+    - ionicon link
+  -->
+  <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+  <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
 
-
-
-
-
-    <!-- footer section start -->
-    <footer>
-        <span>Created By <a style="color: orange;" href="">TUSHAR-PERSPECTIVE</a> | <span
-                class="far fa-copyright"></span>
-            2024 All rights
-            reserved.</span>
-    </footer>
-
-
-
-
-
-
-
-
-    <script src="script.js"></script>
 </body>
-
-
 
 </html>

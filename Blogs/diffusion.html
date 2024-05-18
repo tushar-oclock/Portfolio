@@ -1,0 +1,725 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>BLOG</title>
+
+  <!--
+    - favicon
+  -->
+  <link rel="shortcut icon" href="../assets/images/logo.png" type="image/x-icon">
+
+  <!--
+    - custom css link
+  -->
+  <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@400;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@400;500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../assets/css/style.css">
+  <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;700&display=swap">
+
+
+
+
+  <!--
+    - google font link
+  -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+
+  <div class="video-container">
+    <video autoplay loop muted id="background-video">
+      <source src="../assets/images/video/bg2.mp4" type="video/mp4">
+      Your browser does not support the video tag.
+    </video>
+  </div>
+
+
+
+  <!--
+    - #MAIN
+  -->
+
+  <main>
+
+    <!--
+      - #SIDEBAR
+    -->
+
+    <aside class="sidebar" data-sidebar>
+      <div class="sidebar-info">
+
+        <figure class="avatar-box">
+          <img class=" test-shine" src="../assets/images/TusharArora.png" alt="tushar arora" width="80">
+        </figure>
+
+
+
+
+
+        <div class="info-content">
+          <h1 class="name" title="Tushar Arora">📛TUSHAR-PERSPECTIVE</h1>
+
+          <div style="display: flex; justify-content: center; font-family:  Ubuntu;">
+            <div id="badge-container" style="display: inline-block;"></div>
+          </div>
+
+        </div>
+
+
+
+
+
+        <button class="info_more-btn" data-sidebar-btn>
+          <span>Show Contacts</span>
+
+          <ion-icon name="chevron-down"></ion-icon>
+        </button>
+
+      </div>
+
+      <div class="sidebar-info_more">
+        <div class="separator"></div>
+        <ul class="contacts-list">
+
+
+
+
+
+
+          <li class="contact-item">
+            <div class="service-icon-box">
+              <img src="../assets/images/sidebar/mailsvg.svg" alt="design icon" width="40">
+            </div>
+            <div class="contact-info">
+              <p class="contact-title">Email</p>
+              <a href="mailto:tushar.aka.datascientist@gmail.com"
+                class="contact-link">Tushar.aka.datascientist@gmail.com</a>
+            </div>
+          </li>
+
+          <li class="contact-item">
+            <div class="service-icon-box">
+              <img src="../assets/images/sidebar/phonesvg.svg" alt="design icon" width="40">
+            </div>
+            <div class="contact-info">
+              <p class="contact-title">Phone</p>
+              <a href="tel:+12133522795" class="contact-link">+91 8851084852</a>
+            </div>
+          </li>
+
+        </ul>
+
+        <div class="separator"></div>
+
+        <ul class="social-list">
+
+          <li class="social-item">
+            <a href="#" class="social-link">
+              <img src="../assets/images/sidebar/github.png" alt="design icon" width="40">
+
+            </a>
+          </li>
+
+          <li class="social-item">
+            <a href="#" class="social-link">
+              <img src="../assets/images/sidebar/linkedin.png" alt="design icon" width="40">
+
+            </a>
+          </li>
+
+          <li class="social-item">
+            <a href="#" class="social-link">
+              <img src="../assets/images/sidebar/instagram.png" alt="design icon" width="40">
+
+            </a>
+          </li>
+
+
+        </ul>
+
+      </div>
+
+    </aside>
+
+
+
+
+
+    <!--
+      - #main-content
+    -->
+
+    <div class="main-content">
+
+      <!--
+        - #NAVBAR
+      -->
+
+      <nav class="navbar">
+
+        <ul class="navbar-list">
+
+
+
+
+          <li class="navbar-item">
+            <button class="navbar-link"
+              onclick="window.open('https://tushar-perspective.github.io/Portfolio/', '_blank')">Home page</button>
+          </li>
+
+
+
+
+
+        </ul>
+
+      </nav>
+
+
+
+
+      <!--
+        - #ABOUT
+      -->
+
+      <article class="about  active" data-page="about">
+
+        <header>
+          <h2 class="h2 article-title">🎯 How Diffusion Models Work?</h2>
+        </header>
+
+
+        <section class="about-text">
+
+
+
+
+
+          <p>
+            <span class="badge badge-purple">Introduction: </span>
+          </p>
+
+          <div class="blog">
+            <ul>
+              <li><strong>Diffusion Models generate new data</strong>: Like images, similar to what they're trained on.</li>
+              <li><strong>They work in two stages</strong>: Corrupting data and denoising.</li>
+              <li><strong>Corrupting data</strong>: Adding noise to existing data.</li>
+              <li><strong>Denoising</strong>: Learning to remove the added noise.</li>
+              <li><strong>To create new data</strong>: Start with random noise.</li>
+              <li><strong>Apply the learned denoising steps</strong>: To progressively clean the noise into new data.</li>
+          </ul>
+          
+
+          </div> <br>
+
+          <p>
+            <span class="badge badge-red">How its Work?</span>
+          </p>
+
+          <div class="blog">
+            <ul>
+              <li><strong>Dual-phase mechanism</strong>: Forward diffusion and reverse diffusion.</li>
+              <li><strong>Data preprocessing</strong>: Clean, normalize, augment, and standardize data.</li>
+              <li><strong>Forward diffusion</strong>: Introduce noise by sampling from a Gaussian distribution.</li>
+              <li><strong>Incremental modifications</strong>: Add structured noise to capture complex patterns.</li>
+              <li><strong>Reverse diffusion</strong>: Recognize and denoise specific noise patterns.</li>
+              <li><strong>Complex reconstruction</strong>: Converts noise into meaningful data.</li>
+              <li><strong>The model predicts and removes noise</strong>: At each step to generate detailed outputs.</li>
+          </ul>
+          
+
+          </div> <br>
+
+          <p>
+            <span class="badge badge-orange">Reverse diffusion misconception:</span>
+          </p>
+
+          <div class="blog">
+            <ul>
+              <li><strong>Misconception:</strong> Neural network's role in diffusion models is misunderstood.</li>
+              <li>Diffusion model is a parameterized Markov Chain.</li>
+              <li>Neural network predicts entire noise removal at each timestep.</li>
+              <li>At t=600, model predicts noise removal to reach t=0, not t=599.</li>
+              <li>Step-by-step reverse diffusion clarifies the process.</li>
+            </ul>
+
+          </div> <br>
+
+
+
+
+          <p>
+            <span class="badge badge-secondary">Diffusion model techniques:</span>
+          </p>
+
+          <div class="blog">
+            <ul>
+              <li><strong>Key mechanisms driving performance</strong>: In diffusion models, score-based generative modeling, denoising diffusion models, and using SDEs to describe noise addition.</li>
+              <li><strong>Mathematical tools</strong>: SDEs involve both deterministic and stochastic components.</li>
+              <li><strong>Noise addition process</strong>: SDEs detail gradual noise introduction in the data.</li>
+              <li><strong>Blueprint for noise</strong>: SDEs specify the behavior and impact of noise on data.</li>
+              <li><strong>Flexibility and adaptability</strong>: SDEs can be tailored for different data types and generative tasks.</li>
+              <li><strong>Fundamental framework</strong>: SDEs are used in various fields to model stochastic processes.</li>
+          </ul>
+          
+
+
+          </div> <br>
+
+
+
+
+
+
+          <p>
+            <span class="badge badge-success">Score-based generative models:</span>
+          </p>
+
+          <div class="blog">
+            <ul>
+              <li>SGMs teach models to reverse noise addition, creating clear images from noisy inputs.</li>
+              <li>They excel at generating realistic outputs.</li>
+              <li><strong>Applications:</strong> image generation, speech synthesis, and natural language processing.</li>
+            </ul>
+          </div> <br>
+
+
+
+
+
+          <p>
+            <span class="badge badge-danger">Denoising diffusion probabilistic models:</span>
+          </p>
+
+          <div class="blog">
+            <ul>
+              <li>DDPMs probabilistically remove noise from data, learning to recover the original data during training.
+              </li>
+              <li>They make educated guesses about the original data distribution and accurately reconstruct it.</li>
+              <li><strong>Applications:</strong> Image denoising, speech enhancement, and signal processing.</li>
+            </ul>
+          </div> <br>
+
+
+
+
+
+
+
+          <p>
+            <span class="badge badge-warning">Popular Diffusion tools:</span>
+          </p>
+
+          <div class="blog">
+            <ul>
+              <li><strong>DALL-E 2:</strong> Highly detailed image generation from text by OpenAI.</li>
+              <li><strong>DALL-E 3:</strong> Latest version integrated into ChatGPT.</li>
+              <li><strong>Sora:</strong> OpenAI's text-to-video model for realistic 1080p videos.</li>
+              <li><strong>Stable Diffusion:</strong> Known for stable diffusion model architecture by Stability AI.</li>
+              <li><strong>Midjourney:</strong> API-based diffusion model for image generation from text prompts.</li>
+              <li><strong>Imagen:</strong> Google's text-to-image model for photorealistic outputs.</li>
+            </ul>
+          </div> <br>
+
+
+
+
+          <p>
+            <span class="badge badge-info">Architecture:</span>
+          </p>
+
+          <div class="blog">
+            <ul>
+              <li><strong>Architecture:</strong> Modified U-Net.</li>
+              <li><strong>ResNet Block:</strong> Key component in the architecture.</li>
+              <li><strong>Downsample Block:</strong> Used for reducing dimensionality.</li>
+              <li><strong>Self-Attention Block:</strong> Enhances feature representation.</li>
+              <li><strong>Summary:</strong></li>
+              <ul>
+                <li>1, Forward diffusion adds noise using a schedule (e.g., linear).</li>
+                <li>2, Noise can be added in one step with a specific equation.</li>
+                <li>3, Reverse diffusion removes noise in multiple steps.</li>
+                <li>4, Diffusion model predicts the entire noise.</li>
+                <li>5, Inference can use a different schedule and number of steps.</li>
+                <li>6, Uses sinusoidal encoding and text embedder for timestep and prompt.</li>
+                <li>7, Some ResNet blocks are replaced with Self-Attention blocks.</li>
+              </ul>
+            </ul>
+            
+          </div> <br>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    </div> <br>
+    </section>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <!--
+          - testimonials modal
+        -->
+
+    <div class="modal-container" data-modal-container>
+
+      <div class="overlay" data-overlay></div>
+
+      <section class="testimonials-modal">
+
+        <button class="modal-close-btn" data-modal-close-btn>
+          <ion-icon name="close-outline"></ion-icon>
+        </button>
+
+        <div class="modal-img-wrapper">
+          <figure class="modal-avatar-box">
+            <img src="./assets/images/avatar-1.png" alt="Daniel lewis" width="80" data-modal-img>
+          </figure>
+
+          <img src="./assets/images/icon-quote.svg" alt="quote icon">
+        </div>
+
+        <div class="modal-content">
+
+          <h4 class="h3 modal-title" data-modal-title>Daniel lewis</h4>
+
+          <time datetime="2021-06-14">14 June, 2021</time>
+
+          <div data-modal-text>
+            <p>
+              Richard was hired to create a corporate identity. We were very pleased with the work done. She has a
+              lot of experience
+              and is very concerned about the needs of client. Lorem ipsum dolor sit amet, ullamcous cididt
+              consectetur adipiscing
+              elit, seds do et eiusmod tempor incididunt ut laborels dolore magnarels alia.
+            </p>
+          </div>
+
+        </div>
+
+      </section>
+
+    </div>
+
+    </article>
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <!--
+        - #PORTFOLIO
+      -->
+
+    <article class="portfolio" data-page="portfolio">
+
+      <header>
+        <h2 class="h2 article-title">Portfolio</h2>
+      </header>
+
+      <section class="projects">
+
+        <ul class="filter-list">
+
+          <li class="filter-item">
+            <button class="active" data-filter-btn>All</button>
+          </li>
+
+          <li class="filter-item">
+            <button data-filter-btn>Web design</button>
+          </li>
+
+          <li class="filter-item">
+            <button data-filter-btn>Applications</button>
+          </li>
+
+          <li class="filter-item">
+            <button data-filter-btn>Web development</button>
+          </li>
+
+        </ul>
+
+        <div class="filter-select-box">
+
+          <button class="filter-select" data-select>
+
+            <div class="select-value" data-selecct-value>Select category</div>
+
+            <div class="select-icon">
+              <ion-icon name="chevron-down"></ion-icon>
+            </div>
+
+          </button>
+
+          <ul class="select-list">
+
+            <li class="select-item">
+              <button data-select-item>All</button>
+            </li>
+
+            <li class="select-item">
+              <button data-select-item>Web design</button>
+            </li>
+
+            <li class="select-item">
+              <button data-select-item>Applications</button>
+            </li>
+
+            <li class="select-item">
+              <button data-select-item>Web development</button>
+            </li>
+
+          </ul>
+
+        </div>
+
+        <ul class="project-list">
+
+          <li class="project-item  active" data-filter-item data-category="web development">
+            <a href="#">
+
+              <figure class="project-img">
+                <div class="project-item-icon-box">
+                  <ion-icon name="eye-outline"></ion-icon>
+                </div>
+
+                <img src="./assets/images/project-1.jpg" alt="finance" loading="lazy">
+              </figure>
+
+              <h3 class="project-title">Finance</h3>
+
+              <p class="project-category">Web development</p>
+
+            </a>
+          </li>
+
+          <li class="project-item  active" data-filter-item data-category="web development">
+            <a href="#">
+
+              <figure class="project-img">
+                <div class="project-item-icon-box">
+                  <ion-icon name="eye-outline"></ion-icon>
+                </div>
+
+                <img src="./assets/images/project-2.png" alt="orizon" loading="lazy">
+              </figure>
+
+              <h3 class="project-title">Orizon</h3>
+
+              <p class="project-category">Web development</p>
+
+            </a>
+          </li>
+
+          <li class="project-item  active" data-filter-item data-category="web design">
+            <a href="#">
+
+              <figure class="project-img">
+                <div class="project-item-icon-box">
+                  <ion-icon name="eye-outline"></ion-icon>
+                </div>
+
+                <img src="./assets/images/project-3.jpg" alt="fundo" loading="lazy">
+              </figure>
+
+              <h3 class="project-title">Fundo</h3>
+
+              <p class="project-category">Web design</p>
+
+            </a>
+          </li>
+
+          <li class="project-item  active" data-filter-item data-category="applications">
+            <a href="#">
+
+              <figure class="project-img">
+                <div class="project-item-icon-box">
+                  <ion-icon name="eye-outline"></ion-icon>
+                </div>
+
+                <img src="./assets/images/project-4.png" alt="brawlhalla" loading="lazy">
+              </figure>
+
+              <h3 class="project-title">Brawlhalla</h3>
+
+              <p class="project-category">Applications</p>
+
+            </a>
+          </li>
+
+          <li class="project-item  active" data-filter-item data-category="web design">
+            <a href="#">
+
+              <figure class="project-img">
+                <div class="project-item-icon-box">
+                  <ion-icon name="eye-outline"></ion-icon>
+                </div>
+
+                <img src="./assets/images/project-5.png" alt="dsm." loading="lazy">
+              </figure>
+
+              <h3 class="project-title">DSM.</h3>
+
+              <p class="project-category">Web design</p>
+
+            </a>
+          </li>
+
+          <li class="project-item  active" data-filter-item data-category="web design">
+            <a href="#">
+
+              <figure class="project-img">
+                <div class="project-item-icon-box">
+                  <ion-icon name="eye-outline"></ion-icon>
+                </div>
+
+                <img src="./assets/images/project-6.png" alt="metaspark" loading="lazy">
+              </figure>
+
+              <h3 class="project-title">MetaSpark</h3>
+
+              <p class="project-category">Web design</p>
+
+            </a>
+          </li>
+
+          <li class="project-item  active" data-filter-item data-category="web development">
+            <a href="#">
+
+              <figure class="project-img">
+                <div class="project-item-icon-box">
+                  <ion-icon name="eye-outline"></ion-icon>
+                </div>
+
+                <img src="./assets/images/project-7.png" alt="summary" loading="lazy">
+              </figure>
+
+              <h3 class="project-title">Summary</h3>
+
+              <p class="project-category">Web development</p>
+
+            </a>
+          </li>
+
+          <li class="project-item  active" data-filter-item data-category="applications">
+            <a href="#">
+
+              <figure class="project-img">
+                <div class="project-item-icon-box">
+                  <ion-icon name="eye-outline"></ion-icon>
+                </div>
+
+                <img src="./assets/images/project-8.jpg" alt="task manager" loading="lazy">
+              </figure>
+
+              <h3 class="project-title">Task Manager</h3>
+
+              <p class="project-category">Applications</p>
+
+            </a>
+          </li>
+
+          <li class="project-item  active" data-filter-item data-category="web development">
+            <a href="#">
+
+              <figure class="project-img">
+                <div class="project-item-icon-box">
+                  <ion-icon name="eye-outline"></ion-icon>
+                </div>
+
+                <img src="./assets/images/project-9.png" alt="arrival" loading="lazy">
+              </figure>
+
+              <h3 class="project-title">Arrival</h3>
+
+              <p class="project-category">Web development</p>
+
+            </a>
+          </li>
+
+        </ul>
+
+      </section>
+
+    </article>
+
+
+
+
+
+
+
+
+
+
+
+    </div>
+
+
+
+  </main>
+
+
+
+
+
+
+  <!--
+    - custom js link
+  -->
+  <script src="../assets/js/script.js"></script>
+  <!--
+    - ionicon link
+  -->
+  <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+  <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+
+</body>
+
+</html>

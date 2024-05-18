@@ -1,0 +1,635 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>BLOG</title>
+
+  <!--
+    - favicon
+  -->
+  <link rel="shortcut icon" href="../assets/images/logo.png" type="image/x-icon">
+
+  <!--
+    - custom css link
+  -->
+  <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@400;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@400;500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../assets/css/style.css">
+  <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;700&display=swap">
+
+
+
+
+  <!--
+    - google font link
+  -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+
+  <div class="video-container">
+    <video autoplay loop muted id="background-video">
+      <source src="../assets/images/video/bg2.mp4" type="video/mp4">
+      Your browser does not support the video tag.
+    </video>
+  </div>
+
+
+
+  <!--
+    - #MAIN
+  -->
+
+  <main>
+
+    <!--
+      - #SIDEBAR
+    -->
+
+    <aside class="sidebar" data-sidebar>
+      <div class="sidebar-info">
+
+        <figure class="avatar-box">
+          <img class=" test-shine" src="../assets/images/TusharArora.png" alt="tushar arora" width="80">
+        </figure>
+
+
+
+
+
+        <div class="info-content">
+          <h1 class="name" title="Tushar Arora">📛TUSHAR-PERSPECTIVE</h1>
+
+          <div style="display: flex; justify-content: center; font-family:  Ubuntu;">
+            <div id="badge-container" style="display: inline-block;"></div>
+          </div>
+
+        </div>
+
+
+
+
+
+        <button class="info_more-btn" data-sidebar-btn>
+          <span>Show Contacts</span>
+
+          <ion-icon name="chevron-down"></ion-icon>
+        </button>
+
+      </div>
+
+      <div class="sidebar-info_more">
+        <div class="separator"></div>
+        <ul class="contacts-list">
+
+
+
+
+
+
+          <li class="contact-item">
+            <div class="service-icon-box">
+              <img src="../assets/images/sidebar/mailsvg.svg" alt="design icon" width="40">
+            </div>
+            <div class="contact-info">
+              <p class="contact-title">Email</p>
+              <a href="mailto:tushar.aka.datascientist@gmail.com"
+                class="contact-link">Tushar.aka.datascientist@gmail.com</a>
+            </div>
+          </li>
+
+          <li class="contact-item">
+            <div class="service-icon-box">
+              <img src="../assets/images/sidebar/phonesvg.svg" alt="design icon" width="40">
+            </div>
+            <div class="contact-info">
+              <p class="contact-title">Phone</p>
+              <a href="tel:+12133522795" class="contact-link">+91 8851084852</a>
+            </div>
+          </li>
+
+        </ul>
+
+        <div class="separator"></div>
+
+        <ul class="social-list">
+
+          <li class="social-item">
+            <a href="#" class="social-link">
+              <img src="../assets/images/sidebar/github.png" alt="design icon" width="40">
+
+            </a>
+          </li>
+
+          <li class="social-item">
+            <a href="#" class="social-link">
+              <img src="../assets/images/sidebar/linkedin.png" alt="design icon" width="40">
+
+            </a>
+          </li>
+
+          <li class="social-item">
+            <a href="#" class="social-link">
+              <img src="../assets/images/sidebar/instagram.png" alt="design icon" width="40">
+
+            </a>
+          </li>
+
+
+        </ul>
+
+      </div>
+
+    </aside>
+
+
+
+
+
+    <!--
+      - #main-content
+    -->
+
+    <div class="main-content">
+
+      <!--
+        - #NAVBAR
+      -->
+
+      <nav class="navbar">
+
+        <ul class="navbar-list">
+
+
+
+
+          <li class="navbar-item">
+            <button class="navbar-link"
+              onclick="window.open('https://tushar-perspective.github.io/Portfolio/', '_blank')">Home page</button>
+          </li>
+
+
+
+
+
+        </ul>
+
+      </nav>
+
+
+
+
+      <!--
+        - #ABOUT
+      -->
+
+      <article class="about  active" data-page="about">
+
+        <header>
+          <h2 class="h2 article-title">🎯 Chain, Agent & Memory</h2>
+        </header>
+
+
+        <section class="about-text">
+          <p>
+            <span class="badge badge-purple">Use Cases: </span>
+          </p>
+
+          <div class="blog">
+            <ul>
+              <li> Summarization: Highlights key points from text or chat.</li>
+              <li> Q&A Over Documents: Answers questions using document info.</li>
+              <li> Extraction: Retrieves structured data from text or queries.</li>
+              <li> Evaluation: Measures the quality of application outputs.</li>
+              <li> Querying Tabular Data: Fetches data from tables or databases.</li>
+              <li> Code Understanding: Analyzes and interprets code.</li>
+              <li> Interacting with APIs: Connects with APIs and external systems.</li>
+              <li> Chatbots: Engages in conversations with user memory.</li>
+              <li> Agents: Makes context-aware decisions using memory.</li>
+            </ul>
+          </div> <br>
+
+
+          <p>
+            <span class="badge badge-primary">Differences: </span>
+          </p>
+
+          <div class="blog">
+            <ul>
+              <li><strong>Chain with Memory</strong>: Executes specific tasks with memory.</li>
+              <li><strong>Agent with Memory</strong>: Handles conversation and context-aware responses.</li>
+              <li><strong>Agent with Memory (Conversation Flow)</strong>: Uses AgentExecutor for user interaction.</li>
+              <li><strong>Chain with Memory (Conversation Flow)</strong>: Performs actions without user input.</li>
+              <li><strong>Agent with Memory (Memory Usage)</strong>: Remembers conversation history.</li>
+              <li><strong>Chain with Memory (Memory Usage)</strong>: Utilizes memory for tasks, not conversation.</li>
+          </ul>
+          
+          
+          </div> <br>
+
+
+
+          <p>
+            <span class="badge badge-deeporange">Memory: </span>
+          </p>
+
+          <div class="blog">
+            <ul>
+              <li><strong>Overview</strong>: Remembers past interactions for better decisions.</li>
+              <li><strong>Functionality</strong>: Recalls user inputs and system responses.</li>
+              <li><strong>Benefits</strong>: Creates interactive, personalized apps.</li>
+              <li><strong>Use Cases</strong>: Ideal for context-aware applications like personal assistants.</li>
+              <li><strong>Implementation</strong>: Set up prompt and memory, initialize and call LLMChain.</li>
+              <li><strong>ConversationBufferMemory</strong>: Stores chat messages, viewable via <code>memory.load_memory_variables</code>.</li>
+              <li><strong>Strings or Lists</strong>: Stores messages as a single string or list.</li>
+              <li><strong>ConversationBuffer WindowMemory</strong>: Tracks the last K interactions.</li>
+              <li><code>memory.load_memory_variables({})</code>: Checks memory variables.</li>
+          </ul>
+          
+          
+          
+          </div> <br>
+
+
+
+          <p>
+            <span class="badge badge-success">Chain: </span>
+          </p>
+
+          <div class="blog">
+            <ul>
+              <li><strong>Chains in LangChain:</strong> Sequences of calls combining LLMs.</li>
+              <li><strong>Components:</strong> LLMs, Memory, Tools, Agents, Data Retrieval Components.</li>
+              <li><strong>Types:</strong> LLMChain, RouterChain, SimpleSequentialChain, TransformChain.</li>
+              <li><strong>Benefits:</strong> Break down complex tasks, add state and memory, apply logic, facilitate debugging.</li>
+          </ul>
+          </div> <br>
+
+
+
+          <p>
+            <span class="badge badge-danger">Agent: </span>
+          </p>
+
+          <div class="blog">
+            <ul>
+              <li><strong>Agents in LangChain:</strong> Drive decision-making, returning responses for actions.</li>
+              <li><strong>Agents vs. Chains:</strong> Agents use LLMs for reasoning; chains are code-based sequences.</li>
+              <li><strong>Use Cases:</strong> Assistants, question answering, chatbots, API interactions, extraction, summarization.</li>
+              <li><strong>Components:</strong> Tools, User Input, Intermediate Steps.</li>
+              <li><strong>Toolkit:</strong> Tools for accessing resources, processing data, and integrating systems.</li>
+              <li><strong>AgentExecutor:</strong> Executes agent actions, managing memory.</li>
+              <li><strong>Initialize Agent:</strong> Simplifies creation with a language model and tools.</li>
+              <li><strong>Agent Memory:</strong> Stores information for contextual understanding and continuity.</li>
+          </ul>
+          
+          </div> <br>
+
+
+
+        </section>
+
+
+
+
+
+
+
+
+
+        <!--
+          - testimonials modal
+        -->
+
+        <div class="modal-container" data-modal-container>
+
+          <div class="overlay" data-overlay></div>
+
+          <section class="testimonials-modal">
+
+            <button class="modal-close-btn" data-modal-close-btn>
+              <ion-icon name="close-outline"></ion-icon>
+            </button>
+
+            <div class="modal-img-wrapper">
+              <figure class="modal-avatar-box">
+                <img src="./assets/images/avatar-1.png" alt="Daniel lewis" width="80" data-modal-img>
+              </figure>
+
+              <img src="./assets/images/icon-quote.svg" alt="quote icon">
+            </div>
+
+            <div class="modal-content">
+
+              <h4 class="h3 modal-title" data-modal-title>Daniel lewis</h4>
+
+              <time datetime="2021-06-14">14 June, 2021</time>
+
+              <div data-modal-text>
+                <p>
+                  Richard was hired to create a corporate identity. We were very pleased with the work done. She has a
+                  lot of experience
+                  and is very concerned about the needs of client. Lorem ipsum dolor sit amet, ullamcous cididt
+                  consectetur adipiscing
+                  elit, seds do et eiusmod tempor incididunt ut laborels dolore magnarels alia.
+                </p>
+              </div>
+
+            </div>
+
+          </section>
+
+        </div>
+
+      </article>
+
+
+
+
+
+
+
+
+
+
+
+
+
+      <!--
+        - #PORTFOLIO
+      -->
+
+      <article class="portfolio" data-page="portfolio">
+
+        <header>
+          <h2 class="h2 article-title">Portfolio</h2>
+        </header>
+
+        <section class="projects">
+
+          <ul class="filter-list">
+
+            <li class="filter-item">
+              <button class="active" data-filter-btn>All</button>
+            </li>
+
+            <li class="filter-item">
+              <button data-filter-btn>Web design</button>
+            </li>
+
+            <li class="filter-item">
+              <button data-filter-btn>Applications</button>
+            </li>
+
+            <li class="filter-item">
+              <button data-filter-btn>Web development</button>
+            </li>
+
+          </ul>
+
+          <div class="filter-select-box">
+
+            <button class="filter-select" data-select>
+
+              <div class="select-value" data-selecct-value>Select category</div>
+
+              <div class="select-icon">
+                <ion-icon name="chevron-down"></ion-icon>
+              </div>
+
+            </button>
+
+            <ul class="select-list">
+
+              <li class="select-item">
+                <button data-select-item>All</button>
+              </li>
+
+              <li class="select-item">
+                <button data-select-item>Web design</button>
+              </li>
+
+              <li class="select-item">
+                <button data-select-item>Applications</button>
+              </li>
+
+              <li class="select-item">
+                <button data-select-item>Web development</button>
+              </li>
+
+            </ul>
+
+          </div>
+
+          <ul class="project-list">
+
+            <li class="project-item  active" data-filter-item data-category="web development">
+              <a href="#">
+
+                <figure class="project-img">
+                  <div class="project-item-icon-box">
+                    <ion-icon name="eye-outline"></ion-icon>
+                  </div>
+
+                  <img src="./assets/images/project-1.jpg" alt="finance" loading="lazy">
+                </figure>
+
+                <h3 class="project-title">Finance</h3>
+
+                <p class="project-category">Web development</p>
+
+              </a>
+            </li>
+
+            <li class="project-item  active" data-filter-item data-category="web development">
+              <a href="#">
+
+                <figure class="project-img">
+                  <div class="project-item-icon-box">
+                    <ion-icon name="eye-outline"></ion-icon>
+                  </div>
+
+                  <img src="./assets/images/project-2.png" alt="orizon" loading="lazy">
+                </figure>
+
+                <h3 class="project-title">Orizon</h3>
+
+                <p class="project-category">Web development</p>
+
+              </a>
+            </li>
+
+            <li class="project-item  active" data-filter-item data-category="web design">
+              <a href="#">
+
+                <figure class="project-img">
+                  <div class="project-item-icon-box">
+                    <ion-icon name="eye-outline"></ion-icon>
+                  </div>
+
+                  <img src="./assets/images/project-3.jpg" alt="fundo" loading="lazy">
+                </figure>
+
+                <h3 class="project-title">Fundo</h3>
+
+                <p class="project-category">Web design</p>
+
+              </a>
+            </li>
+
+            <li class="project-item  active" data-filter-item data-category="applications">
+              <a href="#">
+
+                <figure class="project-img">
+                  <div class="project-item-icon-box">
+                    <ion-icon name="eye-outline"></ion-icon>
+                  </div>
+
+                  <img src="./assets/images/project-4.png" alt="brawlhalla" loading="lazy">
+                </figure>
+
+                <h3 class="project-title">Brawlhalla</h3>
+
+                <p class="project-category">Applications</p>
+
+              </a>
+            </li>
+
+            <li class="project-item  active" data-filter-item data-category="web design">
+              <a href="#">
+
+                <figure class="project-img">
+                  <div class="project-item-icon-box">
+                    <ion-icon name="eye-outline"></ion-icon>
+                  </div>
+
+                  <img src="./assets/images/project-5.png" alt="dsm." loading="lazy">
+                </figure>
+
+                <h3 class="project-title">DSM.</h3>
+
+                <p class="project-category">Web design</p>
+
+              </a>
+            </li>
+
+            <li class="project-item  active" data-filter-item data-category="web design">
+              <a href="#">
+
+                <figure class="project-img">
+                  <div class="project-item-icon-box">
+                    <ion-icon name="eye-outline"></ion-icon>
+                  </div>
+
+                  <img src="./assets/images/project-6.png" alt="metaspark" loading="lazy">
+                </figure>
+
+                <h3 class="project-title">MetaSpark</h3>
+
+                <p class="project-category">Web design</p>
+
+              </a>
+            </li>
+
+            <li class="project-item  active" data-filter-item data-category="web development">
+              <a href="#">
+
+                <figure class="project-img">
+                  <div class="project-item-icon-box">
+                    <ion-icon name="eye-outline"></ion-icon>
+                  </div>
+
+                  <img src="./assets/images/project-7.png" alt="summary" loading="lazy">
+                </figure>
+
+                <h3 class="project-title">Summary</h3>
+
+                <p class="project-category">Web development</p>
+
+              </a>
+            </li>
+
+            <li class="project-item  active" data-filter-item data-category="applications">
+              <a href="#">
+
+                <figure class="project-img">
+                  <div class="project-item-icon-box">
+                    <ion-icon name="eye-outline"></ion-icon>
+                  </div>
+
+                  <img src="./assets/images/project-8.jpg" alt="task manager" loading="lazy">
+                </figure>
+
+                <h3 class="project-title">Task Manager</h3>
+
+                <p class="project-category">Applications</p>
+
+              </a>
+            </li>
+
+            <li class="project-item  active" data-filter-item data-category="web development">
+              <a href="#">
+
+                <figure class="project-img">
+                  <div class="project-item-icon-box">
+                    <ion-icon name="eye-outline"></ion-icon>
+                  </div>
+
+                  <img src="./assets/images/project-9.png" alt="arrival" loading="lazy">
+                </figure>
+
+                <h3 class="project-title">Arrival</h3>
+
+                <p class="project-category">Web development</p>
+
+              </a>
+            </li>
+
+          </ul>
+
+        </section>
+
+      </article>
+
+
+
+
+
+
+
+
+
+
+
+    </div>
+
+
+
+  </main>
+
+
+
+
+
+
+  <!--
+    - custom js link
+  -->
+  <script src="../assets/js/script.js"></script>
+  <!--
+    - ionicon link
+  -->
+  <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+  <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+
+</body>
+
+</html>

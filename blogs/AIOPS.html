@@ -2,166 +2,304 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Tushar-Perspective</title>
-    <link rel="shortcut icon" href="../images/tushar.png" type="image/x-icon">
-    <link rel="stylesheet" href="../style.css">
-    <link href='https://fonts.googleapis.com/css?family=JetBrains Mono' rel='stylesheet'>
-    <link href='https://fonts.googleapis.com/css?family=Space Grotesk' rel='stylesheet'>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>BLOG</title>
+
+  <!--
+    - favicon
+  -->
+  <link rel="shortcut icon" href="../assets/images/logo.png" type="image/x-icon">
+
+  <!--
+    - custom css link
+  -->
+  <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@400;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@400;500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../assets/css/style.css">
+  <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;700&display=swap">
 
 
 
 
-
-
-
+  <!--
+    - google font link
+  -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
 </head>
 
 <body>
-    <div class="video-container">
-        <video autoplay loop muted id="background-video">
-            <source src="../images/video8.mp4" type="video/mp4">
-            Your browser does not support the video tag.
-        </video>
-    </div>
 
 
-    <div class="front">
-        <span>Created By <a style="color: orange;" target="_blank"
-                href="https://tushar-perspective.github.io/Portfolio/">TUSHAR-PERSPECTIVE</a> | <span
-                class="far fa-copyright"></span>
-            2024 All rights
-            reserved.</span>
-
-    </div>
+  <div class="video-container">
+    <video autoplay loop muted id="background-video">
+      <source src="../assets/images/video/bg2.mp4" type="video/mp4">
+      Your browser does not support the video tag.
+    </video>
+  </div>
 
 
 
+  <!--
+    - #MAIN
+  -->
 
-    <!---INFO---------->
-    <section class="info2" id="ab">
-        <div class="max-width">
-            <h2 class="titles">AI<span style="color: #BDA3A1;"> :OPS</span>
-                <a style=" color: inherit; " href="https://github.com/Thinkliketushar" target="_blank"> </a>
-            </h2>
-            <div class="info-content">
-                <div class="column right">
+  <main>
 
-                    <h1>INTRODUCTION</h1>
-                    <ul>
-                        <li>MLOPS, LLMOPS, AIOPS</li>
-                        <li>Project Architecture</li>
-                        <li>Configuration of Template and Setup file</li>
-                        <li>pyproject.toml / setup.cfg : Configuration python project</li>
-                        <li>pytest:- tox.ini with Unit testing and Integration testing.</li>
-                        <li>Docker Configuration</li>
-                        <li>Configure Main.yaml</li>
-                        <li>Continuous Integration and Deployment</li>
-                        <li>Github Action Server</li>
-                        <li>Monitoring: Evedently.Ai</li>
-                        <li>continuous training : Airflow</li>
-                        <li>Data Management : DVC</li>
-                        <li>Experiment Tracking : MLFLOW</li>
-                        <li>Model registry : Dags Hub</li>
-                        <li>Model builder : BentoML</li>
-                    </ul>
+    <!--
+      - #SIDEBAR
+    -->
 
-                    <h1>Github:</h1>
-                    <ul>
-                        <li>Repo: Project files & history (`git init`) </li>
-                        <li>Commit: Snapshot of changes (`git commit -m "message"`)</li>
-                        <li>Branch: Separate development line (`git branch new-branch-name`)</li>
-                        <li>Merge: Combine changes from branches (`git merge branch-to-merge`)</li>
-                        <li>Remote: Shared repo for collaboration (`git remote add origin <url>`) </li>
-                        <li>Pull: Get changes from remote (`git pull origin main`)</li>
-                        <li>Push: Send changes to remote (`git push origin main`)</li>
-                        <li>Clone: Copy remote repo (`git clone <url>`) </li>
-                        <li>Status: Check repo state (`git status`)</li>
-                        <li>Log: View commit history (`git log`)</li>
-                    </ul>
+    <aside class="sidebar" data-sidebar>
+      <div class="sidebar-info">
 
-                    <ul>
-                        <li>Branch: Create <code>git branch</code>, Switch <code>git checkout</code>, (Create & Switch)
-                            <code>git checkout -b</code>, Delete <code>git branch -d</code>, Rename
-                            <code>git branch -m</code>
-                        </li>
-                        <li>Stage: Add file <code>git add</code>, Add all <code>git add .</code>, Remove file
-                            <code>git reset</code>, Unstage all <code>git reset</code>
-                        </li>
-                        <li>Compare: Changes <code>git diff</code>, Staged <code>git diff --staged</code></li>
-                        <li>Undo: Discard file <code>git checkout --</code>, Discard all <code>git reset --hard</code>,
-                            Undo commit <code>git reset HEAD~</code>, (Undo & Discard)
-                            <code>git reset --hard HEAD~</code>
-                        </li>
-                        <li>History: View <code>git log</code>, (Short) <code>git log --oneline</code>, Details
-                            <code>git show</code>
-                        </li>
-                        <li>Remote: Fetch <code>git fetch</code>, Pull <code>git pull</code>, Push <code>git push</code>
-                        </li>
-                        <li>Rebase/Merge: Choose wisely! Fetch <code>git fetch origin</code>, Rebase
-                            <code>git rebase origin/main</code>, Merge
-                            <code>git merge origin/main && git push origin main</code>
-                        </li>
-                    </ul>
+        <figure class="avatar-box">
+          <img class=" test-shine" src="../assets/images/TusharArora.png" alt="tushar arora" width="80">
+        </figure>
 
-                    <h1>Docker:</h1>
 
-                    <ul>
-                        <li><strong>docker build -t &lt;imagename&gt; .</strong>: Build a Docker image with the
-                            specified name.</li>
-                        <li><strong>docker run -d -p 5000:5000 helloapp</strong>: Run a Docker container in detached
-                            mode with port mapping.</li>
-                        <li><strong>docker login</strong>: Log in to a Docker registry.</li>
-                        <li><strong>docker tag myhelloapp username/reponame or imagename</strong>: Tag a Docker image
-                            with a new name.</li>
-                        <li><strong>docker push username/reponame or imagename</strong>: Push a Docker image to a
-                            registry/repository.</li>
-                        <li><strong>docker run -it ubuntu /bin/bash</strong>: Run a new Docker container interactively
-                            with a Bash shell.</li>
-                        <li><strong>docker images</strong>: List all Docker images.</li>
-                        <li><strong>docker ps</strong>: List all running Docker containers.</li>
-                        <li><strong>docker ps -a</strong>: List all Docker containers, including those that are not
-                            running.</li>
-                        <li><strong>docker rmi -f jenkins/jenkins</strong>: Remove a Docker image.</li>
-                        <li><strong>docker rm -f jenkins/jenkins</strong>: Remove a Docker container.</li>
-                        <li><strong>docker run -p 8080:8080 jenkins/jenkins:lts</strong>: Run a Docker container with
-                            port mapping.</li>
-                        <li><strong>FROM ubuntu</strong>: Specify the base image as Ubuntu in a Dockerfile.</li>
-                        <li><strong>WORKDIR /tmp</strong>: Set the working directory inside the Docker container.</li>
-                        <li><strong>RUN echo "Subscribe the ineuron intelligence"</strong>: Execute a command during the
-                            image build process.</li>
-                        <li><strong>ENV myname sunny</strong>: Set an environment variable inside the Docker container.
-                        </li>
-                        <li><strong>COPY testfile /tmp</strong>: Copy a file into the Docker container.</li>
-                        <li><strong>ADD test.tar.gz /tmp</strong>: Add and extract an archive into the Docker container.
-                        </li>
-                    </ul>
 
-                    <h1>Amazon Web Service:</h1>
-                    <ul>
-                        <li>AWS bedrock : CLI, Configure, Run Model in Local Machine </li>
-                        <li>AWS Elastic Contain Repository (ECR) : For Docker image</li>
-                        <li>AWS I am user : Access key, secret Access Key, Region</li>
-                        <li>AWS Lambda : Serverless Code runner, Custom Logic, Layers</li>
-                        <li>AWS Cloud9 : Code Running, Execute</li>
-                        <li>Amazon Elastic Compute Cloud (EC2) : Cloud Service</li>
-                        <li>AWS App Runner: To run Project with user and ECR</li>
-                        <li>AWS CloudWatch: Monitoring</li>
-                        <li>AWS Sagemaker: ML platform, Run & Deploy</li>
-                        <li>AWS S3: Scailiblity , Security Performance, Connect with Segemaker</li>
-                        <li>AWS Service Quotas : LLM deploy Instance </li>
-                    </ul>
 
-                    <h1>Google Cloud Services:</h1>
-                    <ul>
-                        <li>Vertex AI : Connecting Notebook</li>
-                    </ul>
 
-                </div>
+        <div class="info-content">
+          <h1 class="name" title="Tushar Arora">📛TUSHAR-PERSPECTIVE</h1>
+
+          <div style="display: flex; justify-content: center; font-family:  Ubuntu;">
+            <div id="badge-container" style="display: inline-block;"></div>
+          </div>
+
+        </div>
+
+
+
+
+
+        <button class="info_more-btn" data-sidebar-btn>
+          <span>Show Contacts</span>
+
+          <ion-icon name="chevron-down"></ion-icon>
+        </button>
+
+      </div>
+
+      <div class="sidebar-info_more">
+        <div class="separator"></div>
+        <ul class="contacts-list">
+
+
+
+
+
+
+          <li class="contact-item">
+            <div class="service-icon-box">
+              <img src="../assets/images/sidebar/mailsvg.svg" alt="design icon" width="40">
             </div>
-    </section>
-    <!----------------->
+            <div class="contact-info">
+              <p class="contact-title">Email</p>
+              <a href="mailto:tushar.aka.datascientist@gmail.com"
+                class="contact-link">Tushar.aka.datascientist@gmail.com</a>
+            </div>
+          </li>
+
+          <li class="contact-item">
+            <div class="service-icon-box">
+              <img src="../assets/images/sidebar/phonesvg.svg" alt="design icon" width="40">
+            </div>
+            <div class="contact-info">
+              <p class="contact-title">Phone</p>
+              <a href="tel:+12133522795" class="contact-link">+91 8851084852</a>
+            </div>
+          </li>
+
+        </ul>
+
+        <div class="separator"></div>
+
+        <ul class="social-list">
+
+          <li class="social-item">
+            <a href="#" class="social-link">
+              <img src="../assets/images/sidebar/github.png" alt="design icon" width="40">
+
+            </a>
+          </li>
+
+          <li class="social-item">
+            <a href="#" class="social-link">
+              <img src="../assets/images/sidebar/linkedin.png" alt="design icon" width="40">
+
+            </a>
+          </li>
+
+          <li class="social-item">
+            <a href="#" class="social-link">
+              <img src="../assets/images/sidebar/instagram.png" alt="design icon" width="40">
+
+            </a>
+          </li>
+
+
+        </ul>
+
+      </div>
+
+    </aside>
+
+
+
+
+
+    <!--
+      - #main-content
+    -->
+
+    <div class="main-content">
+
+      <!--
+        - #NAVBAR
+      -->
+
+      <nav class="navbar">
+
+        <ul class="navbar-list">
+
+
+
+
+          <li class="navbar-item">
+            <button class="navbar-link"
+              onclick="window.open('https://tushar-perspective.github.io/Portfolio/', '_blank')">Home page</button>
+          </li>
+
+
+
+
+
+        </ul>
+
+      </nav>
+
+
+
+
+      <!--
+        - #ABOUT
+      -->
+
+      <article class="about  active" data-page="about">
+
+        <header>
+          <h2 class="h2 article-title">🎯 MLOPS, AIOPS & LLMOPS</h2>
+        </header>
+
+
+        <section class="about-text">
+
+
+
+
+
+          <p>
+            <span class="badge badge-purple">AWS Services & IAM: </span>
+          </p>
+
+          <div class="blog">
+            <ul>
+              <li> Infrastructure as a Service (IaaS)</li>
+              <li> Platform as a Service (PaaS)</li>
+              <li> Software as a Service (SaaS)</li>
+              <li> Access Management</li>
+            </ul>
+          </div> <br>
+
+          <p>
+            <span class="badge badge-red">AWS CLI & CloudShell:</span>
+          </p>
+
+          <div class="blog">
+            <ul>
+              <li> Configuration CLI, Console & SDK</li>
+              <li> Private key</li>
+              <li> CloudShell Configuration</li>
+            </ul>
+          </div> <br>
+
+          <p>
+            <span class="badge badge-orange">EC2 (Elastic Compute Cloud):</span>
+          </p>
+
+          <div class="blog">
+            <ul>
+              <li>Instance Management</li>
+              <li>Amazon Machine Image (AMI)</li>
+              <li>Storage Space: EBS(Elastic Block Store), EFS(Elastic File System)</li>
+              <li>Network Card, Security Group, Inbound & Outbound Traffic </li>
+              <li>Linux Commands, Bootstrap Script, </li>
+            </ul>
+          </div> <br>
+
+
+
+        </section>
+
+
+
+
+
+
+
+
+
+        <!--
+          - testimonials modal
+        -->
+
+        <div class="modal-container" data-modal-container>
+
+          <div class="overlay" data-overlay></div>
+
+          <section class="testimonials-modal">
+
+            <button class="modal-close-btn" data-modal-close-btn>
+              <ion-icon name="close-outline"></ion-icon>
+            </button>
+
+            <div class="modal-img-wrapper">
+              <figure class="modal-avatar-box">
+                <img src="./assets/images/avatar-1.png" alt="Daniel lewis" width="80" data-modal-img>
+              </figure>
+
+              <img src="./assets/images/icon-quote.svg" alt="quote icon">
+            </div>
+
+            <div class="modal-content">
+
+              <h4 class="h3 modal-title" data-modal-title>Daniel lewis</h4>
+
+              <time datetime="2021-06-14">14 June, 2021</time>
+
+              <div data-modal-text>
+                <p>
+                  Richard was hired to create a corporate identity. We were very pleased with the work done. She has a
+                  lot of experience
+                  and is very concerned about the needs of client. Lorem ipsum dolor sit amet, ullamcous cididt
+                  consectetur adipiscing
+                  elit, seds do et eiusmod tempor incididunt ut laborels dolore magnarels alia.
+                </p>
+              </div>
+
+            </div>
+
+          </section>
+
+        </div>
+
+      </article>
 
 
 
@@ -172,9 +310,276 @@
 
 
 
-    <script src="script.js"></script>
+
+
+
+      <!--
+        - #PORTFOLIO
+      -->
+
+      <article class="portfolio" data-page="portfolio">
+
+        <header>
+          <h2 class="h2 article-title">Portfolio</h2>
+        </header>
+
+        <section class="projects">
+
+          <ul class="filter-list">
+
+            <li class="filter-item">
+              <button class="active" data-filter-btn>All</button>
+            </li>
+
+            <li class="filter-item">
+              <button data-filter-btn>Web design</button>
+            </li>
+
+            <li class="filter-item">
+              <button data-filter-btn>Applications</button>
+            </li>
+
+            <li class="filter-item">
+              <button data-filter-btn>Web development</button>
+            </li>
+
+          </ul>
+
+          <div class="filter-select-box">
+
+            <button class="filter-select" data-select>
+
+              <div class="select-value" data-selecct-value>Select category</div>
+
+              <div class="select-icon">
+                <ion-icon name="chevron-down"></ion-icon>
+              </div>
+
+            </button>
+
+            <ul class="select-list">
+
+              <li class="select-item">
+                <button data-select-item>All</button>
+              </li>
+
+              <li class="select-item">
+                <button data-select-item>Web design</button>
+              </li>
+
+              <li class="select-item">
+                <button data-select-item>Applications</button>
+              </li>
+
+              <li class="select-item">
+                <button data-select-item>Web development</button>
+              </li>
+
+            </ul>
+
+          </div>
+
+          <ul class="project-list">
+
+            <li class="project-item  active" data-filter-item data-category="web development">
+              <a href="#">
+
+                <figure class="project-img">
+                  <div class="project-item-icon-box">
+                    <ion-icon name="eye-outline"></ion-icon>
+                  </div>
+
+                  <img src="./assets/images/project-1.jpg" alt="finance" loading="lazy">
+                </figure>
+
+                <h3 class="project-title">Finance</h3>
+
+                <p class="project-category">Web development</p>
+
+              </a>
+            </li>
+
+            <li class="project-item  active" data-filter-item data-category="web development">
+              <a href="#">
+
+                <figure class="project-img">
+                  <div class="project-item-icon-box">
+                    <ion-icon name="eye-outline"></ion-icon>
+                  </div>
+
+                  <img src="./assets/images/project-2.png" alt="orizon" loading="lazy">
+                </figure>
+
+                <h3 class="project-title">Orizon</h3>
+
+                <p class="project-category">Web development</p>
+
+              </a>
+            </li>
+
+            <li class="project-item  active" data-filter-item data-category="web design">
+              <a href="#">
+
+                <figure class="project-img">
+                  <div class="project-item-icon-box">
+                    <ion-icon name="eye-outline"></ion-icon>
+                  </div>
+
+                  <img src="./assets/images/project-3.jpg" alt="fundo" loading="lazy">
+                </figure>
+
+                <h3 class="project-title">Fundo</h3>
+
+                <p class="project-category">Web design</p>
+
+              </a>
+            </li>
+
+            <li class="project-item  active" data-filter-item data-category="applications">
+              <a href="#">
+
+                <figure class="project-img">
+                  <div class="project-item-icon-box">
+                    <ion-icon name="eye-outline"></ion-icon>
+                  </div>
+
+                  <img src="./assets/images/project-4.png" alt="brawlhalla" loading="lazy">
+                </figure>
+
+                <h3 class="project-title">Brawlhalla</h3>
+
+                <p class="project-category">Applications</p>
+
+              </a>
+            </li>
+
+            <li class="project-item  active" data-filter-item data-category="web design">
+              <a href="#">
+
+                <figure class="project-img">
+                  <div class="project-item-icon-box">
+                    <ion-icon name="eye-outline"></ion-icon>
+                  </div>
+
+                  <img src="./assets/images/project-5.png" alt="dsm." loading="lazy">
+                </figure>
+
+                <h3 class="project-title">DSM.</h3>
+
+                <p class="project-category">Web design</p>
+
+              </a>
+            </li>
+
+            <li class="project-item  active" data-filter-item data-category="web design">
+              <a href="#">
+
+                <figure class="project-img">
+                  <div class="project-item-icon-box">
+                    <ion-icon name="eye-outline"></ion-icon>
+                  </div>
+
+                  <img src="./assets/images/project-6.png" alt="metaspark" loading="lazy">
+                </figure>
+
+                <h3 class="project-title">MetaSpark</h3>
+
+                <p class="project-category">Web design</p>
+
+              </a>
+            </li>
+
+            <li class="project-item  active" data-filter-item data-category="web development">
+              <a href="#">
+
+                <figure class="project-img">
+                  <div class="project-item-icon-box">
+                    <ion-icon name="eye-outline"></ion-icon>
+                  </div>
+
+                  <img src="./assets/images/project-7.png" alt="summary" loading="lazy">
+                </figure>
+
+                <h3 class="project-title">Summary</h3>
+
+                <p class="project-category">Web development</p>
+
+              </a>
+            </li>
+
+            <li class="project-item  active" data-filter-item data-category="applications">
+              <a href="#">
+
+                <figure class="project-img">
+                  <div class="project-item-icon-box">
+                    <ion-icon name="eye-outline"></ion-icon>
+                  </div>
+
+                  <img src="./assets/images/project-8.jpg" alt="task manager" loading="lazy">
+                </figure>
+
+                <h3 class="project-title">Task Manager</h3>
+
+                <p class="project-category">Applications</p>
+
+              </a>
+            </li>
+
+            <li class="project-item  active" data-filter-item data-category="web development">
+              <a href="#">
+
+                <figure class="project-img">
+                  <div class="project-item-icon-box">
+                    <ion-icon name="eye-outline"></ion-icon>
+                  </div>
+
+                  <img src="./assets/images/project-9.png" alt="arrival" loading="lazy">
+                </figure>
+
+                <h3 class="project-title">Arrival</h3>
+
+                <p class="project-category">Web development</p>
+
+              </a>
+            </li>
+
+          </ul>
+
+        </section>
+
+      </article>
+
+
+
+
+
+
+
+
+
+
+
+    </div>
+
+
+
+  </main>
+
+
+
+
+
+
+  <!--
+    - custom js link
+  -->
+  <script src="../assets/js/script.js"></script>
+  <!--
+    - ionicon link
+  -->
+  <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+  <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+
 </body>
-
-
 
 </html>
