@@ -847,9 +847,9 @@ main {
  * #clients 
  */
 
-.clients {
+/* .clients {
   margin-bottom: 15px;
-}
+} */
 
 .clients-list {
   display: flex;
@@ -2026,7 +2026,7 @@ textarea.form-input::-webkit-resizer {
   /* clients */
 
   .clients-item {
-    min-width: calc(25% - 38px);
+    min-width: calc(23% - 65px);
   }
 
 
