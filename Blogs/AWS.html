@@ -441,39 +441,49 @@
               <li><strong>Connect to EC2 Instance:</strong>
                 <ul>
                   <li>SSH into your instance using:
-                    <pre><code>ssh -i /path/to/your-file.pem ubuntu@ec2-xx-xx-xx-xx.compute-1.amazonaws.com</code></pre>
+                    <ul>
+                      <li>ssh -i /path/to/your-file.pem ubuntu@ec2-xx-xx-xx-xx.compute-1.amazonaws.com</li>
+                    </ul>
                   </li>
-                  <li>Replace <code>/path/to/your-file.pem</code> with your actual .pem file path and
-                    <code>ec2-xx-xx-xx-xx.compute-1.amazonaws.com</code> with your instance's public DNS or IP address.
-                  </li>
+                  <li>Replace /path/to/your-file.pem with your actual .pem file path and ec2-xx-xx-xx-xx.compute-1.amazonaws.com with your instance's public DNS or IP address.</li>
                 </ul>
               </li>
               <li><strong>Set .pem File Permissions:</strong>
                 <ul>
                   <li>Ensure your .pem file has read-only permissions:
-                    <pre><code>chmod 400 /path/to/your-file.pem</code></pre>
+                    <ul>
+                      <li>chmod 400 /path/to/your-file.pem</li>
+                    </ul>
                   </li>
                 </ul>
               </li>
               <li><strong>Check System Information:</strong>
                 <ul>
                   <li><strong>CPU Info:</strong>
-                    <pre><code>lscpu</code></pre>
+                    <ul>
+                      <li>lscpu</li>
+                    </ul>
                   </li>
                   <li><strong>RAM Info:</strong>
-                    <pre><code>free -h</code></pre>
+                    <ul>
+                      <li>free -h</li>
+                    </ul>
                   </li>
                   <li><strong>OS Info:</strong>
-                    <pre><code>cat /etc/os-release</code></pre>
+                    <ul>
+                      <li>cat /etc/os-release</li>
+                    </ul>
                   </li>
                   <li><strong>Disk Usage:</strong>
-                    <pre><code>df -h</code></pre>
+                    <ul>
+                      <li>df -h</li>
+                    </ul>
                   </li>
                 </ul>
               </li>
             </ul>
-
-          </div> <br>
+          </div>  <br>
+          
 
           <p>
             <span class="badge badge-red">Script in Terminal: </span>
