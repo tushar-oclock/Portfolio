@@ -1,0 +1,814 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>BLOG</title>
+
+  <!--
+    - favicon
+  -->
+  <link rel="shortcut icon" href="../assets/images/logo.png" type="image/x-icon">
+
+  <!--
+    - custom css link
+  -->
+  <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@400;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@400;500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../assets/css/style.css">
+  <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;700&display=swap">
+
+
+
+
+  <!--
+    - google font link
+  -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+
+  <div class="video-container">
+    <video autoplay loop muted id="background-video">
+      <source src="../assets/images/video/bg2.mp4" type="video/mp4">
+      Your browser does not support the video tag.
+    </video>
+  </div>
+
+
+
+  <!--
+    - #MAIN
+  -->
+
+  <main>
+
+    <!--
+      - #SIDEBAR
+    -->
+
+    <aside class="sidebar" data-sidebar>
+      <div class="sidebar-info">
+
+        <figure class="avatar-box">
+          <img class=" test-shine" src="../assets/images/TusharArora.png" alt="tushar arora" width="80">
+        </figure>
+
+
+
+
+
+        <div class="info-content">
+          <h1 class="name" title="Tushar Arora">📛TUSHAR-PERSPECTIVE</h1>
+
+          <div style="display: flex; justify-content: center; font-family:  Ubuntu;">
+            <div id="badge-container" style="display: inline-block;"></div>
+          </div>
+
+        </div>
+
+
+
+
+
+        <button class="info_more-btn" data-sidebar-btn>
+          <span>Show Contacts</span>
+
+          <ion-icon name="chevron-down"></ion-icon>
+        </button>
+
+      </div>
+
+      <div class="sidebar-info_more">
+        <div class="separator"></div>
+        <ul class="contacts-list">
+
+
+
+
+
+
+          <li class="contact-item">
+            <div class="service-icon-box">
+              <img src="../assets/images/sidebar/mailsvg.svg" alt="design icon" width="40">
+            </div>
+            <div class="contact-info">
+              <p class="contact-title">Email</p>
+              <a href="mailto:tushar.aka.datascientist@gmail.com"
+                class="contact-link">Tushar.aka.datascientist@gmail.com</a>
+            </div>
+          </li>
+
+          <li class="contact-item">
+            <div class="service-icon-box">
+              <img src="../assets/images/sidebar/phonesvg.svg" alt="design icon" width="40">
+            </div>
+            <div class="contact-info">
+              <p class="contact-title">Phone</p>
+              <a href="tel:+12133522795" class="contact-link">+91 8851084852</a>
+            </div>
+          </li>
+
+        </ul>
+
+        <div class="separator"></div>
+
+        <ul class="social-list">
+
+          <li class="social-item">
+            <a href="#" class="social-link">
+              <img src="../assets/images/sidebar/github.png" alt="design icon" width="40">
+
+            </a>
+          </li>
+
+          <li class="social-item">
+            <a href="#" class="social-link">
+              <img src="../assets/images/sidebar/linkedin.png" alt="design icon" width="40">
+
+            </a>
+          </li>
+
+          <li class="social-item">
+            <a href="#" class="social-link">
+              <img src="../assets/images/sidebar/instagram.png" alt="design icon" width="40">
+
+            </a>
+          </li>
+
+
+        </ul>
+
+      </div>
+
+    </aside>
+
+
+
+
+
+    <!--
+      - #main-content
+    -->
+
+    <div class="main-content">
+
+      <!--
+        - #NAVBAR
+      -->
+
+      <nav class="navbar">
+
+        <ul class="navbar-list">
+
+
+
+
+          <li class="navbar-item">
+            <button class="navbar-link"
+              onclick="window.open('https://tushar-perspective.github.io/Portfolio/', '_blank')">Home page</button>
+          </li>
+
+
+
+
+
+        </ul>
+
+      </nav>
+
+
+
+
+      <!--
+        - #ABOUT
+      -->
+
+      <article class="about  active" data-page="about">
+
+        <header>
+          <h2 class="h2 article-title">🎯 Vector Database For LLM</h2>
+        </header>
+
+
+        <section class="about-text">
+          <p>
+            <span class="badge badge-primary">Why Use: </span>
+          </p>
+
+          <div class="blog">
+            <ul>
+              <li><strong>Efficient Similarity Search:</strong> Optimized for high-dimensional searches like image
+                recognition and NLP.</li>
+              <li><strong>Scalability:</strong> Handles large data volumes efficiently, unlike traditional databases.
+              </li>
+              <li><strong>Performance:</strong> Uses specialized indexing (e.g., HNSW, IVF) for fast query responses.
+              </li>
+              <li><strong>High-Dimensional Data Management:</strong> Designed specifically for managing and querying
+                high-dimensional data.</li>
+              <li><strong>ML Pipeline Integration:</strong> Seamlessly integrates with machine learning pipelines for
+                efficient feature vector handling.</li>
+            </ul>
+          </div> <br>
+
+
+          <p>
+            <span class="badge badge-secondary">Vector Database Capabilities: </span>
+          </p>
+
+          <div class="blog">
+            <ul>
+              <li><strong>Ultra-Fast Similarity Search:</strong> Essential for generative AI, enabling fast nearest
+                neighbor search across billions of vectors for: Image Search, Recommendations, Anomaly Detection, etc.
+              </li>
+              <li><strong>Approximate Nearest Neighbors:</strong> Algorithms like HNSW achieve speedup with minimal
+                accuracy loss.</li>
+              <li><strong>Support for Sparse Vectors:</strong> Compression schemes reduce storage and allow quick
+                calculations.</li>
+              <li><strong>Semantic Vector Search:</strong> Query vectors by meaning, e.g., find "dog" related vectors
+                like cat, wolf.</li>
+              <li><strong>Hybrid Vector + Metadata Search:</strong> Combine vector similarity with metadata filters for
+                powerful queries.</li>
+            </ul>
+
+
+          </div> <br>
+
+
+
+          <p>
+            <span class="badge badge-success">Vector: </span>
+          </p>
+
+          <div class="blog">
+            <li><strong>Definition:</strong> Set of numbers representing features of objects (words, sentences, images,
+              etc.).</li>
+            <li><strong>Purpose:</strong> Simplifies comparison and searching of unstructured content using math.</li>
+            <li><strong>Storage:</strong> Stored with data objects; similar objects have close vectors.</li>
+            <li><strong>Query:</strong> Form query vectors with specific features to find similar objects.</li>
+
+
+          </div> <br>
+
+
+
+          <p>
+            <span class="badge badge-danger">Database Architecture: </span>
+          </p>
+
+          <div class="blog">
+            <li><strong>Storage Layer:</strong> Optimized for storing vector data.</li>
+            <li><strong>Indexing Layer:</strong> Indexes vectors for efficient querying.</li>
+            <li><strong>Query Processing Layer:</strong> Processes queries and retrieves vectors.</li>
+            <li><strong>Similarity Computation:</strong> Computes similarity between query and database vectors.</li>
+
+
+          </div> <br>
+
+
+
+
+          <p>
+            <span class="badge badge-warning">Embeddings & Techniques: </span>
+          </p>
+
+          <div class="blog">
+            <ul>
+              <li><strong>What Are Embeddings?</strong></li>
+              <li><strong>Definition:</strong> Numerical vectors representing complex data (e.g., images, text).</li>
+              <li><strong>Purpose:</strong> Captures semantic similarities for efficient ML processing.</li> <br>
+
+              <li><strong>Popular Embedding Techniques:</strong></li>
+              <li><strong>Word2Vec:</strong> Learns dense word vectors, captures relationships, offers CBOW and
+                Skip-Gram architectures.</li>
+              <li><strong>GloVe:</strong> Combines global/local word context, uses word co-occurrence statistics.</li>
+              <li><strong>BERT:</strong> Transformer-based model, learns contextual embeddings, excels in NLP tasks.
+              </li>
+            </ul>
+
+
+
+
+          </div> <br>
+
+
+
+          <p>
+            <span class="badge badge-info">How Embeddings Work? </span>
+          </p>
+
+          <div class="blog">
+            <ul>
+              <li><strong>How Do Embeddings Work?</strong></li>
+              <li><strong>Representation:</strong> Each word is a dense vector in a continuous space with fixed
+                dimensions.</li>
+              <li><strong>Contextual Meaning:</strong> Embeddings capture word meanings; similar words are close in the
+                embedding space.</li>
+              <li><strong>Training:</strong> Pre-trained on large corpora using algorithms like Word2Vec, GloVe, or
+                BERT.</li>
+              <li><strong>Dimensionality Reduction:</strong> Converts thousands of words into a smaller dimensional
+                space.</li>
+              <li><strong>Usage in Models:</strong> Vectors are used in machine learning models for various tasks.</li>
+              <li><strong>Beyond Words:</strong> Embeddings also represent sentences, paragraphs, user IDs, products,
+                etc.</li> <br>
+
+              <li><strong>Why it is Useful:</strong></li>
+              <li><strong>Efficiency:</strong> Provides compact, dense representations.</li>
+              <li><strong>Semantic Meaning:</strong> Captures deeper meanings of words or items.</li>
+              <li><strong>Flexibility:</strong> Used in various machine learning tasks.</li>
+              <li><strong>Transfer Learning:</strong> Boosts performance in tasks with limited data.</li> <br>
+
+              <li><strong>Example of Word Embeddings:</strong></li>
+              <li><strong>One-Hot Encoding:</strong> Traditional method where each word is represented by a unique
+                vector.</li>
+              <li><strong>Embedding Process:</strong> Model learns 2D embeddings (e.g., cat = [0.9, 0.1], dog = [0.85,
+                0.15]).</li>
+              <li><strong>Similarity:</strong> Words like "cat" and "dog" are close in the embedding space.</li>
+              <li><strong>Dissimilarity:</strong> Words like "cat" and "swim" are far apart, indicating less similarity.
+              </li>
+              <li><strong>Contextual Grouping:</strong> Activities like "run" and "swim" are closer to each other and
+                related words.</li>
+            </ul>
+
+
+          </div> <br>
+
+
+
+          <p>
+            <span class="badge badge-light">Vector Database: </span>
+          </p>
+
+          <div class="blog">
+            <ul>
+              <li><strong>What Is a Vector Database?</strong></li>
+              <li>Stores vector embeddings for unstructured data (documents, images, videos, audio).</li>
+              <li>Crucial for fast vector search in generative AI.</li> <br>
+
+              <li><strong>Vector Index vs. Vector Database</strong></li>
+              <li>Vector Index: Quick search structure for vectors.</li>
+              <li>Vector Database: Manages indexes and data objects, coordinating search.</li><br>
+
+              <li><strong>Key Differences</strong></li>
+              <li>Vector Index: Stores attributes as vectors.</li>
+              <li>Vector Database: Combines SQL querying with vector search.</li><br>
+
+              <li><strong>Vector Index</strong></li>
+              <li>Efficiently stores and retrieves high-dimensional vector data.</li>
+              <li>Enables fast similarity and nearest neighbor searches.</li><br>
+
+              <li><strong>Types of Vector Indexes</strong></li>
+              <li>HNSW: Graph-based fast nearest neighbor searches.</li>
+              <li>IVF: Cluster-based efficient search.</li>
+              <li>PQ: Compressed vector search.</li>
+              <li>LSH: Bucket-based approximate search.</li><br>
+
+              <li><strong>Vector Database</strong></li>
+              <li>Manages vector embeddings with machine learning algorithms.</li>
+              <li>Provides fast similarity and nearest neighbor searches.</li>
+              <li>Ideal for AI tasks like NLP and recommendation systems.</li>
+            </ul>
+
+
+          </div> <br>
+
+
+          <p>
+            <span class="badge badge-teal">How Vector Databases Work? </span>
+          </p>
+
+          <div class="blog">
+            <ul>
+              <li><strong>How Vector Databases Work</strong></li>
+              <li>Store and process data as vectors in multidimensional space</li>
+              <li>Efficiently handle images, audio, and video data</li>
+              <li>Useful for recommendation systems, NLP, and image recognition</li> <br>
+            
+              <li><strong>Key Operations</strong></li>
+              <li>Vectorization: Create vectors for unstructured data</li>
+              <li>Indexing: Organize vectors for efficient search</li>
+              <li>Querying: Find similar vectors using distance operations</li>
+              <li>Post Processing: Optionally re-rank query results</li> <br>
+            
+              <li><strong>Components</strong></li>
+              <li>Embeddings: Capture semantic information</li>
+              <li>Optimized Storage: Handle complex data efficiently</li>
+              <li>ANN Search: Find similar vectors quickly</li>
+              <li>Serverless: Separate storage and compute costs</li> <br>
+            
+              <li><strong>Processes</strong></li>
+              <li>Indexing: Create and store vector embeddings</li>
+              <li>Querying: Search and find similar vector embeddings</li>
+              <li>Post Processing: Re-rank results for better accuracy</li>
+            </ul>
+            
+
+
+          </div> <br>
+
+
+          <p>
+            <span class="badge badge-deeporange">Types of Vector Database:</span>
+          </p>
+
+          <div class="blog">
+            <ul>
+              <li><strong>Data Type:</strong></li>
+              <ul>
+                <li>Text vector databases: optimized for text data</li>
+                <li>Image vector databases: for image data</li>
+                <li>Multimedia vector databases: handle various media types</li>
+                <li>Graph vector databases: specialized for graph data</li>
+              </ul> <br>
+
+              <li><strong>Indexing Technique:</strong></li>
+              <ul>
+                <li>Tree-based indexing: use tree structures like KD-trees</li>
+                <li>Hashing-based indexing: employ hashing techniques</li>
+                <li>Quantization-based indexing: use vector quantization</li>
+              </ul> <br>
+              
+              <li><strong>Storage Model:</strong></li>
+              <ul>
+                <li>In-memory databases: store all data in RAM</li>
+                <li>Disk-based databases: store data on disk</li>
+                <li>Hybrid databases: combine in-memory and disk-based approaches</li>
+              </ul> 
+            </ul>
+            
+            
+
+
+          </div> <br>
+
+
+
+          <p>
+            <span class="badge badge-gray">Feature of Vector Database:</span>
+          </p>
+
+          <div class="blog">
+            <ul>
+              <li><strong>High-Dimensional Vector Storage:</strong> Specifically designed to store, manage, and index massive quantities of high-dimensional vector data.</li>
+              <li><strong>Vector Data Representation:</strong> Arrays of numbers representing complex objects like text, images, and audio.</li>
+              <li><strong>Vector Embeddings:</strong> Continuous, multi-dimensional representations of vectors generated by specialized models.</li>
+              <li><strong>Scalability and Tunability:</strong> Scalable to handle growing datasets and tunable for optimized performance.</li>
+              <li><strong>Multi-Tenancy and Data Isolation:</strong> Supports multiple tenants while ensuring data isolation and security.</li>
+              <li><strong>Comprehensive APIs:</strong> Provides a complete suite of APIs for seamless integration with applications.</li>
+              <li><strong>Intuitive User Interface/Administrative Console:</strong> User-friendly interface for efficient database management.</li>
+            </ul>
+            
+            
+            
+
+
+          </div> <br>
+
+
+
+
+        </section>
+
+
+
+
+
+
+
+
+
+        <!--
+          - testimonials modal
+        -->
+
+        <div class="modal-container" data-modal-container>
+
+          <div class="overlay" data-overlay></div>
+
+          <section class="testimonials-modal">
+
+            <button class="modal-close-btn" data-modal-close-btn>
+              <ion-icon name="close-outline"></ion-icon>
+            </button>
+
+            <div class="modal-img-wrapper">
+              <figure class="modal-avatar-box">
+                <img src="./assets/images/avatar-1.png" alt="Daniel lewis" width="80" data-modal-img>
+              </figure>
+
+              <img src="./assets/images/icon-quote.svg" alt="quote icon">
+            </div>
+
+            <div class="modal-content">
+
+              <h4 class="h3 modal-title" data-modal-title>Daniel lewis</h4>
+
+              <time datetime="2021-06-14">14 June, 2021</time>
+
+              <div data-modal-text>
+                <p>
+                  Richard was hired to create a corporate identity. We were very pleased with the work done. She has a
+                  lot of experience
+                  and is very concerned about the needs of client. Lorem ipsum dolor sit amet, ullamcous cididt
+                  consectetur adipiscing
+                  elit, seds do et eiusmod tempor incididunt ut laborels dolore magnarels alia.
+                </p>
+              </div>
+
+            </div>
+
+          </section>
+
+        </div>
+
+      </article>
+
+
+
+
+
+
+
+
+
+
+
+
+
+      <!--
+        - #PORTFOLIO
+      -->
+
+      <article class="portfolio" data-page="portfolio">
+
+        <header>
+          <h2 class="h2 article-title">Portfolio</h2>
+        </header>
+
+        <section class="projects">
+
+          <ul class="filter-list">
+
+            <li class="filter-item">
+              <button class="active" data-filter-btn>All</button>
+            </li>
+
+            <li class="filter-item">
+              <button data-filter-btn>Web design</button>
+            </li>
+
+            <li class="filter-item">
+              <button data-filter-btn>Applications</button>
+            </li>
+
+            <li class="filter-item">
+              <button data-filter-btn>Web development</button>
+            </li>
+
+          </ul>
+
+          <div class="filter-select-box">
+
+            <button class="filter-select" data-select>
+
+              <div class="select-value" data-selecct-value>Select category</div>
+
+              <div class="select-icon">
+                <ion-icon name="chevron-down"></ion-icon>
+              </div>
+
+            </button>
+
+            <ul class="select-list">
+
+              <li class="select-item">
+                <button data-select-item>All</button>
+              </li>
+
+              <li class="select-item">
+                <button data-select-item>Web design</button>
+              </li>
+
+              <li class="select-item">
+                <button data-select-item>Applications</button>
+              </li>
+
+              <li class="select-item">
+                <button data-select-item>Web development</button>
+              </li>
+
+            </ul>
+
+          </div>
+
+          <ul class="project-list">
+
+            <li class="project-item  active" data-filter-item data-category="web development">
+              <a href="#">
+
+                <figure class="project-img">
+                  <div class="project-item-icon-box">
+                    <ion-icon name="eye-outline"></ion-icon>
+                  </div>
+
+                  <img src="./assets/images/project-1.jpg" alt="finance" loading="lazy">
+                </figure>
+
+                <h3 class="project-title">Finance</h3>
+
+                <p class="project-category">Web development</p>
+
+              </a>
+            </li>
+
+            <li class="project-item  active" data-filter-item data-category="web development">
+              <a href="#">
+
+                <figure class="project-img">
+                  <div class="project-item-icon-box">
+                    <ion-icon name="eye-outline"></ion-icon>
+                  </div>
+
+                  <img src="./assets/images/project-2.png" alt="orizon" loading="lazy">
+                </figure>
+
+                <h3 class="project-title">Orizon</h3>
+
+                <p class="project-category">Web development</p>
+
+              </a>
+            </li>
+
+            <li class="project-item  active" data-filter-item data-category="web design">
+              <a href="#">
+
+                <figure class="project-img">
+                  <div class="project-item-icon-box">
+                    <ion-icon name="eye-outline"></ion-icon>
+                  </div>
+
+                  <img src="./assets/images/project-3.jpg" alt="fundo" loading="lazy">
+                </figure>
+
+                <h3 class="project-title">Fundo</h3>
+
+                <p class="project-category">Web design</p>
+
+              </a>
+            </li>
+
+            <li class="project-item  active" data-filter-item data-category="applications">
+              <a href="#">
+
+                <figure class="project-img">
+                  <div class="project-item-icon-box">
+                    <ion-icon name="eye-outline"></ion-icon>
+                  </div>
+
+                  <img src="./assets/images/project-4.png" alt="brawlhalla" loading="lazy">
+                </figure>
+
+                <h3 class="project-title">Brawlhalla</h3>
+
+                <p class="project-category">Applications</p>
+
+              </a>
+            </li>
+
+            <li class="project-item  active" data-filter-item data-category="web design">
+              <a href="#">
+
+                <figure class="project-img">
+                  <div class="project-item-icon-box">
+                    <ion-icon name="eye-outline"></ion-icon>
+                  </div>
+
+                  <img src="./assets/images/project-5.png" alt="dsm." loading="lazy">
+                </figure>
+
+                <h3 class="project-title">DSM.</h3>
+
+                <p class="project-category">Web design</p>
+
+              </a>
+            </li>
+
+            <li class="project-item  active" data-filter-item data-category="web design">
+              <a href="#">
+
+                <figure class="project-img">
+                  <div class="project-item-icon-box">
+                    <ion-icon name="eye-outline"></ion-icon>
+                  </div>
+
+                  <img src="./assets/images/project-6.png" alt="metaspark" loading="lazy">
+                </figure>
+
+                <h3 class="project-title">MetaSpark</h3>
+
+                <p class="project-category">Web design</p>
+
+              </a>
+            </li>
+
+            <li class="project-item  active" data-filter-item data-category="web development">
+              <a href="#">
+
+                <figure class="project-img">
+                  <div class="project-item-icon-box">
+                    <ion-icon name="eye-outline"></ion-icon>
+                  </div>
+
+                  <img src="./assets/images/project-7.png" alt="summary" loading="lazy">
+                </figure>
+
+                <h3 class="project-title">Summary</h3>
+
+                <p class="project-category">Web development</p>
+
+              </a>
+            </li>
+
+            <li class="project-item  active" data-filter-item data-category="applications">
+              <a href="#">
+
+                <figure class="project-img">
+                  <div class="project-item-icon-box">
+                    <ion-icon name="eye-outline"></ion-icon>
+                  </div>
+
+                  <img src="./assets/images/project-8.jpg" alt="task manager" loading="lazy">
+                </figure>
+
+                <h3 class="project-title">Task Manager</h3>
+
+                <p class="project-category">Applications</p>
+
+              </a>
+            </li>
+
+            <li class="project-item  active" data-filter-item data-category="web development">
+              <a href="#">
+
+                <figure class="project-img">
+                  <div class="project-item-icon-box">
+                    <ion-icon name="eye-outline"></ion-icon>
+                  </div>
+
+                  <img src="./assets/images/project-9.png" alt="arrival" loading="lazy">
+                </figure>
+
+                <h3 class="project-title">Arrival</h3>
+
+                <p class="project-category">Web development</p>
+
+              </a>
+            </li>
+
+          </ul>
+
+        </section>
+
+      </article>
+
+
+
+
+
+
+
+
+
+
+
+    </div>
+
+
+
+  </main>
+
+
+
+
+
+
+  <!--
+    - custom js link
+  -->
+  <script src="../assets/js/script.js"></script>
+  <!--
+    - ionicon link
+  -->
+  <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+  <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+
+</body>
+
+</html>
