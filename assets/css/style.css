@@ -550,8 +550,8 @@ main {
 .navbar-link {
   /* color: var(--light-gray); */
   color: #ffdb70;
-  
-  font-size: var(--fs-9);
+  font-size: 15px;
+  /* font-size: var(--fs-9); */
   padding: 20px 7px;
   transition: color var(--transition-1);
 
@@ -2518,7 +2518,8 @@ strong{
 
 .waviy {
   position: relative;
-  margin: 8px;
+  margin-bottom: 10px;
+
 }
 .waviy span {
   position: relative;
