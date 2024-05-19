@@ -206,148 +206,313 @@
       <article class="about  active" data-page="about">
 
         <header>
-          <h2 class="h2 article-title">🎯 LangServe and LangSmith</h2>
+          <h2 class="h2 article-title">🎯 MLOPS, AIOPS & LLMOPS</h2>
         </header>
 
 
         <section class="about-text">
-          <p>
-            <span class="badge badge-purple">LangServe</span>
-            helps developers deploy LangChain runnables and chains as a REST API.
-          </p>
-
-
 
           <p>
-            <span class="badge badge-success">LangSmith</span> is a platform for building production-grade LLM
-            applications. It allows you to closely monitor and evaluate application.
+            <span class="badge badge-purple">Cloud Computing: </span>
           </p>
 
-
-          <span class="badge badge-warning">API Testing</span> 
-
-          <div class="code-window">
-            <pre>
-              # Import necessary modules and classes
-              from langchain_openai import ChatOpenAI
-              from langchain_core.prompts import ChatPromptTemplate
-              from langchain_core.output_parsers import StrOutputParser
-              import os
-              from dotenv import load_dotenv
-
-              # Set the OPENAI_API_KEY environment variable from the .env file
-              os.environ['OPENAI_API_KEY'] = os.getenv("OPENAI_API_KEY")
-
-              # Initialize the FastAPI app with title, version, and description
-              app = FastAPI(
-                  title="Langchain Server",
-                  version="1.0",
-                  description="A simple API Server"
-              )
-              
-              # Add routes to the app for the OpenAI chat model
-              add_routes(
-                  app,
-                  ChatOpenAI(),  # Initialize ChatOpenAI model
-                  path="/openai"  # Set the endpoint path
-              )
-              
-              # Initialize the ChatOpenAI model
-              model = ChatOpenAI()
-              
-              # Create a ChatPromptTemplate for explaining a topic in a point-wise manner
-              prompt = ChatPromptTemplate.from_template("What is {topic}?
-              Explain that topic in points-wise.")
-              
-              # Create another ChatPromptTemplate for making a story from a given topic
-              prompt1 = ChatPromptTemplate.from_template("Make a story about {topic}.")
-              
-              # Add routes to the app for the topic explanation endpoint
-              add_routes(
-                  app,
-                  prompt | model,  # Use the prompt and model
-                  path="/topic"  # Set the endpoint path
-              )
-              
-              # Add routes to the app for the story-making endpoint
-              add_routes(
-                  app,
-                  prompt1 | model,  # Use the prompt1 and model
-                  path="/story"  # Set the endpoint path
-              )
-              
-              # Run the FastAPI app using uvicorn when the script is executed directly
-              if __name__ == "__main__":
-                  # Run the server on localhost at port 8000
-                  uvicorn.run(app, host="localhost", port=8000)  
-            </pre>
-          </div>
-
-        </section> <br>
+          <div class="blog">
+            <ul>
+              <li><strong>What is Cloud Computing?</strong>
+                <p>Cloud computing is the on-demand delivery of IT resources over the Internet with pay-as-you-go pricing. It allows access to technology services like computing power, storage, and databases from providers like AWS.</p>
+              </li>
+              <li><strong>Key Features of Traditional Computing:</strong>
+                <ul>
+                  <li><strong>Control:</strong> Complete control over infrastructure.</li>
+                  <li><strong>Security:</strong> Responsible for securing data and systems.</li>
+                  <li><strong>Scalability:</strong> Expensive and time-consuming to expand.</li>
+                </ul>
+              </li>
+            </ul>
+            
+          </div> <br>
 
 
-        <span class="badge badge-warning">App Testing</span>
+          <p>
+            <span class="badge badge-red">Key Features: </span>
+          </p>
+
+          <div class="blog">
+            <ul>
+              <li><strong>Scalability:</strong> Easily adjust resources without buying more hardware, adapting quickly to changes in demand.</li>
+              <li><strong>Cost-Efficiency:</strong> Pay-as-you-go model eliminates large upfront investments and reduces maintenance costs.</li>
+              <li><strong>Accessibility and Collaboration:</strong> Access applications and data from anywhere, promoting teamwork and productivity.</li>
+              <li><strong>Security and Reliability:</strong> Leading providers prioritize security with encryption, backups, and disaster recovery plans.</li>
+              <li><strong>Application Development Efficiency:</strong> Offers a flexible, scalable platform for optimizing the application development lifecycle.</li>
+              <li><strong>Rapid Provisioning and Scalability:</strong> Quick provisioning of resources, enabling easy scaling for optimal performance.</li>
+              <li><strong>Cost-Effectiveness:</strong> Pay only for used resources, eliminating upfront infrastructure investments and saving on maintenance.</li>
+              <li><strong>Collaborative Development:</strong> Facilitates real-time collaboration among team members, enhancing productivity.</li>
+              <li><strong>Focus on Development:</strong> Offloads infrastructure management, allowing teams to focus on coding, testing, and deployment.</li>
+            </ul>
+            
+            
+          </div> <br>
 
 
-        <section class="about-text">
-          <div class="code-window">
-            <pre>
-              # Import necessary modules
-              from langchain_openai import ChatOpenAI
-              from langchain_core.prompts import ChatPromptTemplate
-              from langchain_core.output_parsers import StrOutputParser
+          <p>
+            <span class="badge badge-orange">Infrastructure As A Service: </span>
+          </p>
 
-              # Load environment variables from a .env file
-              import os
-              from dotenv import load_dotenv
-              load_dotenv()
+          <div class="blog">
+            <ul>
+              <li><strong>Infrastructure As A Service (IaaS):</strong>
+                <ul>
+                  <li>Flexible cloud service, rents hardware.</li>
+                  <li>Control over servers, VMs, storage, networks, OS.</li>
+                  <li>Instant, managed computing infrastructure.</li>
+                  <li>Examples: AWS EC2, DigitalOcean, Azure, Google Compute Engine.</li>
+                </ul>
+              </li>
+              <li><strong>Use-Cases:</strong>
+                <ul>
+                  <li>Data backup, storage, and recovery.</li>
+                  <li>Cost-effective test and development environments.</li>
+                  <li>Increased computing power for Big Data.</li>
+                  <li>Scalable for complex web projects.</li>
+                  <li>Handles tasks requiring supercomputers.</li>
+                  <li>Run graphic-intensive apps without latency.</li>
+                </ul>
+              </li>
+              <li><strong>Disadvantages:</strong>
+                <ul>
+                  <li>Limited infrastructure control.</li>
+                  <li>Users responsible for security.</li>
+                  <li>Possible restricted access in some regions.</li>
+                </ul>
+              </li>
+            </ul>
+            
+          </div> <br>
+          
+        
+          <p>
+            <span class="badge badge-cyan">Platform As A Service: </span>
+          </p>
 
-              # Set the environment variables for OpenAI and Langchain
-              os.environ["OPENAI_API_KEY"] = os.getenv("OPENAI_API_KEY")
-              os.environ["LANGCHAIN_TRACING_V2"] = "true"
-              os.environ["LANGCHAIN_API_KEY"] = os.getenv("LANGCHAIN_API_KEY")
+          <div class="blog">
+            <ul>
+              <li><strong>Platform As A Service (PaaS):</strong>
+                <ul>
+                  <li>Ready-to-use development environment.</li>
+                  <li>Focus on code without managing infrastructure.</li>
+                  <li>Scalable and feature-rich services.</li>
+                  <li>More expensive than IaaS, cheaper than SaaS.</li>
+                  <li>Examples: AWS Elastic Beanstalk, Azure WebApps, Google Cloud SQL.</li>
+                </ul>
+              </li>
+              <li><strong>Benefits:</strong>
+                <ul>
+                  <li>Faster development time.</li>
+                  <li>Reduced costs on manual deployments.</li>
+                  <li>Enhanced security for applications.</li>
+                  <li>High availability even during failures.</li>
+                </ul>
+              </li>
+              <li><strong>Use-Cases:</strong>
+                <ul>
+                  <li>Developing and managing APIs and microservices.</li>
+                  <li>Setting up and managing databases.</li>
+                </ul>
+              </li>
+              <li><strong>Disadvantages:</strong>
+                <ul>
+                  <li>Limited infrastructure control.</li>
+                  <li>Dependency on provider for maintenance.</li>
+                  <li>Restricted flexibility for specific workloads.</li>
+                </ul>
+              </li>
+            </ul>
+            
+          </div> <br>
 
-              # Define a chat prompt template
-              prompt = ChatPromptTemplate.from_messages([
-                  ("system", "You are a helpful assistant. Please respond to 
-                  the user request only based on the given context"),
-                  ("user", "Question: {question}\nContext: {context}")
-              ])
 
-              # Create an instance of the ChatOpenAI class with the specified model
-              model = ChatOpenAI(model="gpt-3.5-turbo")
 
-              # Create an output parser instance
-              output_parser = StrOutputParser()
+          <p>
+            <span class="badge badge-Amber">Software As A Service: </span>
+          </p>
 
-              # Define the chatbot pipeline with the prompt, model, and output parser
-              chain = prompt | model | output_parser
+          <div class="blog">
+            <ul>
+              <li><strong>Software As A Service (SaaS):</strong>
+                <ul>
+                  <li>Complete product run and managed by the provider.</li>
+                  <li>Hosted online and available via subscription or purchase.</li>
+                  <li>No need to worry about maintenance or infrastructure management.</li>
+                  <li>Examples: Microsoft Office 365, Oracle ERP/HCM Cloud, SalesForce, Gmail, Dropbox.</li>
+                </ul>
+              </li>
+              <li><strong>Benefits:</strong>
+                <ul>
+                  <li>Lower Total Cost of Ownership (TCO).</li>
+                  <li>Eliminates hardware expenses and maintenance costs.</li>
+                  <li>Improved security with secure servers and 24/7 monitoring.</li>
+                </ul>
+              </li>
+              <li><strong>Disadvantages:</strong>
+                <ul>
+                  <li>Limited customization options.</li>
+                  <li>Dependency on internet connectivity.</li>
+                  <li>Potential security incidents and data breaches.</li>
+                  <li>Limited control over data.</li>
+                </ul>
+              </li>
+            </ul>
+            
+          </div> <br>
 
-              # Define the question and context for the chatbot
-              question = "summarize that article about waterlogging" context = """ Kempegowda International Airport 
-              (KIA) officials said eight flights were diverted, seven to Chennai and one to Coimbatore since they 
-              were unable to land between 5 pm and 5.15 pm. According to IMD, the KIA weather station recorded 
-              3.9 mm rainfall up to 5.30 pm.
+          <p>
+            <span class="badge badge-maron">Cloud Deployment: </span>
+          </p>
 
-              Bengaluru Traffic Commissioner M N Anucheth said that heavy water logging was reported at 33 
-              locations and trees were uprooted in 16 locations in Bengaluru. This led to considerable traffic 
-              congestion in several places.
+          <div class="blog">
+            <ul>
+              <li><strong>Public Cloud:</strong> Available to all, managed by providers. Examples: Amazon EC2, Google App Engine.</li>
+              <li><strong>Private Cloud:</strong> Used by one organization, not shared. Examples: AWS, Microsoft Azure.</li>
+              <li><strong>Hybrid Cloud:</strong> Combination of public and private clouds, for smooth transition.</li>
+            </ul>
+            
+          </div> <br>
 
-              Waterlogging was reported in Electronic City, Bellandur, Nagawara, Kamakshipalya, Maharani 
-              underpass and Hebbal, among other areas. Meanwhile, trees were uprooted in Jayamahal Road, 
-              Kathriguppe, PES College, Hosakerehalli, Hennur Main Road, Malleswaram and Mekhri Circle. At
-              Hennur Main Road, an electric pole collapsed leading to traffic disruption and the underpass 
-              connecting towards Sankey Road near Kalpana Junction was closed due to waterlogging. this is 
-              created by prince katiyar make in karnataka
-              """
 
-              # Invoke the chatbot with the question and context
-              print(chain.invoke({"question": question, "context": context}))
-            </pre>
-          </div>
+
+
+          <p>
+            <span class="badge badge-red">AWS CLI & CloudShell:</span>
+          </p>
+
+          <div class="blog">
+            <ul>
+              <li> Configuration CLI, Console & SDK</li>
+              <li> Private key</li>
+              <li> CloudShell Configuration</li>
+            </ul>
+          </div> <br>
+
+          <p>
+            <span class="badge badge-orange">EC2 (Elastic Compute Cloud):</span>
+          </p>
+
+          <div class="blog">
+            <ul>
+              <li>Instance Management</li>
+              <li>Amazon Machine Image (AMI)</li>
+              <li>Storage Space: EBS(Elastic Block Store), EFS(Elastic File System)</li>
+              <li>Network Card, Security Group, Inbound & Outbound Traffic </li>
+              <li>Linux Commands, Bootstrap Script,  Security Group, Instance Storage</li>
+              <li></li>
+            </ul>
+          </div> <br>
+
+          <p>
+            <span class="badge badge-purple">EC2 Commands: </span>
+          </p>
+
+          <div class="blog">
+            <ul>
+              <li><strong>Connect to EC2 Instance:</strong>
+                <ul>
+                  <li>SSH into your instance using:
+                    <pre><code>ssh -i /path/to/your-file.pem ubuntu@ec2-xx-xx-xx-xx.compute-1.amazonaws.com</code></pre>
+                  </li>
+                  <li>Replace <code>/path/to/your-file.pem</code> with your actual .pem file path and <code>ec2-xx-xx-xx-xx.compute-1.amazonaws.com</code> with your instance's public DNS or IP address.</li>
+                </ul>
+              </li>
+              <li><strong>Set .pem File Permissions:</strong>
+                <ul>
+                  <li>Ensure your .pem file has read-only permissions:
+                    <pre><code>chmod 400 /path/to/your-file.pem</code></pre>
+                  </li>
+                </ul>
+              </li>
+              <li><strong>Check System Information:</strong>
+                <ul>
+                  <li><strong>CPU Info:</strong>
+                    <pre><code>lscpu</code></pre>
+                  </li>
+                  <li><strong>RAM Info:</strong>
+                    <pre><code>free -h</code></pre>
+                  </li>
+                  <li><strong>OS Info:</strong>
+                    <pre><code>cat /etc/os-release</code></pre>
+                  </li>
+                  <li><strong>Disk Usage:</strong>
+                    <pre><code>df -h</code></pre>
+                  </li>
+                </ul>
+              </li>
+            </ul>
+            
+          </div> <br>
+          
+          <p>
+            <span class="badge badge-red">Script in Terminal: </span>
+          </p>
+
+          <div class="blog">
+            <ul>
+              <li><strong>Switch to Root User:</strong> <code>sudo -i</code></li>
+              <li><strong>Clear the Terminal:</strong> <code>clear</code></li>
+              <li><strong>Update Package Lists:</strong> <code>apt-get update</code></li>
+              <li><strong>Check Nginx Config Syntax:</strong> <code>nginx -t</code></li>
+              <li><strong>Install Nginx:</strong> <code>apt-get install nginx</code></li>
+              <li><strong>Verify Nginx Installation:</strong> <code>nginx -t</code></li>
+              <li><strong>Check Nginx Service Status:</strong> <code>service nginx status</code></li>
+              <li><strong>Test Nginx with Curl:</strong> <code>curl localhost</code></li>
+              <li><strong>Change to Web Root:</strong> <code>cd /var/www/html/</code></li>
+              <li><strong>List Directory Contents:</strong> <code>ls</code></li>
+              <li><strong>Display Default Nginx HTML:</strong> <code>cat index.nginx-debian.html</code></li>
+              <li><strong>Create New HTML File:</strong> <code>echo "i m a prince katiyar" > index.html</code></li>
+              <li><strong>Test New HTML with Curl:</strong> <code>curl localhost</code></li>
+            </ul>
+            
+            
+          </div> <br>
+          
+
+          <p>
+            <span class="badge badge-orange">Script in Bootstrap: </span>
+          </p>
+
+          <div class="blog">
+            <ul>
+              <li><strong>Shebang:</strong> <code>#!/bin/bash</code>
+                <p>Indicates the script should be executed using the Bash shell.</p>
+              </li>
+              <li><strong>Update Package Lists:</strong> <code>apt-get update</code>
+                <p>Ensures the system has the latest information about available packages.</p>
+              </li>
+              <li><strong>Install Nginx:</strong> <code>apt-get install nginx -y</code>
+                <p>Installs the Nginx web server. The <code>-y</code> flag automatically answers "yes" to prompts.</p>
+              </li>
+              <li><strong>Create HTML File:</strong> <code>echo "welcome to ineuron.ai" > /var/www/html/index.html</code>
+                <p>Creates a new <code>index.html</code> file in <code>/var/www/html/</code> with the content "welcome to ineuron.ai".</p>
+              </li>
+            </ul>
+            
+            
+            
+          </div> <br>
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
 
         </section>
-
 
 
 

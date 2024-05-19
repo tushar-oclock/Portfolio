@@ -201,3 +201,25 @@ setInterval(() => {
 
 
 
+new kursor({
+  type: 1,
+  removeDefaultCursor:true,
+  color: "#FFD870"
+})
+
+
+
+
+document.addEventListener("click", function() {
+  playSound();
+});
+
+function playSound() {
+  var audio = document.getElementById("clickSound");
+  audio.play();
+}
+
+document.getElementById('background-video').addEventListener('loadeddata', function() {
+  document.body.style.backgroundColor = 'black';
+});
+
