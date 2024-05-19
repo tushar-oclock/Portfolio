@@ -65,14 +65,22 @@
 
 
 
-        <div class="info-content">
-          <h1 class="name" title="Tushar Arora">📛TUSHAR-PERSPECTIVE</h1>
-
-          <div style="display: flex; justify-content: center; font-family:  Ubuntu;">
-            <div id="badge-container" style="display: inline-block;"></div>
-          </div>
-
+        <div style="display: flex; justify-content: center; font-family:  Ubuntu;">
+          <div id="badge-container" style="display: inline-block;"></div>
         </div>
+
+        <style>
+          @media (max-width: 768px) {
+            #badge-container {
+              margin-left: 0;
+              /* Reset margin for mobile view */
+              margin-right: auto;
+              /* Align to the left */
+            }
+          }
+        </style>
+      </div>
+
 
 
 
