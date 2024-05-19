@@ -551,7 +551,7 @@ main {
   /* color: var(--light-gray); */
   color: #ffdb70;
   
-  font-size: var(--fs-8);
+  font-size: var(--fs-9);
   padding: 20px 7px;
   transition: color var(--transition-1);
 
@@ -2264,7 +2264,7 @@ h3 {
   white-space: nowrap;
   vertical-align: baseline;
   border-radius: 0.25rem;
-  font-family: 'Space Grotesk'; 
+  font-family: 'Poppins'; 
 }
 
 .badge-primary {
@@ -2329,7 +2329,7 @@ h3 {
 
 .badge-red {
   background-color: #f44336;
-  color: whtie;
+  color: #fff;
 }
 
 .badge-orange {
@@ -2511,3 +2511,27 @@ strong{
   filter: invert(50%);
 }
 
+
+
+
+
+
+.waviy {
+  position: relative;
+  margin: 8px;
+}
+.waviy span {
+  position: relative;
+  display: inline-block;
+  font-size: 18px;
+  color: #fff;
+  text-transform: uppercase;
+  animation: flip 2s infinite;
+  animation-delay: calc(.100s * var(--i));
+  font-family: 'Space Grotesk';
+}
+@keyframes flip {
+  0%,80% {
+    transform: rotateY(360deg) 
+  }
+}
