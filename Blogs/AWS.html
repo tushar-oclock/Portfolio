@@ -15,11 +15,6 @@
   <!--
     - custom css link
   -->
-  <link rel="stylesheet" href="https://unpkg.com/kursor/dist/kursor.css">
-  <script src="https://cdn.jsdelivr.net/npm/kursor@0.0.14/dist/kursor.js"></script>
-
-
-
   <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@400;700&display=swap" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@400;500;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="../assets/css/style.css">
@@ -38,13 +33,6 @@
 </head>
 
 <body>
-
-
-  <audio id="clickSound">
-    <source src="../assets/images/aud/sound.wav" type="audio/wav">
-    Your browser does not support the audio element.
-</audio>
-
 
 
   <div class="video-container">
@@ -77,24 +65,21 @@
 
 
 
-        <div class="info-content">
-          <h1 class="name" title="Tushar Arora">📛TUSHAR-PERSPECTIVE</h1>
-
-          <div style="display: flex; justify-content: center; font-family:  Ubuntu;">
-            <div id="badge-container" style="display: inline-block;"></div>
-          </div>
-
-          <style>
-            @media (max-width: 768px) {
-              #badge-container {
-                margin-left: 0;
-                /* Reset margin for mobile view */
-                margin-right: auto;
-                /* Align to the left */
-              }
-            }
-          </style>
+        <div style="display: flex; justify-content: center; font-family:  Ubuntu;">
+          <div id="badge-container" style="display: inline-block;"></div>
         </div>
+
+        <style>
+          @media (max-width: 768px) {
+            #badge-container {
+              margin-left: 0;
+              /* Reset margin for mobile view */
+              margin-right: auto;
+              /* Align to the left */
+            }
+          }
+        </style>
+      </div>
 
 
 
@@ -183,13 +168,6 @@
 
     <div class="main-content">
 
-
-
-
-
-
-
-
       <!--
         - #NAVBAR
       -->
@@ -205,7 +183,7 @@
             <button class="navbar-link"
               onclick="window.open('https://tushar-perspective.github.io/Portfolio/', '_blank')">Home page</button>
           </li>
- 
+
 
 
 
@@ -216,6 +194,10 @@
 
 
 
+
+      <!--
+        - #ABOUT
+      -->
 
       <!--
         - #ABOUT
@@ -237,7 +219,9 @@
           <div class="blog">
             <ul>
               <li><strong>What is Cloud Computing?</strong>
-                <p>Cloud computing is the on-demand delivery of IT resources over the Internet with pay-as-you-go pricing. It allows access to technology services like computing power, storage, and databases from providers like AWS.</p>
+                <p>Cloud computing is the on-demand delivery of IT resources over the Internet with pay-as-you-go
+                  pricing. It allows access to technology services like computing power, storage, and databases from
+                  providers like AWS.</p>
               </li>
               <li><strong>Key Features of Traditional Computing:</strong>
                 <ul>
@@ -247,7 +231,7 @@
                 </ul>
               </li>
             </ul>
-            
+
           </div> <br>
 
 
@@ -257,18 +241,27 @@
 
           <div class="blog">
             <ul>
-              <li><strong>Scalability:</strong> Easily adjust resources without buying more hardware, adapting quickly to changes in demand.</li>
-              <li><strong>Cost-Efficiency:</strong> Pay-as-you-go model eliminates large upfront investments and reduces maintenance costs.</li>
-              <li><strong>Accessibility and Collaboration:</strong> Access applications and data from anywhere, promoting teamwork and productivity.</li>
-              <li><strong>Security and Reliability:</strong> Leading providers prioritize security with encryption, backups, and disaster recovery plans.</li>
-              <li><strong>Application Development Efficiency:</strong> Offers a flexible, scalable platform for optimizing the application development lifecycle.</li>
-              <li><strong>Rapid Provisioning and Scalability:</strong> Quick provisioning of resources, enabling easy scaling for optimal performance.</li>
-              <li><strong>Cost-Effectiveness:</strong> Pay only for used resources, eliminating upfront infrastructure investments and saving on maintenance.</li>
-              <li><strong>Collaborative Development:</strong> Facilitates real-time collaboration among team members, enhancing productivity.</li>
-              <li><strong>Focus on Development:</strong> Offloads infrastructure management, allowing teams to focus on coding, testing, and deployment.</li>
+              <li><strong>Scalability:</strong> Easily adjust resources without buying more hardware, adapting quickly
+                to changes in demand.</li>
+              <li><strong>Cost-Efficiency:</strong> Pay-as-you-go model eliminates large upfront investments and reduces
+                maintenance costs.</li>
+              <li><strong>Accessibility and Collaboration:</strong> Access applications and data from anywhere,
+                promoting teamwork and productivity.</li>
+              <li><strong>Security and Reliability:</strong> Leading providers prioritize security with encryption,
+                backups, and disaster recovery plans.</li>
+              <li><strong>Application Development Efficiency:</strong> Offers a flexible, scalable platform for
+                optimizing the application development lifecycle.</li>
+              <li><strong>Rapid Provisioning and Scalability:</strong> Quick provisioning of resources, enabling easy
+                scaling for optimal performance.</li>
+              <li><strong>Cost-Effectiveness:</strong> Pay only for used resources, eliminating upfront infrastructure
+                investments and saving on maintenance.</li>
+              <li><strong>Collaborative Development:</strong> Facilitates real-time collaboration among team members,
+                enhancing productivity.</li>
+              <li><strong>Focus on Development:</strong> Offloads infrastructure management, allowing teams to focus on
+                coding, testing, and deployment.</li>
             </ul>
-            
-            
+
+
           </div> <br>
 
 
@@ -304,10 +297,10 @@
                 </ul>
               </li>
             </ul>
-            
+
           </div> <br>
-          
-        
+
+
           <p>
             <span class="badge badge-cyan">Platform As A Service: </span>
           </p>
@@ -345,7 +338,7 @@
                 </ul>
               </li>
             </ul>
-            
+
           </div> <br>
 
 
@@ -380,7 +373,7 @@
                 </ul>
               </li>
             </ul>
-            
+
           </div> <br>
 
           <p>
@@ -389,11 +382,13 @@
 
           <div class="blog">
             <ul>
-              <li><strong>Public Cloud:</strong> Available to all, managed by providers. Examples: Amazon EC2, Google App Engine.</li>
-              <li><strong>Private Cloud:</strong> Used by one organization, not shared. Examples: AWS, Microsoft Azure.</li>
+              <li><strong>Public Cloud:</strong> Available to all, managed by providers. Examples: Amazon EC2, Google
+                App Engine.</li>
+              <li><strong>Private Cloud:</strong> Used by one organization, not shared. Examples: AWS, Microsoft Azure.
+              </li>
               <li><strong>Hybrid Cloud:</strong> Combination of public and private clouds, for smooth transition.</li>
             </ul>
-            
+
           </div> <br>
 
 
@@ -421,7 +416,7 @@
               <li>Amazon Machine Image (AMI)</li>
               <li>Storage Space: EBS(Elastic Block Store), EFS(Elastic File System)</li>
               <li>Network Card, Security Group, Inbound & Outbound Traffic </li>
-              <li>Linux Commands, Bootstrap Script,  Security Group, Instance Storage</li>
+              <li>Linux Commands, Bootstrap Script, Security Group, Instance Storage</li>
               <li></li>
             </ul>
           </div> <br>
@@ -437,7 +432,9 @@
                   <li>SSH into your instance using:
                     <pre><code>ssh -i /path/to/your-file.pem ubuntu@ec2-xx-xx-xx-xx.compute-1.amazonaws.com</code></pre>
                   </li>
-                  <li>Replace <code>/path/to/your-file.pem</code> with your actual .pem file path and <code>ec2-xx-xx-xx-xx.compute-1.amazonaws.com</code> with your instance's public DNS or IP address.</li>
+                  <li>Replace <code>/path/to/your-file.pem</code> with your actual .pem file path and
+                    <code>ec2-xx-xx-xx-xx.compute-1.amazonaws.com</code> with your instance's public DNS or IP address.
+                  </li>
                 </ul>
               </li>
               <li><strong>Set .pem File Permissions:</strong>
@@ -464,9 +461,9 @@
                 </ul>
               </li>
             </ul>
-            
+
           </div> <br>
-          
+
           <p>
             <span class="badge badge-red">Script in Terminal: </span>
           </p>
@@ -487,10 +484,10 @@
               <li><strong>Create New HTML File:</strong> <code>echo "i m a prince katiyar" > index.html</code></li>
               <li><strong>Test New HTML with Curl:</strong> <code>curl localhost</code></li>
             </ul>
-            
-            
+
+
           </div> <br>
-          
+
 
           <p>
             <span class="badge badge-orange">Script in Bootstrap: </span>
@@ -507,29 +504,25 @@
               <li><strong>Install Nginx:</strong> <code>apt-get install nginx -y</code>
                 <p>Installs the Nginx web server. The <code>-y</code> flag automatically answers "yes" to prompts.</p>
               </li>
-              <li><strong>Create HTML File:</strong> <code>echo "welcome to ineuron.ai" > /var/www/html/index.html</code>
-                <p>Creates a new <code>index.html</code> file in <code>/var/www/html/</code> with the content "welcome to ineuron.ai".</p>
+              <li><strong>Create HTML File:</strong>
+                <code>echo "welcome to ineuron.ai" > /var/www/html/index.html</code>
+                <p>Creates a new <code>index.html</code> file in <code>/var/www/html/</code> with the content "welcome
+                  to ineuron.ai".</p>
               </li>
             </ul>
-            
-            
-            
+
+
+
           </div> <br>
-          
+
         </section>
-
-
-
-
-
-
-
 
 
         <!--
           - testimonials modal
         -->
 
+        
         <div class="modal-container" data-modal-container>
 
           <div class="overlay" data-overlay></div>
@@ -824,8 +817,8 @@
 
 
 
-    </div>
 
+    </div>
 
 
 
