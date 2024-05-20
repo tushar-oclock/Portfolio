@@ -7,45 +7,24 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>BLOG</title>
 
-  <!--
-    - favicon
-  -->
   <link rel="shortcut icon" href="../assets/images/logo.png" type="image/x-icon">
 
-  <!--
-    - custom css link
-  -->
   <link rel="stylesheet" href="https://unpkg.com/kursor/dist/kursor.css">
   <script src="https://cdn.jsdelivr.net/npm/kursor@0.0.14/dist/kursor.js"></script>
 
-
-
-  <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@400;700&display=swap" rel="stylesheet">
-  <link href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@400;500;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="../assets/css/style.css">
-  <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;700&display=swap">
 
 
-
-
-  <!--
-    - google font link
-  -->
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
 </head>
 
 <body>
 
-
+<!-- Assets -->
   <audio id="clickSound">
     <source src="../assets/images/aud/sound.wav" type="audio/wav">
     Your browser does not support the audio element.
   </audio>
-
-
 
   <div class="video-container">
     <video autoplay loop muted id="background-video">
@@ -55,16 +34,10 @@
   </div>
 
 
-  <!--
-    - #MAIN
-  -->
-
+  <!-- #MAIN -->
   <main>
 
-    <!--
-      - #SIDEBAR
-    -->
-
+    <!-- #SIDEBAR -->
     <aside class="sidebar" data-sidebar>
       <div class="sidebar-info">
 
@@ -132,7 +105,7 @@
 
           <li class="contact-item">
             <div class="service-icon-box">
-              <img src="../assets/images/sidebar/mailsvg.svg" alt="design icon" width="40">
+              <img src="../assets/images/sidebar/mailsvg.svg" alt="design icon" width="30">
             </div>
             <div class="contact-info">
               <p class="contact-title">Email</p>
@@ -143,7 +116,7 @@
 
           <li class="contact-item">
             <div class="service-icon-box">
-              <img src="../assets/images/sidebar/phonesvg.svg" alt="design icon" width="40">
+              <img src="../assets/images/sidebar/phonesvg.svg" alt="design icon" width="30">
             </div>
             <div class="contact-info">
               <p class="contact-title">Phone</p>
@@ -159,21 +132,21 @@
 
           <li class="social-item">
             <a href="#" class="social-link">
-              <img src="../assets/images/sidebar/github.png" alt="design icon" width="40">
+              <img src="../assets/images/sidebar/github.svg" alt="design icon" width="40">
 
             </a>
           </li>
 
           <li class="social-item">
             <a href="#" class="social-link">
-              <img src="../assets/images/sidebar/linkedin.png" alt="design icon" width="40">
+              <img src="../assets/images/sidebar/linkedin.svg" alt="design icon" width="40">
 
             </a>
           </li>
 
           <li class="social-item">
             <a href="#" class="social-link">
-              <img src="../assets/images/sidebar/instagram.png" alt="design icon" width="40">
+              <img src="../assets/images/sidebar/instagram.svg" alt="design icon" width="40">
 
             </a>
           </li>
@@ -186,15 +159,11 @@
     </aside>
 
 
-
-
-
-    <!--
-      - #main-content
-    -->
-
+    <!-- #main-content -->
     <div class="main-content">
 
+
+      <!-- NAVBAR -->
       <nav class="navbar">
         <ul class="navbar-list">
           <li class="navbar-item">
@@ -204,17 +173,15 @@
         </ul>
       </nav>
 
-
-
-
+      <!-- BLOG -->
       <article class="about  active" data-page="about">
 
         <header>
-          <h2 class="h2 article-title">🎯 Structure Query Language</h2>
+          <h2 class="h2 article-title">📛 Structure Query Language</h2>
         </header>
 
         <section class="about-text with-line">
-        </section> 
+        </section>
 
         <section class="about-text">
 
@@ -242,326 +209,50 @@
           <div class="blog">
             <ul>
               <li><strong> Commands</strong>: Create, Alter, drop, Truncate</li>
+              <li><strong>Data Integrity</strong>: Constrains, Transaction, Normalization</li>
             </ul>
+          </div> <br>
+          <div class="code-window">
+            <pre>
+              -- Create a new database named 'my_database'
+              CREATE DATABASE my_database;
+              
+              -- Create a table named 'employees' in the 'my_database' database
+              CREATE TABLE my_database.employees (
+                  id INT PRIMARY KEY, -- Employee ID
+                  name VARCHAR(100) NOT NULL, -- Employee Name
+                  position VARCHAR(50), -- Employee Position
+                  salary DECIMAL(10, 2), -- Employee Salary
+                  hire_date DATE -- Employee Hire Date
+              );
+              
+              -- Add a new column named 'department' to the 'employees' table
+              ALTER TABLE my_database.employees
+              ADD department VARCHAR(50); -- Employee Department
+              
+              -- Drop the 'employees' table from the 'my_database' database
+              DROP TABLE my_database.employees;
+              
+              -- Remove all records from the 'employees' table in the 'my_database' database
+              TRUNCATE TABLE my_database.employees;
+              
+            </pre>
           </div> <br>
 
 
-
-
-        </section>
-
-
-
-
-
-
-
-
-
-
-        <!--
-          - testimonials modal
-        -->
-
-        <div class="modal-container" data-modal-container>
-
-          <div class="overlay" data-overlay></div>
-
-          <section class="testimonials-modal">
-
-            <button class="modal-close-btn" data-modal-close-btn>
-              <ion-icon name="close-outline"></ion-icon>
-            </button>
-
-
-
-
-
-          </section>
-
-        </div>
-
-      </article>
-
-
-
-
-
-
-
-
-
-
-
-
-
-      <!--
-        - #PORTFOLIO
-      -->
-
-      <article class="portfolio" data-page="portfolio">
-
-        <header>
-          <h2 class="h2 article-title">Portfolio</h2>
-        </header>
-
-        <section class="projects">
-
-          <ul class="filter-list">
-
-            <li class="filter-item">
-              <button class="active" data-filter-btn>All</button>
-            </li>
-
-            <li class="filter-item">
-              <button data-filter-btn>Web design</button>
-            </li>
-
-            <li class="filter-item">
-              <button data-filter-btn>Applications</button>
-            </li>
-
-            <li class="filter-item">
-              <button data-filter-btn>Web development</button>
-            </li>
-
-          </ul>
-
-          <div class="filter-select-box">
-
-            <button class="filter-select" data-select>
-
-              <div class="select-value" data-selecct-value>Select category</div>
-
-              <div class="select-icon">
-                <ion-icon name="chevron-down"></ion-icon>
-              </div>
-
-            </button>
-
-            <ul class="select-list">
-
-              <li class="select-item">
-                <button data-select-item>All</button>
-              </li>
-
-              <li class="select-item">
-                <button data-select-item>Web design</button>
-              </li>
-
-              <li class="select-item">
-                <button data-select-item>Applications</button>
-              </li>
-
-              <li class="select-item">
-                <button data-select-item>Web development</button>
-              </li>
-
-            </ul>
-
-          </div>
-
-          <ul class="project-list">
-
-            <li class="project-item  active" data-filter-item data-category="web development">
-              <a href="#">
-
-                <figure class="project-img">
-                  <div class="project-item-icon-box">
-                    <ion-icon name="eye-outline"></ion-icon>
-                  </div>
-
-                  <img src="./assets/images/project-1.jpg" alt="finance" loading="lazy">
-                </figure>
-
-                <h3 class="project-title">Finance</h3>
-
-                <p class="project-category">Web development</p>
-
-              </a>
-            </li>
-
-            <li class="project-item  active" data-filter-item data-category="web development">
-              <a href="#">
-
-                <figure class="project-img">
-                  <div class="project-item-icon-box">
-                    <ion-icon name="eye-outline"></ion-icon>
-                  </div>
-
-                  <img src="./assets/images/project-2.png" alt="orizon" loading="lazy">
-                </figure>
-
-                <h3 class="project-title">Orizon</h3>
-
-                <p class="project-category">Web development</p>
-
-              </a>
-            </li>
-
-            <li class="project-item  active" data-filter-item data-category="web design">
-              <a href="#">
-
-                <figure class="project-img">
-                  <div class="project-item-icon-box">
-                    <ion-icon name="eye-outline"></ion-icon>
-                  </div>
-
-                  <img src="./assets/images/project-3.jpg" alt="fundo" loading="lazy">
-                </figure>
-
-                <h3 class="project-title">Fundo</h3>
-
-                <p class="project-category">Web design</p>
-
-              </a>
-            </li>
-
-            <li class="project-item  active" data-filter-item data-category="applications">
-              <a href="#">
-
-                <figure class="project-img">
-                  <div class="project-item-icon-box">
-                    <ion-icon name="eye-outline"></ion-icon>
-                  </div>
-
-                  <img src="./assets/images/project-4.png" alt="brawlhalla" loading="lazy">
-                </figure>
-
-                <h3 class="project-title">Brawlhalla</h3>
-
-                <p class="project-category">Applications</p>
-
-              </a>
-            </li>
-
-            <li class="project-item  active" data-filter-item data-category="web design">
-              <a href="#">
-
-                <figure class="project-img">
-                  <div class="project-item-icon-box">
-                    <ion-icon name="eye-outline"></ion-icon>
-                  </div>
-
-                  <img src="./assets/images/project-5.png" alt="dsm." loading="lazy">
-                </figure>
-
-                <h3 class="project-title">DSM.</h3>
-
-                <p class="project-category">Web design</p>
-
-              </a>
-            </li>
-
-            <li class="project-item  active" data-filter-item data-category="web design">
-              <a href="#">
-
-                <figure class="project-img">
-                  <div class="project-item-icon-box">
-                    <ion-icon name="eye-outline"></ion-icon>
-                  </div>
-
-                  <img src="./assets/images/project-6.png" alt="metaspark" loading="lazy">
-                </figure>
-
-                <h3 class="project-title">MetaSpark</h3>
-
-                <p class="project-category">Web design</p>
-
-              </a>
-            </li>
-
-            <li class="project-item  active" data-filter-item data-category="web development">
-              <a href="#">
-
-                <figure class="project-img">
-                  <div class="project-item-icon-box">
-                    <ion-icon name="eye-outline"></ion-icon>
-                  </div>
-
-                  <img src="./assets/images/project-7.png" alt="summary" loading="lazy">
-                </figure>
-
-                <h3 class="project-title">Summary</h3>
-
-                <p class="project-category">Web development</p>
-
-              </a>
-            </li>
-
-            <li class="project-item  active" data-filter-item data-category="applications">
-              <a href="#">
-
-                <figure class="project-img">
-                  <div class="project-item-icon-box">
-                    <ion-icon name="eye-outline"></ion-icon>
-                  </div>
-
-                  <img src="./assets/images/project-8.jpg" alt="task manager" loading="lazy">
-                </figure>
-
-                <h3 class="project-title">Task Manager</h3>
-
-                <p class="project-category">Applications</p>
-
-              </a>
-            </li>
-
-            <li class="project-item  active" data-filter-item data-category="web development">
-              <a href="#">
-
-                <figure class="project-img">
-                  <div class="project-item-icon-box">
-                    <ion-icon name="eye-outline"></ion-icon>
-                  </div>
-
-                  <img src="./assets/images/project-9.png" alt="arrival" loading="lazy">
-                </figure>
-
-                <h3 class="project-title">Arrival</h3>
-
-                <p class="project-category">Web development</p>
-
-              </a>
-            </li>
-
-          </ul>
-
         </section>
 
       </article>
-
-
-
-
-
-
-
-
-
 
 
     </div>
-
-
-
   </main>
 
 
 
 
 
-
-  <!--
-    - custom js link
-  -->
   <script src="../assets/js/script.js"></script>
-  <!--
-    - ionicon link
-  -->
-  <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
-  <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
-
 </body>
 
 </html>

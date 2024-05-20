@@ -226,6 +226,7 @@ article {
 }
 
 article {
+  /* max-width: 800px; */
   display: none;
 }
 
@@ -547,7 +548,7 @@ main {
 
 .navbar-link {
   /* color: var(--light-gray); */
-  color: #ffdb70;
+  color: white;
   font-size: 15px;
   /* font-size: var(--fs-9); */
   padding: 20px 7px;
@@ -1233,7 +1234,7 @@ main {
 .blog-banner-box img {
   width: 100%;
   height: 100%;
-  object-fit: cover;
+  /* object-fit: cover; */
   transition: var(--transition-1);
 }
 
@@ -1489,7 +1490,7 @@ textarea.form-input::-webkit-resizer {
   article {
     width: 520px;
     margin-inline: auto;
-    padding: 30px;
+    padding: 10px;
   }
 
   .article-title {
@@ -2093,10 +2094,18 @@ textarea.form-input::-webkit-resizer {
    * REUSED STYLE
    */
 
-  .sidebar,
-  article {
+
+
+article {
     width: auto;
   }
+
+
+
+  .sidebar {
+    width: 30%;
+  }
+
 
   article {
     min-height: 100%;
@@ -2118,7 +2127,7 @@ textarea.form-input::-webkit-resizer {
   }
 
   .main-content {
-    min-width: 75%;
+    min-width: 70%;
     width: 75%;
     margin: 0;
   }
@@ -2130,6 +2139,7 @@ textarea.form-input::-webkit-resizer {
    */
 
   .sidebar {
+    /* max-width: 100px; */
     position: sticky;
     top: 60px;
     max-height: max-content;
@@ -2441,40 +2451,30 @@ img:not(.no-hover-effect):hover {
   background-color: #00000073;
   padding: 10px;
   overflow: auto;
-  height: 230px; 
+  height: 200px; 
   border-radius: 10px;
-  font-size: 15px;
   color: mediumspringgreen;
 }
 
 .code-window pre {
-  font-family:  Ubuntu;
+  font-family: 'Space Grotesk';
   margin-left: -50px;
-  overflow: auto;
-  width: max-content;
-  text-align: justify; 
 }
 
 
-/* Style the scrollbar */
+
 .code-window::-webkit-scrollbar {
-  width: 6px; /* Set the width of the vertical scrollbar */
-  height: 6px; /* Set the height of the horizontal scrollbar */
+  width: 6px; 
+  height: 6px; 
 }
-
-/* Track */
 .code-window::-webkit-scrollbar-track {
-  /* background: #f1f1f1; */
-   /* Color of the track */
   background: transparent;
 }
 
-/* Handle */
 .code-window::-webkit-scrollbar-thumb {
   background: darkorange; 
 }
 
-/* Handle on hover */
 .code-window::-webkit-scrollbar-thumb:hover {
   background: #555; 
 }
@@ -2485,10 +2485,9 @@ img:not(.no-hover-effect):hover {
   background-color:  #00000073;
   padding: 10px;
   border-radius: 10px;
-  font-family: ubuntu;
-  font-size: var(--fs-6);
+  font-family: 'Space Grotesk';
+  font-size: 17px;
   color: white;
-
 }
 
 strong{
@@ -2538,11 +2537,11 @@ strong{
 
 
 .about.active {
-  position: relative; /* Ensures the article is positioned relative to its normal position */
+  position: relative; 
 }
 
 .with-line {
-  position: relative; /* Ensures the section is positioned relative */
+  position: relative; 
 }
 
 .with-line::after {
@@ -2550,8 +2549,8 @@ strong{
   position: absolute;
   bottom: 10px;
   left: 0;
-  width: 100%; /* Line spans the full width of the section */
-  height: 5px;
+  width: 100%; 
+  height: 4px;
   background: #ffdb70;
   border-radius: 3px;
 }
