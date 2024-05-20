@@ -179,7 +179,6 @@ body {
 .sidebar,
 article {
   background: transparent;
-  border: 1px solid var(--jet);
   border-radius: 20px;
   padding: 15px;
   box-shadow: var(--shadow-1);
@@ -277,17 +276,16 @@ article.active {
 
 }
 
-.article-title::after {
+/* .article-title::after {
   content: "";
   position: absolute;
   bottom: 0;
   left: 0;
   width: 30px;
   height: 3px;
-  /* background: var(--text-gradient-yellow); */
   background: #ffdb70;
   border-radius: 3px;
-}
+} */
 
 .has-scrollbar::-webkit-scrollbar {
   width: 5px;
@@ -1499,10 +1497,10 @@ textarea.form-input::-webkit-resizer {
     padding-bottom: 15px;
   }
 
-  .article-title::after {
-    width: 40px;
+  /* .article-title::after {
+    width: 400px;
     height: 5px;
-  }
+  } */
 
   .icon-box {
     width: 48px;
@@ -2440,25 +2438,21 @@ img:not(.no-hover-effect):hover {
 
 
 .code-window {
-  /* background-color: #0d0d0d; */
-  background-color: #0d0d0d75;
+  background-color: #00000073;
   padding: 10px;
   overflow: auto;
-  border: 1px solid var(--jet);
-  height: 300px; 
+  height: 230px; 
   border-radius: 10px;
-  /* overflow-x: hidden;  */
+  font-size: 15px;
+  color: mediumspringgreen;
 }
 
 .code-window pre {
   font-family:  Ubuntu;
-  /* margin-left: -120px; Remove this line */
   margin-left: -50px;
-
   overflow: auto;
   width: max-content;
-  text-align: justify; /* Justify the text */
-  /* white-space: pre-wrap; */
+  text-align: justify; 
 }
 
 
@@ -2477,26 +2471,28 @@ img:not(.no-hover-effect):hover {
 
 /* Handle */
 .code-window::-webkit-scrollbar-thumb {
-  background: #ffdb70; /* Color of the scrollbar handle */
+  background: darkorange; 
 }
 
 /* Handle on hover */
 .code-window::-webkit-scrollbar-thumb:hover {
-  background: #555; /* Color of the scrollbar handle on hover */
+  background: #555; 
 }
 
 
 
 .blog{
-  background-color: #0d0d0d75;
+  background-color:  #00000073;
   padding: 10px;
-  border: 1px solid #383838;
   border-radius: 10px;
   font-family: ubuntu;
+  font-size: var(--fs-6);
+  color: white;
+
 }
 
 strong{
-  color: #ffdb70;
+  color: darkorange;
   font-weight: 100;
 }
 
@@ -2535,4 +2531,27 @@ strong{
   0%,80% {
     transform: rotateY(360deg) 
   }
+}
+
+
+
+
+
+.about.active {
+  position: relative; /* Ensures the article is positioned relative to its normal position */
+}
+
+.with-line {
+  position: relative; /* Ensures the section is positioned relative */
+}
+
+.with-line::after {
+  content: "";
+  position: absolute;
+  bottom: 10px;
+  left: 0;
+  width: 100%; /* Line spans the full width of the section */
+  height: 5px;
+  background: #ffdb70;
+  border-radius: 3px;
 }

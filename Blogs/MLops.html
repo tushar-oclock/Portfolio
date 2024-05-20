@@ -15,6 +15,11 @@
   <!--
     - custom css link
   -->
+  <link rel="stylesheet" href="https://unpkg.com/kursor/dist/kursor.css">
+  <script src="https://cdn.jsdelivr.net/npm/kursor@0.0.14/dist/kursor.js"></script>
+
+
+
   <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@400;700&display=swap" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@400;500;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="../assets/css/style.css">
@@ -35,13 +40,19 @@
 <body>
 
 
+  <audio id="clickSound">
+    <source src="../assets/images/aud/sound.wav" type="audio/wav">
+    Your browser does not support the audio element.
+  </audio>
+
+
+
   <div class="video-container">
     <video autoplay loop muted id="background-video">
       <source src="../assets/images/video/bg2.mp4" type="video/mp4">
       Your browser does not support the video tag.
     </video>
   </div>
-
 
 
   <!--
@@ -62,6 +73,8 @@
         </figure>
 
 
+
+
         <div class="info-content">
 
           <div class="waviy">
@@ -78,24 +91,24 @@
             <span style="--i:11">T</span>
             <span style="--i:12">E</span>
             <span style="--i:13">R</span>
-           </div> 
+          </div>
 
+          <div style="display: flex; justify-content: center; font-family:  Ubuntu;">
+            <div id="badge-container" style="display: inline-block;"></div>
+          </div>
 
-        <div style="display: flex; justify-content: center; font-family:  Ubuntu;">
-          <div id="badge-container" style="display: inline-block;"></div>
+          <style>
+            @media (max-width: 768px) {
+              #badge-container {
+                margin-left: 0;
+                /* Reset margin for mobile view */
+                margin-right: auto;
+                /* Align to the left */
+              }
+            }
+          </style>
         </div>
 
-        <style>
-          @media (max-width: 768px) {
-            #badge-container {
-              margin-left: 0;
-              /* Reset margin for mobile view */
-              margin-right: auto;
-              /* Align to the left */
-            }
-          }
-        </style>
-      </div>
 
 
 
@@ -202,9 +215,11 @@
 
 
 
+
         </ul>
 
       </nav>
+
 
 
 
@@ -216,197 +231,253 @@
       <article class="about  active" data-page="about">
 
         <header>
-          <h2 class="h2 article-title">🎯 3 LLM PROJECTS</h2>
+          <h2 class="h2 article-title">🎯 MLOPs</h2>
         </header>
 
 
-
-
-
-
-
         <section class="about-text">
 
+          <h3 class="h3 service-title">🚀 Introduction:</h3>
+          <div class="blog">
+            <ul>
+              <li>Standard ML Cycle, DevOps, MLOps, ML Engineer, Machine learning Lifecycle</li>
+              <li> <strong>Problem defination:</strong> Understand the problem Domain, Identify Audience & Specifying
+                the Goal </li>
+              <li><strong> Data Collection:</strong> Quality inputs & outputs , Data Scources, Data volume and
+                Diversity </li>
+              <li><strong>Libraries:</strong> Pandas, Dask & Polars</li>
+              <li><strong>Data Preprocessing Matters</strong>: Quality Assurance, Model Compatibility, Improved
+                Efficiency</li>
+              <li><strong>Data Preprocessing Techniques</strong>: Handling Missing values, Scaling Feature & Encoding
+                Categorical Variable</li>
+              <li><strong>Model Building</strong>: Algorithm Selection, Model Architecture & Hyperparameter Tuning</li>
+              <li><strong>Model Training</strong>: Learing rom data, Minimizing Errors, Generalization</li>
+              <li><Strong>Training Process</Strong>: Data Splitting, initialization, Forward and Backward Passes,
+                Iterative Optimization, Validation</li>
+              <li><strong>Model Evaluation</strong>: Performance Assesment, Comparison, Decision Making</li>
+              <li><strong>Evaluation Metrics</strong>: Accuracy, Precision, Recall(Sensitivity), F1-Score, Confusion
+                Matrix</li>
+              <li><strong>Model Deployment</strong>: Setup, Packaging, Scalabiliyt, Monitoring & Feedback loop</li>
+              <li>Project structure: CookieCutter, Data Registry: DVC, Aws sagemaker for DS setup, Lifecycle : MLFlow
+              </li>
+            </ul>
 
+          </div> <br>
 
+          <h3 class="h3 service-title">🚀 Version Control System:</h3>
+          <div class="blog">
+            <ul>
+              <li><strong>Version Control:</strong> Track, Manage changes </li>
+              <li> <strong>Tools</strong>: Github, Bigbucket, AWS Commit</li>
+              <li><Strong>Key Aspects:</Strong> Change tracking, Collaboration, Reversion, Branching & Documentaion
+              </li>
+              <li><strong>Types:</strong> CVCS(Centralized) , DVSC (Copy to Distribution)</li>
+              <li><strong>Github:</strong> Create Repo, Clone, Changes, Commit, Pushing, Branch, Pull request,
+                Collaborating, </li>
+              <li><strong>Example for version control for Git</strong>: Initializaation (git init), Adding files (git
+                add), Committing (git commit -m "message"), Branching (git branch & git checkout)</li>
+            </ul>
 
-          <span class="badge badge-warning">Chatbot</span> 
+          </div> <br>
 
+          <h3 class="h3 service-title">🚀 Pipeline Example:</h3>
           <div class="code-window">
             <pre>
-              import streamlit as st
-              from langchain.schema import HumanMessage,SystemMessage,AIMessage
-              from langchain.chat_models import ChatOpenAI
-
-              ## Streamlit UI
-              st.set_page_config(page_title="My chatbot ")
-              st.header("👋👋  I am your chatbot 💬 , Ask me a question ❓ ")
-
-              from dotenv import load_dotenv
-              load_dotenv()
-              import os
-
-              chat=ChatOpenAI(temperature=0.5)
-
-              if 'mymessages' not in st.session_state:
-                  st.session_state['mymessages']=[
-                      SystemMessage(content="you are prince katiyar chatbot ")
-                  ]
-
-              ## Function to load OpenAI model and get respones
-              def chatmodel_response(question):
-
-                  st.session_state['mymessages'].append(HumanMessage(content=question))
-                  response=chat(st.session_state['mymessages'])
-                  st.session_state['mymessages'].append(AIMessage(content=response.content))
-                  return response.content
-
-              input=st.text_input("Input: ",key="input")
-
-              response=chatmodel_response(input)
-
-              submit_button=st.button("Ask Question 🙋❓")
-
-              ## If ask button is clicked
-              if submit_button:
-                  st.subheader(" This is your Response : 👇")
-                  st.write(response)
-            </pre>
-          </div>
-
-        </section> <br>
-
-
-
-
-
-        <span class="badge badge-warning">Synonyms Generator</span> 
-
-
-        <section class="about-text">
-          <div class="code-window">
-            <pre>
-              import streamlit as st
-              from langchain.chat_models import ChatOpenAI
-              from langchain.prompts.chat import ChatPromptTemplate
-              from langchain.schema import BaseOutputParser
-
-              class Commaseparatedoutput(BaseOutputParser):
-                  def parse(self, text: str):
-                      return text.strip().split(",")
-
-              # Set up Streamlit UI
-              st.set_page_config(page_title="Synonyms Generator")
-              st.header("📝 Synonyms Generator 🔄")
-
-              # Define the template for the chat prompt
-              template = "You are a helpful assistant. When the user provides any input, 
-              you should generate 5 words synonyms in a comma-separated list."
-              human_template = "{text}"
-
-              # Create the ChatPromptTemplate
-              chat_prompt = ChatPromptTemplate.from_messages([
-                  ("system", template),
-                  ("human", human_template)
+              # 0. Import Libraries onl
+              import pandas as pd
+              from sklearn.model_selection import train_test_split, cross_val_score
+              from sklearn.ensemble import RandomForestClassifier
+              from sklearn.metrics import accuracy_score
+              from hyperopt import fmin, tpe, hp
+              from sklearn.pipeline import Pipeline
+              from sklearn.compose import ColumnTransformer
+              from sklearn.preprocessing import StandardScaler
+              from sklearn.impute import SimpleImputer
+              
+              # 1. Reading data from CSV
+              def read_csv(file_path):
+                  return pd.read_csv(file_path)
+              
+              # 2. Creating features
+              def create_features(data):
+                  # No feature creation for this example
+                  return data
+              
+              # 3. Training a classifier model
+              def train_classifier(data):
+                  X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_state=42)
+              
+                  model = RandomForestClassifier()
+                  model.fit(X_train, y_train)
+              
+                  y_pred = model.predict(X_test)
+                  accuracy = accuracy_score(y_test, y_pred)
+              
+                  return model, accuracy
+              
+              # 4. Hyperparameter tuning with Hyperopt
+              def objective(params):
+                  model = RandomForestClassifier(**params)
+                  score = cross_val_score(model, X, y, cv=5).mean()
+                  return -score  # Minimize negative accuracy
+              
+              # 5. Evaluating the model on the test set
+              def evaluate_model(model, X_test, y_test):
+                  y_pred = model.predict(X_test)
+                  accuracy = accuracy_score(y_test, y_pred)
+                  return accuracy
+                
+              file_path = "../data/iris/iris.csv"
+              data = read_csv(file_path)
+              
+              
+              
+              # if __name__ == "__main__":
+              # Load data
+              file_path = "../data/iris/iris.csv"
+              data = read_csv(file_path)
+              
+              # Create features
+              data = create_features(data)
+              
+              # Split data into features and target
+              X = data.drop('Species', axis=1)
+              y = data['Species']
+              
+              # Split data into training and test sets
+              X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_state=42)
+              
+              # Define the pipeline
+              pipeline = Pipeline([
+                  ('preprocessor', ColumnTransformer(
+                      transformers=[
+                          ('num', StandardScaler(), X.columns)
+                      ],
+                      remainder='passthrough'
+                  )),
+                  ('classifier', RandomForestClassifier())
               ])
-
-              # Create the ChatOpenAI model
-              model = ChatOpenAI()
-
-              # Create the chain
-              chain = chat_prompt | model | Commaseparatedoutput()
-
-              # Text input for user query
-              input_text = st.text_input("Enter a word or phrase:", "")
-
-              # Button to trigger the synonym generation
-              if st.button("Generate Synonyms"):
-                  # Perform the conversation with the chatbot
-                  if input_text:
-                      # Get the chatbot response
-                      response = chain.invoke({"text": input_text})
-
-                      # Display the synonyms
-                      st.write("Synonyms:", ", ".join(response))
-                  else:
-                      st.write("Please enter a word or phrase.")
+              
+              # Train the model
+              pipeline.fit(X_train, y_train)
+              
+              # Evaluate the model
+              y_pred = pipeline.predict(X_test)
+              accuracy = accuracy_score(y_test, y_pred)
+              print(f"Model accuracy on test set: {accuracy}")
+              
+              #Brute force appraoch try with 2 for loops
+              
+              # Hyperparameter tuning using Tree of Parzen Estimators (TPE)
+              space = {
+                  'n_estimators': hp.choice('n_estimators', range(10, 101)),
+                  'max_depth': hp.choice('max_depth', range(1, 21))
+              }
+              
+              best_params = fmin(fn=objective, space=space, algo=tpe.suggest, max_evals=100)
+              
+              # Update the pipeline with the best hyperparameters
+              # Train the model with the best hyperparameters
+              # Evaluate the updated model              
             </pre>
-          </div>
+          </div> <br>
 
-        </section> <br>
+          <h3 class="h3 service-title">🚀 Major Tools:</h3>
+          <div class="blog">
+            <ul>
+              <li> <strong>End to End ML platform</strong>: Amazon Sagemaker, Azure ML , Vertex AI, Data robot,
+                Databricks</li>
+              <li><Strong>Data ingestion & transformation</Strong>: Glue, Nifi, pyspark, snowflake, informatica, talend
+              </li>
+              <li><strong>Data Pipeline</strong>: Airflow</li>
+              <li><strong>Data Validation</strong>:Greate Exception , GriFFin</li>
+              <li><strong>Data Versioning</strong>: DVC, lakesFs</li>
+              <li><strong>Data Annotation</strong>: Aws Sagemaker</li>
+              <li><strong>Feature Store</strong>: Feast, Tectron</li>
+              <li><strong>Data Observability</strong>: Datadog, prometheus, Grafana</li>
+              <li><strong>Data Governance</strong>: Collibra, SAP</li>
+              <li><strong>Data Security</strong>: okta, Symantec, delphix </li>
+            </ul>
+          </div> <br>
 
+          <h3 class="h3 service-title">🚀 Industry Tools Technology:</h3>
+          <div class="blog">
+            <ul>
+              <li> <strong>Provision and configuration</strong>: Provisioning and Configuration Management, OS Virtualization/Orchestration, K8s, Service Mash, K8s storage, Serverless, API manage </li>
+              <li><strong>Plan and manage </strong>: Planning and prioritization & Managemtne and productivity</li>
+              <li><strong>Code and Create</strong>: Issue tracking, Collaboration, Cloud IDE, Build Management  </li>
+              <li><strong>Continuous Integration</strong>: Verification , Packaging Security and Testing</li>
+              <li><strong>Continuous Delivery</strong>: Feature Flag, Code inspection & release Orchestration</li>
+              <li><strong>Monitor and Management</strong>: SRE, Logging, Alerting, Visualization, Debugging, Security
+              </li>
 
+            </ul>
+          </div> <br>
 
-        <span class="badge badge-warning">Document Search Chatbot through PDF</span> 
+          <h3 class="h3 service-title">🚀 CookieCutter:</h3>
+          <div class="blog">
+            <ul>
+              <li> <strong>Files</strong>: figures, slides, External, interim, processed, raw, changelog, contribute,
+                licence, readme, etc.</li>
+              <li> <strong>Folder</strong>: Data, Docs, models, notebooks, references, report, Src, feature, model,
+                Visualization, etc. </li>
+                <li><strong>Benifit</strong>: Project Standarization, Reproducibility, Collaboration and documentation, Version Control, Time Efficiency </li>
 
-
-        <section class="about-text">
+            </ul>
+          </div> <br>
           <div class="code-window">
             <pre>
-              # Import necessary modules
-              from langchain_openai import ChatOpenAI
-              from langchain_core.prompts import ChatPromptTemplate
-              from langchain_core.output_parsers import StrOutputParser
+              # Using pip to install
+              pip install cookiecutter
+              
+              # Using conda to install
+              conda config --add channels conda-forge
+              conda install cookiecutter
+              
+              # Start a new project
+              cookiecutter -c v1 https://github.com/drivendata/cookiecutter-data-science
 
-              # Load environment variables from a .env file
-              import os
-              from dotenv import load_dotenv
-              load_dotenv()
-
-              # Set the environment variables for OpenAI and Langchain
-              os.environ["OPENAI_API_KEY"] = os.getenv("OPENAI_API_KEY")
-              os.environ["LANGCHAIN_TRACING_V2"] = "true"
-              os.environ["LANGCHAIN_API_KEY"] = os.getenv("LANGCHAIN_API_KEY")
-
-              # Define a chat prompt template
-              prompt = ChatPromptTemplate.from_messages([
-                  ("system", "You are a helpful assistant. Please respond to the 
-                  user request only based on the given context"),
-                  ("user", "Question: {question}\nContext: {context}")
-              ])
-
-              # Create an instance of the ChatOpenAI class with the specified model
-              model = ChatOpenAI(model="gpt-3.5-turbo")
-
-              # Create an output parser instance
-              output_parser = StrOutputParser()
-
-              # Define the chatbot pipeline with the prompt, model, and output parser
-              chain = prompt | model | output_parser
-
-              # Define the question and context for the chatbot
-              question = "summarize that article about waterlogging"
-              context = """
-              Kempegowda International Airport (KIA) officials said that 
-              eight flights were diverted, seven to Chennai and one to 
-              Coimbatore since they were unable to land between 5 pm 
-              and 5.15 pm. According to IMD, the KIA weather station 
-              recorded 3.9 mm rainfall up to 5.30 pm.
-
-              Bengaluru Traffic Commissioner M N Anucheth said that 
-              heavy water logging was reported at 33 locations and
-              trees were uprooted in 16 locations in Bengaluru. 
-              This led to considerable traffic congestion in several places.
-
-              Waterlogging was reported in Electronic City, 
-              Bellandur, Nagawara, Kamakshipalya, Maharani underpass 
-              and Hebbal, among other areas. Meanwhile, trees were 
-              uprooted in Jayamahal Road, Kathriguppe, PES College, 
-              Hosakerehalli, Hennur Main Road, Malleswaram and Mekhri 
-              Circle. At Hennur Main Road, an electric pole collapsed 
-              leading to traffic disruption and the underpass connecting 
-              towards Sankey Road near Kalpana Junction was closed due 
-              to waterlogging.
-              this is created by prince katiyar make in karnataka
-              """
-
-              # Invoke the chatbot with the question and context
-              print(chain.invoke({"question": question, "context": context}))
-
+              # Generate a new project using the cookiecutter template
+              cookiecutter https://github.com/drivendata/cookiecutter-data-science.git
             </pre>
-          </div>
+          </div> <br>
+
+          <h3 class="h3 service-title">🚀 DVC:</h3>
+          <div class="code-window">
+            <pre>
+              # 1. initialize a Git repository
+              git init
+
+              # 2. set up DVC in you project
+              dvc init
+
+              # 3. Add a dataset to your project
+              dvc add -d data/raw/your_dataset.csv
+
+              # 4. Commit changes toi Github
+              git add. 
+              git commit -m "Initialize DVC and add raw data"
+
+              # 5. Create and a version you machine learning pipeline 
+              # Example: Create a DVC file for a pre-processing step
+              dvc run - d data/raw_data.csv - o data/processed_data.csv python code/preprocess.py
+
+              # Example: Train a machine learning model
+              dvc run - d data/processed_data.csv - o models/model.pkl python code/train_model.py
+
+              #track changes and reproduce experiement
+              # Check the status of your project
+              dvc status
+
+              # Reproduce the pipeline at a specific commit
+              dvc repro -s <commit_hash>
+            </pre>
+          </div> <br>
 
         </section>
+
+
+
 
 
 

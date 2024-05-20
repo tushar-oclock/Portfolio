@@ -15,6 +15,11 @@
   <!--
     - custom css link
   -->
+  <link rel="stylesheet" href="https://unpkg.com/kursor/dist/kursor.css">
+  <script src="https://cdn.jsdelivr.net/npm/kursor@0.0.14/dist/kursor.js"></script>
+
+
+
   <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@400;700&display=swap" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@400;500;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="../assets/css/style.css">
@@ -35,13 +40,19 @@
 <body>
 
 
+  <audio id="clickSound">
+    <source src="../assets/images/aud/sound.wav" type="audio/wav">
+    Your browser does not support the audio element.
+  </audio>
+
+
+
   <div class="video-container">
     <video autoplay loop muted id="background-video">
       <source src="../assets/images/video/bg2.mp4" type="video/mp4">
       Your browser does not support the video tag.
     </video>
   </div>
-
 
 
   <!--
@@ -62,6 +73,8 @@
         </figure>
 
 
+
+
         <div class="info-content">
 
           <div class="waviy">
@@ -78,24 +91,24 @@
             <span style="--i:11">T</span>
             <span style="--i:12">E</span>
             <span style="--i:13">R</span>
-           </div> 
+          </div>
 
+          <div style="display: flex; justify-content: center; font-family:  Ubuntu;">
+            <div id="badge-container" style="display: inline-block;"></div>
+          </div>
 
-        <div style="display: flex; justify-content: center; font-family:  Ubuntu;">
-          <div id="badge-container" style="display: inline-block;"></div>
+          <style>
+            @media (max-width: 768px) {
+              #badge-container {
+                margin-left: 0;
+                /* Reset margin for mobile view */
+                margin-right: auto;
+                /* Align to the left */
+              }
+            }
+          </style>
         </div>
 
-        <style>
-          @media (max-width: 768px) {
-            #badge-container {
-              margin-left: 0;
-              /* Reset margin for mobile view */
-              margin-right: auto;
-              /* Align to the left */
-            }
-          }
-        </style>
-      </div>
 
 
 
@@ -112,7 +125,6 @@
       <div class="sidebar-info_more">
         <div class="separator"></div>
         <ul class="contacts-list">
-
 
 
 
@@ -183,230 +195,64 @@
 
     <div class="main-content">
 
-      <!--
-        - #NAVBAR
-      -->
-
       <nav class="navbar">
-
         <ul class="navbar-list">
-
-
-
-
           <li class="navbar-item">
             <button class="navbar-link"
-              onclick="window.open('https://24x7-dev-player.github.io/Portfolio/', '_blank')">Home page</button>
+              onclick="window.open('https://24x7-dev-player.github.io/Portfolio/', '_blank')">Home Page</button>
           </li>
-
-
-
-
         </ul>
-
       </nav>
 
 
 
 
-      <!--
-        - #ABOUT
-      -->
-
       <article class="about  active" data-page="about">
 
         <header>
-          <h2 class="h2 article-title">🎯 3 LLM PROJECTS</h2>
+          <h2 class="h2 article-title">🎯 Structure Query Language</h2>
         </header>
 
-
-
-
-
-
+        <section class="about-text with-line">
+        </section> 
 
         <section class="about-text">
 
+          <h3 class="h3 service-title">🚀 Database:</h3>
+          <div class="blog">
+            <ul>
+              <li><strong> Database</strong>: Data storage, Data Analysis, Record Keeping, Web Application</li>
+              <li> <strong>CURD</strong>: Create, Retrival, Update, Delete </li>
+              <li><strong>Ideal Database</strong>: Integrity, Availability, Security, Independent of application,
+                Concurrrency</li>
+              <li><strong>Type of Database</strong>: Relational, NOsql, Column, Graph, Key-value</li>
+              <li><Strong>DBMS</Strong>: Data management, Integrity, Concurrency, Transaction, Security, Utilites</li>
+              <li><strong>Database Key</strong>: Super, Candidate, Primary, Alternate, Composite, Surrogant, Foreign
+              </li>
+              <li><strong>Cardinality</strong>: one to one, one to many, many to many</li>
+              <li><strong>Drawback</strong>: Complexity, Cost, Scaliabiliy, Data integration, Security, Data migration,
+                Flexiblity </li>
+
+
+            </ul>
+
+          </div> <br>
+
+          <h3 class="h3 service-title">🚀 SQL DDL Commands:</h3>
+          <div class="blog">
+            <ul>
+              <li><strong> Commands</strong>: Create, Alter, drop, Truncate</li>
+            </ul>
+          </div> <br>
 
 
 
-          <span class="badge badge-warning">Chatbot</span> 
-
-          <div class="code-window">
-            <pre>
-              import streamlit as st
-              from langchain.schema import HumanMessage,SystemMessage,AIMessage
-              from langchain.chat_models import ChatOpenAI
-
-              ## Streamlit UI
-              st.set_page_config(page_title="My chatbot ")
-              st.header("👋👋  I am your chatbot 💬 , Ask me a question ❓ ")
-
-              from dotenv import load_dotenv
-              load_dotenv()
-              import os
-
-              chat=ChatOpenAI(temperature=0.5)
-
-              if 'mymessages' not in st.session_state:
-                  st.session_state['mymessages']=[
-                      SystemMessage(content="you are prince katiyar chatbot ")
-                  ]
-
-              ## Function to load OpenAI model and get respones
-              def chatmodel_response(question):
-
-                  st.session_state['mymessages'].append(HumanMessage(content=question))
-                  response=chat(st.session_state['mymessages'])
-                  st.session_state['mymessages'].append(AIMessage(content=response.content))
-                  return response.content
-
-              input=st.text_input("Input: ",key="input")
-
-              response=chatmodel_response(input)
-
-              submit_button=st.button("Ask Question 🙋❓")
-
-              ## If ask button is clicked
-              if submit_button:
-                  st.subheader(" This is your Response : 👇")
-                  st.write(response)
-            </pre>
-          </div>
-
-        </section> <br>
-
-
-
-
-
-        <span class="badge badge-warning">Synonyms Generator</span> 
-
-
-        <section class="about-text">
-          <div class="code-window">
-            <pre>
-              import streamlit as st
-              from langchain.chat_models import ChatOpenAI
-              from langchain.prompts.chat import ChatPromptTemplate
-              from langchain.schema import BaseOutputParser
-
-              class Commaseparatedoutput(BaseOutputParser):
-                  def parse(self, text: str):
-                      return text.strip().split(",")
-
-              # Set up Streamlit UI
-              st.set_page_config(page_title="Synonyms Generator")
-              st.header("📝 Synonyms Generator 🔄")
-
-              # Define the template for the chat prompt
-              template = "You are a helpful assistant. When the user provides any input, 
-              you should generate 5 words synonyms in a comma-separated list."
-              human_template = "{text}"
-
-              # Create the ChatPromptTemplate
-              chat_prompt = ChatPromptTemplate.from_messages([
-                  ("system", template),
-                  ("human", human_template)
-              ])
-
-              # Create the ChatOpenAI model
-              model = ChatOpenAI()
-
-              # Create the chain
-              chain = chat_prompt | model | Commaseparatedoutput()
-
-              # Text input for user query
-              input_text = st.text_input("Enter a word or phrase:", "")
-
-              # Button to trigger the synonym generation
-              if st.button("Generate Synonyms"):
-                  # Perform the conversation with the chatbot
-                  if input_text:
-                      # Get the chatbot response
-                      response = chain.invoke({"text": input_text})
-
-                      # Display the synonyms
-                      st.write("Synonyms:", ", ".join(response))
-                  else:
-                      st.write("Please enter a word or phrase.")
-            </pre>
-          </div>
-
-        </section> <br>
-
-
-
-        <span class="badge badge-warning">Document Search Chatbot through PDF</span> 
-
-
-        <section class="about-text">
-          <div class="code-window">
-            <pre>
-              # Import necessary modules
-              from langchain_openai import ChatOpenAI
-              from langchain_core.prompts import ChatPromptTemplate
-              from langchain_core.output_parsers import StrOutputParser
-
-              # Load environment variables from a .env file
-              import os
-              from dotenv import load_dotenv
-              load_dotenv()
-
-              # Set the environment variables for OpenAI and Langchain
-              os.environ["OPENAI_API_KEY"] = os.getenv("OPENAI_API_KEY")
-              os.environ["LANGCHAIN_TRACING_V2"] = "true"
-              os.environ["LANGCHAIN_API_KEY"] = os.getenv("LANGCHAIN_API_KEY")
-
-              # Define a chat prompt template
-              prompt = ChatPromptTemplate.from_messages([
-                  ("system", "You are a helpful assistant. Please respond to the 
-                  user request only based on the given context"),
-                  ("user", "Question: {question}\nContext: {context}")
-              ])
-
-              # Create an instance of the ChatOpenAI class with the specified model
-              model = ChatOpenAI(model="gpt-3.5-turbo")
-
-              # Create an output parser instance
-              output_parser = StrOutputParser()
-
-              # Define the chatbot pipeline with the prompt, model, and output parser
-              chain = prompt | model | output_parser
-
-              # Define the question and context for the chatbot
-              question = "summarize that article about waterlogging"
-              context = """
-              Kempegowda International Airport (KIA) officials said that 
-              eight flights were diverted, seven to Chennai and one to 
-              Coimbatore since they were unable to land between 5 pm 
-              and 5.15 pm. According to IMD, the KIA weather station 
-              recorded 3.9 mm rainfall up to 5.30 pm.
-
-              Bengaluru Traffic Commissioner M N Anucheth said that 
-              heavy water logging was reported at 33 locations and
-              trees were uprooted in 16 locations in Bengaluru. 
-              This led to considerable traffic congestion in several places.
-
-              Waterlogging was reported in Electronic City, 
-              Bellandur, Nagawara, Kamakshipalya, Maharani underpass 
-              and Hebbal, among other areas. Meanwhile, trees were 
-              uprooted in Jayamahal Road, Kathriguppe, PES College, 
-              Hosakerehalli, Hennur Main Road, Malleswaram and Mekhri 
-              Circle. At Hennur Main Road, an electric pole collapsed 
-              leading to traffic disruption and the underpass connecting 
-              towards Sankey Road near Kalpana Junction was closed due 
-              to waterlogging.
-              this is created by prince katiyar make in karnataka
-              """
-
-              # Invoke the chatbot with the question and context
-              print(chain.invoke({"question": question, "context": context}))
-
-            </pre>
-          </div>
 
         </section>
+
+
+
+
 
 
 
@@ -427,31 +273,9 @@
               <ion-icon name="close-outline"></ion-icon>
             </button>
 
-            <div class="modal-img-wrapper">
-              <figure class="modal-avatar-box">
-                <img src="./assets/images/avatar-1.png" alt="Daniel lewis" width="80" data-modal-img>
-              </figure>
 
-              <img src="./assets/images/icon-quote.svg" alt="quote icon">
-            </div>
 
-            <div class="modal-content">
 
-              <h4 class="h3 modal-title" data-modal-title>Daniel lewis</h4>
-
-              <time datetime="2021-06-14">14 June, 2021</time>
-
-              <div data-modal-text>
-                <p>
-                  Richard was hired to create a corporate identity. We were very pleased with the work done. She has a
-                  lot of experience
-                  and is very concerned about the needs of client. Lorem ipsum dolor sit amet, ullamcous cididt
-                  consectetur adipiscing
-                  elit, seds do et eiusmod tempor incididunt ut laborels dolore magnarels alia.
-                </p>
-              </div>
-
-            </div>
 
           </section>
 
