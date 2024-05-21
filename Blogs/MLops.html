@@ -7,45 +7,24 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>BLOG</title>
 
-  <!--
-    - favicon
-  -->
   <link rel="shortcut icon" href="../assets/images/logo.png" type="image/x-icon">
 
-  <!--
-    - custom css link
-  -->
   <link rel="stylesheet" href="https://unpkg.com/kursor/dist/kursor.css">
   <script src="https://cdn.jsdelivr.net/npm/kursor@0.0.14/dist/kursor.js"></script>
 
-
-
-  <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@400;700&display=swap" rel="stylesheet">
-  <link href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@400;500;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="../assets/css/style.css">
-  <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;700&display=swap">
 
 
-
-
-  <!--
-    - google font link
-  -->
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
 </head>
 
 <body>
 
-
+  <!-- Assets -->
   <audio id="clickSound">
     <source src="../assets/images/aud/sound.wav" type="audio/wav">
     Your browser does not support the audio element.
   </audio>
-
-
 
   <div class="video-container">
     <video autoplay loop muted id="background-video">
@@ -55,16 +34,12 @@
   </div>
 
 
-  <!--
-    - #MAIN
-  -->
 
+
+  <!-- #MAIN -->
   <main>
 
-    <!--
-      - #SIDEBAR
-    -->
-
+    <!-- #SIDEBAR -->
     <aside class="sidebar" data-sidebar>
       <div class="sidebar-info">
 
@@ -72,10 +47,8 @@
           <img class=" test-shine" src="../assets/images/TusharArora.png" alt="tushar arora" width="80">
         </figure>
 
-
-
-
         <div class="info-content">
+
 
           <div class="waviy">
             <span style="--i:1">D</span>
@@ -93,26 +66,16 @@
             <span style="--i:13">R</span>
           </div>
 
-          <div style="display: flex; justify-content: center; font-family:  Ubuntu;">
+          <div style="display: flex; 
+          justify-content: center; ">
             <div id="badge-container" style="display: inline-block;"></div>
           </div>
 
+
           <style>
-            @media (max-width: 768px) {
-              #badge-container {
-                margin-left: 0;
-                /* Reset margin for mobile view */
-                margin-right: auto;
-                /* Align to the left */
-              }
-            }
+
           </style>
         </div>
-
-
-
-
-
 
         <button class="info_more-btn" data-sidebar-btn>
           <span>Show Contacts</span>
@@ -125,10 +88,6 @@
       <div class="sidebar-info_more">
         <div class="separator"></div>
         <ul class="contacts-list">
-
-
-
-
 
           <li class="contact-item">
             <div class="service-icon-box">
@@ -151,6 +110,26 @@
             </div>
           </li>
 
+          <li class="contact-item">
+            <div class="service-icon-box">
+              <img src="../assets/images/sidebar/age.svg" alt="design icon" width="30">
+            </div>
+            <div class="contact-info">
+              <p class="contact-title">AGE</p>
+              <a href="tel:+12133522795" class="contact-link"><span id="age"></span></a>
+            </div>
+          </li>
+
+          <li class="contact-item">
+            <div class="service-icon-box">
+              <img src="../assets/images/sidebar/map.svg" alt="design icon" width="30">
+            </div>
+            <div class="contact-info">
+              <p class="contact-title">Location</p>
+              <a href="https://24x7-dev-player.github.io/Portfolio/" target="_blank" class="contact-link">Ghaziabad, Uttar Pradesh, India</a>
+            </div>
+          </li>
+
         </ul>
 
         <div class="separator"></div>
@@ -159,7 +138,15 @@
 
           <li class="social-item">
             <a href="#" class="social-link">
-              <img src="../assets/images/sidebar/github.svg" alt="design icon" width="40">
+              <img src="../assets/images/sidebar/github.svg" alt="design icon" width="35">
+
+            </a>
+          </li>
+
+
+          <li class="social-item">
+            <a href="#" class="social-link">
+              <img src="../assets/images/sidebar/whatsapp.svg" alt="design icon" width="34">
 
             </a>
           </li>
@@ -186,53 +173,31 @@
     </aside>
 
 
-
-
-
-    <!--
-      - #main-content
-    -->
-
+    <!-- #main-content -->
     <div class="main-content">
 
-      <!--
-        - #NAVBAR
-      -->
 
+      <!-- NAVBAR -->
       <nav class="navbar">
-
         <ul class="navbar-list">
-
-
-
-
           <li class="navbar-item">
             <button class="navbar-link"
-              onclick="window.open('https://24x7-dev-player.github.io/Portfolio/', '_blank')">Home page</button>
+              onclick="window.open('https://24x7-dev-player.github.io/Portfolio/', '_blank')">Home Page</button>
           </li>
-
-
-
-
-
         </ul>
-
       </nav>
 
 
 
-
-
-      <!--
-        - #ABOUT
-      -->
-
+      <!-- BLOG -->
       <article class="about  active" data-page="about">
 
         <header>
-          <h2 class="h2 article-title">🎯 MLOPs</h2>
+          <h2 class="h2 article-title">📛 MLOPs</h2>
         </header>
 
+        <section class="about-text with-line">
+        </section>
 
         <section class="about-text">
 
@@ -256,9 +221,10 @@
               <li><strong>Model Evaluation</strong>: Performance Assesment, Comparison, Decision Making</li>
               <li><strong>Evaluation Metrics</strong>: Accuracy, Precision, Recall(Sensitivity), F1-Score, Confusion
                 Matrix</li>
-              <li><strong>Model Deployment</strong>: Setup, Packaging, Scalabiliyt, Monitoring & Feedback loop</li>
-              <li>Project structure: CookieCutter, Data Registry: DVC, Aws sagemaker for DS setup, Lifecycle : MLFlow
+              <li><strong>Model Deployment</strong>: Setup, Packaging, Scalabiliy, Monitoring & Feedback loop</li>
+              <li>Project structure: CookieCutter, Data Registry: DVC, Aws sagemaker for DS setup, Lifecycle, MLFlow
               </li>
+              <li>Linux commands and Log Parsing</li>
             </ul>
 
           </div> <br>
@@ -402,9 +368,10 @@
           <h3 class="h3 service-title">🚀 Industry Tools Technology:</h3>
           <div class="blog">
             <ul>
-              <li> <strong>Provision and configuration</strong>: Provisioning and Configuration Management, OS Virtualization/Orchestration, K8s, Service Mash, K8s storage, Serverless, API manage </li>
+              <li> <strong>Provision and configuration</strong>: Provisioning and Configuration Management, OS
+                Virtualization/Orchestration, K8s, Service Mash, K8s storage, Serverless, API manage </li>
               <li><strong>Plan and manage </strong>: Planning and prioritization & Managemtne and productivity</li>
-              <li><strong>Code and Create</strong>: Issue tracking, Collaboration, Cloud IDE, Build Management  </li>
+              <li><strong>Code and Create</strong>: Issue tracking, Collaboration, Cloud IDE, Build Management </li>
               <li><strong>Continuous Integration</strong>: Verification , Packaging Security and Testing</li>
               <li><strong>Continuous Delivery</strong>: Feature Flag, Code inspection & release Orchestration</li>
               <li><strong>Monitor and Management</strong>: SRE, Logging, Alerting, Visualization, Debugging, Security
@@ -420,7 +387,8 @@
                 licence, readme, etc.</li>
               <li> <strong>Folder</strong>: Data, Docs, models, notebooks, references, report, Src, feature, model,
                 Visualization, etc. </li>
-                <li><strong>Benifit</strong>: Project Standarization, Reproducibility, Collaboration and documentation, Version Control, Time Efficiency </li>
+              <li><strong>Benifit</strong>: Project Standarization, Reproducibility, Collaboration and documentation,
+                Version Control, Time Efficiency </li>
 
             </ul>
           </div> <br>
@@ -442,371 +410,83 @@
           </div> <br>
 
           <h3 class="h3 service-title">🚀 DVC:</h3>
+          <div class="blog">
+            <ul>
+              <li><Strong>Key Features</Strong>: Version control, Dependency tracking & Integration with Git</li>
+
+            </ul>
+          </div> <br>
           <div class="code-window">
             <pre>
-              # 1. initialize a Git repository
-              git init
-
-              # 2. set up DVC in you project
+              # Initialize a DVC project
               dvc init
-
-              # 3. Add a dataset to your project
-              dvc add -d data/raw/your_dataset.csv
-
-              # 4. Commit changes toi Github
-              git add. 
-              git commit -m "Initialize DVC and add raw data"
-
-              # 5. Create and a version you machine learning pipeline 
-              # Example: Create a DVC file for a pre-processing step
-              dvc run - d data/raw_data.csv - o data/processed_data.csv python code/preprocess.py
-
-              # Example: Train a machine learning model
-              dvc run - d data/processed_data.csv - o models/model.pkl python code/train_model.py
-
-              #track changes and reproduce experiement
-              # Check the status of your project
-              dvc status
-
-              # Reproduce the pipeline at a specific commit
-              dvc repro -s <commit_hash>
+              
+              # Add data file to DVC
+              dvc add data.csv
+              
+              # Commit changes to Git and DVC
+              git add .
+              git commit -m "Add data file and DVC configuration"
+              
+              # Push changes to a remote repository
+              git push
+              dvc push
             </pre>
           </div> <br>
 
-        </section>
-
-
-
-
-
-
-
-
-
-        <!--
-          - testimonials modal
-        -->
-
-        <div class="modal-container" data-modal-container>
-
-          <div class="overlay" data-overlay></div>
-
-          <section class="testimonials-modal">
-
-            <button class="modal-close-btn" data-modal-close-btn>
-              <ion-icon name="close-outline"></ion-icon>
-            </button>
-
-            <div class="modal-img-wrapper">
-              <figure class="modal-avatar-box">
-                <img src="./assets/images/avatar-1.png" alt="Daniel lewis" width="80" data-modal-img>
-              </figure>
-
-              <img src="./assets/images/icon-quote.svg" alt="quote icon">
-            </div>
-
-            <div class="modal-content">
-
-              <h4 class="h3 modal-title" data-modal-title>Daniel lewis</h4>
-
-              <time datetime="2021-06-14">14 June, 2021</time>
-
-              <div data-modal-text>
-                <p>
-                  Richard was hired to create a corporate identity. We were very pleased with the work done. She has a
-                  lot of experience
-                  and is very concerned about the needs of client. Lorem ipsum dolor sit amet, ullamcous cididt
-                  consectetur adipiscing
-                  elit, seds do et eiusmod tempor incididunt ut laborels dolore magnarels alia.
-                </p>
-              </div>
-
-            </div>
-
-          </section>
-
-        </div>
-
-      </article>
-
-
-
-
-
-
-
-
-
-
-
-
-
-      <!--
-        - #PORTFOLIO
-      -->
-
-      <article class="portfolio" data-page="portfolio">
-
-        <header>
-          <h2 class="h2 article-title">Portfolio</h2>
-        </header>
-
-        <section class="projects">
-
-          <ul class="filter-list">
-
-            <li class="filter-item">
-              <button class="active" data-filter-btn>All</button>
-            </li>
-
-            <li class="filter-item">
-              <button data-filter-btn>Web design</button>
-            </li>
-
-            <li class="filter-item">
-              <button data-filter-btn>Applications</button>
-            </li>
-
-            <li class="filter-item">
-              <button data-filter-btn>Web development</button>
-            </li>
-
-          </ul>
-
-          <div class="filter-select-box">
-
-            <button class="filter-select" data-select>
-
-              <div class="select-value" data-selecct-value>Select category</div>
-
-              <div class="select-icon">
-                <ion-icon name="chevron-down"></ion-icon>
-              </div>
-
-            </button>
-
-            <ul class="select-list">
-
-              <li class="select-item">
-                <button data-select-item>All</button>
-              </li>
-
-              <li class="select-item">
-                <button data-select-item>Web design</button>
-              </li>
-
-              <li class="select-item">
-                <button data-select-item>Applications</button>
-              </li>
-
-              <li class="select-item">
-                <button data-select-item>Web development</button>
-              </li>
+          <h3 class="h3 service-title">🚀 MLFlow:</h3>
+          <div class="blog">
+            <ul>
+              <li><Strong>Key Features</Strong>: Experiment Tracking, Packaging Code into Repo, Model Registry,
+                Deployment Tools</li>
 
             </ul>
+          </div> <br>
+          <div class="code-window">
+            <pre>
+              import mlflow
+              import mlflow.sklearn
+              
+              # Start MLflow run
+              with mlflow.start_run():
+                  # Train your model
+                  model = train_model()
+              
+                  # Log parameters, metrics, and the model
+                  mlflow.log_param("param_name", param_value)
+                  mlflow.log_metric("metric_name", metric_value)
+                  mlflow.sklearn.log_model(model, "model")
+              
+              # View the results in the MLflow Server
+              mlflow serve
+            </pre>
+          </div> <br>
 
-          </div>
 
-          <ul class="project-list">
 
-            <li class="project-item  active" data-filter-item data-category="web development">
-              <a href="#">
-
-                <figure class="project-img">
-                  <div class="project-item-icon-box">
-                    <ion-icon name="eye-outline"></ion-icon>
-                  </div>
-
-                  <img src="./assets/images/project-1.jpg" alt="finance" loading="lazy">
-                </figure>
-
-                <h3 class="project-title">Finance</h3>
-
-                <p class="project-category">Web development</p>
-
-              </a>
-            </li>
-
-            <li class="project-item  active" data-filter-item data-category="web development">
-              <a href="#">
-
-                <figure class="project-img">
-                  <div class="project-item-icon-box">
-                    <ion-icon name="eye-outline"></ion-icon>
-                  </div>
-
-                  <img src="./assets/images/project-2.png" alt="orizon" loading="lazy">
-                </figure>
-
-                <h3 class="project-title">Orizon</h3>
-
-                <p class="project-category">Web development</p>
-
-              </a>
-            </li>
-
-            <li class="project-item  active" data-filter-item data-category="web design">
-              <a href="#">
-
-                <figure class="project-img">
-                  <div class="project-item-icon-box">
-                    <ion-icon name="eye-outline"></ion-icon>
-                  </div>
-
-                  <img src="./assets/images/project-3.jpg" alt="fundo" loading="lazy">
-                </figure>
-
-                <h3 class="project-title">Fundo</h3>
-
-                <p class="project-category">Web design</p>
-
-              </a>
-            </li>
-
-            <li class="project-item  active" data-filter-item data-category="applications">
-              <a href="#">
-
-                <figure class="project-img">
-                  <div class="project-item-icon-box">
-                    <ion-icon name="eye-outline"></ion-icon>
-                  </div>
-
-                  <img src="./assets/images/project-4.png" alt="brawlhalla" loading="lazy">
-                </figure>
-
-                <h3 class="project-title">Brawlhalla</h3>
-
-                <p class="project-category">Applications</p>
-
-              </a>
-            </li>
-
-            <li class="project-item  active" data-filter-item data-category="web design">
-              <a href="#">
-
-                <figure class="project-img">
-                  <div class="project-item-icon-box">
-                    <ion-icon name="eye-outline"></ion-icon>
-                  </div>
-
-                  <img src="./assets/images/project-5.png" alt="dsm." loading="lazy">
-                </figure>
-
-                <h3 class="project-title">DSM.</h3>
-
-                <p class="project-category">Web design</p>
-
-              </a>
-            </li>
-
-            <li class="project-item  active" data-filter-item data-category="web design">
-              <a href="#">
-
-                <figure class="project-img">
-                  <div class="project-item-icon-box">
-                    <ion-icon name="eye-outline"></ion-icon>
-                  </div>
-
-                  <img src="./assets/images/project-6.png" alt="metaspark" loading="lazy">
-                </figure>
-
-                <h3 class="project-title">MetaSpark</h3>
-
-                <p class="project-category">Web design</p>
-
-              </a>
-            </li>
-
-            <li class="project-item  active" data-filter-item data-category="web development">
-              <a href="#">
-
-                <figure class="project-img">
-                  <div class="project-item-icon-box">
-                    <ion-icon name="eye-outline"></ion-icon>
-                  </div>
-
-                  <img src="./assets/images/project-7.png" alt="summary" loading="lazy">
-                </figure>
-
-                <h3 class="project-title">Summary</h3>
-
-                <p class="project-category">Web development</p>
-
-              </a>
-            </li>
-
-            <li class="project-item  active" data-filter-item data-category="applications">
-              <a href="#">
-
-                <figure class="project-img">
-                  <div class="project-item-icon-box">
-                    <ion-icon name="eye-outline"></ion-icon>
-                  </div>
-
-                  <img src="./assets/images/project-8.jpg" alt="task manager" loading="lazy">
-                </figure>
-
-                <h3 class="project-title">Task Manager</h3>
-
-                <p class="project-category">Applications</p>
-
-              </a>
-            </li>
-
-            <li class="project-item  active" data-filter-item data-category="web development">
-              <a href="#">
-
-                <figure class="project-img">
-                  <div class="project-item-icon-box">
-                    <ion-icon name="eye-outline"></ion-icon>
-                  </div>
-
-                  <img src="./assets/images/project-9.png" alt="arrival" loading="lazy">
-                </figure>
-
-                <h3 class="project-title">Arrival</h3>
-
-                <p class="project-category">Web development</p>
-
-              </a>
-            </li>
-
-          </ul>
 
         </section>
 
+
+
+
+
+
+
+
+
+
       </article>
-
-
-
-
-
-
-
-
-
 
 
     </div>
 
 
 
+
   </main>
 
-
-
-
-
-
-  <!--
-    - custom js link
-  -->
-  <script src="../assets/js/script.js"></script>
-  <!--
-    - ionicon link
-  -->
-  <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
-  <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+<script src="blogs.js"></script>
 
 </body>
 

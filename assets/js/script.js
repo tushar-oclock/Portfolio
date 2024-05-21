@@ -173,12 +173,12 @@ const professions = [
   { name: "App Developer", color: "teal" },
   { name: "Python Developer", color: "deeporange" },
   { name: "AI Specialist", color: "gray" },
-  { name: "Data Scientist", color: "yellow" },
-  { name: "AIOPS Enginner", color: "purple" },
-  { name: "LLMOPS Enginner", color: "red" },
-  { name: "Data Architect", color: "orange" },
-  { name: "Research Scientist", color: "cyan" },
-  { name: "Data Consultant", color: "Amber" },
+    { name: "Data Scientist", color: "yellow" },
+    { name: "AIOPS Enginner", color: "purple" },
+    { name: "LLMOPS Enginner", color: "red" },
+    { name: "Data Architect", color: "orange" },
+    { name: "Research Scientist", color: "cyan" },
+    { name: "Data Consultant", color: "Amber" },
 
 
 ];
@@ -222,6 +222,7 @@ function playSound() {
 document.getElementById('background-video').addEventListener('loadeddata', function() {
   document.body.style.backgroundColor = 'black';
 });
+
 
 
 

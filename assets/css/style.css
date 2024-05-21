@@ -482,6 +482,7 @@ main {
 .contact-info {
   max-width: calc(100% - 46px);
   width: calc(100% - 46px);
+  /* font-family: 'Space Grotesk' !important; */
 }
 
 .contact-title {
@@ -549,7 +550,7 @@ main {
 
 .navbar-link {
   /* color: var(--light-gray); */
-  color: white;
+  color: #ffdb70;
   font-size: 15px;
   /* font-size: var(--fs-9); */
   padding: 20px 7px;
@@ -2146,7 +2147,7 @@ article {
     max-height: max-content;
     height: 100%;
     margin-bottom: 0;
-    padding-top: 60px;
+    padding-top: 30px;
     z-index: 1;
   }
 
@@ -2189,7 +2190,7 @@ article {
 
   .contact-info :is(.contact-link, time, address) {
 
-    font-weight: var(--fw-300);
+    /* font-weight: var(--fw-300); */
   }
 
   .separator:last-of-type {
@@ -2273,7 +2274,7 @@ h3 {
   white-space: nowrap;
   vertical-align: baseline;
   border-radius: 0.25rem;
-  font-family: 'Poppins'; 
+  font-family: 'Space Grotesk';
 }
 
 .badge-primary {
@@ -2520,7 +2521,7 @@ strong{
 .waviy span {
   position: relative;
   display: inline-block;
-  font-size: 18px;
+  font-size: 23px;
   color: #fff;
   text-transform: uppercase;
   animation: flip 2s infinite;
@@ -2554,4 +2555,14 @@ strong{
   height: 4px;
   background: #ffdb70;
   border-radius: 3px;
+}
+
+
+@media (max-width: 768px) {
+  #badge-container {
+    margin-left: 0;
+    /* Reset margin for mobile view */
+    margin-right: auto;
+    /* Align to the left */
+  }
 }
