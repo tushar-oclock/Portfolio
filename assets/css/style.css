@@ -476,6 +476,7 @@ main {
   display: flex;
   align-items: center;
   gap: 16px;
+  font-family: 'Space Grotesk';
 }
 
 .contact-info {
