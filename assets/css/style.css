@@ -193,7 +193,7 @@ article {
 .separator {
   width: 100%;
   height: 1px;
-  background: var(--jet);
+  background: #ffffff57;
   margin: 16px 0;
 }
 

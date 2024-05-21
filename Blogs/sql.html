@@ -20,7 +20,18 @@
 
 <body>
 
+
   <!-- Assets -->
+  <button id="scrollTopButton" class="scroll-button scroll-top">
+    <img src="../assets/images/sidebar/chevron-angle-svgrepo-com.svg" alt="design icon" width="40">
+
+  </button>
+
+  <button id="scrollBottomButton" class="scroll-button scroll-bottom">
+    <img src="../assets/images/sidebar//down-arrow-download-svgrepo-com.svg" alt="design icon" width="40">
+
+  </button>
+
   <audio id="clickSound">
     <source src="../assets/images/aud/sound.wav" type="audio/wav">
     Your browser does not support the audio element.
@@ -33,7 +44,6 @@
     </video>
   </div>
 
-
   <!-- #MAIN -->
   <main>
 
@@ -42,50 +52,36 @@
       <div class="sidebar-info">
 
         <figure class="avatar-box">
-          <img class=" test-shine" src="../assets/images/TusharArora.png" alt="tushar arora" width="80">
+          <img class=" test-shine" src="../assets/images/tushararora1.png" alt="tushar arora" width="80">
         </figure>
-
-
-
 
         <div class="info-content">
 
+
           <div class="waviy">
-            <span style="--i:1">D</span>
-            <span style="--i:2">A</span>
-            <span style="--i:3">N</span>
-            <span style="--i:4">J</span>
-            <span style="--i:5">I</span>
-            <span style="--i:6">N</span>
-            <span style="--i:7">-</span>
-            <span style="--i:8">M</span>
-            <span style="--i:9">A</span>
-            <span style="--i:10">S</span>
-            <span style="--i:11">T</span>
-            <span style="--i:12">E</span>
-            <span style="--i:13">R</span>
+            <span style="--i:1">2</span>
+            <span style="--i:2">4</span>
+            <span style="--i:3">X</span>
+            <span style="--i:4">7</span>
+            <span style="--i:5">-</span>
+            <span style="--i:6">D</span>
+            <span style="--i:7">E</span>
+            <span style="--i:8">V</span>
+            <span style="--i:9">-</span>
+            <span style="--i:10">P</span>
+            <span style="--i:11">L</span>
+            <span style="--i:12">A</span>
+            <span style="--i:13">Y</span>
+            <span style="--i:14">E</span>
+            <span style="--i:15">R</span>
           </div>
 
-          <div style="display: flex; justify-content: center; font-family:  Ubuntu;">
+          <div style="display: flex; 
+          justify-content: center; ">
             <div id="badge-container" style="display: inline-block;"></div>
           </div>
 
-          <style>
-            @media (max-width: 768px) {
-              #badge-container {
-                margin-left: 0;
-                /* Reset margin for mobile view */
-                margin-right: auto;
-                /* Align to the left */
-              }
-            }
-          </style>
         </div>
-
-
-
-
-
 
         <button class="info_more-btn" data-sidebar-btn>
           <span>Show Contacts</span>
@@ -120,6 +116,27 @@
             </div>
           </li>
 
+          <li class="contact-item">
+            <div class="service-icon-box">
+              <img src="../assets/images/sidebar/age.svg" alt="design icon" width="30">
+            </div>
+            <div class="contact-info">
+              <p class="contact-title">AGE</p>
+              <a href="#" class="contact-link"><span id="age"></span></a>
+            </div>
+          </li>
+
+          <li class="contact-item">
+            <div class="service-icon-box">
+              <img src="../assets/images/sidebar/map.svg" alt="design icon" width="30">
+            </div>
+            <div class="contact-info">
+              <p class="contact-title">Location</p>
+              <a href="#" class="contact-link">Ghaziabad,
+                Uttar Pradesh, India</a>
+            </div>
+          </li>
+
         </ul>
 
         <div class="separator"></div>
@@ -127,21 +144,28 @@
         <ul class="social-list">
 
           <li class="social-item">
-            <a href="#" class="social-link">
+            <a href="https://github.com/24x7-Dev-Player" target="_blank" class="social-link">
               <img src="../assets/images/sidebar/github.svg" alt="design icon" width="40">
 
             </a>
           </li>
 
           <li class="social-item">
-            <a href="#" class="social-link">
+            <a href="https://wa.me/918851084852" target="_blank" class="social-link">
+              <img src="../assets/images/sidebar/whatsapp.svg" alt="design icon" width="40">
+
+            </a>
+          </li>
+
+          <li class="social-item">
+            <a href="https://www.linkedin.com/in/tushar-perspective" target="_blank" class="social-link">
               <img src="../assets/images/sidebar/linkedin.svg" alt="design icon" width="40">
 
             </a>
           </li>
 
           <li class="social-item">
-            <a href="#" class="social-link">
+            <a href="https://www.instagram.com/tushar.oclock" target="_blank" class="social-link">
               <img src="../assets/images/sidebar/instagram.svg" alt="design icon" width="40">
 
             </a>
@@ -163,8 +187,8 @@
       <nav class="navbar">
         <ul class="navbar-list">
           <li class="navbar-item">
-            <button class="navbar-link"
-              onclick="window.open('https://24x7-dev-player.github.io/Portfolio/', '_blank')">Home Page</button>
+            <button style="font-size: 20px;" class="navbar-link"
+              onclick="window.open('https://24x7-dev-player.github.io/Portfolio/', '_blank')">/ Home Page</button>
           </li>
         </ul>
       </nav>
@@ -238,8 +262,46 @@
           </div> <br>
 
 
+          <h3 class="h3 service-title">🚀 SQL DML Commands:</h3>
+          <div class="blog">
+            <ul>
+              <li><strong> Commands</strong>: Insert, Select, Update, Delete</li>
+              <li><Strong>Functions & keywords</Strong>: Alias, Distinct, Where, Operators, Execution Order(FJWGHSDO), In, Not in, SQRT, set, and, round, max, min, avg, sum, count, std, var, abs, ceil, floor,  etc. </li>
+            </ul>
+          </div> <br>
+          <div class="code-window">
+            <pre>
+              -- Insert a new record into the employees table
+              INSERT INTO employees (first_name, last_name, age)
+              VALUES ('John', 'Doe', 30);
+              
+              -- Select the first name and last name of employees older than 25
+              SELECT first_name, last_name
+              FROM employees
+              WHERE age > 25;
+              
+              -- Update the age of employee John Doe to 31
+              UPDATE employees
+              SET age = 31
+              WHERE first_name = 'John' AND last_name = 'Doe';
+              
+              -- Delete employees older than 65
+              DELETE FROM employees
+              WHERE age > 65;
+              
+              TRUNCATE TABLE my_database.employees;
+            </pre>
+          </div> <br>
+
+
+
+
         </section>
       </article>
+
+
+
+
 
     </div>
 
@@ -247,16 +309,10 @@
 
 
   </main>
-  <script>
+  <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+  <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+  <script src="blogs.js"></script>
 
-    new kursor({
-      type: 1,
-      removeDefaultCursor: true,
-      color: "#FFD870"
-    })
-
-  </script>
-  <script src="../assets/js/script.js"></script>
 </body>
 
 </html>
