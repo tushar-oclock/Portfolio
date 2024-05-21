@@ -226,3 +226,19 @@ document.getElementById('background-video').addEventListener('loadeddata', funct
 
 
 
+// Age
+const birthdate = new Date('2001-04-18T00:00:00');
+
+function updateAge() {
+  const ageElement = document.getElementById('age');
+  const now = new Date();
+  const ageInMilliseconds = now - birthdate;
+  const ageInYears = ageInMilliseconds / (1000 * 60 * 60 * 24 * 365.25);
+  ageElement.textContent = ageInYears.toFixed(10);
+}
+
+// Update the age every 100 milliseconds (0.1 seconds)
+setInterval(updateAge, 100);
+
+// Initial call to display the age immediately
+updateAge();

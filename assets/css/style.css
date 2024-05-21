@@ -2149,7 +2149,7 @@ article {
     max-height: max-content;
     height: 100%;
     margin-bottom: 0;
-    /* padding-top: 30px; */
+    padding-top: 20px;
     z-index: 1;
   }
 
