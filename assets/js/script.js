@@ -242,3 +242,6 @@ setInterval(updateAge, 100);
 
 // Initial call to display the age immediately
 updateAge();
+
+
+
