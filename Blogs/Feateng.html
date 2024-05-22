@@ -198,13 +198,13 @@
       <article class="about  active" data-page="about">
 
         <header>
-          <h2 class="h2 article-title">📛 Unsupervised Learning</h2>
+          <h2 class="h2 article-title">📛 Feature Engineering</h2>
         </header>
 
         <div class="blog">
           <ul>
             <li style="color: lightsalmon; text-align: justify; " >
-              ● Introduction ● K-mean Clustering ● Find K code Example ● Types ● K mean from Scratch
+              ● Introduction ● Encoding Categorical Feature
             </li>
           </ul>
         </div> <br>
@@ -217,129 +217,109 @@
           <h3 class="h3 service-title">🚀 Introduction:</h3>
           <div class="blog">
             <ul>
-              <li><strong> Unsupervised Leanring</strong>: Clustering, Association, Dimenionality reducation, Anomaly
-                detection, Language model</li>
-              <li> <strong>Application of Clustering</strong>: Customer Segmentation, Data analysis, Semi Supervised
-                learning, Image Segmentation </li>
-                <li><strong>Types</strong>: Partitional, Hierarchical, Density based, Distribution, Graph based, Soft vs Hard </li>
-
-
+              <li><strong>Ken Aspects</strong>: Creation of New feature, feature Transformation, Feature Selection, Feature Extraction, Handling missing values, Encoding Categorical variables</li>
+              <li><strong>Feature Transformation</strong>: imputation, outlier removal, Matametic Transformation(log, box-cox, feature scaling)</li>
+              <li><strong>Feature Encoding</strong>Handling categorical feature, Discretization </li>
+              <li><strong>Feature Selection</strong>: Filter, wrapped, Embedded</li>
+              <li><strong>Feature Extraction</strong>: PCA, LDA, TSNE</li>
             </ul>
-
           </div> <br>
 
-          <h3 class="h3 service-title">🚀 K-Mean Clustering:</h3>
+          <h3 class="h3 service-title">🚀 Encoding Categorical Feature:</h3>
           <div class="blog">
             <ul>
-              <li><strong> Process</strong>: Decide k, Initialize centroids, start iteration, Assign cluster, move
-                centroid, check & stop</li>
-              <li> <strong>Matrix</strong>: Intra cluster, inter cluster & Dunn Index </li>
-              <li><strong>Hyperparameter</strong>: K choose by Elbow method & Silhouette Score(Cohesion),
-                Initializaation Method, n_init, max_iter, tol </li>
-              <li><strong>Assumption</strong>: Spherical Cluster Shape, Similar Cluster SIze, Equal Varience, Well
-                seperated, Must large number of data points and less k, Define K form Starting</li>
-              <li><strong>Limitation</strong>: Required Cluster of Similar size, Similar varience between cluster,
-                Assumption in Spherical cluster, Vulnerablity of outlier, Hard clustering, High dimensionality
-                challenges, Sensitive to scale </li>
-              <li><strong>Updated version</strong>: Kmean++, K-medoids, lloyd & Elkan Algorithm, Mini Batch K mean</li>
-
-
+              <li><strong>Categorical Data</strong>: Ordinal & Nominal, </li>
+              <li><strong>Categorical to numerical</strong>: Ordinal, Onehot, Target Encoding, Frequency Encoding</li>
+              <li><strong>Numerical to Column</strong>: Discretization</li>
+              <li><strong>Target Column</strong>: label Encoding, Label binarization, Multi label binarization</li>
+              <li>Handling Rare category: Exclusion, Aggrigation, Special Treatment(Min, Max)  </li>
             </ul>
-
           </div> <br>
 
-          <h3 class="h3 service-title">🚀Find K Code Example:</h3>
+          <div class="blog">
+            <ul>
+              <li><strong>Ordinal Encoding</strong>:</li>
+            </ul>
+          </div> <br>
           <div class="code-window">
             <pre>
-              #Elbow Method
-              from sklearn.cluster import KMeans
-              wcss = []
-              for i in range(1, 11):
-                  kmeans = KMeans(n_init = 10, n_clusters = i)
-                  kmeans.fit(X)
-                  wcss.append(kmeans.inertia_)
+              import pandas as pd
+              from sklearn.preprocessing import OrdinalEncoder
 
-              # Silhouette Score
-              from sklearn.metrics import silhouette_score
-              sil = []
-              for i in range(2, 11):
-                  kmeans = KMeans(n_clusters=i)
-                  cluster_labels = kmeans.fit_predict(X)
-                  silhouette_avg = silhouette_score(X, cluster_labels)
-                  sil.append(silhouette_avg)
+              # Sample data
+              data = {'category': ['low', 'medium', 'high', 'medium', 'low']}
+              df = pd.DataFrame(data)
+
+              # Initialize the OrdinalEncoder
+              encoder = OrdinalEncoder(categories=[['low', 'medium', 'high']])
+
+              # Fit and transform the data
+              df['category_encoded'] = encoder.fit_transform(df[['category']])
+
+              print(df)
             </pre>
           </div> <br>
 
-          <h3 class="h3 service-title">🚀 Types:</h3>
           <div class="blog">
             <ul>
-              <li><strong> Partitional Clustering</strong>: K means, Define no. of k, iterative Process, Objective function, work on certain dataset, handling outliers, initial condition, Scalalbility & efficiency, not work on varing cluster or noicy data</li>
-              <li><strong>Hierarchical Clustering</strong>: Agglomerative & divisive, No need to specify Cluster, Dendogram, Use diffrent matrix, flexibility in shape, computation cost, sensitvity noice and outlier, Application in NLP, biology, etc.  </li>
-              <li><strong>Density Based</strong>: DBSCAN, No need to specify clsuter, Handling noice and outliers, Arbitery Shape, Parameter sensitvity, Scalability</li>
-              <li><strong>Distribution</strong>:Gaussian based, Handling complex cluater shape, Computation intensity, Parameter Estimation, Handling outliers, Scalability, Soft Clustering</li>
-
-
+              <li><strong>Label Encoding</strong>:</li>
             </ul>
-
           </div> <br>
-
-          <h3 class="h3 service-title">🚀K mean from Scratch:</h3>
           <div class="code-window">
             <pre>
-              import random
-              import numpy as np
+              import pandas as pd
+              from sklearn.preprocessing import LabelEncoder
               
-              class KMeans:
-                  def __init__(self, n_clusters=2, max_iter=100):
-                      self.n_clusters = n_clusters  # Number of clusters
-                      self.max_iter = max_iter      # Maximum number of iterations
-                      self.centroids = None         # To store the centroids
+              # Sample data
+              data = {'category': ['apple', 'banana', 'cherry', 'banana', 'apple']}
+              df = pd.DataFrame(data)
               
-                  def fit_predict(self, X):
-                      # Randomly initialize centroids from the dataset
-                      random_index = random.sample(range(0, X.shape[0]), self.n_clusters)
-                      self.centroids = X[random_index]
+              import pandas as pd
+              from sklearn.preprocessing import LabelEncoder
               
-                      for i in range(self.max_iter):
-                          # Assign clusters to each data point
-                          cluster_group = self.assign_clusters(X)
-                          old_centroids = self.centroids
-                          # Move centroids to the mean of their assigned points
-                          self.centroids = self.move_centroids(X, cluster_group)
-                          # Check if centroids have changed, if not, stop the algorithm
-                          if (old_centroids == self.centroids).all():
-                              break
+              # Sample data
+              data = {'category': ['apple', 'banana', 'cherry', 'banana', 'apple']}
+              df = pd.DataFrame(data)
               
-                      return cluster_group
+              # Initialize the LabelEncoder
+              encoder = LabelEncoder()
               
-                  def assign_clusters(self, X):
-                      cluster_group = []  # To store the index of the closest centroid for each point
-                      distances = []      # To store the distances of each point to the centroids
+              # Fit and transform the data
+              df['category_encoded'] = encoder.fit_transform(df['category'])
               
-                      for row in X:
-                          for centroid in self.centroids:
-                              # Calculate Euclidean distance between point and centroid
-                              distances.append(np.sqrt(np.dot(row - centroid, row - centroid)))
-                          # Find the closest centroid
-                          min_distance = min(distances)
-                          index_pos = distances.index(min_distance)
-                          cluster_group.append(index_pos)
-                          distances.clear()  # Clear distances for the next point
-              
-                      return np.array(cluster_group)
-              
-                  def move_centroids(self, X, cluster_group):
-                      new_centroids = []  # To store the new centroids
-              
-                      cluster_type = np.unique(cluster_group)  # Unique cluster indices
-              
-                      for type in cluster_type:
-                          # Calculate the mean of points in each cluster to find the new centroid
-                          new_centroids.append(X[cluster_group == type].mean(axis=0))
-              
-                      return np.array(new_centroids)
+              print(df)
             </pre>
           </div> <br>
+
+          <div class="blog">
+            <ul>
+              <li><strong>Onehot Encoding</strong>:</li>
+            </ul>
+          </div> <br>
+          <div class="code-window">
+            <pre>
+              import pandas as pd
+              from sklearn.preprocessing import OneHotEncoder
+              
+              # Sample data
+              data = {'category': ['apple', 'banana', 'cherry', 'banana', 'apple']}
+              df = pd.DataFrame(data)
+              
+              # Initialize the OneHotEncoder
+              encoder = OneHotEncoder(sparse=False)
+              
+              # Fit and transform the data
+              encoded_data = encoder.fit_transform(df[['category']])
+              
+              # Create a DataFrame with the encoded data
+              df_one_hot = pd.DataFrame(encoded_data, 
+              columns=encoder.get_feature_names_out(['category']))
+              
+              print(df_one_hot)
+            </pre>
+          </div> <br>
+
+
         </section>
 
 

@@ -186,7 +186,7 @@
       <nav class="navbar">
         <ul class="navbar-list">
           <li class="navbar-item">
-            <button  style="font-size: 20px;"   class="navbar-link"
+            <button style="font-size: 20px;" class="navbar-link"
               onclick="window.open('https://24x7-dev-player.github.io/Portfolio/', '_blank')">/ Home Page</button>
           </li>
         </ul>
@@ -203,8 +203,9 @@
 
         <div class="blog">
           <ul>
-            <li style="color: lightsalmon; text-align: justify; " >
-              ● Introduction ● Version Control System ● Pipeline Example ● Major Tools ● Industry Tool Technology ● CookieCutter  ● DVC  ● MLFlow ● ZenML ● CI/CD Pipeline
+            <li style="color: lightsalmon; text-align: justify; ">
+              ● Introduction ● Version Control System ● Pipeline Example ● Major Tools ● Industry Tool Technology ●
+              CookieCutter ● DVC ● MLFlow ● ZenML ● Continuous Integration & CML ● Containerization and Orchestration ● Continuous Deployment
             </li>
           </ul>
         </div> <br>
@@ -511,11 +512,10 @@
             </pre>
           </div> <br>
 
-
-          <h3 class="h3 service-title">🚀 CI/CD Pipeline:</h3>
+          <h3 class="h3 service-title">🚀 Continuous Integration & CML:</h3>
           <div class="blog">
             <ul>
-              <li><Strong>1. Setting up GitHub Actions for CI/CD</Strong></li>
+              <li>GitHub Actions for CI & Integrated CML for version Control</li>
 
             </ul>
           </div> <br>
@@ -554,17 +554,129 @@
                   - name: Run Tests
                     run: |
                       python -m unittest discover
+                  
+              ## Only CML specefic code
               
-              ```ne
-              my_pipeline.run()
+                  - name: Create CML report
+                    env:
+                      REPO_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+                    run: |
+              
+                      echo "# First Line of our report" >> report.md
+                      echo "## Bar Plots" >> report.md
+                      echo '![](./bars.png "Bar plot")' >> report.md
+                      echo "## Line Plots" >> report.md
+                      echo '![](./lines.png "Bar plot")' >> report.md
+              
+                      cml comment create report.md
+              
+              ```
+            </pre>
+          </div> <br>
+
+          <h3 class="h3 service-title">🚀Containerization and Orchestration:</h3>
+          <div class="blog">
+            <ul>
+              <li><strong>Containerization Key aspects</strong>: Isolation, Portability, Resources Efficiency</li>
+              <li><strong>Orchestration Key aspects</strong>: Scaling, Service Discovery, Load balancing, Fault
+                tolerance</li>
+            </ul>
+          </div> <br>
+          <div class="code-window">
+            <pre>
+            docker run hello-world
+
+            #build your own image
+            git clone https://github.com/docker/python-docker
+
+            docker init
+            Welcome to the Docker Init CLI!
+
+              - .dockerignore
+              - Dockerfile
+              - compose.yaml
+
+              #Running Web Application
+              docker compose up --build
+            </pre>
+          </div> <br>
+
+          <div class="blog">
+            <ul>
+              <li><strong>Multi container Approach</strong></li>
+            </ul>
+          </div> <br>
+          <div class="code-window">
+            <pre>
+              - Create a `docker-compose.yml` file:
+              ```yaml
+              version: '3'
+              services:
+                web:
+                  image: nginx:alpine
+                  ports:
+                    - "8080:80"
+                db:
+                  image: mysql:5.7
+                  environment:
+                    MYSQL_ROOT_PASSWORD: example
+                    MYSQL_DATABASE: app_db
+                    MYSQL_USER: app_user
+                    MYSQL_PASSWORD: app_password
+              
+              ```
+              - Run the multi-container application:
+              ```bash
+              docker-compose up
             </pre>
           </div> <br>
           <div class="blog">
             <ul>
-              <li><Strong>2. Integrating CML for Version Control</Strong></li>
+              <li><strong>Scaling with Docker Compose</strong></li>
+            </ul>
+          </div> <br>
+          <div class="code-window">
+            <pre>
+                ```yaml
+                version: '3'
+                services:
+                  web:
+                    image: nginx:alpine
+                    ports:
+                      - "8080:80"
+                  db:
+                    image: mysql:5.7
+                    environment:
+                      MYSQL_ROOT_PASSWORD: example
+                      MYSQL_DATABASE: app_db
+                      MYSQL_USER: app_user
+                      MYSQL_PASSWORD: app_password
+                  app_server:
+                    image: custom_app_image
+                    ports:
+                      - "5000:5000"
+                
+                ```
+                - Scale the `app_server` service:
+
+                ```bash
+                docker-compose up --scale app_server=3
+                
+                ```
+              </pre>
+          </div> <br>
+
+
+          <h3 class="h3 service-title">🚀 Continuous Deployment:</h3>
+          <div class="blog">
+            <ul>
+              <li><Strong>Prerequisite</Strong>: Git, Github, Python application (e.g., using Streamlit or FastAPI)</li>
 
             </ul>
           </div> <br>
+
+
+
 
 
         </section>
