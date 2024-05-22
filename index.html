@@ -6,35 +6,36 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>24x7 Dev. Player</title>
-  <link rel="shortcut icon" href="./assets/images/logo.png" type="image/x-icon">
+
+  <link rel="shortcut icon" href="../assets/images/logo.png" type="image/x-icon">
+
   <link rel="stylesheet" href="https://unpkg.com/kursor/dist/kursor.css">
   <script src="https://cdn.jsdelivr.net/npm/kursor@0.0.14/dist/kursor.js"></script>
 
-
-  <link rel="stylesheet" href="./assets/css/style.css">
-
+  <link rel="stylesheet" href="../assets/css/style.css">
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;700&display=swap">
 
 
-
-
-  <!--
-    - google font link
-  -->
-  <!-- <link rel="preconnect" href="https://fonts.googleapis.com"> -->
-  <!-- <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin> -->
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
 </head>
 
 <body>
 
 
+  <!-- Assets -->
+  <button id="scrollTopButton" class="scroll-button scroll-top">
+    <img src="./assets/images/sidebar/chevron-angle-svgrepo-com.svg" alt="design icon" width="40">
+
+  </button>
+
+  <button id="scrollBottomButton" class="scroll-button scroll-bottom">
+    <img src="./assets/images/sidebar//down-arrow-download-svgrepo-com.svg" alt="design icon" width="40">
+
+  </button>
+
   <audio id="clickSound">
     <source src="./assets/images/aud/sound.wav" type="audio/wav">
     Your browser does not support the audio element.
   </audio>
-
-
 
   <div class="video-container">
     <video autoplay loop muted id="background-video">
@@ -43,11 +44,7 @@
     </video>
   </div>
 
-
-  <!--
-    - #MAIN
-  -->
-
+  <!-- #MAIN -->
   <main>
 
     <!-- #SIDEBAR -->
@@ -100,7 +97,7 @@
 
           <li class="contact-item">
             <div class="service-icon-box">
-              <img src="./assets/images/sidebar/mailsvg.svg" alt="design icon" width="30">
+              <img src="../assets/images/sidebar/mailsvg.svg" alt="design icon" width="30">
             </div>
             <div class="contact-info">
               <p class="contact-title">Email</p>
@@ -623,7 +620,7 @@
         </div>
 
       </article>
-      
+
 
 
 
@@ -1393,8 +1390,8 @@
               <a href="Blogs/Unsupervised.html" target="_blank">
 
                 <figure class="blog-banner-box">
-                  <img class="no-hover-effect" src="./assets/images/blogs/unsupervisedlearning.png" alt="Best fonts every designer"
-                    loading="lazy">
+                  <img class="no-hover-effect" src="./assets/images/blogs/unsupervisedlearning.png"
+                    alt="Best fonts every designer" loading="lazy">
                 </figure>
 
                 <div class="blog-content">
@@ -1466,6 +1463,37 @@
 
               </a>
             </li>
+
+            <li class="blog-post-item">
+              <a href="Blogs/aiops.html" target="_blank">
+
+                <figure class="blog-banner-box">
+                  <img class="no-hover-effect" src="./assets/images/blogs/EDA.png" alt="Best fonts every designer"
+                    loading="lazy">
+                </figure>
+
+                <div class="blog-content">
+
+                  <div class="blog-meta">
+                    <p class="blog-category">Deployment</p>
+
+                    <span class="dot"></span>
+
+                    <time datetime="2022-02-23">May 17, 2024</time>
+                  </div>
+
+                  <h3 class="h3 blog-item-title">MLOPS, AIOPS & LLMOPS</h3>
+
+                  <p class="blog-text">
+                    Strategic deployment for efficient operational management.
+                  </p>
+
+                </div>
+
+              </a>
+            </li>
+
+
 
 
 
@@ -1677,37 +1705,10 @@
                 </div>
 
               </a>
-            </li>="blog-post-item">
-              <a href="Blogs/aiops.html" target="_blank">
-
-                <figure class="blog-banner-box">
-                  <img class="no-hover-effect" src="./assets/images/blogs/EDA.png" alt="Best fonts every designer"
-                    loading="lazy">
-                </figure>
-
-                <div class="blog-content">
-
-                  <div class="blog-meta">
-                    <p class="blog-category">Deployment</p>
-
-                    <span class="dot"></span>
-
-                    <time datetime="2022-02-23">May 17, 2024</time>
-                  </div>
-
-                  <h3 class="h3 blog-item-title">MLOPS, AIOPS & LLMOPS</h3>
-
-                  <p class="blog-text">
-                    Strategic deployment for efficient operational management.
-                  </p>
-
-                </div>
-
-              </a>
             </li>
 
 
-            <li class
+
 
 
           </ul>
@@ -1783,21 +1784,49 @@
 
 
   </main>
-
-
-
-
-
-
-  <!--
-    - custom js link
-  -->
-  <script src="./assets/js/script.js"></script>
-  <!--
-    - ionicon link
-  -->
   <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
   <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+  <script src="assets/js/script.js"></script>
+
+<style>
+.scroll-button {
+  position: fixed;
+  bottom: 20px; /* Adjust as needed */
+  z-index: 9999;
+  font-size: 24px;
+  padding: 10px 15px;
+  cursor: pointer;
+  /* background-color: #333; */
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  opacity: 0.9;
+  transition: opacity 0.3s;
+}
+
+.scroll-button:hover {
+  opacity: 1;
+}
+
+.scroll-top {
+  left: 20px; /* Position for the top scroll button */
+}
+
+.scroll-bottom {
+  right: 20px; /* Position for the bottom scroll button */
+}
+
+
+@media (max-width: 768px) {
+  .scroll-button {
+    display: none;
+  }
+}
+
+.scroll-button:hover {
+  opacity: 1;
+}
+</style>
 
 
 </body>

@@ -245,3 +245,18 @@ updateAge();
 
 
 
+
+// botton
+document.getElementById('scrollTopButton').addEventListener('click', function() {
+  window.scrollTo({
+    top: 0,
+    behavior: 'smooth'
+  });
+});
+
+document.getElementById('scrollBottomButton').addEventListener('click', function() {
+  window.scrollTo({
+    top: document.documentElement.scrollHeight,
+    behavior: 'smooth'
+  });
+});

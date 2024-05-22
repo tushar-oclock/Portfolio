@@ -25,8 +25,8 @@
   <button id="scrollTopButton" class="scroll-button scroll-top">
     <img src="../assets/images/sidebar/chevron-angle-svgrepo-com.svg" alt="design icon" width="40">
 
-  </button>
-
+ </button>
+ 
   <button id="scrollBottomButton" class="scroll-button scroll-bottom">
     <img src="../assets/images/sidebar//down-arrow-download-svgrepo-com.svg" alt="design icon" width="40">
 
@@ -205,7 +205,7 @@
         <div class="blog">
           <ul>
             <li style="color: lightsalmon; text-align: justify; " >
-              ● Database ● SQL DDL Commands ● SQL DML Commands ● 
+              ● Database ● SQL DDL Commands ● SQL DML Commands ● SQL Grouping  + Sorting
             </li>
           </ul>
         </div> <br>
@@ -302,7 +302,46 @@
             </pre>
           </div> <br>
 
+          <h3 class="h3 service-title">🚀 SQL Grouping  + Sorting:</h3>
+          <div class="blog">
+            <ul>
+              <li><strong> Commands</strong>: Shorting, Groupby, Having</li>
+              <li><strong>Functions</strong>: Order by, Limit, Desc, Group by, Having</li>
+            </ul>
+          </div> <br>
+          <div class="code-window">
+            <pre>
+              import pandas as pd
 
+              # Sample data
+              data = {
+                  'salesperson': ['Alice', 'Bob', 'Alice', 'Bob', 'Charlie', 'Charlie', 'David', 'David'],
+                  'region': ['North', 'North', 'South', 'South', 'North', 'South', 'North', 'South'],
+                  'sales': [250, 200, 150, 300, 450, 500, 300, 250]
+              }
+              
+              df = pd.DataFrame(data)
+              
+              # Display the DataFrame
+              print("Original DataFrame:")
+              print(df)
+              
+              # Sorting
+              sorted_df = df.sort_values(by='sales', ascending=False)
+              print("\nDataFrame sorted by sales in descending order:")
+              print(sorted_df)
+              
+              # Grouping
+              grouped_df = df.groupby('salesperson').sum().reset_index()
+              print("\nGrouped DataFrame by salesperson with total sales:")
+              print(grouped_df)
+              
+              # Having
+              filtered_df = grouped_df[grouped_df['sales'] > 400]
+              print("\nFiltered DataFrame with total sales greater than 400:")
+              print(filtered_df)
+            </pre>
+          </div> <br>
 
 
         </section>
