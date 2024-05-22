@@ -152,8 +152,8 @@ textarea {
 }
 
 ::selection {
-  background: var(--orange-yellow-crayola);
-  color: var(--smoky-black);
+  background: black; /* optional: change background color */
+  color: yellow;
 }
 
 :focus {
@@ -165,7 +165,9 @@ html {
 }
 
 body {
-  background: var(--smoky-black);
+  font-family: 'Space Grotesk';
+  /* background: var(--smoky-black); */
+  color: black;
 }
 
 
@@ -2473,6 +2475,7 @@ img:not(.no-hover-effect):hover {
   width: 6px; 
   height: 6px; 
 }
+
 .code-window::-webkit-scrollbar-track {
   background: transparent;
 }
@@ -2483,6 +2486,10 @@ img:not(.no-hover-effect):hover {
 
 .code-window::-webkit-scrollbar-thumb:hover {
   background: #555; 
+}
+
+.code-window::-webkit-scrollbar-corner {
+  background: #00000073; /* Match the background color of the code window */
 }
 
 
@@ -2600,3 +2607,5 @@ strong{
 .scroll-bottom {
   right: 20px; /* Position for the bottom scroll button */
 }
+
+

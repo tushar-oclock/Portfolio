@@ -7,45 +7,35 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>BLOG</title>
 
-  <!--
-    - favicon
-  -->
   <link rel="shortcut icon" href="../assets/images/logo.png" type="image/x-icon">
 
-  <!--
-    - custom css link
-  -->
   <link rel="stylesheet" href="https://unpkg.com/kursor/dist/kursor.css">
   <script src="https://cdn.jsdelivr.net/npm/kursor@0.0.14/dist/kursor.js"></script>
 
-
-
-  <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@400;700&display=swap" rel="stylesheet">
-  <link href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@400;500;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="../assets/css/style.css">
-  <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;700&display=swap">
 
 
-
-
-  <!--
-    - google font link
-  -->
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
 </head>
 
 <body>
 
 
+  <!-- Assets -->
+  <button id="scrollTopButton" class="scroll-button scroll-top">
+    <img src="../assets/images/sidebar/chevron-angle-svgrepo-com.svg" alt="design icon" width="40">
+
+  </button>
+
+  <button id="scrollBottomButton" class="scroll-button scroll-bottom">
+    <img src="../assets/images/sidebar//down-arrow-download-svgrepo-com.svg" alt="design icon" width="40">
+
+  </button>
+
   <audio id="clickSound">
     <source src="../assets/images/aud/sound.wav" type="audio/wav">
     Your browser does not support the audio element.
-</audio>
-
-
+  </audio>
 
   <div class="video-container">
     <video autoplay loop muted id="background-video">
@@ -54,65 +44,44 @@
     </video>
   </div>
 
-
-  <!--
-    - #MAIN
-  -->
-
+  <!-- #MAIN -->
   <main>
 
-    <!--
-      - #SIDEBAR
-    -->
-
+    <!-- #SIDEBAR -->
     <aside class="sidebar" data-sidebar>
       <div class="sidebar-info">
 
         <figure class="avatar-box">
-          <img class=" test-shine" src="../assets/images/TusharArora.png" alt="tushar arora" width="80">
+          <img class=" test-shine" src="../assets/images/tushararora1.png" alt="tushar arora" width="80">
         </figure>
-
-
-
 
         <div class="info-content">
 
-          <div class="waviy">
-            <span style="--i:1">D</span>
-            <span style="--i:2">A</span>
-            <span style="--i:3">N</span>
-            <span style="--i:4">J</span>
-            <span style="--i:5">I</span>
-            <span style="--i:6">N</span>
-            <span style="--i:7">-</span>
-            <span style="--i:8">M</span>
-            <span style="--i:9">A</span>
-            <span style="--i:10">S</span>
-            <span style="--i:11">T</span>
-            <span style="--i:12">E</span>
-            <span style="--i:13">R</span>
-           </div> 
 
-          <div style="display: flex; justify-content: center; font-family:  Ubuntu;">
+          <div class="waviy">
+            <span style="--i:1">2</span>
+            <span style="--i:2">4</span>
+            <span style="--i:3">X</span>
+            <span style="--i:4">7</span>
+            <span style="--i:5">-</span>
+            <span style="--i:6">D</span>
+            <span style="--i:7">E</span>
+            <span style="--i:8">V</span>
+            <span style="--i:9">-</span>
+            <span style="--i:10">P</span>
+            <span style="--i:11">L</span>
+            <span style="--i:12">A</span>
+            <span style="--i:13">Y</span>
+            <span style="--i:14">E</span>
+            <span style="--i:15">R</span>
+          </div>
+
+          <div style="display: flex; 
+          justify-content: center; ">
             <div id="badge-container" style="display: inline-block;"></div>
           </div>
 
-          <style>
-            @media (max-width: 768px) {
-              #badge-container {
-                margin-left: 0;
-                /* Reset margin for mobile view */
-                margin-right: auto;
-                /* Align to the left */
-              }
-            }
-          </style>
         </div>
-
-
-
-
-
 
         <button class="info_more-btn" data-sidebar-btn>
           <span>Show Contacts</span>
@@ -126,14 +95,9 @@
         <div class="separator"></div>
         <ul class="contacts-list">
 
-
-
-
-
-
           <li class="contact-item">
             <div class="service-icon-box">
-              <img src="../assets/images/sidebar/mailsvg.svg" alt="design icon" width="40">
+              <img src="../assets/images/sidebar/mailsvg.svg" alt="design icon" width="30">
             </div>
             <div class="contact-info">
               <p class="contact-title">Email</p>
@@ -144,11 +108,31 @@
 
           <li class="contact-item">
             <div class="service-icon-box">
-              <img src="../assets/images/sidebar/phonesvg.svg" alt="design icon" width="40">
+              <img src="../assets/images/sidebar/phonesvg.svg" alt="design icon" width="30">
             </div>
             <div class="contact-info">
               <p class="contact-title">Phone</p>
-              <a href="tel:+12133522795" class="contact-link">+91 8851084852</a>
+              <a href="tel:+12133522795" class="contact-link">+91 <span>&#8730;</span>94080.2043578</a>
+            </div>
+          </li>
+
+          <li class="contact-item">
+            <div class="service-icon-box">
+              <img src="../assets/images/sidebar/age.svg" alt="design icon" width="30">
+            </div>
+            <div class="contact-info">
+              <p class="contact-title">AGE</p>
+              <a href="#" class="contact-link"><span id="age"></span></a>
+            </div>
+          </li>
+
+          <li class="contact-item">
+            <div class="service-icon-box">
+              <img src="../assets/images/sidebar/map.svg" alt="design icon" width="30">
+            </div>
+            <div class="contact-info">
+              <p class="contact-title">Location</p>
+              <a href="#" class="contact-link">28°44'29.6"N 77°17'01.8"E</a>
             </div>
           </li>
 
@@ -159,22 +143,29 @@
         <ul class="social-list">
 
           <li class="social-item">
-            <a href="#" class="social-link">
-              <img src="../assets/images/sidebar/github.png" alt="design icon" width="40">
+            <a href="https://github.com/24x7-Dev-Player" target="_blank" class="social-link">
+              <img src="../assets/images/sidebar/github.svg" alt="design icon" width="40">
 
             </a>
           </li>
 
           <li class="social-item">
-            <a href="#" class="social-link">
-              <img src="../assets/images/sidebar/linkedin.png" alt="design icon" width="40">
+            <a href="https://wa.me/918851084852" target="_blank" class="social-link">
+              <img src="../assets/images/sidebar/whatsapp.svg" alt="design icon" width="40">
 
             </a>
           </li>
 
           <li class="social-item">
-            <a href="#" class="social-link">
-              <img src="../assets/images/sidebar/instagram.png" alt="design icon" width="40">
+            <a href="https://www.linkedin.com/in/tushar-perspective" target="_blank" class="social-link">
+              <img src="../assets/images/sidebar/linkedin.svg" alt="design icon" width="40">
+
+            </a>
+          </li>
+
+          <li class="social-item">
+            <a href="https://www.instagram.com/tushar.oclock" target="_blank" class="social-link">
+              <img src="../assets/images/sidebar/instagram.svg" alt="design icon" width="40">
 
             </a>
           </li>
@@ -187,678 +178,161 @@
     </aside>
 
 
-
-
-
-    <!--
-      - #main-content
-    -->
-
+    <!-- #main-content -->
     <div class="main-content">
 
-      <!--
-        - #NAVBAR
-      -->
 
+      <!-- NAVBAR -->
       <nav class="navbar">
-
         <ul class="navbar-list">
-
-
-
-
           <li class="navbar-item">
-            <button class="navbar-link"
-              onclick="window.open('https://24x7-dev-player.github.io/Portfolio/', '_blank')">Home page</button>
+            <button style="font-size: 20px;" class="navbar-link"
+              onclick="window.open('https://24x7-dev-player.github.io/Portfolio/', '_blank')">/ Home Page</button>
           </li>
-
-
-
-
-
         </ul>
-
       </nav>
 
 
 
-
-
-      <!--
-        - #ABOUT
-      -->
-
+      <!-- BLOG -->
       <article class="about  active" data-page="about">
 
         <header>
-          <h2 class="h2 article-title">🎯 AWS for AI & ML</h2>
+          <h2 class="h2 article-title">📛 Amazon Web Services </h2>
         </header>
 
+        <div class="blog">
+          <ul>
+            <li style="color: lightsalmon; text-align: justify; ">
+              ● Cloud Computing ● EC2 (Elastic Computer Cloud) ● EC2 Commands & Script
+            </li>
+          </ul>
+        </div> <br>
+
+
+        <section class="about-text with-line">
+        </section>
 
         <section class="about-text">
 
-          <p>
-            <span class="badge badge-purple">Cloud Computing: </span>
-          </p>
 
+
+          <h3 class="h3 service-title">🚀Cloud Computing</h3>
           <div class="blog">
             <ul>
-              <li><strong>What is Cloud Computing?</strong>
-                <p>Cloud computing is the on-demand delivery of IT resources over the Internet with pay-as-you-go
-                  pricing. It allows access to technology services like computing power, storage, and databases from
-                  providers like AWS.</p>
-              </li>
-              <li><strong>Key Features of Traditional Computing:</strong>
-                <ul>
-                  <li><strong>Control:</strong> Complete control over infrastructure.</li>
-                  <li><strong>Security:</strong> Responsible for securing data and systems.</li>
-                  <li><strong>Scalability:</strong> Expensive and time-consuming to expand.</li>
-                </ul>
-              </li>
+              <li><strong>Key Feature</strong>: Control, Security, Scalability, Cost Efficiency, Accessibility,
+                collaboration, security, </li>
+              <li><strong>AWS services</strong>: IAAS, PAAS & SAAS</li>
+              <li><strong>Cloud Deployment</strong>: Public, Private and Hybrid</li>
+              <li>AWS IAM (Identity and Access Management)</li>
+              <li>Configuration CLI, CloudShell, Console, SDK</li>
             </ul>
-
           </div> <br>
 
-
-          <p>
-            <span class="badge badge-red">Key Features: </span>
-          </p>
-
+          <h3 class="h3 service-title">🚀EC2 (Elastic Computer Cloud)</h3>
           <div class="blog">
             <ul>
-              <li><strong>Scalability:</strong> Easily adjust resources without buying more hardware, adapting quickly
-                to changes in demand.</li>
-              <li><strong>Cost-Efficiency:</strong> Pay-as-you-go model eliminates large upfront investments and reduces
-                maintenance costs.</li>
-              <li><strong>Accessibility and Collaboration:</strong> Access applications and data from anywhere,
-                promoting teamwork and productivity.</li>
-              <li><strong>Security and Reliability:</strong> Leading providers prioritize security with encryption,
-                backups, and disaster recovery plans.</li>
-              <li><strong>Application Development Efficiency:</strong> Offers a flexible, scalable platform for
-                optimizing the application development lifecycle.</li>
-              <li><strong>Rapid Provisioning and Scalability:</strong> Quick provisioning of resources, enabling easy
-                scaling for optimal performance.</li>
-              <li><strong>Cost-Effectiveness:</strong> Pay only for used resources, eliminating upfront infrastructure
-                investments and saving on maintenance.</li>
-              <li><strong>Collaborative Development:</strong> Facilitates real-time collaboration among team members,
-                enhancing productivity.</li>
-              <li><strong>Focus on Development:</strong> Offloads infrastructure management, allowing teams to focus on
-                coding, testing, and deployment.</li>
+              <li><strong>Key Feature</strong>: Instance Management, Amazon Machine Image (AMI) <strong>Storage
+                  Space</strong>: EBS(Elastic Block Store), EFS(Elastic File System), Network Card, Security Group,
+                Inbound & Outbound Traffic, Linux Commands, Bootstrap Script, Instance Storage, Errors </li>
+                <li><strong>Protocol</strong>: TCP, UDP, HTTPS, FTP, SSH </li>
+                <li><Strong>EBS</Strong>: Volumne, Snapshots</li>
+
             </ul>
-
-
           </div> <br>
 
-
-          <p>
-            <span class="badge badge-orange">Infrastructure As A Service: </span>
-          </p>
+          <h3 class="h3 service-title">🚀EC2 Commands & Script</h3>
 
           <div class="blog">
             <ul>
-              <li><strong>Infrastructure As A Service (IaaS):</strong>
-                <ul>
-                  <li>Flexible cloud service, rents hardware.</li>
-                  <li>Control over servers, VMs, storage, networks, OS.</li>
-                  <li>Instant, managed computing infrastructure.</li>
-                  <li>Examples: AWS EC2, DigitalOcean, Azure, Google Compute Engine.</li>
-                </ul>
-              </li>
-              <li><strong>Use-Cases:</strong>
-                <ul>
-                  <li>Data backup, storage, and recovery.</li>
-                  <li>Cost-effective test and development environments.</li>
-                  <li>Increased computing power for Big Data.</li>
-                  <li>Scalable for complex web projects.</li>
-                  <li>Handles tasks requiring supercomputers.</li>
-                  <li>Run graphic-intensive apps without latency.</li>
-                </ul>
-              </li>
-              <li><strong>Disadvantages:</strong>
-                <ul>
-                  <li>Limited infrastructure control.</li>
-                  <li>Users responsible for security.</li>
-                  <li>Possible restricted access in some regions.</li>
-                </ul>
+              <li><strong>EC2 Commands</strong>
               </li>
             </ul>
+          </div> <br>
+          <div class="code-window">
+            <pre>
+              # Connect to EC2 Instance:
+              SSH into your instance using:
+              ssh -i /path/to/your-file.pem ubuntu@ ec2-xx-xx-xx-xx.compute-1 .amazonaws.com
+              Replace /path/to/your-file.pem with your actual .pem file path and
+               ec2-xx-xx-xx-xx.compute-1.amazonaws.com with your instance's public DNS or IP address.
 
+              #Set .pem File Permissions:
+              Ensure your .pem file has read-only permissions:
+              chmod 400 /path/to/your-file.pem
+
+              #Check System Information:
+              #CPU Info:
+              lscpu
+
+              #RAM Info:
+              free -
+              
+              #OS Info:
+              cat /etc/os-release
+
+              #Disk Usage:
+              df -h
+            </pre>
           </div> <br>
 
-
-          <p>
-            <span class="badge badge-cyan">Platform As A Service: </span>
-          </p>
-
           <div class="blog">
             <ul>
-              <li><strong>Platform As A Service (PaaS):</strong>
-                <ul>
-                  <li>Ready-to-use development environment.</li>
-                  <li>Focus on code without managing infrastructure.</li>
-                  <li>Scalable and feature-rich services.</li>
-                  <li>More expensive than IaaS, cheaper than SaaS.</li>
-                  <li>Examples: AWS Elastic Beanstalk, Azure WebApps, Google Cloud SQL.</li>
-                </ul>
-              </li>
-              <li><strong>Benefits:</strong>
-                <ul>
-                  <li>Faster development time.</li>
-                  <li>Reduced costs on manual deployments.</li>
-                  <li>Enhanced security for applications.</li>
-                  <li>High availability even during failures.</li>
-                </ul>
-              </li>
-              <li><strong>Use-Cases:</strong>
-                <ul>
-                  <li>Developing and managing APIs and microservices.</li>
-                  <li>Setting up and managing databases.</li>
-                </ul>
-              </li>
-              <li><strong>Disadvantages:</strong>
-                <ul>
-                  <li>Limited infrastructure control.</li>
-                  <li>Dependency on provider for maintenance.</li>
-                  <li>Restricted flexibility for specific workloads.</li>
-                </ul>
+              <li><strong>Script In Terminal</strong>
               </li>
             </ul>
-
+          </div> <br>
+          <div class="code-window">
+            <pre>
+              Switch to Root User: sudo -i
+              Clear the Terminal: clear
+              Update Package Lists: apt-get update
+              Check Nginx Config Syntax: nginx -t
+              Install Nginx: apt-get install nginx
+              Verify Nginx Installation: nginx -t
+              Check Nginx Service Status: service nginx status
+              Test Nginx with Curl: curl localhost
+              Change to Web Root: cd /var/www/html/
+              List Directory Contents: ls
+              Display Default Nginx HTML: cat index.nginx-debian.html
+              Create New HTML File: echo "i m a prince katiyar" > index.html
+              Test New HTML with Curl: curl localhost
+            </pre>
           </div> <br>
 
-
-
-          <p>
-            <span class="badge badge-Amber">Software As A Service: </span>
-          </p>
-
           <div class="blog">
             <ul>
-              <li><strong>Software As A Service (SaaS):</strong>
-                <ul>
-                  <li>Complete product run and managed by the provider.</li>
-                  <li>Hosted online and available via subscription or purchase.</li>
-                  <li>No need to worry about maintenance or infrastructure management.</li>
-                  <li>Examples: Microsoft Office 365, Oracle ERP/HCM Cloud, SalesForce, Gmail, Dropbox.</li>
-                </ul>
-              </li>
-              <li><strong>Benefits:</strong>
-                <ul>
-                  <li>Lower Total Cost of Ownership (TCO).</li>
-                  <li>Eliminates hardware expenses and maintenance costs.</li>
-                  <li>Improved security with secure servers and 24/7 monitoring.</li>
-                </ul>
-              </li>
-              <li><strong>Disadvantages:</strong>
-                <ul>
-                  <li>Limited customization options.</li>
-                  <li>Dependency on internet connectivity.</li>
-                  <li>Potential security incidents and data breaches.</li>
-                  <li>Limited control over data.</li>
-                </ul>
+              <li><strong>Script In Bootstrap</strong>
               </li>
             </ul>
-
           </div> <br>
-
-          <p>
-            <span class="badge badge-maron">Cloud Deployment: </span>
-          </p>
-
-          <div class="blog">
-            <ul>
-              <li><strong>Public Cloud:</strong> Available to all, managed by providers. Examples: Amazon EC2, Google
-                App Engine.</li>
-              <li><strong>Private Cloud:</strong> Used by one organization, not shared. Examples: AWS, Microsoft Azure.
-              </li>
-              <li><strong>Hybrid Cloud:</strong> Combination of public and private clouds, for smooth transition.</li>
-            </ul>
-
+          <div class="code-window">
+            <pre>
+              Shebang: #!/bin/bash
+              Indicates the script should be executed using the Bash shell.
+              
+              Update Package Lists: apt-get update
+              Ensures the system has the latest information about available packages.
+              
+              Install Nginx: apt-get install nginx -y
+              Installs the Nginx web server. The -y flag automatically answers "yes" to prompts.
+              
+              Create HTML File: echo "welcome to ineuron.ai" > /var/www/html/index.html
+              Creates a new index.html file in /var/www/html/ with the content "welcome to ineuron.ai".
+            </pre>
           </div> <br>
 
 
 
 
-          <p>
-            <span class="badge badge-red">AWS CLI & CloudShell:</span>
-          </p>
 
-          <div class="blog">
-            <ul>
-              <li> Configuration CLI, Console & SDK</li>
-              <li> Private key</li>
-              <li> CloudShell Configuration</li>
-            </ul>
-          </div> <br>
 
-          <p>
-            <span class="badge badge-orange">EC2 (Elastic Compute Cloud):</span>
-          </p>
 
-          <div class="blog">
-            <ul>
-              <li>Instance Management</li>
-              <li>Amazon Machine Image (AMI)</li>
-              <li>Storage Space: EBS(Elastic Block Store), EFS(Elastic File System)</li>
-              <li>Network Card, Security Group, Inbound & Outbound Traffic </li>
-              <li>Linux Commands, Bootstrap Script, Security Group, Instance Storage</li>
-              <li></li>
-            </ul>
-          </div> <br>
 
-          <p>
-            <span class="badge badge-purple">EC2 Commands: </span>
-          </p>
 
-          <div class="blog">
-            <ul>
-              <li><strong>Connect to EC2 Instance:</strong>
-                <ul>
-                  <li>SSH into your instance using:
-                    <ul>
-                      <li>ssh -i /path/to/your-file.pem ubuntu@ ec2-xx-xx-xx-xx.compute-1 .amazonaws.com</li>
-                    </ul>
-                  </li>
-                  <li>Replace /path/to/your-file.pem with your actual .pem file path and ec2-xx-xx-xx-xx.compute-1.amazonaws.com with your instance's public DNS or IP address.</li>
-                </ul>
-              </li>
-              <li><strong>Set .pem File Permissions:</strong>
-                <ul>
-                  <li>Ensure your .pem file has read-only permissions:
-                    <ul>
-                      <li>chmod 400 /path/to/your-file.pem</li>
-                    </ul>
-                  </li>
-                </ul>
-              </li>
-              <li><strong>Check System Information:</strong>
-                <ul>
-                  <li><strong>CPU Info:</strong>
-                    <ul>
-                      <li>lscpu</li>
-                    </ul>
-                  </li>
-                  <li><strong>RAM Info:</strong>
-                    <ul>
-                      <li>free -h</li>
-                    </ul>
-                  </li>
-                  <li><strong>OS Info:</strong>
-                    <ul>
-                      <li>cat /etc/os-release</li>
-                    </ul>
-                  </li>
-                  <li><strong>Disk Usage:</strong>
-                    <ul>
-                      <li>df -h</li>
-                    </ul>
-                  </li>
-                </ul>
-              </li>
-            </ul>
-          </div>  <br>
-          
 
-          <p>
-            <span class="badge badge-red">Script in Terminal: </span>
-          </p>
-
-          <div class="blog">
-            <ul>
-              <li><strong>Switch to Root User:</strong> <code>sudo -i</code></li>
-              <li><strong>Clear the Terminal:</strong> <code>clear</code></li>
-              <li><strong>Update Package Lists:</strong> <code>apt-get update</code></li>
-              <li><strong>Check Nginx Config Syntax:</strong> <code>nginx -t</code></li>
-              <li><strong>Install Nginx:</strong> <code>apt-get install nginx</code></li>
-              <li><strong>Verify Nginx Installation:</strong> <code>nginx -t</code></li>
-              <li><strong>Check Nginx Service Status:</strong> <code>service nginx status</code></li>
-              <li><strong>Test Nginx with Curl:</strong> <code>curl localhost</code></li>
-              <li><strong>Change to Web Root:</strong> <code>cd /var/www/html/</code></li>
-              <li><strong>List Directory Contents:</strong> <code>ls</code></li>
-              <li><strong>Display Default Nginx HTML:</strong> <code>cat index.nginx-debian.html</code></li>
-              <li><strong>Create New HTML File:</strong> <code>echo "i m a prince katiyar" > index.html</code></li>
-              <li><strong>Test New HTML with Curl:</strong> <code>curl localhost</code></li>
-            </ul>
-
-
-          </div> <br>
-
-
-          <p>
-            <span class="badge badge-orange">Script in Bootstrap: </span>
-          </p>
-
-          <div class="blog">
-            <ul>
-              <li><strong>Shebang:</strong> <code>#!/bin/bash</code>
-                <p>Indicates the script should be executed using the Bash shell.</p>
-              </li>
-              <li><strong>Update Package Lists:</strong> <code>apt-get update</code>
-                <p>Ensures the system has the latest information about available packages.</p>
-              </li>
-              <li><strong>Install Nginx:</strong> <code>apt-get install nginx -y</code>
-                <p>Installs the Nginx web server. The <code>-y</code> flag automatically answers "yes" to prompts.</p>
-              </li>
-              <li><strong>Create HTML File:</strong>
-                <code>echo "welcome to ineuron.ai" > /var/www/html/index.html</code>
-                <p>Creates a new <code>index.html</code> file in <code>/var/www/html/</code> with the content "welcome
-                  to ineuron.ai".</p>
-              </li>
-            </ul>
-
-
-
-          </div> <br>
-
-        </section>
-
-
-
-
-
-
-
-
-
-        <!--
-          - testimonials modal
-        -->
-
-        <div class="modal-container" data-modal-container>
-
-          <div class="overlay" data-overlay></div>
-
-          <section class="testimonials-modal">
-
-            <button class="modal-close-btn" data-modal-close-btn>
-              <ion-icon name="close-outline"></ion-icon>
-            </button>
-
-            <div class="modal-img-wrapper">
-              <figure class="modal-avatar-box">
-                <img src="./assets/images/avatar-1.png" alt="Daniel lewis" width="80" data-modal-img>
-              </figure>
-
-              <img src="./assets/images/icon-quote.svg" alt="quote icon">
-            </div>
-
-            <div class="modal-content">
-
-              <h4 class="h3 modal-title" data-modal-title>Daniel lewis</h4>
-
-              <time datetime="2021-06-14">14 June, 2021</time>
-
-              <div data-modal-text>
-                <p>
-                  Richard was hired to create a corporate identity. We were very pleased with the work done. She has a
-                  lot of experience
-                  and is very concerned about the needs of client. Lorem ipsum dolor sit amet, ullamcous cididt
-                  consectetur adipiscing
-                  elit, seds do et eiusmod tempor incididunt ut laborels dolore magnarels alia.
-                </p>
-              </div>
-
-            </div>
-
-          </section>
-
-        </div>
-
-      </article>
-
-
-
-
-
-
-
-
-
-
-
-
-
-      <!--
-        - #PORTFOLIO
-      -->
-
-      <article class="portfolio" data-page="portfolio">
-
-        <header>
-          <h2 class="h2 article-title">Portfolio</h2>
-        </header>
-
-        <section class="projects">
-
-          <ul class="filter-list">
-
-            <li class="filter-item">
-              <button class="active" data-filter-btn>All</button>
-            </li>
-
-            <li class="filter-item">
-              <button data-filter-btn>Web design</button>
-            </li>
-
-            <li class="filter-item">
-              <button data-filter-btn>Applications</button>
-            </li>
-
-            <li class="filter-item">
-              <button data-filter-btn>Web development</button>
-            </li>
-
-          </ul>
-
-          <div class="filter-select-box">
-
-            <button class="filter-select" data-select>
-
-              <div class="select-value" data-selecct-value>Select category</div>
-
-              <div class="select-icon">
-                <ion-icon name="chevron-down"></ion-icon>
-              </div>
-
-            </button>
-
-            <ul class="select-list">
-
-              <li class="select-item">
-                <button data-select-item>All</button>
-              </li>
-
-              <li class="select-item">
-                <button data-select-item>Web design</button>
-              </li>
-
-              <li class="select-item">
-                <button data-select-item>Applications</button>
-              </li>
-
-              <li class="select-item">
-                <button data-select-item>Web development</button>
-              </li>
-
-            </ul>
-
-          </div>
-
-          <ul class="project-list">
-
-            <li class="project-item  active" data-filter-item data-category="web development">
-              <a href="#">
-
-                <figure class="project-img">
-                  <div class="project-item-icon-box">
-                    <ion-icon name="eye-outline"></ion-icon>
-                  </div>
-
-                  <img src="./assets/images/project-1.jpg" alt="finance" loading="lazy">
-                </figure>
-
-                <h3 class="project-title">Finance</h3>
-
-                <p class="project-category">Web development</p>
-
-              </a>
-            </li>
-
-            <li class="project-item  active" data-filter-item data-category="web development">
-              <a href="#">
-
-                <figure class="project-img">
-                  <div class="project-item-icon-box">
-                    <ion-icon name="eye-outline"></ion-icon>
-                  </div>
-
-                  <img src="./assets/images/project-2.png" alt="orizon" loading="lazy">
-                </figure>
-
-                <h3 class="project-title">Orizon</h3>
-
-                <p class="project-category">Web development</p>
-
-              </a>
-            </li>
-
-            <li class="project-item  active" data-filter-item data-category="web design">
-              <a href="#">
-
-                <figure class="project-img">
-                  <div class="project-item-icon-box">
-                    <ion-icon name="eye-outline"></ion-icon>
-                  </div>
-
-                  <img src="./assets/images/project-3.jpg" alt="fundo" loading="lazy">
-                </figure>
-
-                <h3 class="project-title">Fundo</h3>
-
-                <p class="project-category">Web design</p>
-
-              </a>
-            </li>
-
-            <li class="project-item  active" data-filter-item data-category="applications">
-              <a href="#">
-
-                <figure class="project-img">
-                  <div class="project-item-icon-box">
-                    <ion-icon name="eye-outline"></ion-icon>
-                  </div>
-
-                  <img src="./assets/images/project-4.png" alt="brawlhalla" loading="lazy">
-                </figure>
-
-                <h3 class="project-title">Brawlhalla</h3>
-
-                <p class="project-category">Applications</p>
-
-              </a>
-            </li>
-
-            <li class="project-item  active" data-filter-item data-category="web design">
-              <a href="#">
-
-                <figure class="project-img">
-                  <div class="project-item-icon-box">
-                    <ion-icon name="eye-outline"></ion-icon>
-                  </div>
-
-                  <img src="./assets/images/project-5.png" alt="dsm." loading="lazy">
-                </figure>
-
-                <h3 class="project-title">DSM.</h3>
-
-                <p class="project-category">Web design</p>
-
-              </a>
-            </li>
-
-            <li class="project-item  active" data-filter-item data-category="web design">
-              <a href="#">
-
-                <figure class="project-img">
-                  <div class="project-item-icon-box">
-                    <ion-icon name="eye-outline"></ion-icon>
-                  </div>
-
-                  <img src="./assets/images/project-6.png" alt="metaspark" loading="lazy">
-                </figure>
-
-                <h3 class="project-title">MetaSpark</h3>
-
-                <p class="project-category">Web design</p>
-
-              </a>
-            </li>
-
-            <li class="project-item  active" data-filter-item data-category="web development">
-              <a href="#">
-
-                <figure class="project-img">
-                  <div class="project-item-icon-box">
-                    <ion-icon name="eye-outline"></ion-icon>
-                  </div>
-
-                  <img src="./assets/images/project-7.png" alt="summary" loading="lazy">
-                </figure>
-
-                <h3 class="project-title">Summary</h3>
-
-                <p class="project-category">Web development</p>
-
-              </a>
-            </li>
-
-            <li class="project-item  active" data-filter-item data-category="applications">
-              <a href="#">
-
-                <figure class="project-img">
-                  <div class="project-item-icon-box">
-                    <ion-icon name="eye-outline"></ion-icon>
-                  </div>
-
-                  <img src="./assets/images/project-8.jpg" alt="task manager" loading="lazy">
-                </figure>
-
-                <h3 class="project-title">Task Manager</h3>
-
-                <p class="project-category">Applications</p>
-
-              </a>
-            </li>
-
-            <li class="project-item  active" data-filter-item data-category="web development">
-              <a href="#">
-
-                <figure class="project-img">
-                  <div class="project-item-icon-box">
-                    <ion-icon name="eye-outline"></ion-icon>
-                  </div>
-
-                  <img src="./assets/images/project-9.png" alt="arrival" loading="lazy">
-                </figure>
-
-                <h3 class="project-title">Arrival</h3>
-
-                <p class="project-category">Web development</p>
-
-              </a>
-            </li>
-
-          </ul>
-
-        </section>
-
-      </article>
-
-
-
-
-
-
+    </section>
+    </article>
 
 
 
@@ -868,22 +342,11 @@
 
 
 
+
   </main>
-
-
-
-
-
-
-  <!--
-    - custom js link
-  -->
-  <script src="../assets/js/script.js"></script>
-  <!--
-    - ionicon link
-  -->
   <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
   <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+  <script src="blogs.js"></script>
 
 </body>
 

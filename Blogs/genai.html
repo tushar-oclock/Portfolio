@@ -198,13 +198,13 @@
       <article class="about  active" data-page="about">
 
         <header>
-          <h2 class="h2 article-title">📛 Generative Artificial Intelligence  </h2>
+          <h2 class="h2 article-title">📛 Generative Artificial Intelligence </h2>
         </header>
 
         <div class="blog">
           <ul>
-            <li style="color: lightsalmon; text-align: justify; " >
-              ● Vector Database ● ChromaDB and Pinecode Database
+            <li style="color: lightsalmon; text-align: justify; ">
+              ● Langchain, Langserve & Langsmith ● How Diffusion Models Work? ● Vector Database ● ChromaDB and Pinecode Database ● 
             </li>
           </ul>
         </div> <br>
@@ -217,15 +217,168 @@
 
 
 
+          <h3 class="h3 service-title">🚀Langchain, Langserve & Langsmith</h3>
+          <div class="blog">
+            <ul>
+              <li><strong>Langchain Key Aspects</strong>: LLM, Prompt Template, Chain, Agent & tools, Memory, Documentation Loaders, Vector Store</li>
+              <li><strong>LangServe</strong>: It helps developers deploy LangChain runnables and chains as a REST API.
+              </li>
+              <li><strong>LangSmith</strong>: It is a platform for building production-grade LLM
+                applications. It allows you to closely monitor and evaluate application.
+              </li>
+            </ul>
+          </div> <br>
+          <div class="blog">
+            <ul>
+              <li><strong>API Testing</strong>
+              </li>
+            </ul>
+          </div> <br>
+          <div class="code-window">
+            <pre>
+              # Import necessary modules and classes
+              from langchain_openai import ChatOpenAI
+              from langchain_core.prompts import ChatPromptTemplate
+              from langchain_core.output_parsers import StrOutputParser
+              import os
+              from dotenv import load_dotenv
+
+              # Set the OPENAI_API_KEY environment variable from the .env file
+              os.environ['OPENAI_API_KEY'] = os.getenv("OPENAI_API_KEY")
+
+              # Initialize the FastAPI app with title, version, and description
+              app = FastAPI(
+                  title="Langchain Server",
+                  version="1.0",
+                  description="A simple API Server"
+              )
+              
+              # Add routes to the app for the OpenAI chat model
+              add_routes(
+                  app,
+                  ChatOpenAI(),  # Initialize ChatOpenAI model
+                  path="/openai"  # Set the endpoint path
+              )
+              
+              # Initialize the ChatOpenAI model
+              model = ChatOpenAI()
+              
+              # Create a ChatPromptTemplate for explaining a topic in a point-wise manner
+              prompt = ChatPromptTemplate.from_template("What is {topic}?
+              Explain that topic in points-wise.")
+              
+              # Create another ChatPromptTemplate for making a story from a given topic
+              prompt1 = ChatPromptTemplate.from_template("Make a story about {topic}.")
+              
+              # Add routes to the app for the topic explanation endpoint
+              add_routes(
+                  app,
+                  prompt | model,  # Use the prompt and model
+                  path="/topic"  # Set the endpoint path
+              )
+              
+              # Add routes to the app for the story-making endpoint
+              add_routes(
+                  app,
+                  prompt1 | model,  # Use the prompt1 and model
+                  path="/story"  # Set the endpoint path
+              )
+              
+              # Run the FastAPI app using uvicorn when the script is executed directly
+              if __name__ == "__main__":
+                  # Run the server on localhost at port 8000
+                  uvicorn.run(app, host="localhost", port=8000)  
+            </pre>
+          </div> <br>
+
+          <div class="blog">
+            <ul>
+              <li><strong>App Testing</strong>
+              </li>
+            </ul>
+          </div> <br>
+          <div class="code-window">
+            <pre>
+              # Import necessary modules
+              from langchain_openai import ChatOpenAI
+              from langchain_core.prompts import ChatPromptTemplate
+              from langchain_core.output_parsers import StrOutputParser
+
+              # Load environment variables from a .env file
+              import os
+              from dotenv import load_dotenv
+              load_dotenv()
+
+              # Set the environment variables for OpenAI and Langchain
+              os.environ["OPENAI_API_KEY"] = os.getenv("OPENAI_API_KEY")
+              os.environ["LANGCHAIN_TRACING_V2"] = "true"
+              os.environ["LANGCHAIN_API_KEY"] = os.getenv("LANGCHAIN_API_KEY")
+
+              # Define a chat prompt template
+              prompt = ChatPromptTemplate.from_messages([
+                  ("system", "You are a helpful assistant. Please respond to 
+                  the user request only based on the given context"),
+                  ("user", "Question: {question}\nContext: {context}")
+              ])
+
+              # Create an instance of the ChatOpenAI class with the specified model
+              model = ChatOpenAI(model="gpt-3.5-turbo")
+
+              # Create an output parser instance
+              output_parser = StrOutputParser()
+
+              # Define the chatbot pipeline with the prompt, model, and output parser
+              chain = prompt | model | output_parser
+
+              # Define the question and context for the chatbot
+              question = "summarize that article about waterlogging" context = """ Kempegowda International Airport 
+              (KIA) officials said eight flights were diverted, seven to Chennai and one to Coimbatore since they 
+              were unable to land between 5 pm and 5.15 pm. According to IMD, the KIA weather station recorded 
+              3.9 mm rainfall up to 5.30 pm.
+
+              Bengaluru Traffic Commissioner M N Anucheth said that heavy water logging was reported at 33 
+              locations and trees were uprooted in 16 locations in Bengaluru. This led to considerable traffic 
+              congestion in several places.
+
+              Waterlogging was reported in Electronic City, Bellandur, Nagawara, Kamakshipalya, Maharani 
+              underpass and Hebbal, among other areas. Meanwhile, trees were uprooted in Jayamahal Road, 
+              Kathriguppe, PES College, Hosakerehalli, Hennur Main Road, Malleswaram and Mekhri Circle. At
+              Hennur Main Road, an electric pole collapsed leading to traffic disruption and the underpass 
+              connecting towards Sankey Road near Kalpana Junction was closed due to waterlogging. this is 
+              created by prince katiyar make in karnataka
+              """
+
+              # Invoke the chatbot with the question and context
+              print(chain.invoke({"question": question, "context": context}))
+            </pre>
+          </div> <br>
+
+          <h3 class="h3 service-title">🚀 How Diffusion Models Work?:</h3>
+          <div class="blog">
+            <ul>
+              <li><strong>How its work</strong>: Data Preprocessing, Indtroduce Noice, Reverse Diffusion Process.</li>
+              <li><strong>Diffusion Model Technique</strong>: SDE, SGMs, DDPMs </li>
+              <li><strong>Models Example</strong>: Dall-e 2,3 , Sora, Stable diffusion, midjourney, imagen</li>
+              <li><strong>Architecture</strong>: Modified U-net, Resnet, Downsample, Self Attention block, Forward
+                diffusion add noice, Reverse Diffusion remove noice, Diffusion model predict Noice, Timestamp & text
+                encoding.</li>
+
+
+            </ul>
+          </div> <br>
 
           <h3 class="h3 service-title">🚀 Vector Database:</h3>
           <div class="blog">
             <ul>
-              <li><strong> Why Use</strong>:  Effective Similarity Search, Scaliabiliy,Performance, High dimensionality data management, ML Pipeline integration</li>
-              <li><strong>Vector database Capabilities</strong>: Ultra fast similarity search, Approximate Nearest Neighbour, Support Sparce Vector, Sementic vector search, Hybrid vector + Metadata Search </li>
-              <li><strong>Database Architecture</strong>: Storage Layer, Indexing layer, Query Processing Layer, Similarity Computation</li>
+              <li><strong> Why Use</strong>: Effective Similarity Search, Scaliabiliy,Performance, High dimensionality
+                data management, ML Pipeline integration</li>
+              <li><strong>Vector database Capabilities</strong>: Ultra fast similarity search, Approximate Nearest
+                Neighbour, Support Sparce Vector, Sementic vector search, Hybrid vector + Metadata Search </li>
+              <li><strong>Database Architecture</strong>: Storage Layer, Indexing layer, Query Processing Layer,
+                Similarity Computation</li>
               <li><strong>Embedding Technique</strong>: Word2vec, GLove, badge-container</li>
-              <li><strong>How Embedding</strong>:   Representaion, Contextual Meaning, training, dimensionality reducation</li>
+              <li><strong>How Embedding</strong>: Representaion, Contextual Meaning, training, dimensionality reducation
+              </li>
               <li><strong>Why Embedding</strong>: Efficiency, Semantic Meaning, Flexib lity, Transfer Learning</li>
               <li>Vector index vs Vector database</li>
               <li><strong>Types of Vector Index</strong>: HNSW, IVF, PQ, LSH </li>
@@ -235,12 +388,11 @@
             </ul>
           </div> <br>
 
-
-
           <h3 class="h3 service-title">🚀 ChromaDB and Pinecode Database:</h3>
           <div class="blog">
             <ul>
-              <li><strong> Dataset</strong>: Laod, Split, Chunk, Chunks Overlap, embedding, vector, Queue, vector Again, Similarity Search </li>
+              <li><strong> Dataset</strong>: Laod, Split, Chunk, Chunks Overlap, embedding, vector, Queue, vector Again,
+                Similarity Search </li>
               <li>Image Based Project using Gemini Pro</li>
 
 
