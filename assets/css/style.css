@@ -567,6 +567,7 @@ main {
   /* font-size: var(--fs-9); */
   padding: 20px 7px;
   transition: color var(--transition-1);
+  padding-top: 1px;
 
 }
 
@@ -1348,7 +1349,7 @@ main {
   font-size: var(--fs-6);
   font-weight: var(--fw-400);
   padding: 13px 20px;
-  border: 1px solid var(--jet);
+  border: 1px solid #ffffff57;
   border-radius: 14px;
   outline: none;
 }
@@ -2628,3 +2629,6 @@ strong{
     font-size: 20px; /* Font size for larger screens */
   }
 }
+
+
+
