@@ -1509,7 +1509,8 @@ textarea.form-input::-webkit-resizer {
   }
 
   .article-title {
-    font-weight: var(--fw-600);
+    /* font-weight: var(--fw-600); */
+    font-size: 30px;
     padding-bottom: 15px;
   }
 
