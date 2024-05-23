@@ -568,7 +568,8 @@ main {
 }
 
 .navbar-link.active {
-  color: var(--orange-yellow-crayola);
+  /* color: var(--orange-yellow-crayola); */
+  color: darkorange;
 
 }
 
@@ -2006,7 +2007,8 @@ textarea.form-input::-webkit-resizer {
   }
 
   .navbar-link {
-    font-weight: var(--fw-500);
+    /* font-weight: var(--fw-500); */
+    font-size: 17px;
   }
 
 
@@ -2609,3 +2611,9 @@ strong{
 }
 
 
+
+@media (min-width: 768px) {
+  .navbar-link {
+    font-size: 20px; /* Font size for larger screens */
+  }
+}
