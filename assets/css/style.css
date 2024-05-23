@@ -3,11 +3,11 @@
 \*-----------------------------------*/
 
 a {
-  font-family:  Ubuntu;
+  font-family:  Space Grotesk;
 }
 
 p {
-  font-family:  Ubuntu;
+  font-family:  Space Grotesk;
 
 }
 
@@ -487,6 +487,8 @@ main {
   /* font-family: 'Space Grotesk' !important; */
 }
 
+
+
 .contact-title {
   color: var(--light-gray-70);
   font-size: var(--fs-8);
@@ -595,7 +597,7 @@ main {
 }
 
 .about-text {
-  font-family: ' Ubuntu';
+  font-family: ' Space Grotesk';
   color: var(--light-gray);
   /* font-size: var(--fs-9); */
   font-size: 17px;
@@ -718,7 +720,7 @@ main {
   color: var(--light-gray);
   font-size: var(--fs-6);
   font-weight: var(--fw-300);
-  font-family:  Ubuntu;
+  font-family:  Space Grotesk;
   display: -webkit-box;
   line-clamp: 4;
   line-height: 1.75rem;
@@ -2202,6 +2204,7 @@ article {
   .contact-info :is(.contact-link, time, address) {
 
     /* font-weight: var(--fw-300); */
+    font-family: 'Space Grotesk';
   }
 
   .separator:last-of-type {
