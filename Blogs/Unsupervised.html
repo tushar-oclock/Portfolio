@@ -204,7 +204,7 @@
         <div class="blog">
           <ul>
             <li style="color: lightsalmon; text-align: justify; " >
-              ● Introduction ● K-mean Clustering ● Find K code Example ● Types ● K mean from Scratch
+              ● Introduction ● K-mean Clustering ● Find K code Example ● Types ● K mean from Scratch ● DBSCAN
             </li>
           </ul>
         </div> <br>
@@ -342,9 +342,59 @@
           </div> <br>
         </section>
 
+        <h3 class="h3 service-title">🚀 DBSCAN:</h3>
+        <div class="blog">
+          <ul>
+            <li><strong>Density Based Algorithm</strong>: DBSCAN and OPTICS</li>
+            <li><strong>Key Concepts</strong>: Minpts & Epsilon, Core, Border, Noice Points, Density Connected points, Direct Density Reachable  </li>
+            <li><strong>Hyperparameter</strong>: Eps & MinPts</li>
+            <li><strong>Advantages</strong>: Robust to  outliers, No need to specify cluster, Can find Arbitery shape, Only 2 Hyperparameter </li>
+            <li><strong>Limitation</strong>: Sensitivity, Difficult in varying shape</li>
+            <li><strong>Application areas</strong>: Geography data, Anomaly, Image processing, bioinformative, Astronomy, Traffic analysis, Data mining, Social network, Customer Segmentation</li>
+          </ul>
+        </div> <br>
 
-
-
+        <div class="code-window">
+          <pre>
+            import numpy as np
+            import matplotlib.pyplot as plt
+            from sklearn.cluster import DBSCAN
+            from sklearn import datasets
+            from sklearn.preprocessing import StandardScaler
+            
+            # Load the Iris dataset
+            iris = datasets.load_iris()
+            X = iris.data
+            
+            # Standardize the features
+            X = StandardScaler().fit_transform(X)
+            
+            # Compute DBSCAN
+            db = DBSCAN(eps=0.5, min_samples=5).fit(X)
+            labels = db.labels_
+            
+            # Number of clusters in labels, ignoring noise if present
+            n_clusters_ = len(set(labels)) - (1 if -1 in labels else 0)
+            
+            print(f'Estimated number of clusters: {n_clusters_}')
+            
+            # Plotting the results
+            unique_labels = set(labels)
+            colors = [plt.cm.Spectral(each) for each in np.linspace(0, 1, len(unique_labels))]
+            for k, col in zip(unique_labels, colors):
+                if k == -1:
+                    # Black used for noise.
+                    col = [0, 0, 0, 1]
+            
+                class_member_mask = (labels == k)
+            
+                xy = X[class_member_mask]
+                plt.plot(xy[:, 0], xy[:, 1], 'o', markerfacecolor=tuple(col), markeredgecolor='k', markersize=6)
+            
+            plt.title(f'Estimated number of clusters: {n_clusters_}')
+            plt.show()              
+          </pre>
+        </div> <br>
 
 
 

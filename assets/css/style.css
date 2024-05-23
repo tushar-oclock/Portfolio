@@ -534,14 +534,21 @@ main {
   left: 0;
   width: 100%;
   /* background: hsla(240, 1%, 17%, 0.75); */
-  background-color: rgba(0, 0, 0, 0.45);
-  backdrop-filter: blur(10px);
+  /* background-color: rgba(0, 0, 0, 0.45); */
+  /* backdrop-filter: blur(10px); */
   background: transparent;
   /* border: 2px solid #ffdb70; */
   border-radius: 12px 12px 0 0;
   box-shadow: var(--shadow-2);
   z-index: 5;
 }
+
+@media (max-width: 768px) {
+  .navbar {
+    backdrop-filter: blur(10px);
+  }
+}
+
 
 .navbar-list {
   display: flex;
@@ -1410,7 +1417,7 @@ textarea.form-input::-webkit-resizer {
 }
 
 .form-btn:disabled {
-  opacity: 0.7;
+  /* opacity: 0.7; */
   cursor: not-allowed;
 }
 
