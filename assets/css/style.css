@@ -2542,12 +2542,13 @@ strong{
 .waviy span {
   position: relative;
   display: inline-block;
-  font-size: 17px;
+  font-size: 20px;
   color: #fff;
   text-transform: uppercase;
   animation: flip 2s infinite;
   animation-delay: calc(.100s * var(--i));
   font-family: 'Space Grotesk';
+  letter-spacing: -4px;
 }
 @keyframes flip {
   0%,80% {
