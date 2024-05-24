@@ -112,7 +112,7 @@
             </div>
             <div class="contact-info">
               <p class="contact-title">Phone</p>
-              <a href="tel:+12133522795" class="contact-link">+91 <span>&#8730;</span>94080.2043578</a>
+              <a href="tel:+12133522795" class="contact-link">+91 <span>&#8730;</span>78341703057303861904</a>
             </div>
           </li>
 
@@ -187,7 +187,7 @@
         <ul class="navbar-list">
           <li class="navbar-item">
             <button style="font-size: 40px;" class="navbar-link"
-              onclick="window.open('https://24x7-dev-player.github.io/Portfolio/', '_blank')">🏠</button>
+              onclick="window.open('https://24x7-dev-player.github.io/Portfolio/', '_blank')">🏡</button>
           </li>
         </ul>
       </nav>
@@ -205,7 +205,7 @@
           <ul>
             <li style="color: lightsalmon; text-align: justify; ">
               ● Introduction ● Version Control System ● Pipeline Example ● Major Tools ● Industry Tool Technology ●
-              CookieCutter ● DVC ● MLFlow ● ZenML ● Continuous Integration & CML ● Containerization and Orchestration ● Continuous Deployment CML ● Amazon Web Service
+              CookieCutter ● DVC ● MLFlow ● ZenML ● Continuous Integration & CML ● Containerization and Orchestration ● Continuous Deployment CML ●  Amazon Web Service ● Distributed Computing & Kubernetes Internals
             </li>
           </ul>
         </div> <br>
@@ -689,6 +689,118 @@
 
             </ul>
           </div> <br>
+
+          <h3 class="h3 service-title">🚀 Distributed Computing & Kubernetes Internals:</h3>
+          <div class="blog">
+            <ul>
+              <li><Strong>Key Concept</Strong>: Node(Tensorflow Extended (TFX)), Communication(Apache Kafke) and concurrency(Apache Kafke) </li>
+              <li><strong>Why Disctributed Computing</strong>: Scalability, Fault Tolerance, Performance</li>
+              <li><strong>Docker and Microservices</strong>: Modularity, Scalability, Resilience, Technology</li>
+              <li><strong>Example</strong>: Mantis for Netflix, Michelangelo for Uber, Bighead for Airbnb</li>
+              <li><strong>Kubernetes</strong>: Pods, Nodes, Cluster, Control Plane, Deployment, service, Configmap</li>
+              <li><Strong>Kubectl</Strong>: Deployment, Scaling, Status</li>
+              <li></li>
+            </ul>
+          </div> <br>          
+
+
+          <div class="code-window">
+            <pre>
+              #Pods
+              ```yaml
+              apiVersion: v1
+              kind: Pod
+              metadata:
+                name: ml-app
+              spec:
+                containers:
+                - name: python-app
+                  image: python-app:latest
+                - name: redis-db
+                  image: redis:latest
+              ```
+
+              #Deployment
+              ```yaml
+              apiVersion: apps/v1
+              kind: Deployment
+              metadata:
+                name: ml-service
+              spec:
+                replicas: 3
+                template:
+                  metadata:
+                    labels:
+                      app: ml-service
+                  spec:
+                    containers:
+                    - name: ml-container
+                      image: ml-service:latest
+              ```
+
+              #Services
+              ```yaml
+              apiVersion: v1
+              kind: Service
+              metadata:
+                name: ml-service
+              spec:
+                selector:
+                  app: ml-service
+                ports:
+                  - protocol: TCP
+                    port: 80
+                    targetPort: 5000
+              ```
+
+              #ConfigMap
+              ```yaml
+              apiVersion: v1
+              kind: ConfigMap
+              metadata:
+                name: ml-config
+              data:
+                hyperparam1: "value1"
+                hyperparam2: "value2"
+              ```
+
+              #Deploying Application with Kubernetes
+              ```yaml
+                  apiVersion: apps/v1
+                  kind: Deployment
+                  metadata:
+                    name: ml-service
+                  spec:
+                    replicas: 3
+                    template:
+                      metadata:
+                        labels:
+                          app: ml-service
+                      spec:
+                        containers:
+                        - name: ml-container
+                          image: your-docker-registry/ml-service:latest
+                        resources:
+                            limits:
+                              memory: "1024Mi"
+                              cpu: "2000m"
+                          ports:
+                          - containerPort: 8080
+                  ```
+              </pre>
+          </div> <br>
+
+
+
+
+
+
+
+
+
+
+
+
 
 
         </section>

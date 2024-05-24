@@ -1327,6 +1327,10 @@ main {
   height: 100%;
   border: none;
   filter: grayscale(0.5) invert(1);
+
+
+
+
 }
 
 .contact-form {
@@ -2172,7 +2176,7 @@ article {
   }
 
   .avatar-box img {
-    width: 220px;
+    width: 210px;
 
   }
 
@@ -2629,6 +2633,7 @@ strong{
     font-size: 20px; /* Font size for larger screens */
   }
 }
+
 
 
 

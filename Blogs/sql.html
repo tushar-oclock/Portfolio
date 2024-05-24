@@ -112,7 +112,7 @@
             </div>
             <div class="contact-info">
               <p class="contact-title">Phone</p>
-              <a href="tel:+12133522795" class="contact-link">+91 <span>&#8730;</span>94080.2043578</a>
+              <a href="tel:+12133522795" class="contact-link">+91 <span>&#8730;</span>78341703057303861904</a>
             </div>
           </li>
 
@@ -187,7 +187,7 @@
         <ul class="navbar-list">
           <li class="navbar-item">
             <button style="font-size: 40px;" class="navbar-link"
-              onclick="window.open('https://24x7-dev-player.github.io/Portfolio/', '_blank')">🏠</button>
+              onclick="window.open('https://24x7-dev-player.github.io/Portfolio/', '_blank')">🏡</button>
           </li>
         </ul>
       </nav>
@@ -201,11 +201,10 @@
           <h2 class="h2 article-title">📛 Structure Query Language</h2>
         </header>
 
-
         <div class="blog">
           <ul>
             <li style="color: lightsalmon; text-align: justify; " >
-              ● Database ● SQL DDL Commands ● SQL DML Commands ● SQL Grouping  + Sorting
+              ● Database ● SQL DDL Commands ● SQL DML Commands ● SQL Grouping  + Sorting ● SQL Joins & Operations
             </li>
           </ul>
         </div> <br>
@@ -213,7 +212,6 @@
 
         <section class="about-text with-line">
         </section>
-
         <section class="about-text">
 
           <h3 class="h3 service-title">🚀 Database:</h3>
@@ -269,7 +267,6 @@
               
             </pre>
           </div> <br>
-
 
           <h3 class="h3 service-title">🚀 SQL DML Commands:</h3>
           <div class="blog">
@@ -342,6 +339,49 @@
               print(filtered_df)
             </pre>
           </div> <br>
+
+          <h3 class="h3 service-title">🚀 SQL Joins & Operations:</h3>
+          <div class="blog">
+            <ul>
+              <li><strong> Types of Joins</strong>: Cross join, Inner join, Right join, Full Outer join, Left Join, self join</li>
+              <li><strong>Operations</strong>: Union, Union all, Intersect, except, Joining more than one column, FIlter Columns </li>
+              <li><strong>Keywords</strong>: Join, group, cross, left, right, on, full, in </li>
+            </ul>
+          </div> <br>
+          <div class="code-window">
+            <pre>
+              -- INNER JOIN: 
+              SELECT employees.*, departments.*
+              FROM employees
+              INNER JOIN departments ON employees.department_id = departments.department_id;
+              
+              -- LEFT JOIN (or LEFT OUTER JOIN): 
+              SELECT employees.*, departments.*
+              FROM employees
+              LEFT JOIN departments ON employees.department_id = departments.department_id;
+              
+              -- RIGHT JOIN (or RIGHT OUTER JOIN): 
+              SELECT employees.*, departments.*
+              FROM employees
+              RIGHT JOIN departments ON employees.department_id = departments.department_id;
+              
+              -- FULL JOIN (or FULL OUTER JOIN): 
+              SELECT employees.*, departments.*
+              FROM employees
+              FULL JOIN departments ON employees.department_id = departments.department_id;
+              
+              -- CROSS JOIN: 
+              SELECT employees.*, departments.*
+              FROM employees
+              CROSS JOIN departments;              
+            </pre>
+          </div> <br>
+
+
+
+
+
+
 
 
         </section>
