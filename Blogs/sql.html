@@ -204,7 +204,7 @@
         <div class="blog">
           <ul>
             <li style="color: lightsalmon; text-align: justify; " >
-              ● Database ● SQL DDL Commands ● SQL DML Commands ● SQL Grouping  + Sorting ● SQL Joins & Operations
+              ● Database ● SQL DDL Commands ● SQL DML Commands ● SQL Grouping  + Sorting ● SQL Joins & Operations ● Subqueries in SQL
             </li>
           </ul>
         </div> <br>
@@ -377,9 +377,24 @@
             </pre>
           </div> <br>
 
+          <h3 class="h3 service-title">🚀 Subqueries in SQL:</h3>
+          <div class="blog">
+            <ul>
+              <li><strong> Types of Subqueries</strong>: The result is return(scaler, Raw, Table), Based on working(Independent and Correlated)</li>
+              <li>Subqueries used in insert select(Where, Select, From. Having), update, delete</li>
+            </ul>
+          </div> <br>
 
-
-
+          <div class="code-window">
+            <pre>
+              SELECT employee_id, first_name, last_name, salary
+               -- Selecting columns from the employees table
+              FROM employees
+              WHERE salary > (SELECT AVG(salary) FROM employees); 
+              -- Filtering rows where salary is greater than the average salary
+                 
+            </pre>
+          </div> <br>
 
 
 

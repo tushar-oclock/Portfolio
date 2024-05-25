@@ -203,8 +203,9 @@
 
         <div class="blog">
           <ul>
-            <li style="color: lightsalmon; text-align: justify; " >
-              ● Introduction ● K-mean Clustering ● Find K code Example ● Types ● K mean from Scratch ● DBSCAN
+            <li style="color: lightsalmon; text-align: justify; ">
+              ● Introduction ● K-mean Clustering ● Find K code Example ● Types ● K mean from Scratch ● DBSCAN ●
+              Hierarchical Clustring ● Gaussian Mixture Models
             </li>
           </ul>
         </div> <br>
@@ -221,7 +222,8 @@
                 detection, Language model</li>
               <li> <strong>Application of Clustering</strong>: Customer Segmentation, Data analysis, Semi Supervised
                 learning, Image Segmentation </li>
-                <li><strong>Types</strong>: Partitional, Hierarchical, Density based, Distribution, Graph based, Soft vs Hard </li>
+              <li><strong>Types</strong>: Partitional, Hierarchical, Density based, Distribution, Graph based, Soft vs
+                Hard </li>
 
 
             </ul>
@@ -273,10 +275,16 @@
           <h3 class="h3 service-title">🚀 Types:</h3>
           <div class="blog">
             <ul>
-              <li><strong> Partitional Clustering</strong>: K means, Define no. of k, iterative Process, Objective function, work on certain dataset, handling outliers, initial condition, Scalalbility & efficiency, not work on varing cluster or noicy data</li>
-              <li><strong>Hierarchical Clustering</strong>: Agglomerative & divisive, No need to specify Cluster, Dendogram, Use diffrent matrix, flexibility in shape, computation cost, sensitvity noice and outlier, Application in NLP, biology, etc.  </li>
-              <li><strong>Density Based</strong>: DBSCAN, No need to specify clsuter, Handling noice and outliers, Arbitery Shape, Parameter sensitvity, Scalability</li>
-              <li><strong>Distribution</strong>:Gaussian based, Handling complex cluater shape, Computation intensity, Parameter Estimation, Handling outliers, Scalability, Soft Clustering</li>
+              <li><strong> Partitional Clustering</strong>: K means, Define no. of k, iterative Process, Objective
+                function, work on certain dataset, handling outliers, initial condition, Scalalbility & efficiency, not
+                work on varing cluster or noicy data</li>
+              <li><strong>Hierarchical Clustering</strong>: Agglomerative & divisive, No need to specify Cluster,
+                Dendogram, Use diffrent matrix, flexibility in shape, computation cost, sensitvity noice and outlier,
+                Application in NLP, biology, etc. </li>
+              <li><strong>Density Based</strong>: DBSCAN, No need to specify clsuter, Handling noice and outliers,
+                Arbitery Shape, Parameter sensitvity, Scalability</li>
+              <li><strong>Distribution</strong>:Gaussian based, Handling complex cluater shape, Computation intensity,
+                Parameter Estimation, Handling outliers, Scalability, Soft Clustering</li>
 
 
             </ul>
@@ -346,11 +354,14 @@
         <div class="blog">
           <ul>
             <li><strong>Density Based Algorithm</strong>: DBSCAN and OPTICS</li>
-            <li><strong>Key Concepts</strong>: Minpts & Epsilon, Core, Border, Noice Points, Density Connected points, Direct Density Reachable  </li>
+            <li><strong>Key Concepts</strong>: Minpts & Epsilon, Core, Border, Noice Points, Density Connected points,
+              Direct Density Reachable </li>
             <li><strong>Hyperparameter</strong>: Eps & MinPts</li>
-            <li><strong>Advantages</strong>: Robust to  outliers, No need to specify cluster, Can find Arbitery shape, Only 2 Hyperparameter </li>
+            <li><strong>Advantages</strong>: Robust to outliers, No need to specify cluster, Can find Arbitery shape,
+              Only 2 Hyperparameter </li>
             <li><strong>Limitation</strong>: Sensitivity, Difficult in varying shape</li>
-            <li><strong>Application areas</strong>: Geography data, Anomaly, Image processing, bioinformative, Astronomy, Traffic analysis, Data mining, Social network, Customer Segmentation</li>
+            <li><strong>Application areas</strong>: Geography data, Anomaly, Image processing, bioinformative,
+              Astronomy, Traffic analysis, Data mining, Social network, Customer Segmentation</li>
           </ul>
         </div> <br>
 
@@ -395,6 +406,134 @@
             plt.show()              
           </pre>
         </div> <br>
+
+        <h3 class="h3 service-title">🚀 Hierarchical Clustring:</h3>
+        <div class="blog">
+          <ul>
+            <li><strong>Agglomerative</strong>: Initial step, Clustering Process, Dendogram, Bottom-up Approach</li>
+            <li><strong>Divisive</strong>: Initial steps, Clustering process, Top-Down apprach.
+            <li><strong>Alogorithm</strong>: Initialization, Compute distance Matrix, Find the closest, Merge Cluster,
+              Update Distance Matrix, Repeat</li>
+          </ul>
+          <li><strong>Concepts</strong>: linkage, Proximity</li>
+          <li><strong>Find number of Clusters</strong>: Dendogram</li>
+          <li><strong>Linkage</strong>: Hyperparametr, Min(Single Linkage), Max(Complete Linkage), Average Method, Ward Method</li>
+          <li><strong>Advantages</strong>:hierarchy, Any diatance, Robust to outlier & Noice, Easy to understand</li>
+          <li><strong>Disadvantages</strong>: No methamatical objective, Complexity,  Not available for large datatset, Linkage Criteria</li>
+        </div> <br>
+
+        <div class="code-window">
+          <pre>
+            import numpy as np
+            import matplotlib.pyplot as plt
+            from scipy.cluster.hierarchy import dendrogram, linkage
+            from scipy.cluster.hierarchy import fcluster
+            
+            # Sample data: replace this with your own data
+            np.random.seed(0)
+            data = np.random.rand(10, 2)  # 10 points in 2D space
+            
+            # Perform hierarchical clustering using the 'ward' method
+            Z = linkage(data, method='ward')
+            
+            # Create a dendrogram to visualize the clustering
+            plt.figure(figsize=(10, 7))
+            dendrogram(Z, labels=np.arange(1, 11))
+            plt.title('Hierarchical Clustering Dendrogram')
+            plt.xlabel('Sample index')
+            plt.ylabel('Distance')
+            plt.show()
+            
+            # Apply hierarchical clustering and retrieve cluster labels
+            # Use a distance threshold to form flat clusters (for example, threshold=0.7)
+            max_d = 0.7
+            clusters = fcluster(Z, max_d, criterion='distance')
+            
+            print(f'Cluster assignments: {clusters}')
+        </pre>
+        </div> <br>
+
+
+        <h3 class="h3 service-title">🚀 Gaussian Mixture Models:</h3>
+        <div class="blog">
+          <ul>
+            <li><strong>Key Concepts</strong>: Model based Clustering, EM Algorithm, KDE, Soft vs Hard,  </li>
+            <li><strong>Covarience Type</strong>: Spherical, Diagonal, Tied, Full</li>
+            <li><strong>Hyperparameter</strong>: Covarience type, Decide N Component (AIC & BIC) </li>
+        </div> <br>
+
+        <div class="code-window">
+          <pre>
+            import numpy as np
+            import matplotlib.pyplot as plt
+            from sklearn.datasets import make_blobs
+            from sklearn.mixture import GaussianMixture
+            
+            # Create sample data
+            n_samples = 500
+            random_state = 42
+            X, y_true = make_blobs(n_samples=n_samples, centers=3, cluster_std=0.60, random_state=random_state)
+            
+            # Visualize the sample data
+            plt.scatter(X[:, 0], X[:, 1], s=15)
+            plt.title("Sample Data")
+            plt.xlabel("Feature 1")
+            plt.ylabel("Feature 2")
+            plt.show()
+            
+            # Fit a Gaussian Mixture Model
+            gmm = GaussianMixture(n_components=3, random_state=random_state)
+            gmm.fit(X)
+            
+            # Predict cluster labels
+            labels = gmm.predict(X)
+            
+            # Plot the clustered data
+            plt.scatter(X[:, 0], X[:, 1], c=labels, s=15, cmap='viridis')
+            plt.title("GMM Clustering")
+            plt.xlabel("Feature 1")
+            plt.ylabel("Feature 2")
+            plt.show()
+            
+            # Print the means of the clusters
+            print("Cluster means:\n", gmm.means_)
+            
+            # Optional: Plot the ellipses representing the Gaussian components
+            def plot_gmm(gmm, X, label=True, ax=None):
+                ax = ax or plt.gca()
+                labels = gmm.fit_predict(X)
+                if label:
+                    ax.scatter(X[:, 0], X[:, 1], c=labels, s=40, cmap='viridis', zorder=2)
+                else:
+                    ax.scatter(X[:, 0], X[:, 1], s=40, zorder=2)
+                ax.axis('equal')
+                
+                w_factor = 0.2 / gmm.weights_.max()
+                for pos, covar, w in zip(gmm.means_, gmm.covariances_, gmm.weights_):
+                    draw_ellipse(pos, covar, alpha=w * w_factor)
+            
+            def draw_ellipse(position, covariance, ax=None, **kwargs):
+                ax = ax or plt.gca()
+                if covariance.shape == (2, 2):
+                    U, s, Vt = np.linalg.svd(covariance)
+                    angle = np.degrees(np.arctan2(U[1, 0], U[0, 0]))
+                    width, height = 2 * np.sqrt(s)
+                else:
+                    angle = 0
+                    width, height = 2 * np.sqrt(covariance)
+                for nsig in range(1, 4):
+                    ax.add_patch(plt.Ellipse(position, nsig * width, nsig * height, angle, **kwargs))
+            
+            plt.figure(figsize=(8, 6))
+            plot_gmm(gmm, X)
+            plt.title("GMM with Ellipses Representing Gaussian Components")
+            plt.xlabel("Feature 1")
+            plt.ylabel("Feature 2")
+            plt.show()
+            
+        </pre>
+        </div> <br>
+
 
 
 

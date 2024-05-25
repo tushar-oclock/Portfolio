@@ -263,4 +263,68 @@ document.getElementById('scrollBottomButton').addEventListener('click', function
 
 
 
+document.addEventListener("DOMContentLoaded", function () {
+  const filterButtons = document.querySelectorAll("[data-filter-btn]");
+  const projectItems = document.querySelectorAll("[data-filter-item]");
+
+  filterButtons.forEach((button) => {
+    button.addEventListener("click", () => {
+      const category = button.getAttribute("data-category");
+
+      // Remove 'active' class from all buttons
+      filterButtons.forEach((btn) => btn.classList.remove("active"));
+
+      // Add 'active' class to the clicked button
+      button.classList.add("active");
+
+      // Show only projects related to the selected category
+      projectItems.forEach((item) => {
+        const itemCategory = item.getAttribute("data-category");
+        if (itemCategory === category) {
+          item.style.display = "block";
+        } else {
+          item.style.display = "none";
+        }
+      });
+    });
+  });
+
+  // Show only projects related to "Data Analytics" by default
+  projectItems.forEach((item) => {
+    const itemCategory = item.getAttribute("data-category");
+    if (itemCategory !== "data analytics") {
+      item.style.display = "none";
+    }
+  });
+});
+
+
+
+
+document.addEventListener('DOMContentLoaded', function () {
+  // Get the active button
+  const activeButton = document.querySelector('.select-item .active');
+  // Get the select value element
+  const selectValue = document.querySelector('[data-select-value]');
+
+  // Check if the active button exists
+  if (activeButton) {
+    // Set the default value to the text content of the active button
+    selectValue.textContent = activeButton.textContent;
+  }
+
+  // Add event listeners to update the select value when a new item is selected
+  const filterButtons = document.querySelectorAll('[data-filter-btn]');
+  filterButtons.forEach(button => {
+    button.addEventListener('click', function () {
+      // Remove active class from all buttons
+      filterButtons.forEach(btn => btn.classList.remove('active'));
+      // Add active class to the clicked button
+      this.classList.add('active');
+      // Update the select value
+      selectValue.textContent = this.textContent;
+    });
+  });
+});
+
 

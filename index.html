@@ -191,7 +191,7 @@
         <ul class="navbar-list">
 
           <li class="navbar-item">
-            <button style="font-size: 40px;" class="navbar-link  active" data-nav-link>🏡</button>
+            <button style="font-size: 40px;" class="navbar-link  active" data-nav-link>🏠</button>
           </li>
 
           <li class="navbar-item">
@@ -218,7 +218,7 @@
         - #ABOUT
       -->
 
-      <article class="about  active" data-page="🏡">
+      <article class="about  active" data-page="🏠">
 
         <header>
           <h2 class="h2 article-title">🎯 About me</h2>
@@ -628,7 +628,6 @@
       <!--
         - #RESUME
       -->
-
       <article class="resume" data-page="📋">
 
         <header>
@@ -1059,42 +1058,34 @@
 
         <section class="projects">
 
-          <ul class="filter-list">
+          <ul class="filter-list">            
 
 
             <li class="filter-item">
-              <button class="active" data-filter-btn>All</button>
+              <button class="active" data-filter-btn data-category="data analytics">Data Analytics</button>
             </li>
-
-            <li class="filter-item">
-              <button data-filter-btn>Web design</button>
-            </li>
-
-
             
+
             <li class="filter-item">
-              <button data-filter-btn>Data Analytics</button>
+              <button data-filter-btn data-category="machine learning">Machine Learning</button>
             </li>
 
             <li class="filter-item">
-              <button data-filter-btn>Machine Learning</button>
+              <button data-filter-btn data-category="computer vision">Computer Vision</button>
             </li>
 
             <li class="filter-item">
-              <button data-filter-btn>Computer Vision</button>
-            </li>
-
-            <li class="filter-item">
-              <button data-filter-btn>Generative AI</button>
+              <button data-filter-btn data-category="generative ai">Generative AI</button>
             </li>
 
           </ul>
 
+
+
+
+
+          
           <div class="filter-select-box">
-
-
-
-
 
             <button class="filter-select" data-select>
 
@@ -1103,44 +1094,31 @@
               <div class="select-icon">
                 <ion-icon name="chevron-down"></ion-icon>
               </div>
-
+              
             </button>
 
-            <ul class="select-list">
 
-              <li class="select-item">
-                <button data-select-item>All</button>
-              </li>
-
-              <li class="select-item">
-                <button data-select-item>Web design</button>
-              </li>
-
+            <ul class="select-list" id="select-list">
 
 
 
               <li class="select-item">
-                <button data-select-item>Data Analytics</button>
+                <button class="active" data-filter-btn data-category="data analytics">Data Analytics</button>
               </li>
-
               <li class="select-item">
-                <button data-select-item>Machine Learning</button>
+                <button data-filter-btn data-category="machine learning">Machine Learning</button>
               </li>
-
               <li class="select-item">
-                <button data-select-item>Computer Vision</button>
+                <button data-filter-btn data-category="computer vision">Computer Vision</button>
               </li>
-
               <li class="select-item">
-                <button data-select-item>Generative AI</button>
+                <button data-filter-btn data-category="generative ai">Generative AI</button>
               </li>
 
-
+              
             </ul>
-
           </div>
-
-
+          
 
 
 
@@ -1158,7 +1136,8 @@
 
 
             <li class="project-item  active" data-filter-item data-category="data analytics">
-              <a href="https://github.com/24x7-Dev-Player">
+              <a href="https://github.com/24x7-Dev-Player" target="_blank">
+
 
                 <figure class="project-img">
                   <div class="project-item-icon-box">
@@ -1175,8 +1154,47 @@
               </a>
             </li>
 
+            <li class="project-item  active" data-filter-item data-category="data analytics">
+              <a href="https://github.com/24x7-Dev-Player" target="_blank">
+
+
+                <figure class="project-img">
+                  <div class="project-item-icon-box">
+                    <ion-icon name="eye-outline"></ion-icon>
+                  </div>
+
+                  <img src="./assets/images/projects/Whatsapp chat analysis .png" alt="orizon" loading="lazy">
+                </figure>
+
+                <h3 class="project-title">Whatsapp Chat Analysis</h3>
+
+                <p class="project-category">Data analytics</p>
+
+              </a>
+            </li>
+
+            <li class="project-item  active" data-filter-item data-category="data analytics">
+              <a href="https://github.com/24x7-Dev-Player" target="_blank">
+
+
+                <figure class="project-img">
+                  <div class="project-item-icon-box">
+                    <ion-icon name="eye-outline"></ion-icon>
+                  </div>
+
+                  <img src="./assets/images/projects/discord chat analysis bot.png" alt="orizon" loading="lazy">
+                </figure>
+
+                <h3 class="project-title">Discord Chat Analysis Bot</h3>
+
+                <p class="project-category">Data analytics</p>
+
+              </a>
+            </li>
+
             <li class="project-item  active" data-filter-item data-category="machine learning">
-              <a href="https://github.com/24x7-Dev-Player">
+              <a href="https://github.com/24x7-Dev-Player" target="_blank">
+
 
                 <figure class="project-img">
                   <div class="project-item-icon-box">
@@ -1194,7 +1212,8 @@
             </li>
 
             <li class="project-item  active" data-filter-item data-category="computer vision">
-              <a href="https://github.com/24x7-Dev-Player">
+              <a href="https://github.com/24x7-Dev-Player" target="_blank">
+
 
                 <figure class="project-img">
                   <div class="project-item-icon-box">
@@ -1212,7 +1231,8 @@
             </li>
 
             <li class="project-item  active" data-filter-item data-category="computer vision">
-              <a href="https://github.com/24x7-Dev-Player">
+              <a href="https://github.com/24x7-Dev-Player" target="_blank">
+
 
                 <figure class="project-img">
                   <div class="project-item-icon-box">
@@ -1230,7 +1250,8 @@
             </li>
 
             <li class="project-item  active" data-filter-item data-category="computer vision">
-              <a href="https://github.com/24x7-Dev-Player">
+              <a href="https://github.com/24x7-Dev-Player" target="_blank">
+
 
                 <figure class="project-img">
                   <div class="project-item-icon-box">
@@ -1247,8 +1268,65 @@
               </a>
             </li>
 
+            <li class="project-item  active" data-filter-item data-category="computer vision">
+              <a href="https://github.com/24x7-Dev-Player" target="_blank">
+
+
+                <figure class="project-img">
+                  <div class="project-item-icon-box">
+                    <ion-icon name="eye-outline"></ion-icon>
+                  </div>
+
+                  <img src="./assets/images/projects/self driving car.png" alt="orizon" loading="lazy">
+                </figure>
+
+                <h3 class="project-title">Self Driving Car Simulation</h3>
+
+                <p class="project-category">Computer Vision</p>
+
+              </a>
+            </li>
+
+            <li class="project-item  active" data-filter-item data-category="computer vision">
+              <a href="https://github.com/24x7-Dev-Player" target="_blank">
+
+
+                <figure class="project-img">
+                  <div class="project-item-icon-box">
+                    <ion-icon name="eye-outline"></ion-icon>
+                  </div>
+
+                  <img src="./assets/images/projects/Sign Language Detection.png" alt="orizon" loading="lazy">
+                </figure>
+
+                <h3 class="project-title">Sign Langauge Detection</h3>
+
+                <p class="project-category">Computer Vision</p>
+
+              </a>
+            </li>
+
+            <li class="project-item  active" data-filter-item data-category="computer vision">
+              <a href="https://github.com/24x7-Dev-Player" target="_blank">
+
+
+                <figure class="project-img">
+                  <div class="project-item-icon-box">
+                    <ion-icon name="eye-outline"></ion-icon>
+                  </div>
+
+                  <img src="./assets/images/projects/Face mask.png" alt="orizon" loading="lazy">
+                </figure>
+
+                <h3 class="project-title">Face Mask Detection</h3>
+
+                <p class="project-category">Computer Vision</p>
+
+              </a>
+            </li>
+
             <li class="project-item  active" data-filter-item data-category="generative ai">
-              <a href="https://github.com/24x7-Dev-Player">
+              <a href="https://github.com/24x7-Dev-Player" target="_blank">
 
                 <figure class="project-img">
                   <div class="project-item-icon-box">
@@ -1266,7 +1344,7 @@
             </li>
 
             <li class="project-item  active" data-filter-item data-category="generative ai">
-              <a href="https://github.com/24x7-Dev-Player">
+              <a href="https://github.com/24x7-Dev-Player" target="_blank">
 
                 <figure class="project-img">
                   <div class="project-item-icon-box">
@@ -1291,10 +1369,6 @@
         </section>
 
       </article>
-
-
-
-
 
       <!-- #BLOG -->
       <article class="blog" data-page="📰">

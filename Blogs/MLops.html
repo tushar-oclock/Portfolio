@@ -205,7 +205,9 @@
           <ul>
             <li style="color: lightsalmon; text-align: justify; ">
               ● Introduction ● Version Control System ● Pipeline Example ● Major Tools ● Industry Tool Technology ●
-              CookieCutter ● DVC ● MLFlow ● ZenML ● Continuous Integration & CML ● Containerization and Orchestration ● Continuous Deployment CML ●  Amazon Web Service ● Distributed Computing & Kubernetes Internals
+              CookieCutter ● DVC ● MLFlow ● ZenML ● Continuous Integration & CML ● Containerization and Orchestration ●
+              Continuous Deployment CML ● Amazon Web Service ● Distributed Computing & Kubernetes Internals ● Seldon
+              Deployment
             </li>
           </ul>
         </div> <br>
@@ -377,11 +379,12 @@
               <li><strong>Data Security</strong>: okta, Symantec, delphix </li>
               <li><strong>Code Management(editor & version control)</strong>: Vscode, Pycharm, git, github</li>
               <li><strong>Modular coding(pipeline)</strong>: Kubeflow, DVC, Apache airflow, dagster</li>
-              <li><strong>Modular coding(model Building)</strong>:  Sklearn, tensorflow,  Pytorch, Xgboost</li>
+              <li><strong>Modular coding(model Building)</strong>: Sklearn, tensorflow, Pytorch, Xgboost</li>
               <li><strong>Hyperparameters Tuning</strong>: optuna, hyperopt, kerastuner</li>
               <li><strong>Model Explainability</strong>: Shap, Lime, Eli5</li>
               <li><strong>AutoML</strong>: katib, pycared, cloudautoml, Auto sklearn, </li>
-              <li><strong>Experiment Tracking & model Registry</strong>: MLflow, weights and bias, DVC, comet, neptune.ai</li>
+              <li><strong>Experiment Tracking & model Registry</strong>: MLflow, weights and bias, DVC, comet,
+                neptune.ai</li>
             </ul>
           </div> <br>
 
@@ -685,7 +688,9 @@
           <h3 class="h3 service-title">🚀 Amazon Web Service:</h3>
           <div class="blog">
             <ul>
-              <li><Strong>Services</Strong>: AWS CLI, AWS SageMaker, S3 Buckets (RDS, Aurora, Kinesis,...), AWS Lambda, AWS Step Functions, AWS ECR and ECS, AWS EMR, AWS Codepipeline and AWS Codebuild, Architecture design, AWS Event Bridge, AWS Cloudwatch, AWS API Gateway, EC2 Configuration in yaml</li>
+              <li><Strong>Services</Strong>: AWS CLI, AWS SageMaker, S3 Buckets (RDS, Aurora, Kinesis,...), AWS Lambda,
+                AWS Step Functions, AWS ECR and ECS, AWS EMR, AWS Codepipeline and AWS Codebuild, Architecture design,
+                AWS Event Bridge, AWS Cloudwatch, AWS API Gateway, EC2 Configuration in yaml</li>
 
             </ul>
           </div> <br>
@@ -693,16 +698,15 @@
           <h3 class="h3 service-title">🚀 Distributed Computing & Kubernetes Internals:</h3>
           <div class="blog">
             <ul>
-              <li><Strong>Key Concept</Strong>: Node(Tensorflow Extended (TFX)), Communication(Apache Kafke) and concurrency(Apache Kafke) </li>
+              <li><Strong>Key Concept</Strong>: Node(Tensorflow Extended (TFX)), Communication(Apache Kafke) and
+                concurrency(Apache Kafke) </li>
               <li><strong>Why Disctributed Computing</strong>: Scalability, Fault Tolerance, Performance</li>
               <li><strong>Docker and Microservices</strong>: Modularity, Scalability, Resilience, Technology</li>
               <li><strong>Example</strong>: Mantis for Netflix, Michelangelo for Uber, Bighead for Airbnb</li>
               <li><strong>Kubernetes</strong>: Pods, Nodes, Cluster, Control Plane, Deployment, service, Configmap</li>
               <li><Strong>Kubectl</Strong>: Deployment, Scaling, Status</li>
-              <li></li>
             </ul>
-          </div> <br>          
-
+          </div> <br>
 
           <div class="code-window">
             <pre>
@@ -791,13 +795,194 @@
           </div> <br>
 
 
+          <h3 class="h3 service-title">🚀 Seldon Deployment :</h3>
+          <div class="blog">
+            <ul>
+              <li><Strong>Key Concept</Strong>: Deployment Strategies, Services in Kubernetes, Key features of Seldon, Seldon vs k8s vs AWS EKS, Automated Pipeline with kuberflow and airflow, Apache Airflow Dags vs Kuberflow Pipeline
+              </li>
+            </ul>
+          </div> <br>
+
+          <div class="blog">
+            <ul>
+              <li><Strong>Seldon Installation and Deployment</Strong>
+              </li>
+            </ul>
+          </div> <br>
+
+          <div class="code-window">
+            <pre>
+              #Install Seldon Core Using Helm
+              ```bash
+              # Add the Seldon Core Helm repository
+              helm repo add seldon https://storage.googleapis.com/seldon-charts
+              
+              # Update Helm repositories
+              helm repo update
+              
+              # Install Seldon Core Operator
+              kubectl create namespace seldon-system
+              helm install seldon-core seldon/seldon-core-operator --namespace seldon-system
+              ```
+
+              #Create a Python script for a simple model, e.g., `my_model.py`:
+
+              ```python
+              # my_model.py
+              # Save your final model after all the training and hyper parameter tuning
+              ```
+              Push your model to S3 or Google store, say `gs://seldon-models/v1.18.0-dev/sklearn/iris/model.joblib`
 
 
+              #Define a Seldon Deployment
+              ```yaml
+              apiVersion: machinelearning.seldon.io/v1
+              kind: SeldonDeployment
+              metadata:
+                name: iris-model
+                namespace: seldon
+              spec:
+                name: iris
+                predictors:
+                - graph:
+                    implementation: SKLEARN_SERVER
+                    modelUri: gs://seldon-models/v1.18.0-dev/sklearn/iris
+                    name: classifier
+                  name: default
+                  replicas: 1
+              ```
+
+              #Deploy
+              kubectl apply -f seldon_deployment.yaml
+              </pre>
+          </div> <br>
+
+          <div class="blog">
+            <ul>
+              <li><Strong>Kuberflow Pipeline</Strong>
+              </li>
+            </ul>
+          </div> <br>
+
+          <div class="code-window">
+            <pre>
+              #kuberflow pipeline
+              ```bash
+              minikube start
+              export PIPELINE_VERSION=2.0.5 # Use SET for Windows
+              kubectl apply -k "github.com/kubeflow/pipelines/manifests/kustomize/
+              cluster-scoped-resources?ref=$PIPELINE_VERSION"
+              kubectl wait --for condition=established --timeout=60s crd/applications.app.k8s.io
+              kubectl apply -k "github.com/kubeflow/pipelines/manifests/kustomize/
+              env/platform-agnostic-pns?ref=$PIPELINE_VERSION"
+              ```
 
 
+              ```python
+              import kfp
+              from kfp import dsl
+              from kfp.components import func_to_container_op, InputPath
 
+              def train_model(input_data: InputPath(), model_output: str):
+                  import pandas as pd
+                  from sklearn.model_selection import train_test_split
+                  from sklearn.ensemble import RandomForestClassifier
+                  from joblib import dump
 
+                  # Load the training data
+                  data = pd.read_csv(input_data)
 
+                  # Assume the last column is the target variable
+                  X = data.iloc[:, :-1]
+                  y = data.iloc[:, -1]
+
+                  # Split the data into training and testing sets
+                  X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_state=42)
+
+                  # Train a RandomForestClassifier
+                  model = RandomForestClassifier()
+                  model.fit(X_train, y_train)
+
+                  # Save the trained model
+                  dump(model, model_output)
+
+              @dsl.pipeline(name='Retraining Pipeline', description='A classification model retraining pipeline')
+              def retraining_pipeline(input_data: str, model_output: str):
+                  # Training step
+                  train_step = func_to_container_op(train_model)(
+                      input_data=input_data,
+                      model_output=model_output
+                  )
+
+              if __name__ == '__main__':
+                  kfp.compiler.Compiler().compile(retraining_pipeline, 'retraining_pipeline.yaml')
+              ```
+              </pre>
+          </div> <br>
+
+          <div class="blog">
+            <ul>
+              <li><Strong>Apache Airflow using DAGs</Strong>
+              </li>
+            </ul>
+          </div> <br>
+
+          <div class="code-window">
+            <pre>
+              pip install apache-airflow
+              airflow db init
+
+              ```python
+              # retraining_dag.py
+              from datetime import datetime, timedelta
+              from airflow import DAG
+              from airflow.operators.dummy_operator import DummyOperator
+              from airflow.operators.python_operator import PythonOperator
+
+              def train_model():
+                  # Implement your training logic here
+                  pass
+
+              def retrain_model():
+                  # Implement your retraining logic here
+                  pass
+
+              default_args = {
+                  'owner': 'user',
+                  'start_date': datetime(2024, 1, 1),
+                  'retries': 1,
+                  'retry_delay': timedelta(minutes=5),
+              }
+
+              dag = DAG(
+                  'retraining_dag',
+                  default_args=default_args,
+                  description='A simple ML retraining DAG',
+                  schedule_interval=timedelta(days=1),
+              )
+
+              start = DummyOperator(task_id='start', dag=dag)
+              end = DummyOperator(task_id='end', dag=dag)
+
+              train_task = PythonOperator(
+                  task_id='train_model',
+                  python_callable=train_model,
+                  dag=dag,
+              )
+
+              retrain_task = PythonOperator(
+                  task_id='retrain_model',
+                  python_callable=retrain_model,
+                  dag=dag,
+              )
+
+              start >> train_task >> retrain_task >> end
+              ```
+
+              #run Airflow
+              airflow dags trigger retraining_dag
+              </pre>
+          </div> <br>
 
 
 
