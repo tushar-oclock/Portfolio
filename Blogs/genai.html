@@ -187,7 +187,7 @@
         <ul class="navbar-list">
           <li class="navbar-item">
             <button style="font-size: 40px;" class="navbar-link"
-              onclick="window.open('https://24x7-dev-player.github.io/Portfolio/', '_blank')">🏡</button>
+              onclick="window.open('https://24x7-dev-player.github.io/Portfolio/', '_blank')">🏠</button>
           </li>
         </ul>
       </nav>
@@ -202,171 +202,126 @@
         </header>
 
         <div class="blog">
-          <ul>
-            <li style="color: lightsalmon; text-align: justify; ">
-              ● Retrieval-Augmented Generation ● Langchain, Langserve & Langsmith ● How Diffusion Models Work? ● Vector Database ● ChromaDB and Pinecode Database ● AWS Bedrock ● Reinforcement Learning from Human Feedback
-            </li>
-          </ul>
+          <div class="testimonials-text" data-testimonials-text>
+            <p>
+              <span class="badge badge-primary">Basics</span>
+              <span class="badge badge-secondary">Prompt Engineering</span>
+              <span class="badge badge-success">Transformers</span>
+              <span class="badge badge-yellow">Model Pretraining</span>
+              <span class="badge badge-danger">Fine Tuning</span>
+              <span class="badge badge-warning">RAG</span>
+              <span class="badge badge-info">Langchain</span>
+              <span class="badge badge-light">Diffusion Models</span>
+              <span class="badge badge-teal">Vector Database</span>
+              <span class="badge badge-deeporange">Cloud for LLM</span>
+              <span class="badge badge-gray">RLHF</span>
+
+            </p>
+          </div>
         </div> <br>
-
-
         <section class="about-text with-line">
         </section>
 
         <section class="about-text">
 
+          <h3 class="h3 service-title">🚀Generative AI Basics</h3>
+          <div class="blog">
+            <ul>
+              <li><strong>Prerequisite & key Concepts</strong>: Foundational Machine Learning & Deep Learning, Generative Models for NLP, Benifits, Concern, Use Cases, Types of Models for Generative AI(GAN, VAEs, Transformers, Autoencoders )
+              </li>
+              <li><strong>Examples</strong>: OpenAI's GPT-3, GPT-3.5, and GPT-4,  Google's LaMDA and PaLM, Hugging Face's BLOOM, Meta's LLaMA, NVIDIA's NeMo LLM</li>
+            </ul>
+          </div> <br>
+
+          <h3 class="h3 service-title">🚀Prompt Engineering</h3>
+          <div class="blog">
+            <ul>
+              <li><strong>Mothods</strong>: Zero-Shot Learning, One-Shot Learning, Few-Shot Learning, Chain-of-Thought Prompting, Iterative Prompting, Negative Prompting, Hybrid Prompting, Prompt Chaining
+              </li>
+              <li><strong>Techniques</strong>:  Summerization, Inference, Transformation, Expansion</li>
+            </ul>
+          </div> <br>
+
+          <h3 class="h3 service-title">🚀Transformers & Model Pretraining</h3>
+          <div class="blog">
+            <ul>
+              <li><strong>Transformers</strong>: Architecture, Pre-processing (Tokens, Word Embedding and Positional
+                Encoding), Transformer Layers (Linear Transformation, Self
+                Attention, Feed Forward Network)
+              </li>
+              <li><strong>Model Pretraining</strong>: Generative Configuration, Auto regressive
+                Models, Auto encoding Models, Encoder-Only
+                Models, Decoder-Only Models, Sequence-to-Sequence Models(Encoder-Decoder Models), Model Size, Cost,
+                Trade off, Benefits and shortcomings of Small Language
+                Models, Model for Domain Adaptation (BloombergGPT for Finance), Quantization, Scaling techniques(DDP,
+                FSDP)
+              </li>
+            </ul>
+          </div> <br>
+
+          <h3 class="h3 service-title">🚀Fine Tuning</h3>
+          <div class="blog">
+            <ul>
+              <li><strong>Key Aspects</strong>: Defination, Purpose, Example(Copilot for code), Benifits, Tools(Pytorch,
+                HugginFace, Unsloth, Llama), How its work, Use cases, When to Fine Tune, When Not to Fine Tune, Primary
+                Fine tuning Approach (Repurposing, Full finetune, PEFT), Supervised Finetuning, Prominent Finetuning
+                method (RLHF), Instruction Fine Tuning, SIngle task and multitask finetuning, Padding / Truncation,
+                Prompt Tuning</li>
+              <li><strong>Dataset</strong>: FLAN, FLAN T5, FLAN PALM</li>
+              <li><strong>PEFT</strong>: Achieve PEFT Ways(LORA, QLORA), Techniques </li>
+              <li><strong>Evaluate</strong>: Rouge, BLUE, precision, F1score, N-grams, Benchmarking (GLUE, SuperGlue,
+                HEML, MMLU)</li>
+            </ul>
+          </div> <br>
 
           <h3 class="h3 service-title">🚀Retrieval-Augmented Generation</h3>
           <div class="blog">
             <ul>
-              <li><strong>Key Aspects</strong>: Why, Rag Pipeline, Components, Use case, Pros and cons, Types(Natie, Advnaced and modular), Future Development, Challenges, Advanced RAG, RAG Advantages Over Fine-tuning LLMs, Using RAG and Fine-tuning for Pre- trained Models, When to Fine-Tune vs RAG for Different Model Sizes </li>
+              <li><strong>Key Aspects</strong>: Why, Rag Pipeline, Components, Use cases, Pros and cons, Types(Natie,
+                Advanced and modular), Future Development, Challenges, Advanced RAG, RAG Advantages Over Fine-tuning
+                LLMs, Using RAG and Fine-tuning for Pre- trained Models, When to Fine-Tune vs RAG for Different Model
+                Sizes </li>
             </ul>
           </div> <br>
 
-          <h3 class="h3 service-title">🚀Langchain, Langserve & Langsmith</h3>
+          <h3 class="h3 service-title">🚀Langchain</h3>
           <div class="blog">
             <ul>
-              <li><strong>Langchain Key Aspects</strong>: LLM, Prompt Template, Chain, Agent & tools, Memory, Documentation Loaders, Vector Store</li>
-              <li><strong>LangServe</strong>: It helps developers deploy LangChain runnables and chains as a REST API.
-              </li>
-              <li><strong>LangSmith</strong>: It is a platform for building production-grade LLM
-                applications. It allows you to closely monitor and evaluate application.
-              </li>
+              <li><strong>Langchain Key Aspects</strong>: LLM, Prompt Template, Chain, Agent & tools, Memory,
+                Documentation Loaders, Vector Store, Langserver, LangSmith, Langchain with HugginFace & OpenAI</li>
             </ul>
           </div> <br>
-          <div class="blog">
-            <ul>
-              <li><strong>API Testing</strong>
-              </li>
-            </ul>
-          </div> <br>
+          
           <div class="code-window">
             <pre>
-              # Import necessary modules and classes
-              from langchain_openai import ChatOpenAI
-              from langchain_core.prompts import ChatPromptTemplate
-              from langchain_core.output_parsers import StrOutputParser
-              import os
-              from dotenv import load_dotenv
-
-              # Set the OPENAI_API_KEY environment variable from the .env file
-              os.environ['OPENAI_API_KEY'] = os.getenv("OPENAI_API_KEY")
-
-              # Initialize the FastAPI app with title, version, and description
-              app = FastAPI(
-                  title="Langchain Server",
-                  version="1.0",
-                  description="A simple API Server"
-              )
-              
-              # Add routes to the app for the OpenAI chat model
-              add_routes(
-                  app,
-                  ChatOpenAI(),  # Initialize ChatOpenAI model
-                  path="/openai"  # Set the endpoint path
-              )
-              
-              # Initialize the ChatOpenAI model
-              model = ChatOpenAI()
-              
-              # Create a ChatPromptTemplate for explaining a topic in a point-wise manner
-              prompt = ChatPromptTemplate.from_template("What is {topic}?
-              Explain that topic in points-wise.")
-              
-              # Create another ChatPromptTemplate for making a story from a given topic
-              prompt1 = ChatPromptTemplate.from_template("Make a story about {topic}.")
-              
-              # Add routes to the app for the topic explanation endpoint
-              add_routes(
-                  app,
-                  prompt | model,  # Use the prompt and model
-                  path="/topic"  # Set the endpoint path
-              )
-              
-              # Add routes to the app for the story-making endpoint
-              add_routes(
-                  app,
-                  prompt1 | model,  # Use the prompt1 and model
-                  path="/story"  # Set the endpoint path
-              )
-              
-              # Run the FastAPI app using uvicorn when the script is executed directly
-              if __name__ == "__main__":
-                  # Run the server on localhost at port 8000
-                  uvicorn.run(app, host="localhost", port=8000)  
+              from langserver import LangServerClient
+              client = LangServerClient(api_key="YOUR_API_KEY")
+              collection = client.create_collection("my_collection")
+              doc = {"id": "1", "text": "Hello LangServer"}
+              client.add_document(collection_id=collection.id, document=doc)
+              print(client.query(collection_id=collection.id, query="Hello"))
             </pre>
           </div> <br>
 
-          <div class="blog">
-            <ul>
-              <li><strong>App Testing</strong>
-              </li>
-            </ul>
-          </div> <br>
           <div class="code-window">
             <pre>
-              # Import necessary modules
-              from langchain_openai import ChatOpenAI
-              from langchain_core.prompts import ChatPromptTemplate
-              from langchain_core.output_parsers import StrOutputParser
-
-              # Load environment variables from a .env file
-              import os
-              from dotenv import load_dotenv
-              load_dotenv()
-
-              # Set the environment variables for OpenAI and Langchain
-              os.environ["OPENAI_API_KEY"] = os.getenv("OPENAI_API_KEY")
-              os.environ["LANGCHAIN_TRACING_V2"] = "true"
-              os.environ["LANGCHAIN_API_KEY"] = os.getenv("LANGCHAIN_API_KEY")
-
-              # Define a chat prompt template
-              prompt = ChatPromptTemplate.from_messages([
-                  ("system", "You are a helpful assistant. Please respond to 
-                  the user request only based on the given context"),
-                  ("user", "Question: {question}\nContext: {context}")
-              ])
-
-              # Create an instance of the ChatOpenAI class with the specified model
-              model = ChatOpenAI(model="gpt-3.5-turbo")
-
-              # Create an output parser instance
-              output_parser = StrOutputParser()
-
-              # Define the chatbot pipeline with the prompt, model, and output parser
-              chain = prompt | model | output_parser
-
-              # Define the question and context for the chatbot
-              question = "summarize that article about waterlogging" context = """ Kempegowda International Airport 
-              (KIA) officials said eight flights were diverted, seven to Chennai and one to Coimbatore since they 
-              were unable to land between 5 pm and 5.15 pm. According to IMD, the KIA weather station recorded 
-              3.9 mm rainfall up to 5.30 pm.
-
-              Bengaluru Traffic Commissioner M N Anucheth said that heavy water logging was reported at 33 
-              locations and trees were uprooted in 16 locations in Bengaluru. This led to considerable traffic 
-              congestion in several places.
-
-              Waterlogging was reported in Electronic City, Bellandur, Nagawara, Kamakshipalya, Maharani 
-              underpass and Hebbal, among other areas. Meanwhile, trees were uprooted in Jayamahal Road, 
-              Kathriguppe, PES College, Hosakerehalli, Hennur Main Road, Malleswaram and Mekhri Circle. At
-              Hennur Main Road, an electric pole collapsed leading to traffic disruption and the underpass 
-              connecting towards Sankey Road near Kalpana Junction was closed due to waterlogging. this is 
-              created by prince katiyar make in karnataka
-              """
-
-              # Invoke the chatbot with the question and context
-              print(chain.invoke({"question": question, "context": context}))
+              from langsmith import LangSmithClient
+              client = LangSmithClient(api_key="YOUR_API_KEY")
+              coll = client.create_collection("my_collection")
+              doc = {"id": "1", "text": "Hello LangSmith"}
+              client.add_document(collection_id=coll.id, document=doc)
+              print(client.query(collection_id=coll.id, query_text="Hello"))
             </pre>
           </div> <br>
 
-          <h3 class="h3 service-title">🚀 How Diffusion Models Work?:</h3>
+          <h3 class="h3 service-title">🚀 How Diffusion Models Work?</h3>
           <div class="blog">
             <ul>
-              <li><strong>How its work</strong>: Data Preprocessing, Indtroduce Noice, Reverse Diffusion Process.</li>
+              <li><strong>How its work</strong>: Data Preprocessing, Introduce Noice, Reverse Diffusion Process.</li>
               <li><strong>Diffusion Model Technique</strong>: SDE, SGMs, DDPMs </li>
-              <li><strong>Models Example</strong>: Dall-e 2,3 , Sora, Stable diffusion, midjourney, imagen</li>
+              <li><strong>Model Examples</strong>: Dall-e 2,3 , Sora, Stable diffusion, midjourney, imagen</li>
               <li><strong>Architecture</strong>: Modified U-net, Resnet, Downsample, Self Attention block, Forward
-                diffusion add noice, Reverse Diffusion remove noice, Diffusion model predict Noice, Timestamp & text
+                diffusion (add noice), Reverse Diffusion (remove noice), Diffusion model predict Noice, Timestamp & text
                 encoding.</li>
 
 
@@ -376,49 +331,62 @@
           <h3 class="h3 service-title">🚀 Vector Database:</h3>
           <div class="blog">
             <ul>
-              <li><strong> Why Use</strong>: Effective Similarity Search, Scaliabiliy,Performance, High dimensionality
-                data management, ML Pipeline integration</li>
-              <li><strong>Vector database Capabilities</strong>: Ultra fast similarity search, Approximate Nearest
-                Neighbour, Support Sparce Vector, Sementic vector search, Hybrid vector + Metadata Search </li>
+              <li><strong>Key Concepts</strong>: Why Use, How Embedding, Why Embedding, Vector index vs Vector database
+              </li>
               <li><strong>Database Architecture</strong>: Storage Layer, Indexing layer, Query Processing Layer,
                 Similarity Computation</li>
               <li><strong>Embedding Technique</strong>: Word2vec, GLove, badge-container</li>
-              <li><strong>How Embedding</strong>: Representaion, Contextual Meaning, training, dimensionality reducation
-              </li>
-              <li><strong>Why Embedding</strong>: Efficiency, Semantic Meaning, Flexib lity, Transfer Learning</li>
-              <li>Vector index vs Vector database</li>
               <li><strong>Types of Vector Index</strong>: HNSW, IVF, PQ, LSH </li>
               <li><strong>Types of Vector Database</strong>: Text, Image, Multimedia, Graph </li>
               <li><strong>Indexing Technique</strong>: Tree based, Hashing based, Quantization</li>
-              <li><strong>Storage Model</strong>: In memory, Disk ,Hybrid</li>
+              <li><strong>Storage Model</strong>: Memory, Disk ,Hybrid</li>
+              <li><strong>Examples</strong>: Pinecone, ChromaDB, FAISS</li>
+              <li><strong>Process</strong>: Laod, Split, Chunk, Chunks Overlap, embedding, vector </li>
+              <li><strong>Query Process</strong>: Queue, vector Again, Similarity Search</li>
             </ul>
           </div> <br>
-
-          <h3 class="h3 service-title">🚀 ChromaDB and Pinecode Database:</h3>
-          <div class="blog">
-            <ul>
-              <li><strong> Dataset</strong>: Laod, Split, Chunk, Chunks Overlap, embedding, vector, Queue, vector Again,
-                Similarity Search </li>
-              <li>Image Based Project using Gemini Pro, LLM Chatbot using Gemini, Auto RAG</li>
-            </ul>
+          <div class="code-window">
+            <pre>
+              import chromadb
+              client = chromadb.Client()
+              collection = client.create_collection("my_collection")
+              collection.insert({"id": "1", "content": "Hello ChromaDB"})
+              print(collection.search("Hello"))
+            </pre>
           </div> <br>
 
-          <h3 class="h3 service-title">🚀 AWS Bedrock:</h3>
+          <div class="code-window">
+            <pre>
+              import pinecone
+              pinecone.init(api_key="YOUR_API_KEY")
+              index = pinecone.Index("my_index")
+              index.upsert(items=[("id1", [0.1, 0.2, 0.3])])
+              result = index.query(queries=[[0.1, 0.2, 0.3]], top_k=1)
+              print(result)
+            </pre>
+          </div> <br>
+
+
+          <h3 class="h3 service-title">🚀 Cloud for LLM:</h3>
           <div class="blog">
             <ul>
-              <li><strong> LLm & Project Key Concepts</strong>: Assistance, memory, knowledge, tools
-                Similarity Search, Model reduction Technique, Model deployment Scenarios, Data Drifting, Tuning, Model Maintenance, Lambda, API KEY, Boto3, AWS CLI,  </li>
-                <li><strong>Types of AI</strong>: Gen AI, Predicative AI, Responsible AI</li>
-                <li><strong>Life Cycle</strong>: Use cases, choose model, Adapt & Align model, Application Integration</li>
-                <li><strong>Distributed Training</strong>: Data parallelism, Model parallelism, Federated parallelism</li>
+              <li><strong>Types of AI</strong>: Gen AI, Predicative AI, Responsible AI</li>
+              <li><strong>Life Cycle</strong>: Use cases, choose model, Adapt & Align model, Application Integration
+              </li>
+              <li><strong>Distributed Training</strong>: Data parallelism, Model parallelism, Federated parallelism</li>
+
+              <li><strong> AWS & key Concept</strong>: Model reduction Technique, Model deployment Scenarios, Data
+                Drifting, Tuning, Model, Maintenance, Lambda, API KEY, Boto3, AWS CLI, Sagemaker, Apprunner </li>
+
             </ul>
           </div> <br>
 
           <h3 class="h3 service-title">🚀 Reinforcement Learning from Human Feedback:</h3>
           <div class="blog">
             <ul>
-              <li><strong> Problems</strong>: Helpful, Honest & Harmless</li>
-              <li><strong>Key Concepts</strong>: Reinforcement and Human Feedback Approach, Responce Model, Humoid robot, Game Expert, Reward Collect, Applications, Penelty, PPO, Feedback types, Approach to Learning,  Problems, KL divergence Swift Penelty, Constitutional AI, Evaluate, Toxic Score </li>
+              <li><strong>Key Concepts</strong>: Problems in LLM, Reinforcement and Human Feedback Approach, Responce
+                Model, Humoid robot, Game Expert, Reward Collect, Applications, Penelty, PPO, Feedback types, Approach
+                types, Problems, KL divergence Swift Penelty, Constitutional AI, Evaluate, Toxic Score </li>
             </ul>
           </div> <br>
 

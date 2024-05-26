@@ -1,15 +1,8 @@
 /*-----------------------------------*\
-  #style.css
+  #style.cssact
 \*-----------------------------------*/
 
-a {
-  font-family:  Space Grotesk;
-}
 
-p {
-  font-family:  Space Grotesk;
-
-}
 
 /*-----------------------------------*\
   #CUSTOM PROPERTY
@@ -63,8 +56,7 @@ p {
    * typography
    */
 
-  /* font-family */
-  --ff-poppins: 'Poppins', sans-serif;
+
 
   /* font-size */
   --fs-1: 24px;
@@ -152,7 +144,7 @@ textarea {
 }
 
 ::selection {
-  background: black; /* optional: change background color */
+  background: black; 
   color: yellow;
 }
 
@@ -160,13 +152,10 @@ textarea {
   outline-color: var(--orange-yellow-crayola);
 }
 
-html {
-  font-family: var(--ff-poppins);
-}
+
 
 body {
   font-family: 'Space Grotesk';
-  /* background: var(--smoky-black); */
   color: black;
 }
 
@@ -280,21 +269,10 @@ article.active {
 
 }
 
-/* .article-title::after {
-  content: "";
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  width: 30px;
-  height: 3px;
-  background: #ffdb70;
-  border-radius: 3px;
-} */
-
 .has-scrollbar::-webkit-scrollbar {
-  width: 5px;
+  width: 15px;
   /* for vertical scrollbar */
-  height: 5px;
+  height: 15px;
   /* for horizontal scrollbar */
 }
 
@@ -405,7 +383,6 @@ main {
   font-size: 20px;
   letter-spacing: -0.25px;
   margin-bottom: 10px;
-  font-family: monospace;
 
 }
 
@@ -479,13 +456,11 @@ main {
   display: flex;
   align-items: center;
   gap: 16px;
-  font-family: 'Space Grotesk';
 }
 
 .contact-info {
   max-width: calc(100% - 46px);
   width: calc(100% - 46px);
-  /* font-family: 'Space Grotesk' !important; */
 }
 
 
@@ -499,7 +474,8 @@ main {
 
 .contact-info :is(.contact-link, time, address) {
   color: var(--white-2);
-  font-size: var(--fs-7);
+  /* font-size: var(--fs-7); */
+  font-size: 15px;
 }
 
 .contact-info address {
@@ -557,7 +533,6 @@ main {
   justify-content: center;
   align-items: center;
   padding: 0 10px;
-  font-family: 'Space Grotesk';
 }
 
 .navbar-link {
@@ -592,14 +567,12 @@ main {
 
 .about .article-title {
   margin-bottom: 15px;
-  font-family: 'Space Grotesk';
 
 
 
 }
 
 .about-text {
-  font-family: ' Space Grotesk';
   color: var(--light-gray);
   /* font-size: var(--fs-9); */
   font-size: 17px;
@@ -612,9 +585,8 @@ main {
 
 
 
-/**
- * #service 
- */
+/* #service  */
+
 
 .service {
   margin-bottom: 35px;
@@ -694,6 +666,7 @@ main {
   padding: 25px 15px;
   padding-bottom: 35px;
   overflow-x: auto;
+
   scroll-behavior: smooth;
   overscroll-behavior-inline: contain;
   scroll-snap-type: inline mandatory;
@@ -702,6 +675,7 @@ main {
 .testimonials-item {
   min-width: 100%;
   scroll-snap-align: center;
+  
 }
 
 .testimonials-avatar-box {
@@ -722,7 +696,6 @@ main {
   color: var(--light-gray);
   font-size: var(--fs-6);
   font-weight: var(--fw-300);
-  font-family:  Space Grotesk;
   display: -webkit-box;
   line-clamp: 4;
   line-height: 1.75rem;
@@ -858,43 +831,6 @@ main {
 }
 
 
-/**
- * #clients 
- */
-
-/* .clients {
-  margin-bottom: 15px;
-} */
-
-.clients-list {
-  display: flex;
-  justify-content: flex-start;
-  align-items: flex-start;
-  /* gap: 15px; */
-  margin: 0 -15px;
-  padding: 25px;
-  padding-bottom: 25px;
-  overflow-x: auto;
-  scroll-behavior: smooth;
-  overscroll-behavior-inline: contain;
-  scroll-snap-type: inline mandatory;
-  scroll-padding-inline: 25px;
-}
-
-.clients-item {
-  min-width: 50%;
-  scroll-snap-align: start;
-}
-
-.clients-item img {
-  width: 50%;
-  /* filter: grayscale(1); */
-  transition: var(--transition-1);
-}
-
-.clients-item img:hover {
-  filter: grayscale(0);
-}
 
 
 
@@ -1453,9 +1389,7 @@ textarea.form-input::-webkit-resizer {
    * client
    */
 
-  .clients-item {
-    min-width: calc(33.33% - 10px);
-  }
+
 
 
 
@@ -1730,18 +1664,6 @@ textarea.form-input::-webkit-resizer {
     width: 35px;
   }
 
-  /* clients */
-
-  .clients-list {
-    /* gap: 50px; */
-    margin: 0 -30px;
-    padding: 45px;
-    scroll-padding-inline: 45px;
-  }
-
-  .clients-item {
-    min-width: calc(33.33% - 35px);
-  }
 
 
 
@@ -1928,10 +1850,8 @@ textarea.form-input::-webkit-resizer {
 
 
 
-  /**
-   * CONTACT
-   */
-
+   /* CONTACT */
+  
   .input-wrapper {
     grid-template-columns: 1fr 1fr;
   }
@@ -2044,11 +1964,6 @@ textarea.form-input::-webkit-resizer {
     min-width: calc(50% - 15px);
   }
 
-  /* clients */
-
-  .clients-item {
-    min-width: calc(23% - 65px);
-  }
 
 
 
@@ -2071,8 +1986,6 @@ textarea.form-input::-webkit-resizer {
   }
 
 }
-
-
 
 
 
@@ -2208,11 +2121,7 @@ article {
     text-overflow: ellipsis;
   }
 
-  .contact-info :is(.contact-link, time, address) {
 
-    /* font-weight: var(--fw-300); */
-    font-family: 'Space Grotesk';
-  }
 
   .separator:last-of-type {
     margin: 15px 0;
@@ -2252,12 +2161,6 @@ span {
   color: orange;
 }
 
-h1,
-h4,
-h2,
-h3 {
-  font-family: Space Grotesk;
-}
 
 .video-container {
   position: fixed;
@@ -2296,7 +2199,6 @@ h3 {
   white-space: nowrap;
   vertical-align: baseline;
   border-radius: 0.25rem;
-  font-family: 'Space Grotesk';
   letter-spacing: 1px;
 }
 
@@ -2401,10 +2303,6 @@ h3 {
 
 
 
-.testimonials-text p{
-  font-family: 'Space Grotesk';
-}
-
 
 
 
@@ -2476,14 +2374,13 @@ img:not(.no-hover-effect):hover {
   background-color: #00000073;
   padding: 10px;
   overflow: auto;
-  height: 200px; 
+  height: 166px; 
   border-radius: 10px;
   color: mediumspringgreen;
 }
 
 .code-window pre {
-  font-family: 'Space Grotesk';
-  margin-left: -50px;
+  margin-left: -120px;
 }
 
 
@@ -2515,7 +2412,6 @@ img:not(.no-hover-effect):hover {
   background-color:  #00000073;
   padding: 10px;
   border-radius: 10px;
-  font-family: 'Space Grotesk';
   font-size: 17px;
   color: white;
 }
@@ -2554,7 +2450,6 @@ strong{
   text-transform: uppercase;
   animation: flip 2s infinite;
   animation-delay: calc(.100s * var(--i));
-  font-family: 'Space Grotesk';
   letter-spacing: -4px;
 }
 @keyframes flip {
@@ -2619,11 +2514,11 @@ strong{
 }
 
 .scroll-top {
-  left: 20px; /* Position for the top scroll button */
+  left: 20px; 
 }
 
 .scroll-bottom {
-  right: 20px; /* Position for the bottom scroll button */
+  right: 20px; 
 }
 
 
@@ -2637,7 +2532,7 @@ strong{
 
 
 html {
-  overflow-y: scroll; /* Always show vertical scrollbar */
+  overflow-y: scroll; 
 }
 
 

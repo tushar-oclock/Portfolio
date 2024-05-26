@@ -202,14 +202,13 @@
         </header>
 
         <div class="blog">
-          <ul>
-            <li style="color: lightsalmon; text-align: justify; ">
-              ● Introducation ● Bagging
-            </li>
-          </ul>
+          <div class="testimonials-text" data-testimonials-text>
+            <p>
+              <span class="badge badge-primary">Introduction</span>
+              <span class="badge badge-secondary">Bagging</span>
+            </p>
+          </div>
         </div> <br>
-
-
         <section class="about-text with-line">
         </section>
 
@@ -231,43 +230,19 @@
           <h3 class="h3 service-title">🚀Bagging</h3>
           <div class="blog">
             <ul>
-              <li><strong>Key concepts</strong>: Bootstraping, Aggregation, OOB samples, </li>
+              <li><strong>Key concepts</strong>: Bootstraping, Aggregation, OOB samples </li>
               <li><strong>Types</strong>: Pasting(raw Sampling), Random Subspaces, Random Patches </li>
-              <li><strong>Tips</strong>: Better result in pasting, 0.25 to 0.50 get better result for raw sampling, Random patches and subspace used in high dimensional data, Hyperparameter tuning in base model</li>
+              <li><strong>Tips</strong>: Better result in pasting, 0.25 to 0.50 for raw sampling, Random patches and subspace needs high dimensional data, Hyperparameter Tuning in base model</li>
             </ul>
           </div> <br>
           <div class="code-window">
             <pre>
-              from sklearn.datasets import load_iris
-              from sklearn.model_selection import train_test_split
-              from sklearn.tree import DecisionTreeClassifier
+              #BAGGING
               from sklearn.ensemble import BaggingClassifier
-              from sklearn.metrics import accuracy_score
-              
-              # Load the Iris dataset
-              iris = load_iris()
-              X, y = iris.data, iris.target
-              
-              # Split the dataset into training and testing sets
-              X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.3, random_state=42)
-              
-              # Create a Decision Tree classifier
-              base_estimator = DecisionTreeClassifier()
-              
-              # Create a Bagging classifier with the Decision Tree as the base estimator
-              bagging_clf = BaggingClassifier(base_estimator=base_estimator,
-              n_estimators=50, random_state=42)
-              
-              # Train the Bagging classifier
+              from sklearn.tree import DecisionTreeClassifier
+              base_clf = DecisionTreeClassifier()
+              bagging_clf = BaggingClassifier(base_clf, n_estimators=50)
               bagging_clf.fit(X_train, y_train)
-              
-              # Predict on the test set
-              y_pred = bagging_clf.predict(X_test)
-              
-              # Calculate the accuracy
-              accuracy = accuracy_score(y_test, y_pred)
-              print(f"Accuracy: {accuracy:.2f}")
-              
             </pre>
           </div> <br>
 

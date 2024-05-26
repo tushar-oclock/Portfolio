@@ -202,13 +202,14 @@
         </header>
 
         <div class="blog">
-          <ul>
-            <li style="color: lightsalmon; text-align: justify; " >
-              ● Introduction ● Encoding Categorical & Numerical Feature ● Pipeline & Sklearn Deep Dive
-            </li>
-          </ul>
+          <div class="testimonials-text" data-testimonials-text>
+            <p>
+              <span class="badge badge-primary">Introduction</span>
+              <span class="badge badge-secondary">Features Encoding</span>
+              <span class="badge badge-success">Pipeline & Sklearn</span>
+            </p>
+          </div>
         </div> <br>
-
         <section class="about-text with-line">
         </section>
 
@@ -217,106 +218,60 @@
           <h3 class="h3 service-title">🚀 Introduction:</h3>
           <div class="blog">
             <ul>
-              <li><strong>Ken Aspects</strong>: Creation of New feature, feature Transformation, Feature Selection, Feature Extraction, Handling missing values, Encoding Categorical variables</li>
-              <li><strong>Feature Transformation</strong>: imputation, outlier removal, Matametic Transformation(log, box-cox, feature scaling)</li>
-              <li><strong>Feature Encoding</strong>Handling categorical feature, Discretization </li>
-              <li><strong>Feature Selection</strong>: Filter, wrapped, Embedded</li>
+              <li><strong>Working with Missing Values</strong>: CCA, Indicators, KNN Imputer, MICE</li>
+              <li><strong>Handling Outliers</strong>: Z Score, IQR, Percentile</li>
+              <li><strong>Feature Transformation</strong>: Log, Box cox, Yeo Johnson, Discretization</li>
+              <li><strong>Feature Scaling</strong>: Standarization, Normalization</li>
+              <li><strong>Feature Encoding</strong>Ordinal Enconding and Label Encoding, One Hot Encoding, Hashing, Cardinality  </li>
+              <li><strong>Feature Selection</strong>: Filter, wrapped, Embedded, SelectKBest, Chi-squared, Recursive Feature Elimination, Backward Feature Elimination, Pearson correlation coefficient, Random Forest</li>
               <li><strong>Feature Extraction</strong>: PCA, LDA, TSNE</li>
+              <li><strong>Handling Imbalanced Data</strong>: Smote, Quora</li>
+              <li><strong>Hnadling Multicollienearity</strong>: VIF</li>
             </ul>
           </div> <br>
 
-          <h3 class="h3 service-title">🚀 Encoding Categorical & Numerical Features:</h3>
+
+
+          <h3 class="h3 service-title">🚀Features Encoding:</h3>
           <div class="blog">
             <ul>
-              <li><strong>Categorical Data</strong>: Ordinal & Nominal, </li>
               <li><strong>Categorical to numerical</strong>: Ordinal, Onehot, Target Encoding, Frequency Encoding</li>
               <li><strong>Numerical to Column</strong>: Discretization</li>
               <li><strong>Target Column</strong>: label Encoding, Label binarization, Multi label binarization</li>
               <li><strong> Handling Rare category</strong>: Exclusion, Aggrigation, Special Treatment(Min, Max)  </li>
-              <li><strong>More Encoding Technique</strong>: Count Encoder, Frequency Encoder, Binary Encoder, Target Encoder, </li>
+              <li><strong>More Encoding Technique</strong>: Count, Frequency, Binary, Target</li>
             </ul>
           </div> <br>
 
-          <div class="blog">
-            <ul>
-              <li><strong>Ordinal Encoding</strong>:</li>
-            </ul>
-          </div> <br>
           <div class="code-window">
             <pre>
-              import pandas as pd
+              Ordinal Encoding
               from sklearn.preprocessing import OrdinalEncoder
-
-              # Sample data
-              data = {'category': ['low', 'medium', 'high', 'medium', 'low']}
-              df = pd.DataFrame(data)
-
-              # Initialize the OrdinalEncoder
-              encoder = OrdinalEncoder(categories=[['low', 'medium', 'high']])
-
-              # Fit and transform the data
-              df['category_encoded'] = encoder.fit_transform(df[['category']])
-
-              print(df)
+              data = [['small'], ['medium'], ['large'], ['medium'], ['small']]
+              encoder = OrdinalEncoder()
+              encoded_data = encoder.fit_transform(data)
+              print(encoded_data)
             </pre>
           </div> <br>
 
-          <div class="blog">
-            <ul>
-              <li><strong>Label Encoding</strong>:</li>
-            </ul>
-          </div> <br>
           <div class="code-window">
             <pre>
-              import pandas as pd
+              #LABEL ENCODING
               from sklearn.preprocessing import LabelEncoder
-              
-              # Sample data
-              data = {'category': ['apple', 'banana', 'cherry', 'banana', 'apple']}
-              df = pd.DataFrame(data)
-              
-              import pandas as pd
-              from sklearn.preprocessing import LabelEncoder
-              
-              # Sample data
-              data = {'category': ['apple', 'banana', 'cherry', 'banana', 'apple']}
-              df = pd.DataFrame(data)
-              
-              # Initialize the LabelEncoder
+              data = ['apple', 'orange', 'banana', 'apple', 'banana']
               encoder = LabelEncoder()
-              
-              # Fit and transform the data
-              df['category_encoded'] = encoder.fit_transform(df['category'])
-              
-              print(df)
+              encoded_data = encoder.fit_transform(data)
+              print(encoded_data)
             </pre>
           </div> <br>
 
-          <div class="blog">
-            <ul>
-              <li><strong>Onehot Encoding</strong>:</li>
-            </ul>
-          </div> <br>
           <div class="code-window">
             <pre>
+              #ONE HOT ENCODING
               import pandas as pd
-              from sklearn.preprocessing import OneHotEncoder
-              
-              # Sample data
-              data = {'category': ['apple', 'banana', 'cherry', 'banana', 'apple']}
-              df = pd.DataFrame(data)
-              
-              # Initialize the OneHotEncoder
-              encoder = OneHotEncoder(sparse=False)
-              
-              # Fit and transform the data
-              encoded_data = encoder.fit_transform(df[['category']])
-              
-              # Create a DataFrame with the encoded data
-              df_one_hot = pd.DataFrame(encoded_data, 
-              columns=encoder.get_feature_names_out(['category']))
-              
-              print(df_one_hot)
+              data = pd.DataFrame({'category': ['A', 'B', 'A', 'C', 'B']})
+              encoded_data = pd.get_dummies(data)
+              print(encoded_data)
             </pre>
           </div> <br>
 

@@ -196,24 +196,27 @@
 
       <!-- BLOG -->
       <article class="about  active" data-page="about">
-
         <header>
           <h2 class="h2 article-title">📛 Structure Query Language</h2>
         </header>
 
         <div class="blog">
-          <ul>
-            <li style="color: lightsalmon; text-align: justify; " >
-              ● Database ● SQL DDL Commands ● SQL DML Commands ● SQL Grouping  + Sorting ● SQL Joins & Operations ● Subqueries in SQL
-            </li>
-          </ul>
+          <div class="testimonials-text" data-testimonials-text>
+            <p>
+              <span class="badge badge-primary">Database</span>
+              <span class="badge badge-secondary">DDL Commands</span>
+              <span class="badge badge-success">DML Commands</span>
+              <span class="badge badge-yellow">Grouping  + Sorting</span>
+              <span class="badge badge-danger">Joins & Operations</span>
+              <span class="badge badge-warning">Subqueries</span>
+
+            </p>
+          </div>
         </div> <br>
-
-
         <section class="about-text with-line">
         </section>
-        <section class="about-text">
 
+        <section class="about-text">
           <h3 class="h3 service-title">🚀 Database:</h3>
           <div class="blog">
             <ul>
@@ -233,7 +236,6 @@
             </ul>
 
           </div> <br>
-
           <h3 class="h3 service-title">🚀 SQL DDL Commands:</h3>
           <div class="blog">
             <ul>
@@ -243,28 +245,29 @@
           </div> <br>
           <div class="code-window">
             <pre>
-              -- Create a new database named 'my_database'
-              CREATE DATABASE my_database;
-              
-              -- Create a table named 'employees' in the 'my_database' database
-              CREATE TABLE my_database.employees (
-                  id INT PRIMARY KEY, -- Employee ID
-                  name VARCHAR(100) NOT NULL, -- Employee Name
-                  position VARCHAR(50), -- Employee Position
-                  salary DECIMAL(10, 2), -- Employee Salary
-                  hire_date DATE -- Employee Hire Date
+              -- Create a Customers table
+              CREATE TABLE Customers (
+                CustomerID INT PRIMARY KEY,
+                FirstName VARCHAR(50),
+                LastName VARCHAR(50)
               );
-              
-              -- Add a new column named 'department' to the 'employees' table
-              ALTER TABLE my_database.employees
-              ADD department VARCHAR(50); -- Employee Department
-              
-              -- Drop the 'employees' table from the 'my_database' database
-              DROP TABLE my_database.employees;
-              
-              -- Remove all records from the 'employees' table in the 'my_database' database
-              TRUNCATE TABLE my_database.employees;
-              
+            </pre>
+          </div> <br>
+          <div class="code-window">
+            <pre>
+              -- Add Email column to Customers table
+              ALTER TABLE Customers
+              ADD Email VARCHAR(100);
+              -- Delete Customers table (caution!)
+              DROP TABLE Customers;
+            </pre>
+          </div> <br>
+          <div class="code-window">
+            <pre>
+              -- Remove all data from Customers table
+              TRUNCATE TABLE Customers;
+              -- Rename Customers table to OldCustomers
+              RENAME TABLE Customers TO OldCustomers;
             </pre>
           </div> <br>
 
@@ -277,25 +280,22 @@
           </div> <br>
           <div class="code-window">
             <pre>
-              -- Insert a new record into the employees table
-              INSERT INTO employees (first_name, last_name, age)
-              VALUES ('John', 'Doe', 30);
-              
-              -- Select the first name and last name of employees older than 25
-              SELECT first_name, last_name
-              FROM employees
-              WHERE age > 25;
-              
-              -- Update the age of employee John Doe to 31
-              UPDATE employees
-              SET age = 31
-              WHERE first_name = 'John' AND last_name = 'Doe';
-              
-              -- Delete employees older than 65
-              DELETE FROM employees
-              WHERE age > 65;
-              
-              TRUNCATE TABLE my_database.employees;
+              -- Insert a new customer
+              INSERT INTO Customers (CustomerID, FirstName, LastName)
+              VALUES (1001, 'John', 'Doe');
+              UPDATE Customers   -- Update John Doe's email address
+              SET Email = 'johndoe@example.com'
+              WHERE CustomerID = 1001;
+            </pre>
+          </div> <br>
+          <div class="code-window">
+            <pre>
+              -- Delete all customers with last name Smith
+              DELETE FROM Customers
+              WHERE LastName = 'Smith';
+              -- Select customer information
+              SELECT CustomerID, FirstName, LastName, Email
+              FROM Customers;
             </pre>
           </div> <br>
 
@@ -308,35 +308,27 @@
           </div> <br>
           <div class="code-window">
             <pre>
-              import pandas as pd
-
-              # Sample data
-              data = {
-                  'salesperson': ['Alice', 'Bob', 'Alice', 'Bob', 'Charlie', 'Charlie', 'David', 'David'],
-                  'region': ['North', 'North', 'South', 'South', 'North', 'South', 'North', 'South'],
-                  'sales': [250, 200, 150, 300, 450, 500, 300, 250]
-              }
-              
-              df = pd.DataFrame(data)
-              
-              # Display the DataFrame
-              print("Original DataFrame:")
-              print(df)
-              
-              # Sorting
-              sorted_df = df.sort_values(by='sales', ascending=False)
-              print("\nDataFrame sorted by sales in descending order:")
-              print(sorted_df)
-              
-              # Grouping
-              grouped_df = df.groupby('salesperson').sum().reset_index()
-              print("\nGrouped DataFrame by salesperson with total sales:")
-              print(grouped_df)
-              
-              # Having
-              filtered_df = grouped_df[grouped_df['sales'] > 400]
-              print("\nFiltered DataFrame with total sales greater than 400:")
-              print(filtered_df)
+              -- Select customers ordered by last name (ascending)
+              SELECT CustomerID, FirstName, LastName, Email
+              FROM Customers
+              ORDER BY LastName ASC;              
+            </pre>
+          </div> <br>
+          <div class="code-window">
+            <pre>
+              -- Group customers by country and count the number in each country
+              SELECT Country, COUNT(*) AS CustomerCount
+              FROM Customers
+              GROUP BY Country;              
+            </pre>
+          </div> <br>
+          <div class="code-window">
+            <pre>
+              -- Group customers by country  with more than 10 customers
+              SELECT Country, COUNT(*) AS CustomerCount
+              FROM Customers
+              GROUP BY Country
+              HAVING COUNT(*) > 10;
             </pre>
           </div> <br>
 
@@ -350,49 +342,28 @@
           </div> <br>
           <div class="code-window">
             <pre>
-              -- INNER JOIN: 
-              SELECT employees.*, departments.*
-              FROM employees
-              INNER JOIN departments ON employees.department_id = departments.department_id;
-              
-              -- LEFT JOIN (or LEFT OUTER JOIN): 
-              SELECT employees.*, departments.*
-              FROM employees
-              LEFT JOIN departments ON employees.department_id = departments.department_id;
-              
-              -- RIGHT JOIN (or RIGHT OUTER JOIN): 
-              SELECT employees.*, departments.*
-              FROM employees
-              RIGHT JOIN departments ON employees.department_id = departments.department_id;
-              
-              -- FULL JOIN (or FULL OUTER JOIN): 
-              SELECT employees.*, departments.*
-              FROM employees
-              FULL JOIN departments ON employees.department_id = departments.department_id;
-              
-              -- CROSS JOIN: 
-              SELECT employees.*, departments.*
-              FROM employees
-              CROSS JOIN departments;              
+              -- Select order details with customer names
+              SELECT o.OrderID, o.OrderDate, c.FirstName, c.LastName
+              FROM Orders o  -- Alias for Orders table
+              INNER JOIN Customers c  -- Join with Customers table
+              ON o.CustomerID = c.CustomerID;  -- Join condition on matching CustomerID
             </pre>
           </div> <br>
 
           <h3 class="h3 service-title">🚀 Subqueries in SQL:</h3>
           <div class="blog">
             <ul>
-              <li><strong> Types of Subqueries</strong>: The result is return(scaler, Raw, Table), Based on working(Independent and Correlated)</li>
-              <li>Subqueries used in insert select(Where, Select, From. Having), update, delete</li>
+              <li><strong> Types of Subqueries</strong>: The result is return(scaler, Raw, Table), Based on working(Independent and Correlated), Subqueries used in insert select(Where, Select, From. Having), update, delete</li>
             </ul>
           </div> <br>
-
           <div class="code-window">
             <pre>
-              SELECT employee_id, first_name, last_name, salary
-               -- Selecting columns from the employees table
-              FROM employees
-              WHERE salary > (SELECT AVG(salary) FROM employees); 
-              -- Filtering rows where salary is greater than the average salary
-                 
+              -- Never Ordered Products
+              SELECT p.*
+              FROM Products p
+              WHERE p.ProductID NOT IN ( SELECT ProductID
+                FROM OrderItems
+              );
             </pre>
           </div> <br>
 

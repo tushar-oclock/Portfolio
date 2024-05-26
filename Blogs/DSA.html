@@ -198,17 +198,14 @@
       <article class="about  active" data-page="about">
 
         <header>
-          <h2 class="h2 article-title">📛 Unsupervised Learning</h2>
+          <h2 class="h2 article-title">📛 Data Structure and Algorithm</h2>
         </header>
 
         <div class="blog">
           <div class="testimonials-text" data-testimonials-text>
             <p>
-              <span class="badge badge-primary">Introduction</span>
-              <span class="badge badge-secondary">K-Mean Clustering</span>
-              <span class="badge badge-success">DBSCAN</span>
-              <span class="badge badge-yellow">Hierarchical Clustring</span>
-              <span class="badge badge-danger">Gaussian Mixture Models</span>
+              <span class="badge badge-primary">Algorithmic Complexity</span>
+              <span class="badge badge-secondary">Bagging</span>
             </p>
           </div>
         </div> <br>
@@ -217,106 +214,27 @@
 
         <section class="about-text">
 
-          <h3 class="h3 service-title">🚀 Introduction:</h3>
+
+
+          <h3 class="h3 service-title">🚀Algorithmic Complexity</h3>
           <div class="blog">
             <ul>
-              <li><strong> Unsupervised Leanring</strong>: Clustering, Association, Dimenionality reducation, Anomaly
-                detection, Language model</li>
-              <li> <strong>Application of Clustering</strong>: Segmentation, Analysis, Semi Supervised</li>
-              <li><strong>Types</strong>: Partitional, Hierarchical, Density based, Distribution, Graph based, Soft vs
-                Hard </li>
+              <li><strong>Methods</strong>: Measuring time, Counting operations, Order of Growth </li>
+              <li><strong>Order of Growth</strong>: Constant, Linear, Quadratic, Logarithmic, Nlogn, Exponential </li>
+              <li><strong>Complexity Growth</strong>: O(1), O(log n), O(n), O(n logn), O(n^2), O(2^n)  </li>
             </ul>
           </div> <br>
 
-          <h3 class="h3 service-title">🚀 K-Mean Clustering:</h3>
-          <div class="blog">
-            <ul>
-              <li><strong> Process</strong>: Decide k, Initialize centroids, start iteration, Assign cluster, move
-                centroid, check & stop</li>
-              <li> <strong>Matrix</strong>: Intra cluster, inter cluster & Dunn Index </li>
-              <li><strong>Hyperparameter</strong>: K choose by Elbow method & Silhouette Score(Cohesion),
-                Initialization Method, n_init, max_iter, tolerance </li>
-              <li><strong>Updated version</strong>: Kmean++, K-medoids, lloyd & Elkan Algorithm, Mini Batch K mean</li>
 
 
-            </ul>
-
-          </div> <br>
-          <div class="code-window">
-            <pre>
-              from sklearn.cluster import KMeans
-              import numpy as np
-              X = np.array([[1, 2], [2, 2], [2, 3], [8, 7], [8, 8], [25, 80]])
-              kmeans = KMeans(n_clusters=2, random_state=0)
-              y_kmeans = kmeans.fit_predict(X)
-              print("Cluster labels:", y_kmeans)
-            </pre>
-          </div> <br>
-
-          <h3 class="h3 service-title">🚀 DBSCAN:</h3>
-          <div class="blog">
-            <ul>
-              <li><strong>Density Based Algorithm</strong>: DBSCAN and OPTICS</li>
-              <li><strong>Key Concepts</strong>: Minpts & Epsilon, Core, Border, Noice Points, Density Connected points,
-                Direct Density Reachable, Advantages and Disadvantages </li>
-              <li><strong>Hyperparameter</strong>: Eps & MinPts</li>
-              <li><strong>Application areas</strong>: Geography data, Anomaly, Image processing, bioinformative,
-                Astronomy, Traffic analysis, Data mining, Social network, Customer Segmentation</li>
-            </ul>
-          </div> <br>
-          <div class="code-window">
-            <pre>
-              from sklearn.cluster import DBSCAN
-              import numpy as np
-              X = np.array([[1, 2], [2, 2], [2, 3], [8, 7], [8, 8], [25, 80]])
-              dbscan = DBSCAN(eps=3, min_samples=2)
-              y_dbscan = dbscan.fit_predict(X)
-              print("Cluster labels:", y_dbscan)
-          </pre>
-          </div> <br>
-
-          <h3 class="h3 service-title">🚀 Hierarchical Clustring:</h3>
-          <div class="blog">
-            <ul>
-              <li><strong>Types</strong>: Agglomerative (Bottom-up Approach) and Divisive (Top-Down apprach)</li>
-              <li><strong>Alogorithm</strong>: Initialization, Compute distance Matrix, Find the closest, Merge Cluster,
-                Update Distance Matrix, Repeat</li>
-            <li><strong>key Concepts</strong>: linkage, Proximity, Dendogram, Advantages, Disadvantages</li>
-            <li><strong>Find number of Clusters</strong>: Dendogram</li>
-            <li><strong>Linkage</strong>: Hyperparameter, Min(Single Linkage), Max(Complete Linkage), Average Method,
-              Ward
-              Method</li>
-
-          </div> <br>
-          <div class="code-window">
-            <pre>
-              from sklearn.cluster import AgglomerativeClustering
-              import numpy as np
-              X = np.random.rand(100, 2)
-              clustering = AgglomerativeClustering(n_clusters=2).fit(X)
-              labels = clustering.labels_
-        </pre>
-          </div> <br>
-
-          <h3 class="h3 service-title">🚀 Gaussian Mixture Models:</h3>
-          <div class="blog">
-            <ul>
-              <li><strong>Key Concepts</strong>: Model based Clustering, EM Algorithm, KDE, Soft vs Hard </li>
-              <li><strong>Covarience Type</strong>: Spherical, Diagonal, Tied, Full</li>
-              <li><strong>Hyperparameter</strong>: Covarience type, Decide N Component (AIC & BIC) </li>
-          </div> <br>
-          <div class="code-window">
-            <pre>
-              from sklearn.mixture import GaussianMixture
-              import numpy as np
-              X = np.random.rand(100, 2)
-              gmm = GaussianMixture(n_components=2, random_state=0).fit(X)
-              labels = gmm.predict(X)
-        </pre>
-          </div> <br>
 
         </section>
       </article>
+
+
+
+
+
     </div>
 
 

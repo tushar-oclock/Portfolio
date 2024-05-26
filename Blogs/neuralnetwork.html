@@ -198,17 +198,16 @@
       <article class="about  active" data-page="about">
 
         <header>
-          <h2 class="h2 article-title">📛 Unsupervised Learning</h2>
+          <h2 class="h2 article-title">📛 Neural Network</h2>
         </header>
 
         <div class="blog">
           <div class="testimonials-text" data-testimonials-text>
             <p>
               <span class="badge badge-primary">Introduction</span>
-              <span class="badge badge-secondary">K-Mean Clustering</span>
-              <span class="badge badge-success">DBSCAN</span>
-              <span class="badge badge-yellow">Hierarchical Clustring</span>
-              <span class="badge badge-danger">Gaussian Mixture Models</span>
+              <span class="badge badge-secondary">Loss Function, Activation, Output</span>
+              <span class="badge badge-success"> MLP Notation</span>
+              <span class="badge badge-danger">Problems and Improvement</span>
             </p>
           </div>
         </div> <br>
@@ -217,106 +216,62 @@
 
         <section class="about-text">
 
-          <h3 class="h3 service-title">🚀 Introduction:</h3>
+
+
+          <h3 class="h3 service-title">🚀Introduction</h3>
           <div class="blog">
             <ul>
-              <li><strong> Unsupervised Leanring</strong>: Clustering, Association, Dimenionality reducation, Anomaly
-                detection, Language model</li>
-              <li> <strong>Application of Clustering</strong>: Segmentation, Analysis, Semi Supervised</li>
-              <li><strong>Types</strong>: Partitional, Hierarchical, Density based, Distribution, Graph based, Soft vs
-                Hard </li>
+              <li><strong>Key Concepts</strong>: What is Deep leanring?, Why DL famous?, DL VS ML, Framework,
+                Architecture</li>
+              <li><strong>Types</strong>: ANN(supervised
+                problem), CNN(images), RNN(text and speech), Autoencode, GAN(Generator)</li>
+              <li><strong>Pretrain Model Example</strong>: resnet (image Classification), bert(text Classification),
+                unet (segmentation), Pix2Pix (image translation), Yolo(object), wavenet(speech generation)</li>
+              <li><strong>Perceptron Algorithm</strong>: W^new = W^old - learning rate *xi</li>
+              <li><strong>Perceptron</strong>: Peceptrone vs Neuron, Perceptron Trick, Problem with Perceptron, SIgmoid
+                Function, Loss Function , Hinge Loss, binary cross entropy, Gradient Descent</li>
             </ul>
           </div> <br>
 
-          <h3 class="h3 service-title">🚀 K-Mean Clustering:</h3>
+          <h3 class="h3 service-title">🚀Loss Function, Activation, Output</h3>
           <div class="blog">
             <ul>
-              <li><strong> Process</strong>: Decide k, Initialize centroids, start iteration, Assign cluster, move
-                centroid, check & stop</li>
-              <li> <strong>Matrix</strong>: Intra cluster, inter cluster & Dunn Index </li>
-              <li><strong>Hyperparameter</strong>: K choose by Elbow method & Silhouette Score(Cohesion),
-                Initialization Method, n_init, max_iter, tolerance </li>
-              <li><strong>Updated version</strong>: Kmean++, K-medoids, lloyd & Elkan Algorithm, Mini Batch K mean</li>
-
-
-            </ul>
-
-          </div> <br>
-          <div class="code-window">
-            <pre>
-              from sklearn.cluster import KMeans
-              import numpy as np
-              X = np.array([[1, 2], [2, 2], [2, 3], [8, 7], [8, 8], [25, 80]])
-              kmeans = KMeans(n_clusters=2, random_state=0)
-              y_kmeans = kmeans.fit_predict(X)
-              print("Cluster labels:", y_kmeans)
-            </pre>
-          </div> <br>
-
-          <h3 class="h3 service-title">🚀 DBSCAN:</h3>
-          <div class="blog">
-            <ul>
-              <li><strong>Density Based Algorithm</strong>: DBSCAN and OPTICS</li>
-              <li><strong>Key Concepts</strong>: Minpts & Epsilon, Core, Border, Noice Points, Density Connected points,
-                Direct Density Reachable, Advantages and Disadvantages </li>
-              <li><strong>Hyperparameter</strong>: Eps & MinPts</li>
-              <li><strong>Application areas</strong>: Geography data, Anomaly, Image processing, bioinformative,
-                Astronomy, Traffic analysis, Data mining, Social network, Customer Segmentation</li>
+              <li><strong>Hinge Loss</strong>: Activation funcation step with Output Binary Classification (Perceptron)</li>
+              <li><strong>Log loss</strong>: Activation funcation sigmoid with Output Binary Classification (Logestic Regression)</li>
+              <li><strong>Categorical Cross Entropy</strong>: Activation funcation softmax with Output Multi Class Classification (Probabilstic)</li>
+              <li><strong>MSE</strong>: Activation funcation Linear with Output numbers (Linear Regression)</li>
             </ul>
           </div> <br>
-          <div class="code-window">
-            <pre>
-              from sklearn.cluster import DBSCAN
-              import numpy as np
-              X = np.array([[1, 2], [2, 2], [2, 3], [8, 7], [8, 8], [25, 80]])
-              dbscan = DBSCAN(eps=3, min_samples=2)
-              y_dbscan = dbscan.fit_predict(X)
-              print("Cluster labels:", y_dbscan)
-          </pre>
-          </div> <br>
 
-          <h3 class="h3 service-title">🚀 Hierarchical Clustring:</h3>
+
+          <h3 class="h3 service-title">🚀 MLP Notation</h3>
           <div class="blog">
             <ul>
-              <li><strong>Types</strong>: Agglomerative (Bottom-up Approach) and Divisive (Top-Down apprach)</li>
-              <li><strong>Alogorithm</strong>: Initialization, Compute distance Matrix, Find the closest, Merge Cluster,
-                Update Distance Matrix, Repeat</li>
-            <li><strong>key Concepts</strong>: linkage, Proximity, Dendogram, Advantages, Disadvantages</li>
-            <li><strong>Find number of Clusters</strong>: Dendogram</li>
-            <li><strong>Linkage</strong>: Hyperparameter, Min(Single Linkage), Max(Complete Linkage), Average Method,
-              Ward
-              Method</li>
-
-          </div> <br>
-          <div class="code-window">
-            <pre>
-              from sklearn.cluster import AgglomerativeClustering
-              import numpy as np
-              X = np.random.rand(100, 2)
-              clustering = AgglomerativeClustering(n_clusters=2).fit(X)
-              labels = clustering.labels_
-        </pre>
+              <li><strong>Key Concepts</strong>: Nodes, Layers, Biases, Weight, Forward Propagation, Epochs, Activation Funcation, Optimizer, Loss function vs Cost funcation, Backpropagation, Gradient Descent, Learning rate, Convergence, Memoization, Batch Gradient Descent or Vanilla Gradient Descent, Stochastic Gradient Descent, Mini Batch gradient descent </li>
+              <li><strong>Loss Function</strong>: Regression - mse(L2 Loss), (L1 Loss), Huber loss, Classification - Binary cross entropy(Log Loss), categorical cross entropy, hinge
+                loss, Autoencoder - KL divergence, GAN - Discriminator loss, minmax gan loss, Object detection - Focal loss, Embedding - Tripted loss
+              </li>
+            </ul>
           </div> <br>
 
-          <h3 class="h3 service-title">🚀 Gaussian Mixture Models:</h3>
+
+          <h3 class="h3 service-title">🚀 Problems and Improvement</h3>
           <div class="blog">
             <ul>
-              <li><strong>Key Concepts</strong>: Model based Clustering, EM Algorithm, KDE, Soft vs Hard </li>
-              <li><strong>Covarience Type</strong>: Spherical, Diagonal, Tied, Full</li>
-              <li><strong>Hyperparameter</strong>: Covarience type, Decide N Component (AIC & BIC) </li>
-          </div> <br>
-          <div class="code-window">
-            <pre>
-              from sklearn.mixture import GaussianMixture
-              import numpy as np
-              X = np.random.rand(100, 2)
-              gmm = GaussianMixture(n_components=2, random_state=0).fit(X)
-              labels = gmm.predict(X)
-        </pre>
+              <li><strong>Vanishing Gradient problem</strong>: Reduce Model Complexity, Different activation functions like Relu, Proper weight initialization,  Batch Normalization, Use a Residual Network</li>
+              <li><strong>Exploding Gradient Problem</strong>: Gradient clipping</li>
+              <li><strong> Performance of Neural Networks</strong>: </li>
+
+            </ul>
           </div> <br>
 
         </section>
       </article>
+
+
+
+
+
     </div>
 
 
