@@ -222,7 +222,7 @@
               <li><strong>Handling Outliers</strong>: Z Score, IQR, Percentile</li>
               <li><strong>Feature Transformation</strong>: Log, Box cox, Yeo Johnson, Discretization</li>
               <li><strong>Feature Scaling</strong>: Standarization, Normalization</li>
-              <li><strong>Feature Encoding</strong>Ordinal Enconding and Label Encoding, One Hot Encoding, Hashing, Cardinality  </li>
+              <li><strong>Feature Encoding</strong>: Ordinal Enconding and Label Encoding, One Hot Encoding, Hashing, Cardinality  </li>
               <li><strong>Feature Selection</strong>: Filter, wrapped, Embedded, SelectKBest, Chi-squared, Recursive Feature Elimination, Backward Feature Elimination, Pearson correlation coefficient, Random Forest</li>
               <li><strong>Feature Extraction</strong>: PCA, LDA, TSNE</li>
               <li><strong>Handling Imbalanced Data</strong>: Smote, Quora</li>
@@ -236,10 +236,12 @@
           <div class="blog">
             <ul>
               <li><strong>Categorical to numerical</strong>: Ordinal, Onehot, Target Encoding, Frequency Encoding</li>
-              <li><strong>Numerical to Column</strong>: Discretization</li>
+              <li><strong>Numerical to Column</strong>: Discretization / Binning</li>
               <li><strong>Target Column</strong>: label Encoding, Label binarization, Multi label binarization</li>
               <li><strong> Handling Rare category</strong>: Exclusion, Aggrigation, Special Treatment(Min, Max)  </li>
               <li><strong>More Encoding Technique</strong>: Count, Frequency, Binary, Target</li>
+              <li><strong>Weight of Evidence</strong>: Discretization, Binary classification, Financial domain, Use cases, Binning,  </li>
+              <li><strong>Binning Types</strong>: Custom, Uniform, Quantile, K-mean, Decision Tree based, Threshold Binning</li>
             </ul>
           </div> <br>
 
@@ -282,7 +284,16 @@
               <li><strong>Transformers</strong>: Estimators, Custom Estimators, Mixins, Composite Transformers, Feature Union</li>
             </ul>
           </div> <br>
-
+          <div class="code-window">
+            <pre>
+              pipeline = Pipeline([
+              ('imputer', SimpleImputer(strategy='mean')),
+              ('scaler', StandardScaler()),
+              ('pca', PCA(n_components=2)),
+              ('logreg', LogisticRegression())
+             ])
+            </pre>
+          </div> <br>
 
 
         </section>

@@ -573,7 +573,8 @@ main {
 }
 
 .about-text {
-  color: var(--light-gray);
+  /* color: var(--light-gray); */
+  color: white;
   /* font-size: var(--fs-9); */
   font-size: 17px;
   text-align: justify;
@@ -2496,12 +2497,11 @@ strong{
 
 .scroll-button {
   position: fixed;
-  bottom: 20px; /* Adjust as needed */
+  bottom: 20px; 
   z-index: 9999;
   font-size: 24px;
   padding: 10px 15px;
   cursor: pointer;
-  /* background-color: #333; */
   color: #fff;
   border: none;
   border-radius: 5px;
@@ -2520,7 +2520,6 @@ strong{
 .scroll-bottom {
   right: 20px; 
 }
-
 
 
 @media (min-width: 768px) {

@@ -209,6 +209,7 @@
               <span class="badge badge-success">DBSCAN</span>
               <span class="badge badge-yellow">Hierarchical Clustring</span>
               <span class="badge badge-danger">Gaussian Mixture Models</span>
+              <span class="badge badge-warning">TSNE</span>
             </p>
           </div>
         </div> <br>
@@ -312,6 +313,26 @@
               X = np.random.rand(100, 2)
               gmm = GaussianMixture(n_components=2, random_state=0).fit(X)
               labels = gmm.predict(X)
+        </pre>
+          </div> <br>
+
+          <h3 class="h3 service-title">🚀 TSNE:</h3>
+          <div class="blog">
+            <ul>
+              <li><strong>Key Concepts</strong>: Stochastic Neighborhood Embedding, Linear data,  preserves local structure, KL Divergence, Cost function, Pair wise Similarity,  T distribution, Gradient descent, Sigma</li>
+              <li><strong>Other techniques</strong>: Multiple Dimensional Scaling, Sammon Mapping, Graph based techniques</li>
+              <li><strong>Hyperparameters</strong>: Number of Iteration and perplexity, Learning Rate</li>
+
+
+          </div> <br>
+          <div class="code-window">
+            <pre>
+              data = load_iris()
+              X = data.data
+              tsne = TSNE(n_components=2, random_state=42)
+              X_tsne = tsne.fit_transform(X)
+              plt.scatter(X_tsne[:, 0], X_tsne[:, 1], c=data.target, cmap='viridis')
+              plt.show()
         </pre>
           </div> <br>
 
