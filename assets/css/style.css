@@ -2375,9 +2375,10 @@ img:not(.no-hover-effect):hover {
   background-color: #00000073;
   padding: 10px;
   overflow: auto;
-  height: 166px; 
+  max-height: 500px; /* Adjust this value as needed */
   border-radius: 10px;
   color: mediumspringgreen;
+  font-size: 17px;
 }
 
 .code-window pre {
@@ -2535,3 +2536,7 @@ html {
 }
 
 
+.green{
+  color: #FFDB70;
+  font-family: monospace;
+}

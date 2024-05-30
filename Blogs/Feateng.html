@@ -222,8 +222,10 @@
               <li><strong>Handling Outliers</strong>: Z Score, IQR, Percentile</li>
               <li><strong>Feature Transformation</strong>: Log, Box cox, Yeo Johnson, Discretization</li>
               <li><strong>Feature Scaling</strong>: Standarization, Normalization</li>
-              <li><strong>Feature Encoding</strong>: Ordinal Enconding and Label Encoding, One Hot Encoding, Hashing, Cardinality  </li>
-              <li><strong>Feature Selection</strong>: Filter, wrapped, Embedded, SelectKBest, Chi-squared, Recursive Feature Elimination, Backward Feature Elimination, Pearson correlation coefficient, Random Forest</li>
+              <li><strong>Feature Encoding</strong>: Ordinal Enconding and Label Encoding, One Hot Encoding, Hashing,
+                Cardinality </li>
+              <li><strong>Feature Selection</strong>: Filter, wrapped, Embedded, SelectKBest, Chi-squared, Recursive
+                Feature Elimination, Backward Feature Elimination, Pearson correlation coefficient, Random Forest</li>
               <li><strong>Feature Extraction</strong>: PCA, LDA, TSNE</li>
               <li><strong>Handling Imbalanced Data</strong>: Smote, Quora</li>
               <li><strong>Hnadling Multicollienearity</strong>: VIF</li>
@@ -238,10 +240,12 @@
               <li><strong>Categorical to numerical</strong>: Ordinal, Onehot, Target Encoding, Frequency Encoding</li>
               <li><strong>Numerical to Column</strong>: Discretization / Binning</li>
               <li><strong>Target Column</strong>: label Encoding, Label binarization, Multi label binarization</li>
-              <li><strong> Handling Rare category</strong>: Exclusion, Aggrigation, Special Treatment(Min, Max)  </li>
+              <li><strong> Handling Rare category</strong>: Exclusion, Aggrigation, Special Treatment(Min, Max) </li>
               <li><strong>More Encoding Technique</strong>: Count, Frequency, Binary, Target</li>
-              <li><strong>Weight of Evidence</strong>: Discretization, Binary classification, Financial domain, Use cases, Binning,  </li>
-              <li><strong>Binning Types</strong>: Custom, Uniform, Quantile, K-mean, Decision Tree based, Threshold Binning</li>
+              <li><strong>Weight of Evidence</strong>: Discretization, Binary classification, Financial domain, Use
+                cases, Binning, </li>
+              <li><strong>Binning Types</strong>: Custom, Uniform, Quantile, K-mean, Decision Tree based, Threshold
+                Binning</li>
             </ul>
           </div> <br>
 
@@ -281,7 +285,8 @@
           <div class="blog">
             <ul>
               <li><strong>Sklearn</strong>: Algorithms, Preprocessing, Metrix, Models, Pipeline, Transformers</li>
-              <li><strong>Transformers</strong>: Estimators, Custom Estimators, Mixins, Composite Transformers, Feature Union</li>
+              <li><strong>Transformers</strong>: Estimators, Custom Estimators, Mixins, Composite Transformers, Feature
+                Union</li>
             </ul>
           </div> <br>
           <div class="code-window">
@@ -295,12 +300,265 @@
             </pre>
           </div> <br>
 
-          <h3 class="h3 service-title">🚀 Feature Selection:</h3>
+
+
+
+          <h3 class="h3 service-title">🚀 Handling Missing Values :</h3>
           <div class="blog">
             <ul>
-              <li><strong>Techinique</strong>: Correlation Analysis(linear related), Random Forest Important, Gradient Boosting, Permutation, Importance, LASSO, Recursive Featuer Elimination, Linear Regression Weights, SHAP</li>
+              <li><strong>Charts:</strong> Bar chart, Heatmap, Dendogram</li>
+          </ul>
+          </div> <br>
+          <div class="code-window">
+            <pre>
+              import missingno as msno
+
+            </pre>
+          </div> <br>
+
+
+
+
+
+
+
+
+
+          <h3 class="h3 service-title">🚀 Feature Scaling :</h3>
+          <div class="blog">
+            <ul>
+              <li><strong>Standardization:</strong> Adjusts the values to have a mean of 0 and a standard deviation of 1.</li>
+              <li><strong>Min-Max Scaling:</strong> Rescales the values to a range between 0 and 1.</li>
+              <li><strong>Robust Scaler:</strong> Scales the data using statistics that are robust to outliers.</li>
+              <li><strong>Max Absolute Scaler:</strong> Scales the data so that the maximum absolute value of each feature is 1.</li>
+              <li><strong>L2/L1 Normalization:</strong> Rescales the values of each sample to have a unit norm (sum of squares or absolute values).</li>
+          </ul>
+          </div> <br>
+          <div class="code-window">
+            <pre>
+              from sklearn.preprocessing import PowerTransformer
+              from sklearn.preprocessing import StandardScaler
+              from sklearn.preprocessing import MinMaxScaler
+              from sklearn.preprocessing import RobustScaler
+              from sklearn.preprocessing import MaxAbsScaler
+              from sklearn.preprocessing import Normalizer
+            </pre>
+          </div> <br>
+
+          <h3 class="h3 service-title">🚀 Feature Transformation :</h3>
+          <div class="blog">
+            <ul>
+              <li><strong>Log:</strong> Compresses wide value ranges.</li>
+              <li><strong>Square root:</strong> Reduces impact of large values.</li>
+              <li><strong>Reciprocal:</strong> Emphasizes smaller values.</li>
+              <li><strong>Square:</strong> Amplifies value differences.</li>
+              <li><strong>Box-Cox:</strong> Corrects skewed data.</li>
+              <li><strong>Yeo-Johnson:</strong> Flexible for positive and negative values.</li>
+            </ul>
+            
+          </div> <br>
+          <div class="code-window">
+            <pre>
+              from sklearn.preprocessing import FunctionTransformer
+              from sklearn.preprocessing import PowerTransformer
+            </pre>
+          </div> <br>
+          
+          <h3 class="h3 service-title">🚀 Detect and Handling Outliers :</h3>
+          <div class="blog">
+            <ul>
+              <li><strong>Removal:</strong> Deleting outliers from the dataset to prevent them from affecting analysis.</li>
+              <li><strong>Capping:</strong> Limiting the extreme values of outliers to a specified threshold.</li>
+              <li><strong>Discretization:</strong> Grouping continuous data into categories or bins.</li>
+              <li><strong>Impute:</strong> Replacing missing or outlier values with estimated ones.</li>
+              <li><strong>Zscore, IQR:</strong> Statistical methods for detecting outliers based on the data's mean and spread.</li>
+              <li><strong>Isolation, LOF, OneClass SVM, DBSCAN:</strong> Machine learning algorithms for outlier detection based on data clustering and density.</li>
+              <li><strong>Box plot, Scatter plot:</strong> Visualization techniques to visually identify outliers in a dataset.</li>
             </ul>
           </div> <br>
+          <div class="code-window">
+            <pre>
+              import matplotlib.pyplot as plt
+              import seaborn as sns
+              from scipy.stats import zscore, iqr
+              from sklearn.ensemble import IsolationForest
+              from sklearn.svm import OneClassSVM
+              from sklearn.cluster import DBSCAN
+            </pre>
+          </div> <br>
+
+
+          <h3 class="h3 service-title">🚀 Feature Extraction :</h3>
+          <div class="blog">
+            <ul>
+              <li><strong>PCA</strong>: Reduces data to its most important parts.</li>
+              <li><strong>ICA</strong>: Separates mixed signals into original sources.</li>
+              <li><strong>LDA</strong>: Finds best features to separate data groups.</li>
+              <li><strong>Feature Hashing</strong>: Converts features into fixed-size numbers.</li>
+              <li><strong>Word Embedding</strong>: Turns words into numerical vectors.</li>
+            </ul>
+          </div> <br>
+          <div class="code-window">
+            <pre>
+              from sklearn.decomposition import PCA
+              from sklearn.decomposition import FastICA
+              from sklearn.discriminant_analysis import LinearDiscriminantAnalysis as LDA
+              from sklearn.feature_extraction.text import FeatureHasher
+              from gensim.models import Word2Vec
+              from gensim.models import FastText
+            </pre>
+          </div> <br>
+
+          <div class="blog">
+            <ul>
+              <li><strong>BOW</strong>: Counts word frequency in text.</li>
+              <li><strong>TFIDF</strong>: Highlights important words in documents.</li>
+              <li><strong>Image Feature Extraction</strong>: Identifies key parts of an image.</li>
+              <li><strong>Wavelet Transform</strong>: Analyzes data at different zoom levels.</li>
+              <li><strong>Autoencoders</strong>: Compresses and recreates data.</li>
+            </ul>
+          </div> <br>
+          <div class="code-window">
+            <pre>
+              from sklearn.feature_extraction.text import CountVectorizer
+              from sklearn.feature_extraction.text import TfidfVectorizer
+              # Image feature, Wavelet, autoencoder using CV2, Keras
+            </pre>
+          </div> <br>
+
+          <h3 class="h3 service-title">🚀 Feature Selection :</h3>
+          <div class="blog">
+            <ul>
+              <li><strong class="green">Filter Methods : </strong></li>
+              <li><strong>Correlation:</strong> How two things move together.</li>
+              <li><strong>Chi-Square Test:</strong> Checks if two categories are related.</li>
+              <li><strong>ANOVA:</strong> Compares averages of groups.</li>
+              <li><strong>Mutual Information:</strong> Measures how knowing one thing helps predict another.</li>
+            </ul>
+          </div> <br>
+          <div class="code-window">
+            <pre>
+              from scipy.stats import pearsonr  
+              from sklearn.feature_selection import chi2  
+              from sklearn.feature_selection import f_classif  
+              from sklearn.feature_selection import mutual_info_classif  
+            </pre>
+          </div> <br>
+
+          <div class="blog">
+            <ul>
+              <li><strong class="green">Wrapper Methods : </strong></li>
+              <li><strong>Forward Selection:</strong> Adds the best features step-by-step.</li>
+              <li><strong>Backward Elimination:</strong> Removes the worst features step-by-step.</li>
+              <li><strong>RFE:</strong> Repeatedly removes the least important features.</li>
+              <li><strong>Permutation Importance:</strong> Shuffles features to see their impact.</li>
+            </ul>
+          </div> <br>
+          <div class="code-window">
+            <pre>
+              from sklearn.feature_selection import SequentialFeatureSelector 
+              from sklearn.feature_selection import RFE  
+              from sklearn.inspection import permutation_importance  
+            </pre>
+          </div> <br>
+
+          <div class="blog">
+            <ul>
+              <li><strong class="green">Embedded Methods : </strong></li>
+              <li><strong>LASSO:</strong> Selects features by shrinking some to zero.</li>
+              <li><strong>Ridge Regression:</strong> Reduces model complexity by adding penalties.</li>
+              <li><strong>Elastic Net:</strong> Combines LASSO and Ridge for better feature selection.</li>
+              <li><strong>Tree-Based Methods:</strong> Uses decision trees to find important features.</li>
+              <li><strong>Random Forest Importance:</strong> Uses many trees to rank features.</li>
+              <li><strong>Gradient Boosting Importance:</strong> Ranks features by their error reduction.</li>
+              <li><strong>Linear Regression Weights:</strong> Uses model weights to find important features.</li>
+            </ul>
+          </div> <br>
+          <div class="code-window">
+            <pre>
+              from sklearn.linear_model import Lasso  
+              from sklearn.linear_model import Ridge  
+              from sklearn.linear_model import ElasticNet  
+              from sklearn.tree import DecisionTreeClassifier  
+              from sklearn.ensemble import RandomForestClassifier  
+              from sklearn.ensemble import GradientBoostingClassifier  
+              from sklearn.linear_model import LinearRegression  
+            </pre>
+          </div> <br>
+
+          <div class="blog">
+            <ul>
+              <li><strong class="green">Dimensionality Reduction & Heuristic Methods : </strong></li>
+              <li><strong>PCA:</strong> Reduces many features into a few important ones.</li>
+              <li><strong>LDA:</strong> Finds features that best separate groups.</li>
+              <li><strong>Genetic Algorithms:</strong> Uses natural selection to pick features.</li>
+              <li><strong>Simulated Annealing:</strong> Tries and improves solutions over time.</li>
+            </ul>
+          </div> <br>
+          <div class="code-window">
+            <pre>
+              from sklearn.decomposition import PCA  
+              from sklearn.discriminant_analysis import LinearDiscriminantAnalysis  
+              # For preparing data for Genetic Algorithms and Simulated Annealing
+            </pre>
+          </div> <br>
+
+          <div class="blog">
+            <ul>
+              <li><strong class="green">Statistical Tests & Model-Agnostic Methods : </strong></li>
+              <li><strong>T-Test/ANOVA:</strong> Compares group averages.</li>
+              <li><strong>Chi-Square Test:</strong> Tests if categories are related.</li>
+              <li><strong>SHAP:</strong> Shows how each feature affects predictions.</li>
+            </ul>
+          </div> <br>
+          <div class="code-window">
+            <pre>
+              from scipy.stats import ttest_ind  
+              from sklearn.feature_selection import chi2  
+              import shap  
+            </pre>
+          </div> <br>
+
+          <h3 class="h3 service-title">🚀 Feature Construction :</h3>
+          <div class="blog">
+            <ul>
+              <li><strong>Polynomial Features</strong>: Create features by raising existing ones to a power.</li>
+              <li><strong>Interaction Features</strong>: Multiply features to capture their combined effect.</li>
+              <li><strong>Binning</strong>: Group continuous values into discrete bins.</li>
+              <li><strong>Lag Features</strong>: Use past values of a feature as new ones.</li>
+              <li><strong>Rolling Statistics</strong>: Compute moving averages or sums over a window.</li>
+          </ul>
+          </div> <br>
+          <div class="code-window">
+            <pre>
+              from sklearn.preprocessing import PolynomialFeatures  
+              import pandas as pd  # Group continuous values into discrete bins
+              Use basic pandas operations for Rolling , Log, Interaction
+            </pre>
+          </div> <br>
+
+
+          <div class="blog">
+            <ul>
+              <li><strong>Date and Time Features</strong>: Extract parts of dates like hour or day of the week.</li>
+              <li><strong>Text Features</strong>: Turn text into numerical data using methods like TF-IDF.</li>
+              <li><strong>Domain Knowledge</strong>: Create features based on specific knowledge of the data.</li>
+              <li><strong>Feature Encoding</strong>: Convert categorical data into numbers.</li>
+              <li><strong>Feature Transformation</strong>: Apply mathematical changes like log or square root to features.</li>
+          </ul>
+          </div> <br>
+          <div class="code-window">
+            <pre>
+              # Extract parts of dates using Pandas
+              from sklearn.feature_extraction.text import TfidfVectorizer 
+              # Use basic pandas operations or custom for Domain Knowledge functions
+              from sklearn.preprocessing import OneHotEncoder  
+              # Apply mathematical changes using Numpy
+            </pre>
+          </div> <br>
+
+
+
         </section>
 
 

@@ -206,18 +206,17 @@
             <p>
               <span class="badge badge-primary">Basics</span>
               <span class="badge badge-secondary">Prompt Engineering</span>
-              <span class="badge badge-success">Transformers</span>
-              <span class="badge badge-yellow">Model Pretraining</span>
-              <span class="badge badge-danger">Fine Tuning</span>
-              <span class="badge badge-warning">RAG</span>
-              <span class="badge badge-info">Langchain</span>
-              <span class="badge badge-light">Diffusion Models</span>
-              <span class="badge badge-teal">Vector Database</span>
-              <span class="badge badge-deeporange">Cloud for LLM</span>
-              <span class="badge badge-gray">RLHF</span>
-              <span class="badge badge-purple">Genrative AI for Vision</span>
-              <span class="badge badge-red">More Tools</span>
-              <span class="badge badge-cyan">Additional</span>
+              <span class="badge badge-success">Vector Database</span>
+              <span class="badge badge-yellow">Cloud for LLM</span>
+              <span class="badge badge-danger">Transformer</span>
+              <span class="badge badge-warning">Model Pretraining</span>
+              <span class="badge badge-info">FInetuning</span>
+              <span class="badge badge-light">RAG</span>
+              <span class="badge badge-teal">Langchain</span>
+              <span class="badge badge-deeporange">RLHF</span>
+              <span class="badge badge-gray">LLM Parameters</span>
+              <span class="badge badge-purple">GenAI for Vision</span>
+              <span class="badge badge-red">GenAI Tools</span>
 
 
             </p>
@@ -231,112 +230,27 @@
           <h3 class="h3 service-title">🚀Generative AI Basics</h3>
           <div class="blog">
             <ul>
-              <li><strong>Prerequisite & key Concepts</strong>: Foundational Machine Learning & Deep Learning, Generative Models for NLP, Benifits, Concern, Use Cases, Types of Models for Generative AI(GAN, VAEs, Transformers, Autoencoders ), HMM, SMT, NLP Techniques, AutoRegressive Model, Masking, Greedy decoding, Beam Search, BPE, Multi Head Attention, SFT, RM, RL, PPO, RLHF,
-              </li>
-              <li><strong>Examples</strong>: OpenAI's GPT-3, GPT-3.5, and GPT-4,  Google's LaMDA and PaLM, Hugging Face's BLOOM, Meta's LLaMA, NVIDIA's NeMo LLM</li>
+              <li><strong>Key Concepts</strong>: (Generative Adversarial Network)GAN, AutoRegressive models, Variational autoencoders(VAE), Transformer   </li>
+              <li><strong>Translator Before LLM</strong>: Static Machine translation(SMT), Allignment, translation & Language Model.</li>
+              <li><strong>Speech Recognition Before LLM</strong>: Hidden Markov Model(HMM), Supervised Learning. </li>
+              <li><strong>Neural Network Language Model</strong>: Weights,   Bias, Activation Function </li>
+              <li><strong>Examples</strong>: OpenAI's GPT-3, GPT-3.5, and GPT-4, Google's LaMDA and PaLM, Hugging Face's BLOOM, Meta's LLaMA, NVIDIA's NeMo LLM</li>
             </ul>
           </div> <br>
 
           <h3 class="h3 service-title">🚀Prompt Engineering</h3>
           <div class="blog">
             <ul>
-              <li><strong>Mothods</strong>: Zero-Shot Learning, One-Shot Learning, Few-Shot Learning, Chain-of-Thought Prompting, Iterative Prompting, Negative Prompting, Hybrid Prompting, Prompt Chaining
+              <li><strong>Mothods</strong>: Zero-Shot Learning, One-Shot Learning, Few-Shot Learning, Chain-of-Thought Prompting(COT), Tree of Thoughts(TOT), Iterative Prompting, Negative Prompting, Hybrid Prompting, Prompt Chaining, Active Prompting, ReACT Prompting,
               </li>
-              <li><strong>Techniques</strong>:  Summerization, Inference, Transformation, Expansion</li>
+              <li><Strong>Tricks for Prompt</Strong>: Be Descriptive, Example, structure text, Chain of Thoughts, Chatbot Personas, Flipped Approach, Reflect, Review and Refine</li>
             </ul>
           </div> <br>
 
-          <h3 class="h3 service-title">🚀Transformers & Model Pretraining</h3>
-          <div class="blog">
-            <ul>
-              <li><strong>Transformers</strong>: Architecture, Pre-processing (Tokens, Word Embedding and Positional
-                Encoding), Transformer Layers (Linear Transformation, Self
-                Attention, Feed Forward Network)
-              </li>
-              <li><strong>Model Pretraining</strong>: Generative Configuration, Auto regressive
-                Models, Auto encoding Models, Encoder-Only
-                Models, Decoder-Only Models, Sequence-to-Sequence Models(Encoder-Decoder Models), Model Size, Cost,
-                Trade off, Benefits and shortcomings of Small Language
-                Models, Model for Domain Adaptation (BloombergGPT for Finance), Quantization, Scaling techniques(DDP,
-                FSDP)
-              </li>
-            </ul>
-          </div> <br>
-
-          <h3 class="h3 service-title">🚀Fine Tuning</h3>
-          <div class="blog">
-            <ul>
-              <li><strong>Key Aspects</strong>: Defination, Purpose, Example(Copilot for code), Benifits, Tools(Pytorch,
-                HugginFace, Unsloth, Llama), How its work, Use cases, When to Fine Tune, When Not to Fine Tune, Primary
-                Fine tuning Approach (Repurposing, Full finetune, PEFT), Supervised Finetuning, Prominent Finetuning
-                method (RLHF), Instruction Fine Tuning, SIngle task and multitask finetuning, Padding / Truncation,
-                Prompt Tuning</li>
-              <li><strong>Dataset</strong>: FLAN, FLAN T5, FLAN PALM</li>
-              <li><strong>PEFT</strong>: Achieve PEFT Ways(LORA, QLORA), Techniques </li>
-              <li><strong>Evaluate</strong>: Rouge, BLUE, precision, F1score, N-grams, Benchmarking (GLUE, SuperGlue,
-                HEML, MMLU)</li>
-            </ul>
-          </div> <br>
-
-          <h3 class="h3 service-title">🚀Retrieval-Augmented Generation</h3>
-          <div class="blog">
-            <ul>
-              <li><strong>Key Aspects</strong>: Why, Rag Pipeline, Components, Use cases, Pros and cons, Types(Natie,
-                Advanced and modular), Future Development, Challenges, Advanced RAG, RAG Advantages Over Fine-tuning
-                LLMs, Using RAG and Fine-tuning for Pre- trained Models, When to Fine-Tune vs RAG for Different Model
-                Sizes </li>
-            </ul>
-          </div> <br>
-
-          <h3 class="h3 service-title">🚀Langchain</h3>
-          <div class="blog">
-            <ul>
-              <li><strong>Langchain Key Aspects</strong>: LLM, Prompt Template, Chain, Agent & tools, Memory,
-                Documentation Loaders, Vector Store, Langserver, LangSmith, Langchain with HugginFace & OpenAI</li>
-            </ul>
-          </div> <br>
           
-          <div class="code-window">
-            <pre>
-              from langserver import LangServerClient
-              client = LangServerClient(api_key="YOUR_API_KEY")
-              collection = client.create_collection("my_collection")
-              doc = {"id": "1", "text": "Hello LangServer"}
-              client.add_document(collection_id=collection.id, document=doc)
-              print(client.query(collection_id=collection.id, query="Hello"))
-            </pre>
-          </div> <br>
-
-          <div class="code-window">
-            <pre>
-              from langsmith import LangSmithClient
-              client = LangSmithClient(api_key="YOUR_API_KEY")
-              coll = client.create_collection("my_collection")
-              doc = {"id": "1", "text": "Hello LangSmith"}
-              client.add_document(collection_id=coll.id, document=doc)
-              print(client.query(collection_id=coll.id, query_text="Hello"))
-            </pre>
-          </div> <br>
-
-          <h3 class="h3 service-title">🚀 How Diffusion Models Work?</h3>
-          <div class="blog">
-            <ul>
-              <li><strong>How its work</strong>: Data Preprocessing, Introduce Noice, Reverse Diffusion Process.</li>
-              <li><strong>Diffusion Model Technique</strong>: SDE, SGMs, DDPMs </li>
-              <li><strong>Model Examples</strong>: Dall-e 2,3 , Sora, Stable diffusion, midjourney, imagen</li>
-              <li><strong>Architecture</strong>: Modified U-net, Resnet, Downsample, Self Attention block, Forward
-                diffusion (add noice), Reverse Diffusion (remove noice), Diffusion model predict Noice, Timestamp & text
-                encoding.</li>
-
-
-            </ul>
-          </div> <br>
-
           <h3 class="h3 service-title">🚀 Vector Database:</h3>
           <div class="blog">
             <ul>
-              <li><strong>Key Concepts</strong>: Why Use, How Embedding, Why Embedding, Vector index vs Vector database
-              </li>
               <li><strong>Database Architecture</strong>: Storage Layer, Indexing layer, Query Processing Layer,
                 Similarity Computation</li>
               <li><strong>Embedding Technique</strong>: Word2vec, GLove, badge-container</li>
@@ -349,26 +263,6 @@
               <li><strong>Query Process</strong>: Queue, vector Again, Similarity Search</li>
             </ul>
           </div> <br>
-          <div class="code-window">
-            <pre>
-              import chromadb
-              client = chromadb.Client()
-              collection = client.create_collection("my_collection")
-              collection.insert({"id": "1", "content": "Hello ChromaDB"})
-              print(collection.search("Hello"))
-            </pre>
-          </div> <br>
-
-          <div class="code-window">
-            <pre>
-              import pinecone
-              pinecone.init(api_key="YOUR_API_KEY")
-              index = pinecone.Index("my_index")
-              index.upsert(items=[("id1", [0.1, 0.2, 0.3])])
-              result = index.query(queries=[[0.1, 0.2, 0.3]], top_k=1)
-              print(result)
-            </pre>
-          </div> <br>
 
 
           <h3 class="h3 service-title">🚀 Cloud for LLM:</h3>
@@ -380,57 +274,94 @@
               <li><strong>Distributed Training</strong>: Data parallelism, Model parallelism, Federated parallelism</li>
 
               <li><strong> AWS & key Concept</strong>: Model reduction Technique, Model deployment Scenarios, Data
-                Drifting, Tuning, Model, Maintenance, Lambda, API KEY, Boto3, AWS CLI, Sagemaker, Apprunner </li>
+                Drifting, Tuning, Model, Maintenance, Lambda, API KEY, Boto3, AWS CLI, Sagemaker, Apprunner, ECR with Docker </li>
 
+            </ul>
+          </div> <br>
+
+
+
+
+
+
+          <h3 class="h3 service-title">🚀Transformers & Model Pretraining</h3>
+          <div class="blog">
+            <ul>
+              <li><strong>Encoder</strong>: Embedding, Positional Encoding, Slef Attention, Multi head Attention, Normalization, Feed Forward Network </li>
+              <li><strong>Decoder</strong>: Embedding, Positional Encoding, Slef Attention, Masked Multi head Attentionx2, Feed Forward Network, Greedy Decoding, Beam Search </li>
+              <li><strong>Tokenization</strong>: subword, Wordbased, Character-based, Byte-Pair Encoding(OpenAI), Sentance Piece(Google)</li>
+              <li><strong>LLM Benchmark & Matrix</strong>:  ARC, HellaSwag, MMLU, TruthfulQA, SuperGLUE, Human Eval, MT Bench, Bert score, BLUE, GLUE, Perpexility, Precision, Recall, F1, SST2, HELM, Rouge, etc</li>
+               <li><strong>Key Concepts</strong>: OpenAI Transformers  Vs LLaMA, Traning Arguments</li>
+              <li><strong>Model Pretraining</strong>: Model Size, Cost,
+                Trade off, Benefits, Small Language
+                Models, Model for Domain Adaptation (BloombergGPT for Finance), Quantization, Scaling techniques(DDP,
+                FSDP)
+              </li>
+            </ul>
+          </div> <br>
+
+          <h3 class="h3 service-title">🚀Fine Tuning & RAG</h3>
+          <div class="blog">
+            <ul>
+              <li><strong>Key Aspects</strong>: Copilot for code, Tools(Pytorch, HugginFace, Unsloth, Llama), ORPO Technology, Primary
+                Fine tuning Approach (Repurposing, Full finetune, PEFT) </li>
+
+                <li><Strong>Types</Strong>: Supervised Finetuning, Prominent Finetuning, Instruction Fine Tuning, SIngle task and multitask finetuning, Prompt Tuning</li>
+                <li><strong>Optimization</strong>: IPO, DPO</li>
+              <li><strong>PEFT</strong>: Achieve PEFT Ways(LORA, QLORA), Techniques </li>
+            </ul>
+          </div> <br>
+
+          <h3 class="h3 service-title">🚀Langchain</h3>
+          <div class="blog">
+            <ul>
+              <li><strong>Langchain Key Aspects</strong>: LLM, Prompt Template, Chain, Agent & tools, Memory,
+                Documentation Loaders, Vector Store, Langserver, LangSmith, Langchain with HugginFace & OpenAI</li>
             </ul>
           </div> <br>
 
           <h3 class="h3 service-title">🚀 Reinforcement Learning from Human Feedback:</h3>
           <div class="blog">
             <ul>
-              <li><strong>Key Concepts</strong>: Problems in LLM, Reinforcement and Human Feedback Approach, Responce
-                Model, Humoid robot, Game Expert, Reward Collect, Applications, Penelty, PPO, Feedback types, Approach
-                types, Problems, KL divergence Swift Penelty, Constitutional AI, Evaluate, Toxic Score </li>
+              <li><strong>Key Concepts</strong>: Instruct GPT, Supervised File-Tuning(SFT), Reward Model Training(RM), Reinforcement Learning Fine-Tuning(RL), Proximal Policy Optimization(PPO), KL divergence Swift Penelty, Constitutional AI, Toxic Score </li>
+            </ul>
+          </div> <br>
+
+          <h3 class="h3 service-title">🚀LLM & GPT Parameters:</h3>
+          <div class="blog">
+            <ul>
+              <li><strong>LLM Parameters</strong>: N_params, N_layers, D_model, N_heads, D_heads, Batch Size, Learning rate</li>
+              <li><strong>GPT Playground</strong>: Model, Temperature, Maximum Length, Stop Sequence, TopP, etc</li>
             </ul>
           </div> <br>
 
           <h3 class="h3 service-title">🚀 Genrative AI for Vision:</h3>
           <div class="blog">
             <ul>
-              <li><strong>key Concepts</strong>: Language model vs Vision model, Image Generation Model, Unconditional and conditional image Generation, Grid/array, Pixels, Color Representation, Channels, Pillow, CV2, Numpy, Matplotlib, Latent space, Encoder-Decoder Architecture, Autoencoders, Variational Autoencoder, GAN, Generator, Discriminator, Adversarial, Forward and Reverse Diffusion, Noice Predication Unet, Skip connection, CLIP Embedding (Text to Image), Applications</li>
-              <li><strong>Models Approach</strong>: Denoising Diffusion Probabilistic Model, High-Resolution Image Synthesis with Latent Diffusion Models </li>
-              <li><strong>Parameters</strong>: prompt, Negative_prompt, Num_inference_steps, guidance_scale, Guidance_scale, Height, width, num_images_per_prompt, generator, Seed</li>
-              <li><strong>Effective Prompt</strong>: Subject, Medium, Style, Artist, Resolution, Keyword Weights</li>
-              <li><strong>Terminology</strong>: Style, Medium, Artist, Media, Effects, Color, Lighting, Camera, Perspective, Artistic movement.
+              <li><strong>Key Concepts</strong>: Language Model vs Vision Model, Image Generation Model, Unconditional and Conditional image Generation, Pixels, RGB, Channels</li>
+              <li><strong>Diffusion Model</strong>: Encoder  Latent Space, Decoder, Autoencoder NN, Variational Autoencoder(VAE), Generative Adversarial Network(GAN), Generator & Discriminator Model, AutoRegressive Model, Forward diffiusion(Noising), Reverse Diffusion(Denoising), Noice Predictor UNet, Skip Connection, DDMP(conditional), Unconditional(Text to image), Prompt Parameters</li>
+              <li><strong>Tools</strong>: ChatGPT, HuggingFace, Playground, dreamstudio, etc.</li>
+              <li><strong>Terminology</strong>: Style, Artist, Effects, Color, Resolution, Artist, etc.
               </li> 
-              <li><strong>Popular Vision Model</strong>: Midjourney by Midjourney, DALL-E by OpenAI, Stable Diffusion by Stability AI, Imagen by Google
+              <li><strong>Popular Vision Model</strong>: Midjourney, DALL-E Stable Diffusion, Imagen, Clip Embedding
                 </li>
             </ul>
           </div> <br>
 
-
-          <h3 class="h3 service-title">🚀 More Tools:</h3>
+          <h3 class="h3 service-title">🚀GenAI Tools:</h3>
           <div class="blog">
             <ul>
-              <li><strong>Tools</strong>: Heystack, Langsmith, Chainlit, Flowwise AI, Langflow, Gorilla LLM, GPT4ALL, AutoGPT, AgentGPT, PrivateGPT, H20GPT, LocalGPT, MetaGPT, GPT Engineer, DevOpsGPT, FastChat-T5, CustomGPT, FraudGPT, FinGPT, Perpexility, WizardCoder, StarCoder, Qwen 7b, Platypus 2 70B, LORApeft, SciketLLM, BentoML, VLLM, Prompt Perfect, PandasAI, WizardLM, Free Willy, Aider, Mentat, BabyAGI, SuperAGI, PIcoAGI, DifyAGI, Kasmos 2, Botpress, Voiceflow, StackAI, Orimon.ai, Chatbase, Botpenguin, Code LLama, Verbee.ai, GPTPilot, Invideo AI, RedPajama, Openinterpreter,  WayJourney, Replit, Writesonic, Blackbox AI, Sybil.AI, Qwen vl, LLasm, Chat.dev, Textbase.AI,   Codedesing.ai, Voice.ai, Lalal.ai, MedFlamingo </li>
-            </ul>
-          </div> <br>
-
-
-          <h3 class="h3 service-title">🚀 Additional Things:</h3>
-          <div class="blog">
-            <ul>
-              <li><Strong>Key Concepts</Strong>: LLama Model Features, RMS normalization, Layer normalization, Swiglu Activation function, GELU, Gelu, RpPE, GQA, </li>
-              <li><strong>Ollama</strong>: Nomic Embedding </li>
-              <li>HugginFace with Langchain, Phi Database</li>
-              <li><strong>OpenAI Alternative</strong>: Groq</li>
-              <li><strong>AI Tools</strong>: You, pi, Perpexility, Groq, Ollama, GPT, Kubiya, </li>
+              <li><strong>Large Language Models (LLMs)</strong>: Gorilla LLM, GPT4ALL, AutoGPT, AgentGPT, PrivateGPT, H20GPT, LocalGPT, MetaGPT, GPT Engineer, FastChat-T5, CustomGPT, FraudGPT, FinGPT, Perpexility, WizardCoder, StarCoder, Qwen 7b, Platypus 2 70B, LORApeft, SciketLLM, VLLM, WizardLM, Free Willy, Kasmos 2, LLasm, Voice.ai, Lalal.ai, You.ai, pi.ai, Perpexility, Groq, Ollama, GPT, Kubiya </li>
+              <li><strong>AGI & AGI-related</strong>: BabyAGI, SuperAGI, PIcoAGI, DifyAGI </li>
+              <li><strong>Chatbots & Conversational AI</strong>: Botpress, Voiceflow, Botpenguin, Chatbase, Chat.dev, Orimon.ai, Verbee.ai, GPTPilot, Sybil.AI</li>
+              <li><strong>Model Deployment & Management</strong>: BentoML, StackAI</li>
+              <li><strong>Development Environments</strong>: Replit, Code LLama</li>
+              <li><strong>Code Generation & Assistance</strong>: WizardCoder, Prompt Perfect, Blackbox AI</li>
               <li><strong>Agent</strong>: Devika, CrewAI, Autogen, PraisonAI, SunoV3, MetaGPT, GPT Engineer</li>
-              <li><strong>GPT parameters</strong>: N_paransm N_layers, D_model, N_heads, d_heads, batchsize, learningrate </li>
-              <li><strong>GPT Playground</strong>: Model, Temperature, Maximum Length, Stop Sequence, TopP, Frequency Penalty, Presence Penalty, Probalility Calculation, Sorting by Probability, Cumulative Probability, Word Selection, Sampling</li>
+              <li><strong>Video & Media AI</strong>: Invideo AI</li>
+              <li><strong>Others</strong>: PandasAI, MedFlamingo, WayJourney, RedPajama, Openinterpreter</li>
             </ul>
           </div> <br>
-
 
         </section>
       </article>
