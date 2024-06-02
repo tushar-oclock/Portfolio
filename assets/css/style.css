@@ -2565,6 +2565,15 @@ html {
   right: 10px; 
 }
 
+
+
+@media only screen and (max-width: 768px) {
+  .ink {
+    display: none;  /* Hide button on mobile */
+  }
+}
+
+
 /* SweetAlert2 custom styles */
 .swal2-custom-background {
   background: #fff url('/assets/images/trees.jpg') center center / cover no-repeat !important;
