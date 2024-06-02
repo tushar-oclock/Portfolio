@@ -2547,7 +2547,7 @@ html {
 /* Button styles */
 .ink {
   position: fixed;
-  top: 15%;
+  top: 20%;
   right: -141px; 
   transform: translateY(-50%);
   padding: 10px 20px;
