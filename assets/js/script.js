@@ -317,10 +317,26 @@ document.addEventListener('DOMContentLoaded', function () {
       filterButtons.forEach(btn => btn.classList.remove('active'));
       // Add active class to the clicked button
       this.classList.add('active');
-      // Update the select value
       selectValue.textContent = this.textContent;
     });
   });
 });
 
 
+document.getElementById('show-alert').addEventListener('click', function() {
+  Swal.fire({
+    width: 600,
+    imageUrl: "/assets/images/tat.jpg", 
+    customClass: {
+      popup: 'swal2-custom-background', 
+      image: 'swal2-custom-image', 
+    },
+    backdrop: `
+    rgba(0,0,123,0.4)
+    url("https://sweetalert2.github.io/images/nyan-cat.gif")
+    left top
+    no-repeat
+  `,
+    showConfirmButton: false, 
+  });
+});

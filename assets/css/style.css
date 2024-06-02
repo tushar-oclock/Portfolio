@@ -2540,3 +2540,41 @@ html {
   color: #FFDB70;
   font-family: monospace;
 }
+
+
+
+
+/* Button styles */
+.ink {
+  position: fixed;
+  top: 15%;
+  right: -141px; 
+  transform: translateY(-50%);
+  padding: 10px 20px;
+  background-color: #e7be57;
+  color: black;
+  border: none;
+  cursor: pointer;
+  transition: right 0.5s ease;
+  z-index: 1000; 
+  border-radius: 20px;
+  font-weight: bold;
+}
+
+.ink:hover {
+  right: 10px; 
+}
+
+/* SweetAlert2 custom styles */
+.swal2-custom-background {
+  background: #fff url('/assets/images/trees.jpg') center center / cover no-repeat !important;
+}
+
+.swal2-custom-image {
+  max-width: 100%;
+  height: auto;
+  width: 250px; 
+  border-radius: 20px;
+  animation: upDown 3s ease-in-out infinite;
+}
+

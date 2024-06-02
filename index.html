@@ -16,12 +16,16 @@
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;700&display=swap">
 
 
+
 </head>
 
 <body>
 
 
   <!-- Assets -->
+
+
+  
 
   <button id="scrollTopButton" class="scroll-button scroll-top">
     <img src="./assets/images/sidebar/chevron-angle-svgrepo-com.svg" alt="design icon" width="40">
@@ -54,6 +58,7 @@
   <!-- #MAIN -->
   <main>
 
+    
     <!-- #SIDEBAR -->
     <aside class="sidebar" data-sidebar>
       <div class="sidebar-info">
@@ -119,7 +124,7 @@
             </div>
             <div class="contact-info">
               <p class="contact-title">Phone</p>
-              <a href="tel:+12133522795" class="contact-link">+91 <span>&#8730;</span>78341703057303861904</a>
+              <a href="tel:+8851084852" class="contact-link">+91 <span>&#8730;</span>78341703057303861904</a>
             </div>
           </li>
 
@@ -179,7 +184,7 @@
 
 
         </ul>
-
+        <br>
       </div>
 
     </aside>
@@ -214,7 +219,10 @@
             <button style="font-size: 40px;" class="navbar-link" data-nav-link>💬</button>
           </li>
 
+
+
         </ul>
+    
 
       </nav>
 
@@ -244,6 +252,7 @@
         <header>
           <h2 class="h2 article-title">🎯 About me</h2>
         </header>
+        <button class="ink"  id="show-alert">INK OF DETERMINATION</button>
 
         <section class="about-text">
 
@@ -1133,6 +1142,25 @@
               </a>
             </li>
 
+            <li class="project-item  active" data-filter-item data-category="data analytics">
+              <a href="https://github.com/24x7-Dev-Player" target="_blank">
+
+
+                <figure class="project-img">
+                  <div class="project-item-icon-box">
+                    <ion-icon name="eye-outline"></ion-icon>
+                  </div>
+
+                  <img src="./assets/images/projects/dream11.jpg" alt="orizon" loading="lazy">
+                </figure>
+
+                <h3 class="project-title">Dream11 AWS RDS ETL</h3>
+
+                <p class="project-category">Data analytics</p>
+
+              </a>
+            </li>
+
 
             <li class="project-item  active" data-filter-item data-category="machine learning">
               <a href="https://github.com/24x7-Dev-Player" target="_blank">
@@ -1728,6 +1756,33 @@
               </a>
             </li>
 
+            <li class="blog-post-item">
+              <a href="Blogs/DSA.html" target="_blank">
+
+                <figure class="blog-banner-box">
+                  <img class="no-hover-effect" src="./assets/images/blogs/mlalgo.jpg"
+                    alt="Best fonts every designer" loading="lazy">
+                </figure>
+
+                <div class="blog-content">
+
+                  <div class="blog-meta">
+                    <p class="blog-category">Machine Learning</p>
+
+                    <span class="dot"></span>
+
+                    <time datetime="2022-02-23">May 30, 2024</time>
+                  </div>
+
+                  <h3 class="h3 blog-item-title">Machine Learning Algorithm</h3>
+
+
+
+                </div>
+
+              </a>
+            </li>
+
           </ul>
 
         </section>
@@ -1789,6 +1844,8 @@
   <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
   <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
   <script src="./assets/js/script.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
 
   <style>
     .scroll-button {

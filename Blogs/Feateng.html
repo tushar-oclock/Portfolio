@@ -248,39 +248,7 @@
                 Binning</li>
             </ul>
           </div> <br>
-
-          <div class="code-window">
-            <pre>
-              Ordinal Encoding
-              from sklearn.preprocessing import OrdinalEncoder
-              data = [['small'], ['medium'], ['large'], ['medium'], ['small']]
-              encoder = OrdinalEncoder()
-              encoded_data = encoder.fit_transform(data)
-              print(encoded_data)
-            </pre>
-          </div> <br>
-
-          <div class="code-window">
-            <pre>
-              #LABEL ENCODING
-              from sklearn.preprocessing import LabelEncoder
-              data = ['apple', 'orange', 'banana', 'apple', 'banana']
-              encoder = LabelEncoder()
-              encoded_data = encoder.fit_transform(data)
-              print(encoded_data)
-            </pre>
-          </div> <br>
-
-          <div class="code-window">
-            <pre>
-              #ONE HOT ENCODING
-              import pandas as pd
-              data = pd.DataFrame({'category': ['A', 'B', 'A', 'C', 'B']})
-              encoded_data = pd.get_dummies(data)
-              print(encoded_data)
-            </pre>
-          </div> <br>
-
+          
           <h3 class="h3 service-title">🚀 Pipeline & Sklearn Deep Dive:</h3>
           <div class="blog">
             <ul>
@@ -300,20 +268,18 @@
             </pre>
           </div> <br>
 
-
-
-
           <h3 class="h3 service-title">🚀 Handling Missing Values :</h3>
           <div class="blog">
             <ul>
-              <li><strong>Charts:</strong> Bar chart, Heatmap, Dendogram</li>
-          </ul>
-          </div> <br>
-          <div class="code-window">
-            <pre>
-              import missingno as msno
+              <li><strong>Missingno Library</strong></li>
+              <li><strong>Charts:</strong> Bar chart, Heatmap, Dendogram, Matrix</li>
+              <li><strong>Types of Missing values</strong>: MCAR, MAR, MNAR </li>
+              <li><strong>Handle</strong>: Remove, Imputation, MLAlgo</li>
+              <li><strong>CCA</strong>: LItewaise Division, MCAR</li>
+              <li><strong>Univariate</strong>: Missing Indicator, SImple imputer(Mean, Medium, Mode, Constant), Automatically Select Imputer</li>
+              <li><strong>MultiVariate</strong>: KNN imputer(Hyperparameters), Iterative Imputer(MICE, Chain Wise)</li>
 
-            </pre>
+          </ul>
           </div> <br>
 
 
