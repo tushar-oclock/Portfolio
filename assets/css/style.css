@@ -144,7 +144,7 @@ textarea {
 }
 
 ::selection {
-  background: black; 
+  background: black ;  
   color: yellow;
 }
 
@@ -1493,7 +1493,7 @@ textarea.form-input::-webkit-resizer {
   }
 
   .sidebar-info {
-    gap: 25px;
+    gap: 10px;
   }
 
   .avatar-box {
@@ -2569,12 +2569,10 @@ html {
 
 @media only screen and (max-width: 768px) {
   .ink {
-    display: none;  /* Hide button on mobile */
+    display: none;  
   }
 }
 
-
-/* SweetAlert2 custom styles */
 .swal2-custom-background {
   background: #fff url('/assets/images/trees.jpg') center center / cover no-repeat !important;
 }
@@ -2587,3 +2585,140 @@ html {
   animation: upDown 3s ease-in-out infinite;
 }
 
+
+.svg-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+}
+
+.rotating-svg {
+  width: 100px;
+  height: 100px;
+  animation: rotate 2s linear infinite;
+}
+
+@keyframes rotate {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+
+.code-container {
+  color: #f8f8f2;
+  padding: 10px;
+  border-radius: 5px;
+  /* font-family: 'Space Grotesk'; */
+  font-family: monospace;
+  overflow-x: auto;
+  white-space: pre-wrap;
+  word-wrap: break-word;
+  margin: 0;
+  background-image:  url('/assets/images/bg.png');
+
+
+  background-size: 100%;
+  background-repeat: no-repeat;
+  background-size: cover;
+  
+  
+ 
+}
+
+.keyword { color: #00d6ff; }
+.class-name { color: #ff8812; }
+.string { color: #e7be57; }
+.function { color: #abff00; }
+.comment { color: #75715e; }
+.number { color: #eb49ff; }
+.highlight { color: #ff8a16; }
+
+
+
+.highlight {
+  position: relative;
+  display: inline-block;
+  cursor: pointer;
+}
+
+.popup {
+  visibility: hidden;
+  background-color: #101526;
+  color: #e7be57;
+  text-align: center;
+  padding: 5px;
+  border-radius: 6px;
+
+  /* Position the popup text above the highlight element */
+  position: absolute;
+  z-index: 1;
+  bottom: 125%; /* Position it above the highlight element */
+  left: 50%;
+  transform: translateX(-50%);
+  white-space: nowrap;
+
+  /* Fade in the popup */
+  opacity: 0;
+  transition: opacity 0.3s;
+}
+
+.popup::after {
+  content: "";
+  position: absolute;
+  top: 100%; /* Position the arrow at the bottom of the popup */
+  left: 50%;
+  margin-left: -5px;
+  border-width: 5px;
+  border-style: solid;
+  border-color: black transparent transparent transparent;
+}
+
+
+
+
+.highlight:hover .popup {
+  visibility: visible;
+  opacity: 1;
+}
+
+
+.top-right-button {
+  position: fixed;
+  top: 30px; /* Adjust as needed */
+  right: 20px; /* Adjust as needed */
+  z-index: 999; /* Ensures the button is on top of other content */
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+}
+
+.top-right-button img {
+  width: 40px; /* Adjust image size as needed */
+  height: auto;
+  animation: rotate 6s linear infinite; /* Animation properties */
+}
+
+
+
+
+@keyframes rotate {
+  0% {
+      transform: rotate(0deg); /* Start rotation from 0 degrees */
+  }
+  100% {
+      transform: rotate(360deg); /* Rotate to 360 degrees (full circle) */
+  }
+}
+
+
+
+@media (max-width: 768px) {
+  .top-right-button {
+      top: 95px; /* Adjust position for mobile devices */
+  }
+}
