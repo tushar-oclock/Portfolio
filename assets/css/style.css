@@ -2613,7 +2613,6 @@ html {
   color: #f8f8f2;
   padding: 10px;
   border-radius: 5px;
-  /* font-family: 'Space Grotesk'; */
   font-family: monospace;
   overflow-x: auto;
   white-space: pre-wrap;
@@ -2643,7 +2642,7 @@ html {
 .highlight {
   position: relative;
   display: inline-block;
-  cursor: pointer;
+  cursor: pointer; 
 }
 
 .popup {
@@ -2654,15 +2653,15 @@ html {
   padding: 5px;
   border-radius: 6px;
 
-  /* Position the popup text above the highlight element */
+  
   position: absolute;
   z-index: 1;
-  bottom: 125%; /* Position it above the highlight element */
+  bottom: 125%; 
   left: 50%;
   transform: translateX(-50%);
   white-space: nowrap;
 
-  /* Fade in the popup */
+
   opacity: 0;
   transition: opacity 0.3s;
 }
@@ -2670,7 +2669,7 @@ html {
 .popup::after {
   content: "";
   position: absolute;
-  top: 100%; /* Position the arrow at the bottom of the popup */
+  top: 100%; 
   left: 50%;
   margin-left: -5px;
   border-width: 5px;
@@ -2689,18 +2688,18 @@ html {
 
 .top-right-button {
   position: fixed;
-  top: 30px; /* Adjust as needed */
-  right: 20px; /* Adjust as needed */
-  z-index: 999; /* Ensures the button is on top of other content */
+  top: 30px;
+  right: 20px;
+  z-index: 999; 
   background-color: transparent;
   border: none;
   cursor: pointer;
 }
 
 .top-right-button img {
-  width: 40px; /* Adjust image size as needed */
+  width: 40px;
   height: auto;
-  animation: rotate 6s linear infinite; /* Animation properties */
+  animation: rotate 6s linear infinite; 
 }
 
 
@@ -2708,10 +2707,10 @@ html {
 
 @keyframes rotate {
   0% {
-      transform: rotate(0deg); /* Start rotation from 0 degrees */
+      transform: rotate(0deg); 
   }
   100% {
-      transform: rotate(360deg); /* Rotate to 360 degrees (full circle) */
+      transform: rotate(360deg); 
   }
 }
 
@@ -2719,6 +2718,6 @@ html {
 
 @media (max-width: 768px) {
   .top-right-button {
-      top: 95px; /* Adjust position for mobile devices */
+      top: 95px; 
   }
 }
