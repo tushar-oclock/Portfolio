@@ -2418,6 +2418,12 @@ img:not(.no-hover-effect):hover {
   color: white;
 }
 
+@media (max-width: 768px) {
+  .blog {
+    font-size: 14.5px;
+  }
+}
+
 strong{
   color: darkorange;
   font-weight: 100;
@@ -2587,7 +2593,7 @@ html {
 @media (max-width: 600px) {
   .code-container,
   .abouttext1 {
-    font-size: 14px; 
+    font-size: 14.5px; 
   }
  
 }
@@ -2736,3 +2742,5 @@ html {
     max-width: 100%;
   }
 }
+
+
