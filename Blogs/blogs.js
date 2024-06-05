@@ -93,4 +93,68 @@ document.getElementById('scrollBottomButton').addEventListener('click', function
 
 
 
+// scripts.js
 
+document.addEventListener("DOMContentLoaded", function() {
+  const chunkSize = 700; // Size of the chunk to load in bytes
+
+  async function fetchChunk(url, start, end) {
+      const response = await fetch(url, {
+          headers: {
+              'Range': `bytes=${start}-${end}`
+          }
+      });
+
+      if (!response.ok) {
+          return null;
+      }
+
+      return await response.text();
+  }
+
+  document.querySelectorAll('.file').forEach(fileElement => {
+      const codeBlock = fileElement.querySelector('code');
+      const loadMoreButton = fileElement.querySelector('.load-more');
+      const closeButton = fileElement.querySelector('.close-file');
+      const url = fileElement.getAttribute('data-url');
+      const language = fileElement.getAttribute('data-lang');
+      let currentPosition = 0;
+      let content = '';
+
+      async function loadMore() {
+          const chunk = await fetchChunk(url, currentPosition, currentPosition + chunkSize - 1);
+
+          if (chunk === null) {
+              loadMoreButton.disabled = true;
+              loadMoreButton.textContent = 'No more content';
+              return;
+          }
+
+          content += chunk;
+          codeBlock.textContent = content;
+          Prism.highlightElement(codeBlock);
+          currentPosition += chunkSize;
+      }
+
+      async function closeFile() {
+          content = '';
+          currentPosition = 0;
+          loadMoreButton.disabled = false;
+          loadMoreButton.textContent = 'Load More';
+          // Load the first chunk again
+          const initialChunk = await fetchChunk(url, currentPosition, currentPosition + chunkSize - 1);
+          if (initialChunk !== null) {
+              content = initialChunk;
+              codeBlock.textContent = content;
+              Prism.highlightElement(codeBlock);
+              currentPosition += chunkSize;
+          }
+      }
+
+      loadMoreButton.addEventListener('click', loadMore);
+      closeButton.addEventListener('click', closeFile);
+
+      // Load the first chunk initially
+      loadMore();
+  });
+});

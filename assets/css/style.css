@@ -2378,12 +2378,10 @@ img:not(.no-hover-effect):hover {
   max-height: 500px; /* Adjust this value as needed */
   border-radius: 10px;
   color: mediumspringgreen;
-  font-size: 17px;
+  font-size: 12px;
+  font-family: monospace;
 }
 
-.code-window pre {
-  margin-left: -120px;
-}
 
 
 
@@ -2397,7 +2395,7 @@ img:not(.no-hover-effect):hover {
 }
 
 .code-window::-webkit-scrollbar-thumb {
-  background: darkorange; 
+  background: #555; 
 }
 
 .code-window::-webkit-scrollbar-thumb:hover {
@@ -2584,7 +2582,7 @@ html {
   white-space: pre-wrap;
   word-wrap: break-word;
   margin: 0;
-  background-image:  url('/assets/images/bg2.png');
+  background-image:  url('bg2.png');
   background-size: 80%;
   background-repeat: no-repeat;
   background-size: cover;
@@ -2742,5 +2740,52 @@ html {
     max-width: 100%;
   }
 }
+
+
+
+
+
+
+
+
+
+/* styles.css */
+
+
+
+
+
+.pre1 {
+  border-radius: 4px;
+  padding: 16px;
+  overflow: auto;
+  margin-bottom: 16px;
+  background-color: #00000073 !important;
+  font-size: 16px !important;
+  white-space: pre-wrap !important;
+  word-wrap: break-word !important; 
+}
+
+
+.load-more,
+.close-file {
+  display: block;
+  margin: 10px auto;
+  padding: 10px 20px;
+  background-color: #282c34;
+  color: #ffffff;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  display: inline-block;
+}
+
+.load-more:hover,
+.close-file:hover {
+  background-color: #3c3f4a;
+}
+
+
+
 
 
