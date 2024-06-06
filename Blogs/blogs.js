@@ -96,7 +96,7 @@ document.getElementById('scrollBottomButton').addEventListener('click', function
 // scripts.js
 
 document.addEventListener("DOMContentLoaded", function() {
-  const chunkSize = 700; // Size of the chunk to load in bytes
+  const chunkSize = 500; // Size of the chunk to load in bytes
 
   async function fetchChunk(url, start, end) {
       const response = await fetch(url, {

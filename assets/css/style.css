@@ -2412,7 +2412,7 @@ img:not(.no-hover-effect):hover {
   background-color:  #00000073;
   padding: 10px;
   border-radius: 10px;
-  font-size: 17px;
+  font-size: 16px;
   color: white;
 }
 
@@ -2778,6 +2778,7 @@ html {
   border-radius: 4px;
   cursor: pointer;
   display: inline-block;
+  background-color: navy;
 }
 
 .load-more:hover,
