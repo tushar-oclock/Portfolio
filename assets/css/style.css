@@ -1627,7 +1627,7 @@ textarea.form-input::-webkit-resizer {
   .testimonials-text {
     line-clamp: 2;
     /* -webkit-line-clamp: 3; */
-    text-align: justify;
+    /* text-align: justify; */
   }
 
   /* testimonials modal */
@@ -2588,6 +2588,7 @@ html {
   background-size: 80%;
   background-repeat: no-repeat;
   background-size: cover;
+  background-color: #00000073 ;
 }
 
 @media (max-width: 600px) {
