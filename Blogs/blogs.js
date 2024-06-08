@@ -39,12 +39,7 @@ setInterval(() => {
 
 
 
-// curser
-new kursor({
-  type: 1,
-  removeDefaultCursor: true,
-  color: "#FFD870"
-})
+
 
 
 // click sound
@@ -158,3 +153,7 @@ document.addEventListener("DOMContentLoaded", function() {
       loadMore();
   });
 });
+
+
+
+

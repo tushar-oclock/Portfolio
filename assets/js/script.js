@@ -197,14 +197,6 @@ setInterval(() => {
 
 
 
-new kursor({
-  type: 1,
-  removeDefaultCursor:true,
-  color: "#FFD870"
-})
-
-
-
 
 document.addEventListener("click", function() {
   playSound();
