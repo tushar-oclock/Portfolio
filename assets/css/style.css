@@ -334,7 +334,7 @@ main {
 \*-----------------------------------*/
 
 .sidebar {
-  margin-bottom: 15px;
+  /* margin-bottom: 15px; */
   max-height: 112px;
   overflow: hidden;
   transition: var(--transition-2);
@@ -398,41 +398,13 @@ main {
 
 .info_more-btn {
   position: absolute;
-  top: -15px;
+  top: 0px;
   right: -15px;
-  border-radius: 0 15px;
-  font-size: 13px;
-  color: var(--orange-yellow-crayola);
-  background: var(--border-gradient-onyx);
+  color: yellow;
   padding: 10px;
-  box-shadow: var(--shadow-2);
-  transition: var(--transition-1);
-  z-index: 1;
+
 }
 
-.info_more-btn::before {
-  content: "";
-  position: absolute;
-  inset: 1px;
-  border-radius: inherit;
-  background: var(--bg-gradient-jet);
-  transition: var(--transition-1);
-  z-index: -1;
-}
-
-.info_more-btn:hover,
-.info_more-btn:focus {
-  background: var(--bg-gradient-yellow-1);
-}
-
-.info_more-btn:hover::before,
-.info_more-btn:focus::before {
-  background: var(--bg-gradient-yellow-2);
-}
-
-.info_more-btn span {
-  display: none;
-}
 
 .sidebar-info_more {
   opacity: 0;
@@ -473,7 +445,8 @@ main {
 }
 
 .contact-info :is(.contact-link, time, address) {
-  color: var(--white-2);
+  /* color: var(--white-2); */
+  color: white;
   /* font-size: var(--fs-7); */
   font-size: 15px;
 }
@@ -486,7 +459,7 @@ main {
   display: flex;
   justify-content: flex-start;
   align-items: center;
-  gap: 15px;
+  gap: 13px;
 }
 
 .social-item .social-link {
@@ -2201,7 +2174,7 @@ span {
   white-space: nowrap;
   vertical-align: baseline;
   border-radius: 0.25rem;
-  letter-spacing: 1px;
+  /* letter-spacing: 1px; */
 }
 
 .badge-primary {
@@ -2274,11 +2247,6 @@ span {
   color: #fff;
 }
 
-.badge-cyan {
-  background-color: #00bcd4;
-  color: black;
-}
-
 .badge-Amber {
   background-color: #673ab7;
   color: white;
@@ -2305,7 +2273,7 @@ span {
 
 .badge-green {
   background-color: #4CAF50;
-  color: #000;
+  color: #fff;
 }
 
 .badge-blue {
@@ -2779,22 +2747,6 @@ html {
 }
 
 
-.top-right-button {
-  position: fixed;
-  top: 30px;
-  right: 20px;
-  z-index: 999;
-  background-color: transparent;
-  border: none;
-  cursor: pointer;
-}
-
-.top-right-button img {
-  width: 40px;
-  height: auto;
-  animation: rotate 6s linear infinite;
-}
-
 
 
 
@@ -2809,12 +2761,6 @@ html {
 }
 
 
-
-@media (max-width: 768px) {
-  .top-right-button {
-    top: 95px;
-  }
-}
 
 
 .highlight1 {
@@ -2927,3 +2873,35 @@ html {
 * {
   cursor: url('python.png') 32 32, auto !important;
 }
+
+
+
+@media only screen and (max-width: 600px) {
+  .blogbadge {
+    font-size: 80%;
+    /* Adjust the font size as needed */
+    line-height: 2;
+    padding: 0.5em 0.5em;
+  }
+
+  .language-python {
+    font-size: 12px;
+  }
+
+  .article-title {
+    font-size: 22px;
+  }
+
+
+}
+
+
+::-webkit-scrollbar-thumb {
+  background: #e8bc54 !important;
+  /* Thumb color */
+  border-radius: 20px !important;
+  /* Rounded corners */
+}
+
+
+

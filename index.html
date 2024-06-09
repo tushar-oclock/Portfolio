@@ -33,10 +33,6 @@
 
 
 
-  <button class="top-right-button">
-    <img src="./assets/images/cv.png" alt="Button Image" width="40">
-</button>
-
 
 
 
@@ -47,7 +43,7 @@
 
   <div class="video-container">
     <video autoplay loop muted id="background-video">
-      <source src="./assets/images/video/bg1.mp4" type="video/mp4">
+      <source src="./assets/images/video/bg2.mp4" type="video/mp4">
       Your browser does not support the video tag.
     </video>
   </div>
@@ -99,9 +95,7 @@
         </div>
 
         <button class="info_more-btn" data-sidebar-btn>
-          <span>Show Contacts</span>
-
-          <ion-icon name="chevron-down"></ion-icon>
+          <img src="./assets/images/sidebar/mobiledown.svg"  width=30 height=30  alt="">
         </button>
 
       </div>
@@ -185,24 +179,22 @@
             </a>
           </li>
 
-        </li>
+          <li class="social-item">
+            <a href="https://discord.com/users/808714320505733161" target="_blank" class="social-link">
+              <img src="./assets/images/sidebar/discord.svg" alt="design icon" width="40">
 
-        <li class="social-item">
-          <a href="https://discord.com/users/808714320505733161" target="_blank" class="social-link">
-            <img src="./assets/images/sidebar/discord.svg" alt="design icon" width="40">
+            </a>
+          </li>
 
-          </a>
-        </li>
-      
+          <li class="social-item">
+            <a href="https://drive.google.com/drive/folders/1ejijyKzFVYlD9UNv4KKm5ckLXfy10s1p?usp=sharing" target="_blank" class="social-link">
+              <img src="./assets/images/sidebar/cv.png" alt="design icon" width="40">
 
-
-          
-
-
-
+            </a>
+          </li>
 
         </ul>
-        <br>
+
       </div>
 
     </aside>
@@ -267,7 +259,7 @@
       <article class="about  active" data-page="🏠">
 
         <header>
-          <h2 class="h2 article-title">🎯 About me
+          <h2 class="h2 article-title">📛 About me
             
           </h2>
 
@@ -1022,6 +1014,10 @@
 
       </article>
 
+
+
+
+
       <!-- #PORTFOLIO -->
       <article class="portfolio" data-page="🗂️">
 
@@ -1503,7 +1499,8 @@
               </a>
             </li>
 
-            <li class="project-item  active" data-filter-item data-category="generative ai">
+
+            <li class="project-item" data-filter-item data-category="generative ai">
               <a href="https://github.com/24x7-Dev-Player" target="_blank">
 
                 <figure class="project-img">
@@ -1511,17 +1508,14 @@
                     <ion-icon name="eye-outline"></ion-icon>
                   </div>
 
-                  <img src="./assets/images/projects/Genai/nvdianim.jpg" alt="orizon" loading="lazy">
+                  <img src="./assets/images/projects/Genai/nvidnim.png" alt="orizon" loading="lazy">
                 </figure>
 
                 <h3 class="project-title">RAG Using Nvdia NIM</h3>
-
-                <p class="project-category">Generative AI</p>
-
               </a>
             </li>
 
-            <li class="project-item  active" data-filter-item data-category="generative ai">
+            <li class="project-item" data-filter-item data-category="generative ai">
               <a href="https://github.com/24x7-Dev-Player" target="_blank">
 
                 <figure class="project-img">
@@ -1529,93 +1523,152 @@
                     <ion-icon name="eye-outline"></ion-icon>
                   </div>
 
-                  <img src="./assets/images/projects/Genai/multimodelchatgpt.png" alt="orizon" loading="lazy">
+                  <img src="./assets/images/projects/Genai/multimodel.png" alt="orizon" loading="lazy">
                 </figure>
 
                 <h3 class="project-title">Multi Model Chatbot Using Chainlit</h3>
-
-                <p class="project-category">Generative AI</p>
-
               </a>
             </li>
 
-            <li class="project-item  active" data-filter-item data-category="generative ai">
+            <li class="project-item" data-filter-item data-category="generative ai">
               <a href="https://github.com/24x7-Dev-Player" target="_blank">
                 <figure class="project-img">
                   <div class="project-item-icon-box">
                     <ion-icon name="eye-outline"></ion-icon>
                   </div>
-                  <img src="./assets/images/projects/Genai/SQLchatwithcsv.png" alt="orizon" loading="lazy">
+                  <img src="./assets/images/projects/Genai/sqlcsv.png" alt="orizon" loading="lazy">
                 </figure>
 
                 <h3 class="project-title">SQL + CSV Data Analyst Using Phi Agent</h3>
               </a>
             </li>
 
-            <li class="project-item  active" data-filter-item data-category="generative ai">
+            <li class="project-item" data-filter-item data-category="generative ai">
               <a href="https://github.com/24x7-Dev-Player" target="_blank">
                 <figure class="project-img">
                   <div class="project-item-icon-box">
                     <ion-icon name="eye-outline"></ion-icon>
                   </div>
-                  <img src="./assets/images/projects/Genai/financialChatbot.png" alt="orizon" loading="lazy">
+                  <img src="./assets/images/projects/Genai/finance chatbot.png" alt="orizon" loading="lazy">
                 </figure>
 
                 <h3 class="project-title">Finance Chatbot Using Phi Agent</h3>
               </a>
             </li>
 
-            <li class="project-item  active" data-filter-item data-category="generative ai">
+            <li class="project-item" data-filter-item data-category="generative ai">
               <a href="https://github.com/24x7-Dev-Player" target="_blank">
                 <figure class="project-img">
                   <div class="project-item-icon-box">
                     <ion-icon name="eye-outline"></ion-icon>
                   </div>
-                  <img src="./assets/images/projects/Genai/Rag assist.png" alt="orizon" loading="lazy">
+                  <img src="./assets/images/projects/Genai/ragassistantphi.png" alt="orizon" loading="lazy">
                 </figure>
 
                 <h3 class="project-title">Rag Assistance using Phi Agent</h3>
               </a>
             </li>
 
-            <li class="project-item  active" data-filter-item data-category="generative ai">
+            <li class="project-item" data-filter-item data-category="generative ai">
               <a href="https://github.com/24x7-Dev-Player" target="_blank">
                 <figure class="project-img">
                   <div class="project-item-icon-box">
                     <ion-icon name="eye-outline"></ion-icon>
                   </div>
-                  <img src="./assets/images/projects/Genai/Auto RAG using Phi Agent.png" alt="orizon" loading="lazy">
+                  <img src="./assets/images/projects/Genai/autoragphi.png" alt="orizon" loading="lazy">
                 </figure>
 
                 <h3 class="project-title">Auto RAG using Phi Agent</h3>
               </a>
             </li>
 
-            <li class="project-item  active" data-filter-item data-category="generative ai">
+            <li class="project-item" data-filter-item data-category="generative ai">
               <a href="https://github.com/24x7-Dev-Player" target="_blank">
                 <figure class="project-img">
                   <div class="project-item-icon-box">
                     <ion-icon name="eye-outline"></ion-icon>
                   </div>
-                  <img src="./assets/images/projects/Genai/RAG using Llamaindex with GROQ.png" alt="orizon" loading="lazy">
+                  <img src="./assets/images/projects/Genai/simple chatbot.png" alt="orizon" loading="lazy">
                 </figure>
 
-                <h3 class="project-title">RAG using LLamaindex & Groq</h3>
+                <h3 class="project-title">Simple Chatbot using LLmaindex With Groq</h3>
               </a>
             </li>
 
-            <li class="project-item  active" data-filter-item data-category="generative ai">
+            <li class="project-item" data-filter-item data-category="generative ai">
               <a href="https://github.com/24x7-Dev-Player" target="_blank">
                 <figure class="project-img">
                   <div class="project-item-icon-box">
                     <ion-icon name="eye-outline"></ion-icon>
                   </div>
-                  <img src="./assets/images/projects/Genai/Llmaindex groq simple.png" alt="orizon" loading="lazy">
+                  <img src="./assets/images/projects/Genai/tailer job application.png" alt="orizon" loading="lazy">
                 </figure>
 
-                <h3 class="project-title">Llama index & Groq using Chainlit</h3>
+                <h3 class="project-title">Build a Crew to Tailor Job Applications Using Crew.AI</h3>
               </a>
             </li>
+
+            <li class="project-item" data-filter-item data-category="generative ai">
+              <a href="https://github.com/24x7-Dev-Player" target="_blank">
+                <figure class="project-img">
+                  <div class="project-item-icon-box">
+                    <ion-icon name="eye-outline"></ion-icon>
+                  </div>
+                  <img src="./assets/images/projects/Genai/Multi-agent Customer Support Automation.png" alt="orizon" loading="lazy">
+                </figure>
+
+                <h3 class="project-title">Multi-agent Customer Support Automation Using Crew.AI</h3>
+              </a>
+            </li>
+
+            <li class="project-item" data-filter-item data-category="generative ai">
+              <a href="https://github.com/24x7-Dev-Player" target="_blank">
+                <figure class="project-img">
+                  <div class="project-item-icon-box">
+                    <ion-icon name="eye-outline"></ion-icon>
+                  </div>
+                  <img src="./assets/images/projects/Genai/blogger agent.png" alt="orizon" loading="lazy">
+                </figure>
+
+                <h3 class="project-title">Blogger Agent Using Crew.AI</h3>
+              </a>
+            </li>
+
+            <li class="project-item" data-filter-item data-category="generative ai">
+              <a href="https://github.com/24x7-Dev-Player" target="_blank">
+                <figure class="project-img">
+                  <div class="project-item-icon-box">
+                    <ion-icon name="eye-outline"></ion-icon>
+                  </div>
+                  <img src="./assets/images/projects/Genai/Customer Outreach Campaign Agent.png" alt="orizon" loading="lazy">
+                </figure>
+
+                <h3 class="project-title">Customer Outreach Campaign Agent Using Crew.AI</h3>
+              </a>
+            </li>
+
+            <li class="project-item" data-filter-item data-category="generative ai">
+              <a href="https://github.com/24x7-Dev-Player" target="_blank">
+                <figure class="project-img">
+                  <div class="project-item-icon-box">
+                    <ion-icon name="eye-outline"></ion-icon>
+                  </div>
+                  <img src="./assets/images/projects/Genai/Customer Outreach Campaign Agent.png" alt="orizon" loading="lazy">
+                </figure>
+
+                <h3 class="project-title">Automate Event Planning Using Crew.AI</h3>
+              </a>
+            </li>
+
+
+
+
+
+            
+
+
+
+
 
 
 
@@ -2088,8 +2141,7 @@
       opacity: 1;
     }
 
-    .scroll-button,
-    .top-right-button {
+    .scroll-button, {
     -webkit-tap-highlight-color: transparent;
 }
   </style>

@@ -9,22 +9,22 @@ sidebarBtn.addEventListener("click", function () { elementToggleFunc(sidebar); }
 
 // Badges
 const professions = [
-  { name: "Data Analyst", color: "primary" },
-  { name: "Data Engineer", color: "secondary" },
-  { name: "Data Scientist", color: "success" },
-  { name: "ML Engineer", color: "danger" },
-  { name: "Statistician", color: "warning" },
-  { name: "MLOPS Engineer", color: "info" },
-  { name: "Web Developer", color: "light" },
-  { name: "App Developer", color: "teal" },
-  { name: "Python Developer", color: "deeporange" },
-  { name: "AI Specialist", color: "gray" },
-    { name: "Data Scientist", color: "yellow" },
-    { name: "AIOPS Enginner", color: "purple" },
-    { name: "LLMOPS Enginner", color: "red" },
-    { name: "Data Architect", color: "orange" },
-    { name: "Research Scientist", color: "cyan" },
-    { name: "Data Consultant", color: "Amber" },
+  { name: "Data Analyst", color: "lightblue" },
+  { name: "Data Engineer", color: "redorange" },
+  { name: "Data Scientist", color: "lightgreen" },
+  { name: "ML Engineer", color: "gold" },
+  { name: "Statistician", color: "lightpink" },
+  { name: "MLOPS Engineer", color: "silver" },
+  { name: "Web Developer", color: "crimson" },
+  { name: "App Developer", color: "beige" },
+  { name: "Python Developer", color: "cyan" },
+  { name: "AI Specialist", color: "lime" },
+    { name: "Data Scientist", color: "teal" },
+    { name: "AIOPS Enginner", color: "pink" },
+    { name: "LLMOPS Enginner", color: "orange" },
+    { name: "Data Architect", color: "purple" },
+    { name: "Research Scientist", color: "blue" },
+    { name: "Data Consultant", color: "green" },
 ];
 function updateBadge(index) {
   const profession = professions[index];

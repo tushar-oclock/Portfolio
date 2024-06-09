@@ -5,7 +5,7 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>BLOG</title>
+  <title>Generative AI Code Stuff</title>
 
   <link rel="shortcut icon" href="../assets/images/logo.png" type="image/x-icon">
 
@@ -32,13 +32,6 @@
 
   </button>
 
-  <button class="top-right-button"
-    onclick="window.open('https://drive.google.com/drive/folders/1ejijyKzFVYlD9UNv4KKm5ckLXfy10s1p?usp=sharing', '_blank')">
-    <img src="../assets/images/cv.png" alt="Button Image" width="40">
-  </button>
-
-
-
 
   <audio id="clickSound">
     <source src="../assets/images/aud/sound.wav" type="audio/wav">
@@ -47,7 +40,7 @@
 
   <div class="video-container">
     <video autoplay loop muted id="background-video">
-      <source src="../assets/images/video/bg1.mp4" type="video/mp4">
+      <source src="../assets/images/video/bg2.mp4" type="video/mp4">
       Your browser does not support the video tag.
     </video>
   </div>
@@ -85,16 +78,14 @@
           </div>
 
           <div style="display: flex; 
-          justify-content: center; ">
+          justify-content: center;  ">
             <div id="badge-container" style="display: inline-block;"></div>
           </div>
 
         </div>
 
         <button class="info_more-btn" data-sidebar-btn>
-          <span>Show Contacts</span>
-
-          <ion-icon name="chevron-down"></ion-icon>
+          <img src="../assets/images/sidebar/mobiledown.svg"  width=30 height=30  alt="">
         </button>
 
       </div>
@@ -185,6 +176,13 @@
             </a>
           </li>
 
+          <li class="social-item">
+            <a href="https://drive.google.com/drive/folders/1ejijyKzFVYlD9UNv4KKm5ckLXfy10s1p?usp=sharing" target="_blank" class="social-link">
+              <img src="../assets/images/sidebar/cv.png" alt="design icon" width="40">
+
+            </a>
+          </li>
+
         </ul>
 
       </div>
@@ -201,11 +199,15 @@
         <ul class="navbar-list">
           <li class="navbar-item">
             <button style="font-size: 40px;" class="navbar-link"
-              onclick="window.open('https://24x7-dev-player.github.io/Portfolio/', '_blank')">🏠</button>
+              onclick="window.open('https://24x7-dev-player.github.io/Portfolio/', '_blank')">
+            
+            <img src="../assets/images/navabar/homepage.svg"  width="40" height="40" alt="">
+            
+            
+            </button>
           </li>
         </ul>
       </nav>
-
 
 
       <!-- BLOG -->
@@ -217,7 +219,7 @@
 
         <div class="blog">
           <div class="testimonials-text" data-testimonials-text>
-            <p>
+            <p class="blogbadge" >
               <span class="badge badge-lightblue">Prompt Template</span>
               <span class="badge badge-redorange">RAG Using Nvdia Nim</span>
               <span class="badge badge-lightgreen">GPT4o With Image & OCR</span>
@@ -236,13 +238,13 @@
               <span class="badge badge-orange">Customer Outreach Campaign Agent</span>
               <span class="badge badge-purple">Automate Event Planning</span>
               <span class="badge badge-blue">Build a Crew to Tailor Job Applications</span>
-              <span class="badge badge-green">Multi-agent for Financial Agent</span>
+              <span class="badge badge-green">Multi-agent for Financial Analysis</span>
             </p>
 
           </div>
-        </div> <br>
+        </div> <br> 
         <section class="about-text with-line">
-        </section>
+        </section>    
 
         <section class="about-text">
 

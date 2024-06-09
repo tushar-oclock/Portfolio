@@ -5,7 +5,7 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>BLOG</title>
+  <title>Generative Artificial Intelligence</title>
 
   <link rel="shortcut icon" href="../assets/images/logo.png" type="image/x-icon">
 
@@ -29,9 +29,7 @@
 
   </button>
 
-  <button class="top-right-button" onclick="window.open('https://drive.google.com/drive/folders/1ejijyKzFVYlD9UNv4KKm5ckLXfy10s1p?usp=sharing', '_blank')">
-    <img src="../assets/images/cv.png" alt="Button Image" width="40">
-  </button>
+
 
 
 
@@ -87,9 +85,7 @@
         </div>
 
         <button class="info_more-btn" data-sidebar-btn>
-          <span>Show Contacts</span>
-
-          <ion-icon name="chevron-down"></ion-icon>
+          <img src="../assets/images/sidebar/mobiledown.svg"  width=30 height=30  alt="">
         </button>
 
       </div>
@@ -180,6 +176,13 @@
             </a>
           </li>
 
+          <li class="social-item">
+            <a href="https://drive.google.com/drive/folders/1ejijyKzFVYlD9UNv4KKm5ckLXfy10s1p?usp=sharing" target="_blank" class="social-link">
+              <img src="../assets/images/sidebar/cv.png" alt="design icon" width="40">
+
+            </a>
+          </li>
+
         </ul>
 
       </div>
@@ -196,7 +199,12 @@
         <ul class="navbar-list">
           <li class="navbar-item">
             <button style="font-size: 40px;" class="navbar-link"
-              onclick="window.open('https://24x7-dev-player.github.io/Portfolio/', '_blank')">🏠</button>
+              onclick="window.open('https://24x7-dev-player.github.io/Portfolio/', '_blank')">
+            
+            <img src="../assets/images/navabar/homepage.svg"  width="40" height="40" alt="">
+            
+            
+            </button>
           </li>
         </ul>
       </nav>
@@ -212,23 +220,19 @@
 
         <div class="blog">
           <div class="testimonials-text" data-testimonials-text>
-            <p>
-              <span class="badge badge-primary">Basics</span>
-              <span class="badge badge-secondary">Prompt Engineering</span>
-              <span class="badge badge-success">Vector Database</span>
-              <span class="badge badge-yellow">Cloud for LLM</span>
-              <span class="badge badge-danger">Transformer</span>
-              <span class="badge badge-warning">Model Pretraining</span>
-              <span class="badge badge-info">FInetuning</span>
-              <span class="badge badge-light">RAG</span>
-              <span class="badge badge-teal">Langchain</span>
-              <span class="badge badge-deeporange">RLHF</span>
-              <span class="badge badge-gray">LLM Parameters</span>
-              <span class="badge badge-purple">GenAI for Vision</span>
-              <span class="badge badge-red">GenAI Tools</span>
-              <span class="badge badge-orange">AI Agent</span>
-
-
+            <p class="blogbadge" >
+              <span class="badge badge-lightblue">Generative AI Basics</span>
+              <span class="badge badge-redorange">Vector Database</span>
+              <span class="badge badge-lightgreen">Transformers</span>
+              <span class="badge badge-gold">Fine Tuning</span>
+              <span class="badge badge-lightpink">RAG</span>
+              <span class="badge badge-silver">Reinforcement Learning</span>
+              <span class="badge badge-olive">GenAI for VIsion</span>
+              <span class="badge badge-crimson">GenAI tools</span>
+              <span class="badge badge-beige">LLM Loss Function</span>
+              <span class="badge badge-cyan">AI Agent</span>
+              <span class="badge badge-lime">Evalution Matrix</span>
+              <span class="badge badge-teal">Benchmark</span>
             </p>
           </div>
         </div> <br>
@@ -264,20 +268,6 @@
           </div> <br>
 
 
-          <h3 class="h3 service-title">🚀 Cloud for LLM:</h3>
-          <div class="blog">
-            <ul>
-              <li><strong>Types of AI</strong>: Gen AI, Predicative AI, Responsible AI</li>
-              <li><strong>Life Cycle</strong>: Use cases, choose model, Adapt & Align model, Application Integration
-              </li>
-              <li><strong>Distributed Training</strong>: Data parallelism, Model parallelism, Federated parallelism</li>
-
-              <li><strong> AWS & key Concept</strong>: Model reduction Technique, Model deployment Scenarios, Data
-                Drifting, Tuning, Model, Maintenance, Lambda, API KEY, Boto3, AWS CLI, Sagemaker, Apprunner, ECR with Docker </li>
-
-            </ul>
-          </div> <br>
-
           <h3 class="h3 service-title">🚀Transformers & Model Pretraining</h3>
           <div class="blog">
             <ul>
@@ -305,14 +295,6 @@
             </ul>
           </div> <br>
 
-          <h3 class="h3 service-title">🚀Langchain</h3>
-          <div class="blog">
-            <ul>
-              <li><strong>Langchain Key Aspects</strong>: LLM, Prompt Template, Chain, Agent & tools, Memory,
-                Documentation Loaders, Vector Store, Langserver, LangSmith, Langchain with HugginFace & OpenAI</li>
-            </ul>
-          </div> <br>
-
           <h3 class="h3 service-title">🚀 Reinforcement Learning from Human Feedback:</h3>
           <div class="blog">
             <ul>
@@ -320,13 +302,6 @@
             </ul>
           </div> <br>
 
-          <h3 class="h3 service-title">🚀LLM & GPT Parameters:</h3>
-          <div class="blog">
-            <ul>
-              <li><strong>LLM Parameters</strong>: N_params, N_layers, D_model, N_heads, D_heads, Batch Size, Learning rate</li>
-              <li><strong>GPT Playground</strong>: Model, Temperature, Maximum Length, Stop Sequence, TopP, etc</li>
-            </ul>
-          </div> <br>
 
           <h3 class="h3 service-title">🚀 Genrative AI for Vision:</h3>
           <div class="blog">
@@ -356,11 +331,10 @@
             </ul>
           </div> <br>
 
-          <h3 class="h3 service-title">🚀AI Agent:</h3>
+          <h3 class="h3 service-title">🚀LLM Loss Function & AI Agent:</h3>
           <div class="blog">
             <ul>
-              <li><strong>Concepts</strong>: MultiModel, Text to Image Technology - Vector Quantized Variational Autoencoder (VQ-VAE) & Diffusion model, Basic Autoencoder, Denoising Autoencoder(losses - Kl Divergence, Recunstruction loss), Varitional Autoencoder, Multi AI agent</li>
-              <li>Losses: Discriminator Loss (D_loss), Generator Loss (G_loss), KL Divergence, Reconstruction Loss, Wasserstein Loss, Hinge Loss, Perceptual Loss, Adversarial Loss, Cycle Consistency Loss, Identity Loss, Feature Matching Loss, Least Squares Loss, Total Variation Loss, Style Loss, Content Loss</li>
+              <li><strong>LLM Loss Function</strong>: Discriminator Loss (D_loss), Generator Loss (G_loss), KL Divergence, Reconstruction Loss, Wasserstein Loss, Hinge Loss, Perceptual Loss, Adversarial Loss, Cycle Consistency Loss, Identity Loss, Feature Matching Loss, Least Squares Loss, Total Variation Loss, Style Loss, Content Loss</li>
 
               <li><Strong>AI Agent</Strong>: Roleplaying, Focus, Tools, Cooperations, Guardrails, Memory</li>
               <li><strong>Tools</strong>: Serperdev Tools, Scrape Website Tool, Website Search Tools, Custom Tool </li>
