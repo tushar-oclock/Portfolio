@@ -341,7 +341,7 @@ main {
 }
 
 .sidebar.active {
-  max-height: 405px;
+  max-height: 450px;
 }
 
 .sidebar-info {
@@ -448,7 +448,7 @@ main {
   /* color: var(--white-2); */
   color: white;
   /* font-size: var(--fs-7); */
-  font-size: 15px;
+  font-size: 16px;
 }
 
 .contact-info address {
@@ -1147,7 +1147,8 @@ main {
   position: absolute;
   inset: 1px;
   border-radius: inherit;
-  background: var(--eerie-black-1);
+  /* background: hsl(0deg 0% 7.06%); */
+  background-color: #00000073;
   z-index: -1;
 }
 
@@ -1160,7 +1161,7 @@ main {
 
 .blog-banner-box img {
   width: 100%;
-  height: 100%;
+  /* height: 100%; */
   /* object-fit: cover; */
   transition: var(--transition-1);
 }
@@ -1182,7 +1183,8 @@ main {
 }
 
 .blog-meta :is(.blog-category, time) {
-  color: var(--light-gray-70);
+  /* color: var(--light-gray-70); */
+  color : bisque;
   font-size: var(--fs-6);
   font-weight: var(--fw-300);
 }
@@ -1424,7 +1426,7 @@ textarea.form-input::-webkit-resizer {
 
   .article-title {
     /* font-weight: var(--fw-600); */
-    font-size: 30px;
+    font-size: 40px;
     padding-bottom: 15px;
   }
 
@@ -1749,7 +1751,7 @@ textarea.form-input::-webkit-resizer {
 
   .contacts-list {
     grid-template-columns: 1fr 1fr;
-    gap: 10px 15px;
+    gap: 5px 15px;
   }
 
 
@@ -2028,7 +2030,7 @@ textarea.form-input::-webkit-resizer {
    */
 
   main {
-    max-width: 1250px;
+    max-width: 1310px;
     margin-inline: auto;
     display: flex;
     justify-content: center;
@@ -2099,7 +2101,7 @@ textarea.form-input::-webkit-resizer {
 
 
   .separator:last-of-type {
-    margin: 15px 0;
+    margin: 7px 0;
     opacity: 0;
   }
 
@@ -2265,11 +2267,100 @@ span {
 
 }
 
+.badge-maroon {
+  background-color: #800000;
+  color: #fff;
+}
 
+.badge-navy {
+  background-color: #000080;
+  color: #fff;
+}
 
+.badge-aqua {
+  background-color: #00FFFF;
+  color: #000;
+  /* Changed to black because the background is light */
+}
 
+.badge-salmon {
+  background-color: #FA8072;
+  color: #000;
+  /* Changed to black because the background is light */
+}
 
+.badge-chocolate {
+  background-color: #D2691E;
+  color: #fff;
+}
 
+.badge-peru {
+  background-color: #CD853F;
+  color: #000;
+  /* Changed to black because the background is light */
+}
+
+.badge-indigo {
+  background-color: #4B0082;
+  color: #fff;
+}
+
+.badge-turquoise {
+  background-color: #40E0D0;
+  color: #000;
+  /* Changed to black because the background is light */
+}
+
+.badge-violet {
+  background-color: #EE82EE;
+  color: #000;
+  /* Changed to black because the background is light */
+}
+
+.badge-sienna {
+  background-color: #A0522D;
+  color: #fff;
+}
+
+.badge-plum {
+  background-color: #DDA0DD;
+  color: #000;
+  /* Changed to black because the background is light */
+}
+
+.badge-khaki {
+  background-color: #F0E68C;
+  color: #000;
+  /* Changed to black because the background is light */
+}
+
+.badge-coral {
+  background-color: #FF7F50;
+  color: #000;
+  /* Changed to black because the background is light */
+}
+
+.badge-lavender {
+  background-color: #E6E6FA;
+  color: #000;
+  /* Changed to black because the background is light */
+}
+.badge-rosybrown {
+  background-color: #BC8F8F;
+  color: #000;
+  /* Changed to black because the background is light */
+}
+.badge-thistle {
+  background-color: #D8BFD8;
+  color: #000;
+  /* Changed to black because the background is light */
+}
+
+.badge-skyblue {
+  background-color: #87CEEB;
+  color: #000;
+  /* Changed to black because the background is light */
+}
 
 .badge-green {
   background-color: #4CAF50;
@@ -2889,7 +2980,7 @@ html {
   }
 
   .article-title {
-    font-size: 22px;
+    font-size: 30px;
   }
 
 
@@ -2902,6 +2993,4 @@ html {
   border-radius: 20px !important;
   /* Rounded corners */
 }
-
-
 
