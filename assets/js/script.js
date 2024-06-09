@@ -132,27 +132,34 @@ for (let i = 0; i < formInputs.length; i++) {
 
 
 
-// page navigation variables
 const navigationLinks = document.querySelectorAll("[data-nav-link]");
 const pages = document.querySelectorAll("[data-page]");
 
-// add event to all nav link
-for (let i = 0; i < navigationLinks.length; i++) {
-  navigationLinks[i].addEventListener("click", function () {
+navigationLinks.forEach(link => {
+  link.addEventListener("click", function() {
+    const page = this.getAttribute("data-page");
 
-    for (let i = 0; i < pages.length; i++) {
-      if (this.innerHTML.toLowerCase() === pages[i].dataset.page) {
-        pages[i].classList.add("active");
-        navigationLinks[i].classList.add("active");
-        window.scrollTo(0, 0);
+    pages.forEach(article => {
+      if (article.getAttribute("data-page") === page) {
+        article.classList.add("active");
       } else {
-        pages[i].classList.remove("active");
-        navigationLinks[i].classList.remove("active");
+        article.classList.remove("active");
       }
-    }
+    });
 
+    navigationLinks.forEach(navLink => {
+      if (navLink.getAttribute("data-page") === page) {
+        navLink.classList.add("active");
+      } else {
+        navLink.classList.remove("active");
+      }
+    });
+
+    window.scrollTo(0, 0);
   });
-}
+});
+
+
 
 // custom js
 
@@ -313,5 +320,7 @@ document.addEventListener('DOMContentLoaded', function () {
     });
   });
 });
+
+
 
 
