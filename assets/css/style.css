@@ -292,11 +292,11 @@ article.active {
 
 .content-card {
   position: relative;
-  background: var(--border-gradient-onyx);
+  /* background: var(--border-gradient-onyx); */
   padding: 15px;
   padding-top: 45px;
   border-radius: 14px;
-  box-shadow: var(--shadow-2);
+  box-shadow: var(--shadow-5);
   cursor: pointer;
   z-index: 1;
 }
@@ -664,9 +664,9 @@ main {
   top: 0;
   left: 0;
   transform: translate(15px, -25px);
-  background: var(--bg-gradient-onyx);
+  /* background: var(--bg-gradient-onyx); */
   border-radius: 14px;
-  box-shadow: var(--shadow-1);
+  box-shadow: var(--shadow-5);
 }
 
 .testimonials-item-title {
@@ -1596,7 +1596,7 @@ textarea.form-input::-webkit-resizer {
   }
 
   .testimonials-list {
-    gap: 30px;
+    gap: 15px;
     margin: 0 -30px;
     padding: 30px;
     padding-bottom: 35px;
@@ -1614,6 +1614,7 @@ textarea.form-input::-webkit-resizer {
 
   .testimonials-avatar-box img {
     width: 80px;
+    padding-top: 20px;
   }
 
   .testimonials-item-title {
@@ -2123,7 +2124,7 @@ textarea.form-input::-webkit-resizer {
 
 
   .separator:last-of-type {
-    margin: 7px 0;
+    margin: 10px 0;
     opacity: 0;
   }
 
