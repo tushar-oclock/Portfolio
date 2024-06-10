@@ -549,7 +549,7 @@ main {
   /* color: var(--light-gray); */
   color: white;
   /* font-size: var(--fs-9); */
-  font-size: 17px;
+  font-size: 18px;
   text-align: justify;
 }
 
@@ -601,7 +601,7 @@ main {
 
 .service-item .service-icon-box img {
   margin: auto;
-  animation: 5s ease-in-out 0s infinite normal none running upDown;
+  animation: 4s ease-in-out 0s infinite normal none running upDown;
 }
 
 .service-content-box {
@@ -2827,7 +2827,7 @@ html {
 
 .popup {
   visibility: hidden;
-  background-color: #101526;
+  background-color: #121212;
   color: #ffdb70;
   text-align: center;
   padding: 5px;
