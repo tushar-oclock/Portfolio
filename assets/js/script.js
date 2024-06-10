@@ -287,7 +287,7 @@ document.addEventListener("DOMContentLoaded", function () {
   // Show only projects related to "Data Analytics" by default
   projectItems.forEach((item) => {
     const itemCategory = item.getAttribute("data-category");
-    if (itemCategory !== "data analytics") {
+    if (itemCategory !== "generative ai") {
       item.style.display = "none";
     }
   });
@@ -324,3 +324,12 @@ document.addEventListener('DOMContentLoaded', function () {
 
 
 
+var isMobile = window.matchMedia("only screen and (max-width: 768px)");
+
+window.addEventListener('scroll', function() {
+  if (isMobile.matches && window.scrollY > 0) {
+    document.querySelector('.blog-banner-box img').classList.add('mobile-color-filter');
+  } else {
+    document.querySelector('.blog-banner-box img').classList.remove('mobile-color-filter');
+  }
+});
