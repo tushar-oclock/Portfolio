@@ -86,22 +86,18 @@ document.getElementById('scrollBottomButton').addEventListener('click', function
 
 
 
-// scripts.js
-
+// Load Github Python FIles and Load & Close more Button
 document.addEventListener("DOMContentLoaded", function () {
   const chunkSize = 500; // Size of the chunk to load in bytes
-
   async function fetchChunk(url, start, end) {
     const response = await fetch(url, {
       headers: {
         'Range': `bytes=${start}-${end}`
       }
     });
-
     if (!response.ok) {
       return null;
     }
-
     return await response.text();
   }
 
@@ -143,15 +139,25 @@ document.addEventListener("DOMContentLoaded", function () {
         currentPosition += chunkSize;
       }
     }
-
     loadMoreButton.addEventListener('click', loadMore);
     closeButton.addEventListener('click', closeFile);
-
-    // Load the first chunk initially
     loadMore();
   });
 });
 
-
-
+// Scroll SPAN to H3
+const spans = document.querySelectorAll('.blogbadge .badge');
+spans.forEach(span => {
+  span.addEventListener('click', () => {
+    const spanText = span.textContent.trim();
+    const h3Elements = document.querySelectorAll('.service-title');
+    h3Elements.forEach(h3 => {
+      if (h3.textContent.trim() === '🚀' + spanText + ' :') {
+        const h3Top = h3.getBoundingClientRect().top + window.scrollY;
+        const offset = h3Top - (window.innerHeight * 0.1); // Adjust 0.1 for desired percentage
+        window.scrollTo({ top: offset, behavior: 'smooth' });
+      }
+    });
+  });
+});
 
