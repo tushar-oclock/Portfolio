@@ -1,13 +1,11 @@
 // Sidebar for mobileview
 const elementToggleFunc = function (elem) { elem.classList.toggle("active"); }
-
 const sidebar = document.querySelector("[data-sidebar]");
 const sidebarBtn = document.querySelector("[data-sidebar-btn]");
-
 sidebarBtn.addEventListener("click", function () { elementToggleFunc(sidebar); });
 
 
-// Badges
+// SideBar Badges
 const professions = [
   { name: "Data Analyst", color: "lightblue" },
   { name: "Data Engineer", color: "redorange" },
@@ -35,11 +33,6 @@ setInterval(() => {
   updateBadge(index);
 }, 1000);
 
-
-
-
-
-
 // click sound
 document.addEventListener("click", function () {
   playSound();
@@ -48,13 +41,6 @@ function playSound() {
   var audio = document.getElementById("clickSound");
   audio.play();
 }
-
-
-//  scrollbar
-document.getElementById('background-video').addEventListener('loadeddata', function () {
-  document.body.style.backgroundColor = 'black';
-});
-
 
 // Age on Sidebar
 const birthdate = new Date('2001-04-18T00:00:00');
@@ -158,4 +144,6 @@ spans.forEach(span => {
     });
   });
 });
+
+
 
