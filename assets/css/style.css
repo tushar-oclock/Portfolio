@@ -2234,10 +2234,7 @@ span {
   color: #fff;
 }
 
-.badge-light {
-  background-color: #f8f9fa;
-  color: #000;
-}
+
 
 .badge-teal {
   background-color: #00796b;
@@ -2302,12 +2299,6 @@ span {
   color: #fff;
 }
 
-.badge-aqua {
-  background-color: #00FFFF;
-  color: #000;
-  /* Changed to black because the background is light */
-}
-
 .badge-chocolate {
   background-color: #D2691E;
   color: #fff;
@@ -2324,6 +2315,19 @@ span {
 
 
 
+
+
+
+.badge-light {
+  background-color: #f8f9fa;
+  color: #000;
+}
+
+.badge-aqua {
+  background-color: #00FFFF;
+  color: #000;
+  /* Changed to black because the background is light */
+}
 
 .badge-salmon {
   background-color: #FA8072;
