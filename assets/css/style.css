@@ -1069,7 +1069,7 @@ main {
 .project-item-icon-box {
   --scale: 0.8;
 
-  background: var(--jet);
+  background: hsl(0deg 0% 7.06%);
   color: var(--orange-yellow-crayola);
   position: absolute;
   top: 50%;
@@ -1321,7 +1321,8 @@ textarea.form-input::-webkit-resizer {
   position: relative;
   width: 100%;
   background: var(--border-gradient-onyx);
-  color: var(--orange-yellow-crayola);
+  /* color: var(--orange-yellow-crayola); */
+  color: hsl(48deg 34.48% 88.63%);
   display: flex;
   justify-content: center;
   align-items: center;
@@ -2307,12 +2308,6 @@ span {
   /* Changed to black because the background is light */
 }
 
-.badge-salmon {
-  background-color: #FA8072;
-  color: #000;
-  /* Changed to black because the background is light */
-}
-
 .badge-chocolate {
   background-color: #D2691E;
   color: #fff;
@@ -2330,6 +2325,11 @@ span {
 
 
 
+.badge-salmon {
+  background-color: #FA8072;
+  color: #000;
+  /* Changed to black because the background is light */
+}
 
 .badge-peru {
   background-color: #CD853F;
