@@ -2799,7 +2799,7 @@ html {
 }
 
 .string {
-  color: #ffc72d;
+  color: #FBD125;
 }
 
 .function {
@@ -2815,7 +2815,7 @@ html {
 }
 
 .highlight {
-  color: #ff8a16;
+  color: #ff9a00;
 }
 
 
@@ -2886,7 +2886,7 @@ html {
 .highlight1 {
   position: relative;
   cursor: pointer;
-  color: #ffdb70;
+  color: #FBD125;
 }
 
 .popup1 {

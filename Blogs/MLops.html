@@ -5,7 +5,7 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>BLOG</title>
+  <title>Machine Learning Operations</title>
 
   <link rel="shortcut icon" href="../assets/images/logo.png" type="image/x-icon">
 
@@ -83,7 +83,7 @@
         </div>
 
         <button class="info_more-btn" data-sidebar-btn>
-          <img src="../assets/images/sidebar/mobiledown.svg"  width=30 height=30  alt="">
+          <img src="../assets/images/sidebar/mobiledown.svg" width=30 height=30 alt="">
         </button>
 
       </div>
@@ -175,7 +175,8 @@
           </li>
 
           <li class="social-item">
-            <a href="https://drive.google.com/drive/folders/1ejijyKzFVYlD9UNv4KKm5ckLXfy10s1p?usp=sharing" target="_blank" class="social-link">
+            <a href="https://drive.google.com/drive/folders/1ejijyKzFVYlD9UNv4KKm5ckLXfy10s1p?usp=sharing"
+              target="_blank" class="social-link">
               <img src="../assets/images/sidebar/cv.svg" alt="design icon" width="40">
 
             </a>
@@ -198,10 +199,10 @@
           <li class="navbar-item">
             <button style="font-size: 40px;" class="navbar-link"
               onclick="window.open('https://24x7-dev-player.github.io/Portfolio/', '_blank')">
-            
-            <img src="../assets/images/navabar/homepage.svg"  width="40" height="40" alt="">
-            
-            
+
+              <img src="../assets/images/navabar/homepage.svg" width="40" height="40" alt="">
+
+
             </button>
           </li>
         </ul>
@@ -213,15 +214,21 @@
       <article class="about  active" data-page="about">
 
         <header>
-          <h2 class="h2 article-title">           <img style="display: inline;"  src="../assets/images/navabar/blog.svg"  width="30" height="30" alt=""> Machine Learning Operations</h2>
+          <h2 class="h2 article-title"> <img style="display: inline;" src="../assets/images/navabar/blog.svg" width="30"
+              height="30" alt=""> Machine Learning Operations</h2>
         </header>
 
         <div class="blog">
           <div class="testimonials-text" data-testimonials-text>
             <p>
-              <span class="badge badge-primary">Data Management Tools</span>
-              <span class="badge badge-secondary">Model Building Tools</span>
-              <span class="badge badge-success">Model Deployment Tools</span>
+              <span class="badge badge-lightblue">Data Management Tools</span>
+              <span class="badge badge-redorange">Model Building Tools</span>
+              <span class="badge badge-lightgreen">Model Deployment Tools</span>
+              <span class="badge badge-gold">AWS Introduction</span>
+              <span class="badge badge-lightpink">EC2 (Elastic Computer Cloud)</span>
+              <span class="badge badge-silver">EC2 Commands & Script</span>
+              <span class="badge badge-olive">Github & Docker</span>
+              <span class="badge badge-crimson">Kubernets</span>
             </p>
           </div>
         </div> <br>
@@ -268,18 +275,21 @@
           <h3 class="h3 service-title">🚀Model Deployment Tools :</h3>
           <div class="blog">
             <ul>
-
-              <li><strong>End to End MLOps Platflow</strong>: Aws Sagemaker, AzureML, VertexAI, DataRobot, DataBricks</li>
+              <li><strong>End to End MLOps Platflow</strong>: Aws Sagemaker, AzureML, VertexAI, DataRobot, DataBricks
+              </li>
               <li><strong>CI/CD</strong>: Jenkins,Github Actions, TravicCI, AWS CodePipeline</li>
-              <li><strong>Containerization</strong>:  Docker, Amazon ECR</li>
+              <li><strong>Containerization</strong>: Docker, Amazon ECR</li>
               <li><strong>Model Serving</strong>: Seldon, BentoML, Kserver, Tenserflow Serving</li>
               <li><strong>Orchestraction</strong>: Amazon ECS, Kubernetes</li>
               <li><strong>Clound Platflorm</strong>: AWS, Azure, GCP</li>
               <li><strong>Provisioning</strong>: Terraform, Cloudformation</li>
               <li><strong>Infrastructure Management</strong>: Amazon ELB, Amazon ASGx</li>
               <li><strong>Security</strong>: AWS IAM, API Gateway</li>
-              <li><strong>Monitoring</strong>: General(Prometheus, Grafana), ML Specific(Evidently AI, Whylabs, FIddler), Cloud Native Tools(AWS Cloudwatch, Azure Monitor)</li>
+              <li><strong>Monitoring</strong>: General(Prometheus, Grafana), ML Specific(Evidently AI, Whylabs,
+                FIddler), Cloud Native Tools(AWS Cloudwatch, Azure Monitor)</li>
               <li><strong>Collaboration</strong>: Jira, Confluence, Slack </li>
+              <li><strong>Monolithic Architecture & Microservice Architecture</strong>: API, Message Brocker(RabbitMQ,
+                Redis, AWSSQS, Apache Kafka), Service Mesh (lstio), Web Sockets</li>
             </ul>
           </div> <br>
 
@@ -299,9 +309,9 @@
           <h3 class="h3 service-title">🚀EC2 (Elastic Computer Cloud)</h3>
           <div class="blog">
             <ul>
-              <li><strong>Key Feature</strong>: Instance Management, Amazon Machine Image (AMI) <strong>Storage
-                  Space</strong>: EBS(Elastic Block Store), EFS(Elastic File System), Network Card, Security Group,
-                Inbound & Outbound Traffic, Linux Commands, Bootstrap Script, Instance Storage, Errors </li>
+              <li><strong>Key Feature</strong>: Instance Management, Amazon Machine Image (AMI) </li>
+              <li><strong>Storage Space</strong>: EBS(Elastic Block Store), EFS(Elastic File System), Network Card,
+                Security Group, Inbound & Outbound Traffic, Linux Commands, Bootstrap Script, Instance Storage, Errors </li>
               <li><strong>Protocol</strong>: TCP, UDP, HTTPS, FTP, SSH </li>
               <li><Strong>EBS</Strong>: Volume, Snapshots</li>
 
@@ -309,14 +319,48 @@
           </div> <br>
 
           <h3 class="h3 service-title">🚀EC2 Commands & Script</h3>
-          <div class="file"
-            data-url="https://raw.githubusercontent.com/24x7-dev-player/MLOperations/main/ec2command.py"
+          <div class="file" data-url="https://raw.githubusercontent.com/24x7-dev-player/MLOperations/main/ec2command.py"
             data-lang="python">
             <pre class="pre1"><code class="language-python"></code></pre>
             <button class="load-more">Load More</button>
             <button class="close-file">Close File</button>
           </div><br>
 
+          <h3 class="h3 service-title">🚀Github &  Docker</h3>
+
+          <div class="blog">
+            <ul>
+              <li><strong>Github</strong>: Command, Repo, Commit, Branch, Merge, Pull Request, Fork, Clone </li>
+              <li><Strong>Docker</Strong>: Image, Container, Dockerhub, Dockerfile, Command, Docker Compose, Volume, Networking, Security, Docker Swarm, Kubernets, CI/CD Integration</li>
+
+            </ul>
+          </div> <br>
+
+          <div class="file" data-url="https://raw.githubusercontent.com/24x7-dev-player/MLOperations/main/Github.py"
+            data-lang="python">
+            <pre class="pre1"><code class="language-python"></code></pre>
+            <button class="load-more">Load More</button>
+            <button class="close-file">Close File</button>
+          </div><br>
+
+          <div class="file" data-url="https://raw.githubusercontent.com/24x7-dev-player/MLOperations/main/docker.py"
+            data-lang="python">
+            <pre class="pre1"><code class="language-python"></code></pre>
+            <button class="load-more">Load More</button>
+            <button class="close-file">Close File</button>
+          </div><br>
+
+
+          <h3 class="h3 service-title">🚀Kubernets</h3>
+          <div class="blog">
+            <ul>
+              <li><strong>Key Feature</strong>: Cluster, Master Nodes, Worker Nodes, KubeCTL</li>
+              <li><strong>Master Nodes</strong>: Control Panel, API server, ETCD, Controller, Scheduler</li>
+              <li><strong>Working Nodes</strong>: Container, Pod, Container Runtime, Kubelet, Kube-proxy </li>
+              <li><strong>Container Orchestraction Services</strong>: Kubernetes, Docker Swarm, Apache Mesos, AWS ECS, AmazonEKS, Google Kubernetes, Azure AKS, OpenShift, Nomad </li>
+
+            </ul>
+          </div> <br>
 
 
         </section>
@@ -341,6 +385,8 @@
   </main>
   <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
   <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.25.0/prism.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.25.0/components/prism-python.min.js"></script>
   <script src="blogs.js"></script>
 
 </body>
