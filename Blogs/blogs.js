@@ -56,7 +56,7 @@ document.getElementById('background-video').addEventListener('loadeddata', funct
 });
 
 
-// Age
+// Age on Sidebar
 const birthdate = new Date('2001-04-18T00:00:00');
 function updateAge() {
   const ageElement = document.getElementById('age');
@@ -68,23 +68,21 @@ function updateAge() {
 setInterval(updateAge, 100);
 updateAge();
 
-
-
-// botton
+// Page Up
 document.getElementById('scrollTopButton').addEventListener('click', function () {
   window.scrollTo({
     top: 0,
     behavior: 'smooth'
   });
 });
+
+// Down Button
 document.getElementById('scrollBottomButton').addEventListener('click', function () {
   window.scrollTo({
     top: document.documentElement.scrollHeight,
     behavior: 'smooth'
   });
 });
-
-
 
 // Load Github Python FIles and Load & Close more Button
 document.addEventListener("DOMContentLoaded", function () {
