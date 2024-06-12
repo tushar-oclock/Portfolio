@@ -2283,16 +2283,15 @@ span {
 
 }
 
-.badge-darkorange {
-  background-color: rebeccapurple;
-  color: white;
 
-}
 
 .badge-maroon {
   background-color: #800000;
   color: #fff;
 }
+
+
+
 
 .badge-navy {
   background-color: #000080;
@@ -2308,14 +2307,69 @@ span {
   color: #fff;
 }
 
-
-
-
-
-
 .badge-blue {
   background-color: #2196F3;
   color: #000;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.badge-darkorange {
+  background-color: rebeccapurple;
+  color: white;
+
+}
+
+
+.badge-lightseagreen {
+  background-color: #20B2AA;
+  color: #000;
+  /* Changed to black because the background is light */
+}
+
+
+.badge-palevioletred {
+  background-color: #DB7093;
+  color: #000;
+  /* Changed to black because the background is light */
+}
+
+.badge-lightpink2 {
+  background-color: #FFB6C1;
+  color: #000;
+  /* Changed to black because the background is light */
+}
+
+.badge-lightsalmon {
+  background-color: #FFA07A;
+  color: #000;
+  /* Changed to black because the background is light */
+}
+
+.badge-palegoldenrod {
+  background-color: #EEE8AA;
+  color: #000;
+  /* Changed to black because the background is light */
 }
 
 .badge-light {
