@@ -2235,53 +2235,20 @@ span {
 }
 
 
-
 .badge-teal {
   background-color: #00796b;
   color: #fff;
 }
 
-.badge-deeporange {
-  background-color: #ff5722;
-  color: #fff;
-}
 
 .badge-gray {
   background-color: #8bc34a;
   color: black;
 }
 
-.badge-yellow {
-  background-color: #ffeb3b;
-  color: black;
-}
-
-.badge-purple {
-  background-color: #9c27b0;
-  color: #fff;
-}
-
-.badge-red {
-  background-color: #f44336;
-  color: #fff;
-}
-
-.badge-orange {
-  background-color: #3f51b5;
-  color: #fff;
-}
-
-.badge-Amber {
-  background-color: #673ab7;
-  color: white;
-}
 
 
-.badge-maron {
-  background-color: sienna;
-  color: white;
 
-}
 
 
 
@@ -2289,6 +2256,10 @@ span {
   background-color: #800000;
   color: #fff;
 }
+
+
+
+
 
 
 
@@ -2312,32 +2283,90 @@ span {
   color: #000;
 }
 
+.badge-mediumorchid {
+  background-color: #BA55D3;
+  color: #fff;
+}
+
+.badge-mediumslateblue {
+  background-color: #7B68EE;
+  color: #fff;
+}
+
+.badge-mediumseagreen {
+  background-color: #3CB371;
+  color: #fff;
+}
+
+.badge-mediumturquoise {
+  background-color: #48D1CC;
+  color: #000;
+  /* Changed to black because the background is light */
+}
 
 
 
+.badge-midnightblue {
+  background-color: #191970;
+  color: #fff;
+}
 
+.badge-mediumaquamarine {
+  background-color: #66CDAA;
+  color: #000;
+  /* Changed to black because the background is light */
+}
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+.badge-cadetblue {
+  background-color: #5F9EA0;
+  color: #fff;
+}
 
 .badge-darkorange {
-  background-color: rebeccapurple;
-  color: white;
+  background-color: #FF8C00;
+  color: #fff;
+}
 
+.badge-darkorchid {
+  background-color: #9932CC;
+  color: #fff;
+}
+
+.badge-darkgoldenrod {
+  background-color: #B8860B;
+  color: #000;
+}
+
+
+
+.badge-cornflowerblue {
+  background-color: #6495ED;
+  color: #fff;
+}
+
+.badge-royalblue {
+  background-color: #4169E1;
+  color: #fff;
+}
+
+
+.badge-steelblue {
+  background-color: #4682B4;
+  color: #fff;
+}
+
+
+
+
+
+.badge-dodgerblue {
+  background-color: #1E90FF;
+  color: #fff;
+}
+
+.badge-seagreen {
+  background-color: #2E8B57;
+  color: #fff;
 }
 
 
@@ -2348,8 +2377,47 @@ span {
 }
 
 
+
+
+
+
+
+
+.badge-mediumvioletred {
+  background-color: #C71585;
+  color: #fff;
+}
+
+.badge-slateblue {
+  background-color: #6A5ACD;
+  color: #fff;
+}
+
+.badge-forestgreen {
+  background-color: #228B22;
+  color: #fff;
+}
+
+
+.badge-mediumspringgreen {
+  background-color: #00FA9A;
+  color: #000;
+  /* Changed to black because the background is light */
+}
+
 .badge-palevioletred {
   background-color: #DB7093;
+  color: #000;
+  /* Changed to black because the background is light */
+}
+
+.badge-darkorange {
+  background-color: rebeccapurple;
+  color: white;
+}
+
+.badge-burlywood {
+  background-color: #DEB887;
   color: #000;
   /* Changed to black because the background is light */
 }

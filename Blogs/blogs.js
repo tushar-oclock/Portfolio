@@ -4,7 +4,6 @@ const sidebar = document.querySelector("[data-sidebar]");
 const sidebarBtn = document.querySelector("[data-sidebar-btn]");
 sidebarBtn.addEventListener("click", function () { elementToggleFunc(sidebar); });
 
-
 // SideBar Badges
 const professions = [
   { name: "Data Analyst", color: "lightblue" },
