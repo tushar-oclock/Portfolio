@@ -136,7 +136,7 @@ const navigationLinks = document.querySelectorAll("[data-nav-link]");
 const pages = document.querySelectorAll("[data-page]");
 
 navigationLinks.forEach(link => {
-  link.addEventListener("click", function() {
+  link.addEventListener("click", function () {
     const page = this.getAttribute("data-page");
 
     pages.forEach(article => {
@@ -176,12 +176,12 @@ const professions = [
   { name: "App Developer", color: "beige" },
   { name: "Python Developer", color: "cyan" },
   { name: "AI Specialist", color: "lime" },
-    { name: "Data Scientist", color: "teal" },
-    { name: "AIOPS Enginner", color: "pink" },
-    { name: "LLMOPS Enginner", color: "orange" },
-    { name: "Data Architect", color: "purple" },
-    { name: "Research Scientist", color: "blue" },
-    { name: "Data Consultant", color: "green" },
+  { name: "Data Scientist", color: "teal" },
+  { name: "AIOPS Enginner", color: "pink" },
+  { name: "LLMOPS Enginner", color: "orange" },
+  { name: "Data Architect", color: "purple" },
+  { name: "Research Scientist", color: "blue" },
+  { name: "Data Consultant", color: "green" },
 
 
 ];
@@ -205,7 +205,7 @@ setInterval(() => {
 
 
 
-document.addEventListener("click", function() {
+document.addEventListener("click", function () {
   playSound();
 });
 
@@ -214,7 +214,7 @@ function playSound() {
   audio.play();
 }
 
-document.getElementById('background-video').addEventListener('loadeddata', function() {
+document.getElementById('background-video').addEventListener('loadeddata', function () {
   document.body.style.backgroundColor = 'black';
 });
 
@@ -242,14 +242,14 @@ updateAge();
 
 
 // botton
-document.getElementById('scrollTopButton').addEventListener('click', function() {
+document.getElementById('scrollTopButton').addEventListener('click', function () {
   window.scrollTo({
     top: 0,
     behavior: 'smooth'
   });
 });
 
-document.getElementById('scrollBottomButton').addEventListener('click', function() {
+document.getElementById('scrollBottomButton').addEventListener('click', function () {
   window.scrollTo({
     top: document.documentElement.scrollHeight,
     behavior: 'smooth'
@@ -326,7 +326,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
 var isMobile = window.matchMedia("only screen and (max-width: 768px)");
 
-window.addEventListener('scroll', function() {
+window.addEventListener('scroll', function () {
   if (isMobile.matches && window.scrollY > 0) {
     document.querySelector('.blog-banner-box img').classList.add('mobile-color-filter');
   } else {
@@ -337,44 +337,44 @@ window.addEventListener('scroll', function() {
 
 
 
-document.addEventListener("DOMContentLoaded", function() {
+document.addEventListener("DOMContentLoaded", function () {
   let lazyImages = [].slice.call(document.querySelectorAll("img.lazyload"));
 
   if ("IntersectionObserver" in window) {
-      let lazyImageObserver = new IntersectionObserver(function(entries, observer) {
-          entries.forEach(function(entry) {
-              if (entry.isIntersecting) {
-                  let lazyImage = entry.target;
-                  lazyImage.src = lazyImage.dataset.src;
-                  lazyImage.classList.remove("lazyload");
-                  lazyImageObserver.unobserve(lazyImage);
-              }
-          });
+    let lazyImageObserver = new IntersectionObserver(function (entries, observer) {
+      entries.forEach(function (entry) {
+        if (entry.isIntersecting) {
+          let lazyImage = entry.target;
+          lazyImage.src = lazyImage.dataset.src;
+          lazyImage.classList.remove("lazyload");
+          lazyImageObserver.unobserve(lazyImage);
+        }
       });
+    });
 
-      lazyImages.forEach(function(lazyImage) {
-          lazyImageObserver.observe(lazyImage);
-      });
+    lazyImages.forEach(function (lazyImage) {
+      lazyImageObserver.observe(lazyImage);
+    });
   } else {
-      // Fallback for browsers without IntersectionObserver support
-      let lazyLoad = function() {
-          lazyImages.forEach(function(lazyImage) {
-              if (lazyImage.getBoundingClientRect().top < window.innerHeight) {
-                  lazyImage.src = lazyImage.dataset.src;
-                  lazyImage.classList.remove("lazyload");
-              }
-          });
+    // Fallback for browsers without IntersectionObserver support
+    let lazyLoad = function () {
+      lazyImages.forEach(function (lazyImage) {
+        if (lazyImage.getBoundingClientRect().top < window.innerHeight) {
+          lazyImage.src = lazyImage.dataset.src;
+          lazyImage.classList.remove("lazyload");
+        }
+      });
 
-          if (lazyImages.length === 0) {
-              document.removeEventListener("scroll", lazyLoad);
-              window.removeEventListener("resize", lazyLoad);
-              window.removeEventListener("orientationchange", lazyLoad);
-          }
-      };
+      if (lazyImages.length === 0) {
+        document.removeEventListener("scroll", lazyLoad);
+        window.removeEventListener("resize", lazyLoad);
+        window.removeEventListener("orientationchange", lazyLoad);
+      }
+    };
 
-      document.addEventListener("scroll", lazyLoad);
-      window.addEventListener("resize", lazyLoad);
-      window.addEventListener("orientationchange", lazyLoad);
+    document.addEventListener("scroll", lazyLoad);
+    window.addEventListener("resize", lazyLoad);
+    window.addEventListener("orientationchange", lazyLoad);
   }
 });
 
@@ -445,3 +445,35 @@ document.addEventListener("DOMContentLoaded", function () {
     loadMore();
   });
 });
+
+
+
+
+
+document.addEventListener("DOMContentLoaded", function () {
+  const lazyImages = document.querySelectorAll('img.lazy');
+
+  if ('IntersectionObserver' in window) {
+    const observer = new IntersectionObserver((entries, observer) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          const img = entry.target;
+          img.src = img.dataset.src;
+          img.classList.remove('lazy');
+          observer.unobserve(img);
+        }
+      });
+    });
+
+    lazyImages.forEach(img => {
+      observer.observe(img);
+    });
+  } else {
+    // Fallback for browsers without IntersectionObserver support
+    lazyImages.forEach(img => {
+      img.src = img.dataset.src;
+      img.classList.remove('lazy');
+    });
+  }
+});
+
