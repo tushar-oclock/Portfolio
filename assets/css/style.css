@@ -1223,10 +1223,6 @@ main {
   color: hsl(48deg 34.48% 88.63%);;
 }
 
-.blog-post-item>a:hover .blog-item-title {
-  /* color: var(--orange-yellow-crayola); */
-  
-}
 
 .blog-text {
   color: var(--light-gray);
