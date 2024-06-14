@@ -2219,50 +2219,15 @@ span {
   color: #fff;
 }
 
-.badge-danger {
-  background-color: #dc3545;
-  color: #fff;
-}
-
-.badge-warning {
-  background-color: #ffc107;
-  color: #000;
-}
-
 .badge-info {
   background-color: #17a2b8;
-  color: #fff;
+  color: #000;
 }
-
-
-.badge-teal {
-  background-color: #00796b;
-  color: #fff;
-}
-
 
 .badge-gray {
   background-color: #8bc34a;
   color: black;
 }
-
-
-
-
-
-
-
-.badge-maroon {
-  background-color: #800000;
-  color: #fff;
-}
-
-
-
-
-
-
-
 
 .badge-navy {
   background-color: #000080;
@@ -2298,13 +2263,6 @@ span {
   color: #fff;
 }
 
-.badge-mediumturquoise {
-  background-color: #48D1CC;
-  color: #000;
-  /* Changed to black because the background is light */
-}
-
-
 
 .badge-midnightblue {
   background-color: #191970;
@@ -2317,18 +2275,8 @@ span {
   /* Changed to black because the background is light */
 }
 
-.badge-cadetblue {
-  background-color: #5F9EA0;
-  color: #fff;
-}
-
 .badge-darkorange {
   background-color: #FF8C00;
-  color: #fff;
-}
-
-.badge-darkorchid {
-  background-color: #9932CC;
   color: #fff;
 }
 
@@ -2338,10 +2286,9 @@ span {
 }
 
 
-
 .badge-cornflowerblue {
   background-color: #6495ED;
-  color: #fff;
+  color: #000;
 }
 
 .badge-royalblue {
@@ -2349,15 +2296,10 @@ span {
   color: #fff;
 }
 
-
 .badge-steelblue {
   background-color: #4682B4;
   color: #fff;
 }
-
-
-
-
 
 .badge-dodgerblue {
   background-color: #1E90FF;
@@ -2370,18 +2312,39 @@ span {
 }
 
 
-.badge-lightseagreen {
-  background-color: #20B2AA;
-  color: #000;
-  /* Changed to black because the background is light */
+
+
+
+
+
+
+
+
+
+.badge-danger {
+  background-color: #dc3545;
+  color: #fff;
 }
 
+.badge-maroon {
+  background-color: #800000;
+  color: #fff;
+}
 
+.badge-warning {
+  background-color: #ffc107;
+  color: #000;
+}
 
+.badge-darkorchid {
+  background-color: #9932CC;
+  color: #fff;
+}
 
-
-
-
+.badge-cadetblue {
+  background-color: #5F9EA0;
+  color: #000;
+}
 
 .badge-mediumvioletred {
   background-color: #C71585;
@@ -2397,7 +2360,6 @@ span {
   background-color: #228B22;
   color: #fff;
 }
-
 
 .badge-mediumspringgreen {
   background-color: #00FA9A;
@@ -3149,3 +3111,10 @@ html {
   /* Rounded corners */
 }
 
+
+
+
+math * {
+  padding-top: 2px; 
+  margin-top: 2px;
+}
