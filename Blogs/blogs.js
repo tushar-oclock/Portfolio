@@ -6,20 +6,15 @@ sidebarBtn.addEventListener("click", function () { elementToggleFunc(sidebar); }
 
 // SideBar Badges
 const professions = [
-  { name: "Data Analyst", color: "lightblue" },
-  { name: "Data Engineer", color: "redorange" },
-  { name: "Data Scientist", color: "lightgreen" },
-  { name: "ML Engineer", color: "gold" },
-  { name: "Statistician", color: "lightpink" },
-  { name: "MLOPS Engineer", color: "silver" },
-  { name: "Web Developer", color: "crimson" },
-  { name: "App Developer", color: "beige" },
-  { name: "AI Specialist", color: "lime" },
-  { name: "Data Scientist", color: "teal" },
-  { name: "AIOPS Enginner", color: "pink" },
-  { name: "LLMOPS Enginner", color: "orange" },
-  { name: "Data Architect", color: "purple" },
-  { name: "Data Consultant", color: "green" },
+  { name: "Data Analyst", color: "gold" },
+  { name: "Data Engineer", color: "lightpink" },
+  { name: "Data Scientist", color: "beige" },
+  { name: "ML Engineer", color: "crimson" },
+  { name: "MLOPS Engineer", color: "mediumspringgreen" },
+  { name: "Web Developer", color: "mediumvioletred" },
+  { name: "AIOPS Engineer", color: "khaki" },
+  { name: "LLMOPS Engineer", color: "plum" },
+  { name: "Python Developer", color: "lime" },
 ];
 function updateBadge(index) {
   const profession = professions[index];
@@ -33,13 +28,24 @@ setInterval(() => {
 }, 1000);
 
 // click sound
-document.addEventListener("click", function () {
-  playSound();
+document.addEventListener("DOMContentLoaded", function () {
+  // Create audio element
+  var audio = document.createElement("audio");
+  audio.id = "clickSound";
+  audio.innerHTML = '<source src="../assets/images/aud/sound.ogg" type="audio/ogg">Your browser does not support the audio element.';
+  document.body.appendChild(audio);
+
+  // Function to play the sound
+  function playSound() {
+      var audio = document.getElementById("clickSound");
+      audio.play();
+  }
+
+  // Event listener for mouse press
+  document.addEventListener("mousedown", function () {
+      playSound();
+  });
 });
-function playSound() {
-  var audio = document.getElementById("clickSound");
-  audio.play();
-}
 
 // Age on Sidebar
 const birthdate = new Date('2001-04-18T00:00:00');
@@ -53,94 +59,72 @@ function updateAge() {
 setInterval(updateAge, 100);
 updateAge();
 
-// Page Up
-document.getElementById('scrollTopButton').addEventListener('click', function () {
-  window.scrollTo({
-    top: 0,
-    behavior: 'smooth'
+// Page Up and Down
+function createScrollButton(id, scrollValue, scrollDirection) {
+  const button = document.createElement('button');
+  button.id = id;
+  button.className = 'scroll-button ' + scrollDirection;
+  button.innerHTML = `<img src="../assets/images/sidebar/${scrollDirection === 'scroll-top' ? 'chevron-angle-svgrepo-com.svg' : 'down-arrow-download-svgrepo-com.svg'}" alt="design icon" width="40">`;
+  button.addEventListener('click', function() {
+    window.scrollTo({
+      top: scrollValue,
+      behavior: 'smooth'
+    });
   });
-});
+  document.body.appendChild(button);
+}
+createScrollButton('scrollTopButton', 0, 'scroll-top');
+createScrollButton('scrollBottomButton', document.documentElement.scrollHeight, 'scroll-bottom');
 
-// Down Button
-document.getElementById('scrollBottomButton').addEventListener('click', function () {
-  window.scrollTo({
-    top: document.documentElement.scrollHeight,
-    behavior: 'smooth'
-  });
-});
 
 // Load Github Python FIles and Load & Close more Button
-document.addEventListener("DOMContentLoaded", function () {
-  const chunkSize = 500; // Size of the chunk to load in bytes
+document.querySelectorAll('.file').forEach(fileElement => {
+  const codeBlock = fileElement.querySelector('code');
+  const loadMoreButton = fileElement.querySelector('.load-more');
+  const closeButton = fileElement.querySelector('.close-file');
+  const url = fileElement.getAttribute('data-url');
+  const language = fileElement.getAttribute('data-lang');
+  let currentPosition = 0;
+  let content = '';
+
   async function fetchChunk(url, start, end) {
-    const response = await fetch(url, {
-      headers: {
-        'Range': `bytes=${start}-${end}`
-      }
-    });
-    if (!response.ok) {
-      return null;
-    }
+    const response = await fetch(url, { headers: { 'Range': `bytes=${start}-${end}` } });
+    if (!response.ok) return null;
     return await response.text();
   }
 
-  document.querySelectorAll('.file').forEach(fileElement => {
-    const codeBlock = fileElement.querySelector('code');
-    const loadMoreButton = fileElement.querySelector('.load-more');
-    const closeButton = fileElement.querySelector('.close-file');
-    const url = fileElement.getAttribute('data-url');
-    const language = fileElement.getAttribute('data-lang');
-    let currentPosition = 0;
-    let content = '';
+  async function loadMore() {
+    const chunk = await fetchChunk(url, currentPosition, currentPosition + 499);
+    if (chunk === null) return loadMoreButton.disabled = true, loadMoreButton.textContent = 'No more content';
+    content += chunk;
+    codeBlock.textContent = content;
+    Prism.highlightElement(codeBlock);
+    currentPosition += 500;
+  }
 
-    async function loadMore() {
-      const chunk = await fetchChunk(url, currentPosition, currentPosition + chunkSize - 1);
+  async function closeFile() {
+    content = '';
+    currentPosition = 0;
+    loadMoreButton.disabled = false;
+    loadMoreButton.textContent = 'Load More';
+    if (await fetchChunk(url, 0, 499) !== null) await loadMore();
+  }
 
-      if (chunk === null) {
-        loadMoreButton.disabled = true;
-        loadMoreButton.textContent = 'No more content';
-        return;
-      }
-
-      content += chunk;
-      codeBlock.textContent = content;
-      Prism.highlightElement(codeBlock);
-      currentPosition += chunkSize;
-    }
-
-    async function closeFile() {
-      content = '';
-      currentPosition = 0;
-      loadMoreButton.disabled = false;
-      loadMoreButton.textContent = 'Load More';
-      // Load the first chunk again
-      const initialChunk = await fetchChunk(url, currentPosition, currentPosition + chunkSize - 1);
-      if (initialChunk !== null) {
-        content = initialChunk;
-        codeBlock.textContent = content;
-        Prism.highlightElement(codeBlock);
-        currentPosition += chunkSize;
-      }
-    }
-    loadMoreButton.addEventListener('click', loadMore);
-    closeButton.addEventListener('click', closeFile);
-    loadMore();
-  });
+  loadMoreButton.addEventListener('click', loadMore);
+  closeButton.addEventListener('click', closeFile);
+  loadMore();
 });
 
+
 // Scroll SPAN to H3
-const spans = document.querySelectorAll('.blogbadge .badge');
-spans.forEach(span => {
+document.querySelectorAll('.blogbadge .badge').forEach(span => {
   span.addEventListener('click', () => {
     const spanText = span.textContent.trim();
-    const h3Elements = document.querySelectorAll('.service-title');
-    h3Elements.forEach(h3 => {
-      if (h3.textContent.trim() === '🚀' + spanText + ' :') {
-        const h3Top = h3.getBoundingClientRect().top + window.scrollY;
-        const offset = h3Top - (window.innerHeight * 0.1); // Adjust 0.1 for desired percentage
-        window.scrollTo({ top: offset, behavior: 'smooth' });
-      }
-    });
+    const h3 = [...document.querySelectorAll('.service-title')].find(h3 => h3.textContent.trim() === '🚀' + spanText + ' :');
+    if (h3) {
+      const offset = h3.getBoundingClientRect().top + window.scrollY - (window.innerHeight * 0.1);
+      window.scrollTo({ top: offset, behavior: 'smooth' });
+    }
   });
 });
 
