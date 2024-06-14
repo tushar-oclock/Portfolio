@@ -227,16 +227,19 @@
           <div class="testimonials-text" data-testimonials-text>
             <p class="blogbadge" >
               <span class="badge badge-lightblue">Generative AI Basics</span>
-              <span class="badge badge-redorange">Vector Database</span>
-              <span class="badge badge-lightgreen">Transformers & Model Pretraining</span>
-              <span class="badge badge-gold">Fine Tuning & RAG</span>
-              <span class="badge badge-lightpink">Reinforcement Learning from Human Feedback</span>
-              <span class="badge badge-silver">Genrative AI for Vision</span>
-              <span class="badge badge-olive">GenAI Tools</span>
-              <span class="badge badge-crimson">LLM Loss Function & AI Agent</span>
-              <span class="badge badge-beige">Evaluation Matrix & Benchmark</span>
-        
-
+              <span class="badge badge-redorange">Prompt Engineering</span>
+              <span class="badge badge-lightgreen">Transformers</span>
+              <span class="badge badge-gold">Model Pretraining</span>
+              <span class="badge badge-lightpink">Paramter Finetuning</span>
+              <span class="badge badge-silver">RAG</span>
+              <span class="badge badge-olive">AWS Bedrock & Sagemaker</span>
+              <span class="badge badge-crimson">Langchain</span>
+              <span class="badge badge-beige">Reinforcement Learning from Human Feedback</span>
+              <span class="badge badge-cyan">Genrative AI for Vision</span>
+              <span class="badge badge-lime">Vector Database</span>
+              <span class="badge badge-teal">GenAI Tools</span>
+              <span class="badge badge-pink">LLM Loss Function & AI Agent</span>
+              <span class="badge badge-orange">Evaluation Matrix & Benchmark</span>
             </p>
           </div>
         </div> <br>
@@ -263,7 +266,7 @@
             </ul>
           </div> <br>
 
-          <h3 class="h3 service-title">🚀Prompt Engineerings :</h3>
+          <h3 class="h3 service-title">🚀Prompt Engineering :</h3>
           <div class="blog">
             <ul>
               <li><strong>Prompt Types and Mothods</strong>: Zero-Shot Learning, One-Shot Learning, Few-Shot Learning, Chain-of-Thought Prompting(COT), Tree of Thoughts(TOT), Iterative Prompting, Negative Prompting, Hybrid Prompting, Prompt Chaining, Active Prompting, ReACT Prompting, etc.
@@ -272,24 +275,38 @@
             </ul>
           </div> <br>
           
-          
-
-          <h3 class="h3 service-title">🚀Transformers & Model Pretraining :</h3>
+          <h3 class="h3 service-title">🚀Transformers :</h3>
           <div class="blog">
             <ul>
-              <li><strong>Encoder</strong>: Embedding, Positional Encoding, Slef Attention, Multi head Attention, Normalization, Feed Forward Network </li>
-              <li><strong>Decoder</strong>: Embedding, Positional Encoding, Slef Attention, Masked Multi head Attentionx2, Feed Forward Network, Greedy Decoding, Beam Search </li>
+              <li><strong>Key Concepts</strong>: Self Attention, Parralissm, Encoder, Decorder, Transfer Learning, Position Encoding, Token, Word Embedding, Attension Score(Key, Value, Query), Sequential Attension, </li>
+              <li><strong>Encoder</strong>: Embedding, Positional Encoding, Self Attention, Multi head Attention, Normalization, Feed Forward Network </li>
+              <li><strong>Decoder</strong>: Embedding, Positional Encoding, Self Attention, Masked Multi head Attentionx2, Feed Forward Network, Greedy Decoding, Beam Search </li>
+              <li><strong>Word Preprocessing</strong>: Tokens, Word Embedding and Positional Encoding</li>
+              <li><strong>Transformer Layers</strong>: Linear Transformation, Self Attention, Feed Farward Network </li>
+              <li><strong>Self Attention Process</strong>: create Query, key & values, calcualte Attension score & Weighted sum, multiple attension head, Genrate Output</li>
+              <li><strong>Feed Forward Process</strong>: Linear transformation, Activation Funcation, Residual Connection and layer Normalization, Generate Output </li>
+              <li><strong>Decoder Process</strong>: Input Embedding, Masked Multi Head Self Attension, Residual Connection & layer Normalization, Multi Head Attention with Encoder Output, Residiual Connection and layer Normalization, Position Wise Feed Forward Network, Residual Connection & Layer Normalization, Staking Decoder Blocks, Output Linear layer & Softmax.</li>
               <li><strong>Tokenization</strong>: subword, Wordbased, Character-based, Byte-Pair Encoding(OpenAI), Sentance Piece(Google)</li>
-               <li><strong>Key Concepts</strong>: OpenAI Transformers  Vs LLaMA, Traning Arguments</li>
-              <li><strong>Model Pretraining</strong>: Model Size, Cost,
-                Trade off, Benefits, Small Language
-                Models, Model for Domain Adaptation (BloombergGPT for Finance), Quantization, Scaling techniques(DDP,
-                FSDP)
-              </li>
             </ul>
           </div> <br>
 
+          <h3 class="h3 service-title">🚀Model Pretraining :</h3>
+          <div class="blog">
+            <ul>
+              <li><strong>Generative Configuration</strong>: Generative Configuration. Autoencoding Models(Encoder-Only Models), Autoregressive Models(Decoder-Only Models), Sequence-to-Sequence Models(
+                Encoder-Decoder Models)
+              </li>
+              <li><strong>Model Pretraining</strong>: Model Size, Cost,
+                Trade off, Benefits, Small Language, Models, Model for Domain Adaptation (BloombergGPT for Finance), Quantization
+              </li>
+              <li><strong>Quantization Process and Memory Savings</strong>: lower precision spaces, QAT, BfIOAT16</li>
+              <li><strong>Scaling Techniques</strong>: DDP, FSDP</li>
+              <li><strong>Memory Optimization Techniques</strong>: Zero</li>
 
+
+
+            </ul>
+          </div> <br>
 
           <h3 class="h3 service-title">🚀Instruction Finetuning :</h3>
           <div class="blog">
@@ -340,6 +357,17 @@
             </ul>
           </div> <br>
 
+          <h3 class="h3 service-title">🚀Langchain :</h3>
+          <div class="blog">
+            <ul>
+              <li>Open Source Framewark to talk with LLM Model</li>
+              <li><strong>key Concepts</strong>: ChatModel, Prompt, Memory Concept, Chain, Agent, Retrival, Output Parser, Funcations, Vector Store, Sequential Chain, Summerization Chain, Expression language, Langserver(APIs and Monitoring), Langsmith(Tools for model development), LangGraphm Router chain</li>
+              <li><strong>Agent use cases</strong>: Summarization, Question and Answering Over Documents, Extraction, Evaluation, Querying Tabular Data, Code Understanding, Interacting with APIs, Chatbots, Agents</li>
+              
+
+            </ul>
+          </div> <br>
+
           <h3 class="h3 service-title">🚀Reinforcement Learning from Human Feedback :</h3>
           <div class="blog">
             <ul>
@@ -361,7 +389,6 @@
             </ul>
           </div> <br>
 
-
           <h3 class="h3 service-title">🚀Vector Database :</h3>
           <div class="blog">
             <ul>
@@ -377,7 +404,6 @@
               <li><strong>Query Process</strong>: Queue, vector Search, Similarity Search, Result</li>
             </ul>
           </div> <br>
-
 
           <h3 class="h3 service-title">🚀GenAI Tools :</h3>
           <div class="blog">
@@ -403,7 +429,6 @@
               <li><strong>Tools</strong>: Serperdev Tools, Scrape Website Tool, Website Search Tools, Custom Tool, Autogen </li>
             </ul>
           </div> <br>
-
 
           <h3 class="h3 service-title">🚀Evaluation Matrix & Benchmark :</h3>
           <div class="blog">

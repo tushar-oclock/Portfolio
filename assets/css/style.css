@@ -2219,15 +2219,7 @@ span {
   color: #fff;
 }
 
-.badge-info {
-  background-color: #17a2b8;
-  color: #000;
-}
 
-.badge-gray {
-  background-color: #8bc34a;
-  color: black;
-}
 
 .badge-navy {
   background-color: #000080;
@@ -2280,12 +2272,6 @@ span {
   color: #fff;
 }
 
-.badge-darkgoldenrod {
-  background-color: #B8860B;
-  color: #000;
-}
-
-
 .badge-cornflowerblue {
   background-color: #6495ED;
   color: #000;
@@ -2301,6 +2287,16 @@ span {
   color: #fff;
 }
 
+
+
+
+
+
+.badge-darkgoldenrod {
+  background-color: #B8860B;
+  color: #000;
+}
+
 .badge-dodgerblue {
   background-color: #1E90FF;
   color: #fff;
@@ -2310,16 +2306,15 @@ span {
   background-color: #2E8B57;
   color: #fff;
 }
+.badge-info {
+  background-color: #17a2b8;
+  color: #000;
+}
 
-
-
-
-
-
-
-
-
-
+.badge-gray {
+  background-color: #8bc34a;
+  color: black;
+}
 
 .badge-danger {
   background-color: #dc3545;
@@ -2334,11 +2329,6 @@ span {
 .badge-warning {
   background-color: #ffc107;
   color: #000;
-}
-
-.badge-darkorchid {
-  background-color: #9932CC;
-  color: #fff;
 }
 
 .badge-cadetblue {
