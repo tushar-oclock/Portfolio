@@ -104,22 +104,27 @@ function updateAge() {
 setInterval(updateAge, 100);
 updateAge();
 
+
 // Page Up and Down
 function createScrollButton(id, scrollValue, scrollDirection) {
   const button = document.createElement('button');
   button.id = id;
   button.className = 'scroll-button ' + scrollDirection;
   button.innerHTML = `<img src="../assets/images/sidebar/${scrollDirection === 'scroll-top' ? 'chevron-angle-svgrepo-com.svg' : 'down-arrow-download-svgrepo-com.svg'}" alt="design icon" width="40">`;
+  
   button.addEventListener('click', function() {
+    const targetScrollValue = scrollDirection === 'scroll-bottom' ? document.documentElement.scrollHeight : scrollValue;
     window.scrollTo({
-      top: scrollValue,
+      top: targetScrollValue,
       behavior: 'smooth'
     });
   });
+  
   document.body.appendChild(button);
 }
 createScrollButton('scrollTopButton', 0, 'scroll-top');
-createScrollButton('scrollBottomButton', document.documentElement.scrollHeight, 'scroll-bottom');
+createScrollButton('scrollBottomButton', 0, 'scroll-bottom');
+
 
 // Drop Down in MOBILE VIEW
 document.addEventListener("DOMContentLoaded", function () {
