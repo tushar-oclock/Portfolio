@@ -1610,8 +1610,7 @@ textarea.form-input::-webkit-resizer {
   }
 
   .testimonials-avatar-box img {
-    width: 80px;
-    padding-top: 20px;
+    width: 100px;
   }
 
   .testimonials-item-title {
@@ -2861,6 +2860,7 @@ html {
   background-repeat: no-repeat;
   background-size: cover;
   font-size: 18px;
+  /* animation: upDown 3s ease-in-out infinite; */
 }
 
 @media (max-width: 600px) {
@@ -2900,7 +2900,7 @@ html {
 }
 
 .highlight {
-  color: #ff9a00;
+  color: #fdce5c;
 }
 
 
@@ -2914,7 +2914,7 @@ html {
 .popup {
   visibility: hidden;
   background-color: #121212;
-  color: #ffdb70;
+  color: darkorange;
   text-align: center;
   padding: 5px;
   border-radius: 6px;
@@ -2971,7 +2971,7 @@ html {
 .highlight1 {
   position: relative;
   cursor: pointer;
-  color: #FBD125;
+  color: #fdce5c;
 }
 
 .popup1 {
@@ -3114,4 +3114,8 @@ html {
 math * {
   padding-top: 2px; 
   margin-top: 2px;
+}
+
+.test-shine{
+  border-radius: 40px;
 }
