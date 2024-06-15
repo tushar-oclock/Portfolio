@@ -2763,11 +2763,13 @@ strong {
 
 .scroll-button {
   position: fixed;
-  bottom: 20px;
+  bottom: 70px;
+  /* Adjust as needed */
   z-index: 9999;
   font-size: 24px;
   padding: 10px 15px;
   cursor: pointer;
+  /* background-color: #333; */
   color: #fff;
   border: none;
   border-radius: 5px;
@@ -2780,11 +2782,20 @@ strong {
 }
 
 .scroll-top {
-  left: 20px;
+  left: 10px;
 }
 
 .scroll-bottom {
-  right: 20px;
+  right:10px;
+  /* outline: none; */
+}
+
+.scroll-button:hover {
+  opacity: 1;
+}
+
+.scroll-button {
+-webkit-tap-highlight-color: transparent;
 }
 
 
