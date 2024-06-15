@@ -110,7 +110,7 @@ function createScrollButton(id, scrollValue, scrollDirection) {
   const button = document.createElement('button');
   button.id = id;
   button.className = 'scroll-button ' + scrollDirection;
-  button.innerHTML = `<img src="./assets/images/sidebar/${scrollDirection === 'scroll-top' ? 'chevron-angle-svgrepo-com.svg' : 'down-arrow-download-svgrepo-com.svg'}" alt="design icon" width="40">`;
+  button.innerHTML = `<img src="../assets/images/sidebar/${scrollDirection === 'scroll-top' ? 'chevron-angle-svgrepo-com.svg' : 'down-arrow-download-svgrepo-com.svg'}" alt="design icon" width="40">`;
   
   button.addEventListener('click', function() {
     const targetScrollValue = scrollDirection === 'scroll-bottom' ? document.documentElement.scrollHeight : scrollValue;
