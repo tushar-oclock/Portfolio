@@ -224,6 +224,15 @@
               <span class="badge badge-olive">Improvement</span>
               <span class="badge badge-crimson">Vanishing Gradient</span>
               <span class="badge badge-beige">Early Stopping</span>
+              <span class="badge badge-cyan">Normalization</span>
+              <span class="badge badge-lime">Dropout for Classification</span>
+              <span class="badge badge-teal">Dropout for Regression</span>
+              <span class="badge badge-pink">Regularization</span>
+              <span class="badge badge-orange">Activation Function</span>
+              <span class="badge badge-purple">Weight Initialization</span>
+              <span class="badge badge-plum">Batch Normalization</span>
+              <span class="badge badge-sienna">Optimizers</span>
+              <span class="badge badge-khaki">Keras Tuner</span>
             </p>
           </div>
         </div> <br>
@@ -253,7 +262,7 @@
           <div class="blog">
             <ul>
               <li><strong>Key Concepts & Notation</strong>: Nodes, Layers, Biases, Weight, Forward Propagation, Epochs, Activation
-                Function, Optimizer, Loss function vs Cost funcation, Backpropagation, Gradient Descent, Learning rate,
+                Function, Optimizer, Loss function vs Cost function, Backpropagation, Gradient Descent, Learning rate,
                 Convergence, Memoization, Batch Gradient Descent or Vanilla Gradient Descent, Stochastic Gradient
                 Descent, Mini Batch gradient descent </li>
             </ul>
@@ -319,9 +328,10 @@
               <li><strong>Slow training</strong>: Optimization, Learning rate scheduler</li>
               <li><strong>Overfitting</strong>: L1 and L2 Regularization, Dropout (Effect of P), Reduce Complexity, Increase data, Early stopping
               </li>
-              <li><strong> Normalisation</strong>: Normalisation input, Batch normalisation, Normalising Activation</li>
-              <li><strong> Optimizers</strong>: Momentum, Adagrade, Rmsprop
+              <li><strong>Normalisation</strong>: Normalisation input, Batch normalisation(Mini Batch GD apply), Normalising Activation</li>
+              <li><strong>Optimizers</strong>: Momentum, Adagrade, Rmsprop, adam, etc.
               </li>
+              <li><strong>hyperparameter</strong>: No. of Nodes, Batchsize, hidden Layer</li>
 
             </ul>
           </div> <br>
@@ -344,39 +354,96 @@
             <button class="close-file">Close File</button>
           </div><br>
 
+          <h3 class="h3 service-title">🚀Normalization :</h3>
+          <div class="file"
+            data-url="https://raw.githubusercontent.com/24x7-dev-player/Deep-Learning/main/Normalization%20inputs.py"
+            data-lang="python">
+            <pre class="pre1"><code class="language-python"></code></pre>
+            <button class="load-more">Load More</button>
+            <button class="close-file">Close File</button>
+          </div><br>
 
+          <h3 class="h3 service-title">🚀Dropout for Classification :</h3>
+          <div class="file"
+            data-url="https://raw.githubusercontent.com/24x7-dev-player/Deep-Learning/main/dropout_classification.py"
+            data-lang="python">
+            <pre class="pre1"><code class="language-python"></code></pre>
+            <button class="load-more">Load More</button>
+            <button class="close-file">Close File</button>
+          </div><br>
 
+          <h3 class="h3 service-title">🚀Dropout for Regression :</h3>
+          <div class="file"
+            data-url="https://raw.githubusercontent.com/24x7-dev-player/Deep-Learning/main/dropout_Regression.py"
+            data-lang="python">
+            <pre class="pre1"><code class="language-python"></code></pre>
+            <button class="load-more">Load More</button>
+            <button class="close-file">Close File</button>
+          </div><br>
 
+          <h3 class="h3 service-title">🚀Regularization :</h3>
+          <div class="file"
+            data-url="https://raw.githubusercontent.com/24x7-dev-player/Deep-Learning/main/regularization.py"
+            data-lang="python">
+            <pre class="pre1"><code class="language-python"></code></pre>
+            <button class="load-more">Load More</button>
+            <button class="close-file">Close File</button>
+          </div><br>
 
-          
-
-
-          <h3 class="h3 service-title">🚀 Activation Function & Weight Initialization & Optimizers:</h3>
+          <h3 class="h3 service-title">🚀Activation Function :</h3>
           <div class="blog">
             <ul>
-              <li><strong>Ideal </strong>: Non linear, Differentiable, Computationally inexpensive, Zero-centered or
-                normalized, Non-Saturating like in range (0,1) or (-1,1) its occur vanishing GD </li>
-              <li><strong>Functions</strong>: Sigmoid, Tanh, Relu, Leaky Relu, parametric relu, Elu and Selu</li>
-              <li><strong>Weight Initialization</strong>: Xavier/Glorat is better in tanh and he is for relu.
-              </li>
-              <li><strong>Batch Normalization</strong>: Exponentially weighted moving average </li>
-              <li><strong>Problem in batch, stochastic, and mini-batch Optimization</strong>: Learning rate with
-                Learning rate scheduling, Weights and bias, Local minima, Saddle point
-              </li>
-              <li><strong>Optimizers</strong>: Exponentially Weighted Moving Average or Exponential Weighted Average,
-                SGD with Momentum, Adagrad, NAG, RMSprop, Adam</li>
+              <li><strong>Ideal Activation Funcion</strong>: Non linear, Differentiable, Computationally inexpensive, Zero-centered or
+                normalized, Non-Saturating like in range (0,1) or (-1,1), Occur vanishing GD </li>
+              <li><strong>Sigmoid Funcation</strong>: Binary Clasification, Non linear, Differentiable, Saturated Function(Vanishing Gradient), Non Zero Center, </li>
+              <li><strong>Tanh Funcation</strong>: Non linear, Differentiable, Zero Center, Saturated, Computationally Expensive </li>
+              <li><strong>Relu</strong>: Non linear, Non Saturated, Computationally inexpensive, Convergence, Non Zero Center</li>
+              <li><strong>Dying Relu Problem</strong>: Set Low learning Rate, Bias +, Variant of Relu, Leakly Relu(No saturated, Easily Computed, Close to 0 Center), Paramteric Relu, ELU, SELU</li>
             </ul>
           </div> <br>
-          <div class="code-window">
-            <pre>
-              def build_model(hp):  # Define model building function with hyperparameter search
-                    hp.Int('units', min_value=32, max_value=128, step=32)
-                    model = keras.Sequential([keras.layers.Dense(hp.get('units'), 
-                    activation='relu', input_shape=(10,))])
-                    model.compile(optimizer='adam', loss='mse')
-                    return model
-            </pre>
+
+          <h3 class="h3 service-title">🚀Weight Initialization :</h3>
+          <div class="blog">
+            <ul>
+              <li><strong>Can't use becasue of Gernalization</strong>: Zero initialization, Non 0 or Constant, Random initializaiton(Small weights or Large Weights)</li>
+              <li><strong>Xavier/Glorat</strong>: Normal and Uniform</li>
+              <li><strong>He Init</strong>: Normal and Uniform </li>
+            </ul>
           </div> <br>
+          <div class="file"
+            data-url="https://raw.githubusercontent.com/24x7-dev-player/Deep-Learning/main/Weightsinitialization.py"
+            data-lang="python">
+            <pre class="pre1"><code class="language-python"></code></pre>
+            <button class="load-more">Load More</button>
+            <button class="close-file">Close File</button>
+          </div><br>
+
+          <h3 class="h3 service-title">🚀Batch Normalization :</h3>
+          <div class="file"
+            data-url="https://raw.githubusercontent.com/24x7-dev-player/Deep-Learning/main/batch_norm_example.py"
+            data-lang="python">
+            <pre class="pre1"><code class="language-python"></code></pre>
+            <button class="load-more">Load More</button>
+            <button class="close-file">Close File</button>
+          </div><br>
+
+          <h3 class="h3 service-title">🚀Optimizers :</h3>
+          <div class="blog">
+            <ul>
+              <li><Strong>Types</Strong>: Batch GD, Stochastic GD, Mini Batch GD</li>
+              Learning Rate Scheduler
+              <li><strong>Concepts</strong>Exponential Weighted Moving Average, Exponential Weighted Average, Momentum, Contours plot, Convex, Non convex, Local minima, Gloabl minimam Saddle point, Momentum Optimisation, Nesterov, Decay </li>
+              <li><strong>Optimizers</strong>: SGD with Momentum, Adagrad(Sparse), NAG, RMSprop, Adam</li>
+            </ul>
+          </div> <br>
+
+          <h3 class="h3 service-title">🚀Keras Tuner :</h3>
+          <div class="file" data-url="https://raw.githubusercontent.com/24x7-dev-player/Deep-Learning/main/keras_tuner.py"
+            data-lang="python">
+            <pre class="pre1"><code class="language-python"></code></pre>
+            <button class="load-more">Load More</button>
+            <button class="close-file">Close File</button>
+          </div><br>
 
 
 
@@ -528,7 +595,7 @@
           <div class="blog">
             <ul>
               <li><strong>Components</strong>: Generator (G), Discriminator (D), Minimax Game, Challenges, Applications,  </li>
-              <li><strong>Loss Funcation</strong>: Generator Loss, Discriminator Loss</li>
+              <li><strong>Loss function</strong>: Generator Loss, Discriminator Loss</li>
               <li><strong>Variants</strong>: DCGAN, CycleGAN, StyleGAN, ConditionGAN, SRGAN, ESRGAN, etc. </li>
             </ul>
           </div> <br>

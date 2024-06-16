@@ -620,7 +620,7 @@ main {
 
 .service-item-text {
   color: hsl(48deg 34.48% 88.63%);
-  font-size: var(--fs-5);
+  font-size: 16px
   font-weight: var(--fw-3);
   text-align: justify;
 }
