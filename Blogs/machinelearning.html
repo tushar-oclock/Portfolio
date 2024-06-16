@@ -360,7 +360,51 @@
             </div> <br>
 
 
-
+            <div class="blog">
+              <div class="testimonials-text" data-testimonials-text>
+                <p>
+                  <span class="badge badge-primary">Introduction</span>
+                  <span class="badge badge-secondary">Bagging</span>
+                </p>
+              </div>
+            </div> <br>
+            <section class="about-text with-line">
+            </section>
+    
+            <section class="about-text">
+    
+    
+    
+              <h3 class="h3 service-title">🚀Introducation</h3>
+              <div class="blog">
+                <ul>
+                  <li><strong>Types</strong>: Voting, Bagging, Boosting, stacking</li>
+                  <li><strong>Bagging</strong>: Random forest</li>
+                  <li><strong>Boosting</strong>: Adaboosting, Gradient Boosting, Xgboost</li>
+                  <li><strong>Benifits</strong>: Improvement in performance, Bias variance</li>
+                </ul>
+              </div> <br>
+    
+    
+              <h3 class="h3 service-title">🚀Bagging</h3>
+              <div class="blog">
+                <ul>
+                  <li><strong>Key concepts</strong>: Bootstraping, Aggregation, OOB samples </li>
+                  <li><strong>Types</strong>: Pasting(raw Sampling), Random Subspaces, Random Patches </li>
+                  <li><strong>Tips</strong>: Better result in pasting, 0.25 to 0.50 for raw sampling, Random patches and subspace needs high dimensional data, Hyperparameter Tuning in base model</li>
+                </ul>
+              </div> <br>
+              <div class="code-window">
+                <pre>
+                  #BAGGING
+                  from sklearn.ensemble import BaggingClassifier
+                  from sklearn.tree import DecisionTreeClassifier
+                  base_clf = DecisionTreeClassifier()
+                  bagging_clf = BaggingClassifier(base_clf, n_estimators=50)
+                  bagging_clf.fit(X_train, y_train)
+                </pre>
+              </div> <br>
+    
 
 
 
