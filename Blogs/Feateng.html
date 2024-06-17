@@ -75,7 +75,7 @@
         </div>
 
         <button class="info_more-btn" data-sidebar-btn>
-          <img src="../assets/images/sidebar/mobiledown.svg"  width=30 height=30  alt="">
+          <img src="../assets/images/sidebar/mobiledown.svg" width=30 height=30 alt="">
         </button>
 
       </div>
@@ -173,7 +173,8 @@
           </li>
 
           <li class="social-item">
-            <a href="https://drive.google.com/drive/folders/1ejijyKzFVYlD9UNv4KKm5ckLXfy10s1p?usp=sharing" target="_blank" class="social-link">
+            <a href="https://drive.google.com/drive/folders/1ejijyKzFVYlD9UNv4KKm5ckLXfy10s1p?usp=sharing"
+              target="_blank" class="social-link">
               <img src="../assets/images/sidebar/cv.svg" alt="design icon" width="40">
 
             </a>
@@ -196,10 +197,10 @@
           <li class="navbar-item">
             <button style="font-size: 40px;" class="navbar-link"
               onclick="window.open('https://24x7-dev-player.github.io/Portfolio/', '_blank')">
-            
-            <img src="../assets/images/navabar/homepage.svg"  width="40" height="40" alt="">
-            
-            
+
+              <img src="../assets/images/navabar/homepage.svg" width="40" height="40" alt="">
+
+
             </button>
           </li>
         </ul>
@@ -212,7 +213,9 @@
 
         <header>
           <h2 class="h2 article-title">
-            <img style="display: inline;"  src="../assets/images/navabar/blog.svg"  width="30" height="30" alt=""> Feature Engineering</h2>
+            <img style="display: inline;" src="../assets/images/navabar/blog.svg" width="30" height="30" alt=""> Feature
+            Engineering
+          </h2>
         </header>
 
         <div class="blog">
@@ -221,6 +224,8 @@
               <span class="badge badge-lightblue">Introduction</span>
               <span class="badge badge-redorange">Features Encoding</span>
               <span class="badge badge-lightgreen">Encoding Categorical Variable</span>
+              <span class="badge badge-gold">Sklearn Pipeline </span>
+
             </p>
           </div>
         </div> <br>
@@ -258,12 +263,14 @@
               <li><strong>More Encoding Technique</strong>: Count, Frequency, Binary, etc.</li>
               <li><strong>Weight of Evidence</strong>: Discretization, Binary classification, Financial domain, Use
                 cases, Binning, </li>
-              <li><strong>Binning Types</strong>: Custom, Uniform, Quantile, K-mean, Decision Tree based, Threshold Binning</li>
+              <li><strong>Binning Types</strong>: Custom, Uniform, Quantile, K-mean, Decision Tree based, Threshold
+                Binning</li>
             </ul>
           </div> <br>
 
           <h3 class="h3 service-title">🚀Encoding Categorical Variable :</h3>
-          <div class="file" data-url="https://raw.githubusercontent.com/24x7-dev-player/Data-Engineering/main/encoding_categorical_variables.py"
+          <div class="file"
+            data-url="https://raw.githubusercontent.com/24x7-dev-player/Data-Engineering/main/encoding_categorical_variables.py"
             data-lang="python">
             <pre class="pre1"><code class="language-python"></code></pre>
             <button class="load-more">Load More</button>
@@ -272,7 +279,7 @@
 
 
 
-          
+
           <h3 class="h3 service-title">🚀 Pipeline & Sklearn Deep Dive:</h3>
           <div class="blog">
             <ul>
@@ -281,16 +288,46 @@
                 Union</li>
             </ul>
           </div> <br>
-          <div class="code-window">
-            <pre>
-              pipeline = Pipeline([
-              ('imputer', SimpleImputer(strategy='mean')),
-              ('scaler', StandardScaler()),
-              ('pca', PCA(n_components=2)),
-              ('logreg', LogisticRegression())
-             ])
-            </pre>
+          <div class="file"
+            data-url="https://raw.githubusercontent.com/24x7-dev-player/Data-Engineering/main/encoding_categorical_variables.py"
+            data-lang="python">
+            <pre class="pre1"><code class="language-python"></code></pre>
+            <button class="load-more">Load More</button>
+            <button class="close-file">Close File</button>
+          </div><br>
+
+
+          <h3 class="h3 service-title">🚀Sklearn Pipeline :</h3>
+          <div class="blog">
+            <ul>
+              <li><strong>Sklearn</strong>: Algorithms, Preprocessing, Metrix, Models, Pipeline, Transformers</li>
+              <li><strong>Transformers</strong>: Estimators, Custom Estimators, Mixins, Composite Transformers, Feature
+                Union</li>
+            </ul>
           </div> <br>
+          <div class="file"
+            data-url="https://raw.githubusercontent.com/24x7-dev-player/Data-Engineering/main/sklearn_column_transformer.py"
+            data-lang="python">
+            <pre class="pre1"><code class="language-python"></code></pre>
+            <button class="load-more">Load More</button>
+            <button class="close-file">Close File</button>
+          </div><br>
+
+          <div class="file"
+          data-url="https://raw.githubusercontent.com/24x7-dev-player/Data-Engineering/main/sklearn_deep_dive.py"
+          data-lang="python">
+          <pre class="pre1"><code class="language-python"></code></pre>
+          <button class="load-more">Load More</button>
+          <button class="close-file">Close File</button>
+        </div><br>
+
+
+
+
+
+
+
+
 
           <h3 class="h3 service-title">🚀 Handling Missing Values :</h3>
           <div class="blog">
@@ -300,10 +337,11 @@
               <li><strong>Types of Missing values</strong>: MCAR, MAR, MNAR </li>
               <li><strong>Handle</strong>: Remove, Imputation, MLAlgo</li>
               <li><strong>CCA</strong>: LItewaise Division, MCAR</li>
-              <li><strong>Univariate</strong>: Missing Indicator, SImple imputer(Mean, Medium, Mode, Constant), Automatically Select Imputer</li>
+              <li><strong>Univariate</strong>: Missing Indicator, SImple imputer(Mean, Medium, Mode, Constant),
+                Automatically Select Imputer</li>
               <li><strong>MultiVariate</strong>: KNN imputer(Hyperparameters), Iterative Imputer(MICE, Chain Wise)</li>
 
-          </ul>
+            </ul>
           </div> <br>
 
 
@@ -317,12 +355,15 @@
           <h3 class="h3 service-title">🚀 Feature Scaling :</h3>
           <div class="blog">
             <ul>
-              <li><strong>Standardization:</strong> Adjusts the values to have a mean of 0 and a standard deviation of 1.</li>
+              <li><strong>Standardization:</strong> Adjusts the values to have a mean of 0 and a standard deviation of
+                1.</li>
               <li><strong>Min-Max Scaling:</strong> Rescales the values to a range between 0 and 1.</li>
               <li><strong>Robust Scaler:</strong> Scales the data using statistics that are robust to outliers.</li>
-              <li><strong>Max Absolute Scaler:</strong> Scales the data so that the maximum absolute value of each feature is 1.</li>
-              <li><strong>L2/L1 Normalization:</strong> Rescales the values of each sample to have a unit norm (sum of squares or absolute values).</li>
-          </ul>
+              <li><strong>Max Absolute Scaler:</strong> Scales the data so that the maximum absolute value of each
+                feature is 1.</li>
+              <li><strong>L2/L1 Normalization:</strong> Rescales the values of each sample to have a unit norm (sum of
+                squares or absolute values).</li>
+            </ul>
           </div> <br>
           <div class="code-window">
             <pre>
@@ -345,7 +386,7 @@
               <li><strong>Box-Cox:</strong> Corrects skewed data.</li>
               <li><strong>Yeo-Johnson:</strong> Flexible for positive and negative values.</li>
             </ul>
-            
+
           </div> <br>
           <div class="code-window">
             <pre>
@@ -353,17 +394,21 @@
               from sklearn.preprocessing import PowerTransformer
             </pre>
           </div> <br>
-          
+
           <h3 class="h3 service-title">🚀 Detect and Handling Outliers :</h3>
           <div class="blog">
             <ul>
-              <li><strong>Removal:</strong> Deleting outliers from the dataset to prevent them from affecting analysis.</li>
+              <li><strong>Removal:</strong> Deleting outliers from the dataset to prevent them from affecting analysis.
+              </li>
               <li><strong>Capping:</strong> Limiting the extreme values of outliers to a specified threshold.</li>
               <li><strong>Discretization:</strong> Grouping continuous data into categories or bins.</li>
               <li><strong>Impute:</strong> Replacing missing or outlier values with estimated ones.</li>
-              <li><strong>Zscore, IQR:</strong> Statistical methods for detecting outliers based on the data's mean and spread.</li>
-              <li><strong>Isolation, LOF, OneClass SVM, DBSCAN:</strong> Machine learning algorithms for outlier detection based on data clustering and density.</li>
-              <li><strong>Box plot, Scatter plot:</strong> Visualization techniques to visually identify outliers in a dataset.</li>
+              <li><strong>Zscore, IQR:</strong> Statistical methods for detecting outliers based on the data's mean and
+                spread.</li>
+              <li><strong>Isolation, LOF, OneClass SVM, DBSCAN:</strong> Machine learning algorithms for outlier
+                detection based on data clustering and density.</li>
+              <li><strong>Box plot, Scatter plot:</strong> Visualization techniques to visually identify outliers in a
+                dataset.</li>
             </ul>
           </div> <br>
           <div class="code-window">
@@ -517,7 +562,7 @@
               <li><strong>Binning</strong>: Group continuous values into discrete bins.</li>
               <li><strong>Lag Features</strong>: Use past values of a feature as new ones.</li>
               <li><strong>Rolling Statistics</strong>: Compute moving averages or sums over a window.</li>
-          </ul>
+            </ul>
           </div> <br>
           <div class="code-window">
             <pre>
@@ -534,8 +579,9 @@
               <li><strong>Text Features</strong>: Turn text into numerical data using methods like TF-IDF.</li>
               <li><strong>Domain Knowledge</strong>: Create features based on specific knowledge of the data.</li>
               <li><strong>Feature Encoding</strong>: Convert categorical data into numbers.</li>
-              <li><strong>Feature Transformation</strong>: Apply mathematical changes like log or square root to features.</li>
-          </ul>
+              <li><strong>Feature Transformation</strong>: Apply mathematical changes like log or square root to
+                features.</li>
+            </ul>
           </div> <br>
           <div class="code-window">
             <pre>
