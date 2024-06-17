@@ -233,6 +233,10 @@
               <span class="badge badge-plum">Batch Normalization</span>
               <span class="badge badge-sienna">Optimizers</span>
               <span class="badge badge-khaki">Keras Tuner</span>
+              <span class="badge badge-skyblue">CNN</span>
+              <span class="badge badge-lavender">Padding</span>
+              <span class="badge badge-thistle">Pooling</span>
+              <span class="badge badge-coral">Classification</span>
             </p>
           </div>
         </div> <br>
@@ -261,7 +265,8 @@
           <h3 class="h3 service-title">🚀MLP Notation :</h3>
           <div class="blog">
             <ul>
-              <li><strong>Key Concepts & Notation</strong>: Nodes, Layers, Biases, Weight, Forward Propagation, Epochs, Activation
+              <li><strong>Key Concepts & Notation</strong>: Nodes, Layers, Biases, Weight, Forward Propagation, Epochs,
+                Activation
                 Function, Optimizer, Loss function vs Cost function, Backpropagation, Gradient Descent, Learning rate,
                 Convergence, Memoization, Batch Gradient Descent or Vanilla Gradient Descent, Stochastic Gradient
                 Descent, Mini Batch gradient descent </li>
@@ -285,7 +290,7 @@
             <button class="load-more">Load More</button>
             <button class="close-file">Close File</button>
           </div><br>
-          
+
           <h3 class="h3 service-title">🚀ANN for Regression :</h3>
           <div class="file"
             data-url="https://raw.githubusercontent.com/24x7-dev-player/Deep-Learning/main/regressionann.py"
@@ -306,7 +311,8 @@
                 Classification (Probabilstic)</li>
               <li><strong>MSE</strong>: Activation function Linear with Output numbers (Linear Regression)</li>
               <li><strong>Regression</strong>: Mse(L2 Loss), (L1 Loss), Huber loss</li>
-              <li><strong>Classification</strong>: Binary cross entropy(Log Loss), categorical cross entropy, hinge loss</li>
+              <li><strong>Classification</strong>: Binary cross entropy(Log Loss), categorical cross entropy, hinge loss
+              </li>
               <li><strong>Autoencoder</strong>: KL divergence</li>
               <li><strong>GAN</strong>: Discriminator loss, minmax gan loss</li>
               <li><strong>Object detection</strong>: Focal loss</li>
@@ -326,9 +332,11 @@
               </li>
               <li><strong>Not Enough data</strong>: Transfer learning, Unsupervised pre-training</li>
               <li><strong>Slow training</strong>: Optimization, Learning rate scheduler</li>
-              <li><strong>Overfitting</strong>: L1 and L2 Regularization, Dropout (Effect of P), Reduce Complexity, Increase data, Early stopping
+              <li><strong>Overfitting</strong>: L1 and L2 Regularization, Dropout (Effect of P), Reduce Complexity,
+                Increase data, Early stopping
               </li>
-              <li><strong>Normalisation</strong>: Normalisation input, Batch normalisation(Mini Batch GD apply), Normalising Activation</li>
+              <li><strong>Normalisation</strong>: Normalisation input, Batch normalisation(Mini Batch GD apply),
+                Normalising Activation</li>
               <li><strong>Optimizers</strong>: Momentum, Adagrade, Rmsprop, adam, etc.
               </li>
               <li><strong>hyperparameter</strong>: No. of Nodes, Batchsize, hidden Layer</li>
@@ -393,19 +401,25 @@
           <h3 class="h3 service-title">🚀Activation Function :</h3>
           <div class="blog">
             <ul>
-              <li><strong>Ideal Activation Funcion</strong>: Non linear, Differentiable, Computationally inexpensive, Zero-centered or
+              <li><strong>Ideal Activation Funcion</strong>: Non linear, Differentiable, Computationally inexpensive,
+                Zero-centered or
                 normalized, Non-Saturating like in range (0,1) or (-1,1), Occur vanishing GD </li>
-              <li><strong>Sigmoid Funcation</strong>: Binary Clasification, Non linear, Differentiable, Saturated Function(Vanishing Gradient), Non Zero Center, </li>
-              <li><strong>Tanh Funcation</strong>: Non linear, Differentiable, Zero Center, Saturated, Computationally Expensive </li>
-              <li><strong>Relu</strong>: Non linear, Non Saturated, Computationally inexpensive, Convergence, Non Zero Center</li>
-              <li><strong>Dying Relu Problem</strong>: Set Low learning Rate, Bias +, Variant of Relu, Leakly Relu(No saturated, Easily Computed, Close to 0 Center), Paramteric Relu, ELU, SELU</li>
+              <li><strong>Sigmoid Funcation</strong>: Binary Clasification, Non linear, Differentiable, Saturated
+                Function(Vanishing Gradient), Non Zero Center, </li>
+              <li><strong>Tanh Funcation</strong>: Non linear, Differentiable, Zero Center, Saturated, Computationally
+                Expensive </li>
+              <li><strong>Relu</strong>: Non linear, Non Saturated, Computationally inexpensive, Convergence, Non Zero
+                Center</li>
+              <li><strong>Dying Relu Problem</strong>: Set Low learning Rate, Bias +, Variant of Relu, Leakly Relu(No
+                saturated, Easily Computed, Close to 0 Center), Paramteric Relu, ELU, SELU</li>
             </ul>
           </div> <br>
 
           <h3 class="h3 service-title">🚀Weight Initialization :</h3>
           <div class="blog">
             <ul>
-              <li><strong>Can't use becasue of Gernalization</strong>: Zero initialization, Non 0 or Constant, Random initializaiton(Small weights or Large Weights)</li>
+              <li><strong>Can't use becasue of Gernalization</strong>: Zero initialization, Non 0 or Constant, Random
+                initializaiton(Small weights or Large Weights)</li>
               <li><strong>Xavier/Glorat</strong>: Normal and Uniform</li>
               <li><strong>He Init</strong>: Normal and Uniform </li>
             </ul>
@@ -432,18 +446,70 @@
             <ul>
               <li><Strong>Types</Strong>: Batch GD, Stochastic GD, Mini Batch GD</li>
               Learning Rate Scheduler
-              <li><strong>Concepts</strong>Exponential Weighted Moving Average, Exponential Weighted Average, Momentum, Contours plot, Convex, Non convex, Local minima, Gloabl minimam Saddle point, Momentum Optimisation, Nesterov, Decay </li>
+              <li><strong>Concepts</strong>Exponential Weighted Moving Average, Exponential Weighted Average, Momentum,
+                Contours plot, Convex, Non convex, Local minima, Gloabl minimam Saddle point, Momentum Optimisation,
+                Nesterov, Decay </li>
               <li><strong>Optimizers</strong>: SGD with Momentum, Adagrad(Sparse), NAG, RMSprop, Adam</li>
             </ul>
           </div> <br>
 
           <h3 class="h3 service-title">🚀Keras Tuner :</h3>
-          <div class="file" data-url="https://raw.githubusercontent.com/24x7-dev-player/Deep-Learning/main/keras_tuner.py"
+          <div class="file"
+            data-url="https://raw.githubusercontent.com/24x7-dev-player/Deep-Learning/main/keras_tuner.py"
             data-lang="python">
             <pre class="pre1"><code class="language-python"></code></pre>
             <button class="load-more">Load More</button>
             <button class="close-file">Close File</button>
           </div><br>
+
+          <h3 class="h3 service-title">🚀CNN :</h3>
+          <div class="blog">
+            <ul>
+              <li><strong>basic of Image</strong>: Edge, RGB channel, Filter </li>
+              <li><strong>Key Concepts</strong>: Grid Like structure, Convolution layer, Kernal, pooling(Max, averge,
+                Global, Global Avg), Flatten, Fully Connected layer, Padding, stride, Respective Field, Forward and
+                Backward Propagation, Memory issue, Translation variance, Trainable Paramters </li>
+              <li><strong>Architecture</strong>: Lenet, Alexnet, Vggnet, GoogleNet, Resnet, Densenet, mobilenet,
+                EfficientNet, Nasnet</li>
+              <li><strong>Reduce Overfitting</strong>: Add more data, Data Augmentation, L1/l2 Regularization, Dropout,
+                Batch Normalization, Reduce Complexity </li>
+            </ul>
+          </div> <br>
+
+
+          <h3 class="h3 service-title">🚀Padding :</h3>
+          <div class="file"
+            data-url="https://raw.githubusercontent.com/24x7-dev-player/Deep-Learning/main/keras_padding_demo.py"
+            data-lang="python">
+            <pre class="pre1"><code class="language-python"></code></pre>
+            <button class="load-more">Load More</button>
+            <button class="close-file">Close File</button>
+          </div><br>
+
+          <h3 class="h3 service-title">🚀Pooling :</h3>
+          <div class="file"
+            data-url="https://raw.githubusercontent.com/24x7-dev-player/Deep-Learning/main/keras_pooling_demo.py"
+            data-lang="python">
+            <pre class="pre1"><code class="language-python"></code></pre>
+            <button class="load-more">Load More</button>
+            <button class="close-file">Close File</button>
+          </div><br>
+
+          <h3 class="h3 service-title">🚀Classification :</h3>
+          <div class="file"
+            data-url="https://raw.githubusercontent.com/24x7-dev-player/Deep-Learning/main/cats_v_dogs_classification.py"
+            data-lang="python">
+            <pre class="pre1"><code class="language-python"></code></pre>
+            <button class="load-more">Load More</button>
+            <button class="close-file">Close File</button>
+          </div><br>
+
+
+
+
+
+
+
 
 
 
@@ -457,16 +523,20 @@
               <li><strong>Key Conceptss</strong>: Bounding Box & Representation, Sliding Window Technique, Coco,
                 Roboflow, labelimg, Ground Truth, Classification with SVM, Non Max Suppression
                 Image Annotation, Configuration Yaml file, Confidence Score, BlackBox, Labeling Anchor Box </li>
-              <li><strong>Evaluation Matrix</strong>: F1, Precision, Recall, Confusion matrix, Intersection over Union
+              <li><strong>Evaluation Matrix</strong>: F1, Precision, Recall, Confusion matrix, Intersection over
+                Union
                 (IoU), Average Precision (AP), MAP</li>
-              <li><strong>Models</strong>: Yolov5, Yolov6, Yolov7, Yolov8, Yolov9, Yolov10, Detectron3, Overleaf, RCNN,
+              <li><strong>Models</strong>: Yolov5, Yolov6, Yolov7, Yolov8, Yolov9, Yolov10, Detectron3, Overleaf,
+                RCNN,
                 FastRCNN, SSD, RFCN, Retina, CenterNet, Sniper </li>
               <li><strong>Traditional Methods</strong>: HOG (Histogram of Oriented Gradients), SIFT (Scale-Invariant
                 Feature Transform), Viola-Jones Detector</li>
               <li><strong>Modern Deep Learning-Based Methods</strong>: Region-Based Convolutional Neural Networks
-                (R-CNN), Fast R-CNN, Faster R-CNN, Mask R-CNN, You Only Look Once (YOLO), Single Shot MultiBox Detector
+                (R-CNN), Fast R-CNN, Faster R-CNN, Mask R-CNN, You Only Look Once (YOLO), Single Shot MultiBox
+                Detector
                 (SSD), RetinaNet, EfficientDet, </li>
-              <li><strong>Transformers for Object Detection</strong>: DEtection TRansformer (DETR), DEformable DETR</li>
+              <li><strong>Transformers for Object Detection</strong>: DEtection TRansformer (DETR), DEformable DETR
+              </li>
               <li><strong>Important Things to check</strong>: Config File, Yaml File, Label File </li>
               <li><strong>How its work?</strong>: Image, Backbone CNN, Region Proposal Wrapped Cropped, FClayer,
                 Predication </li>
@@ -474,7 +544,8 @@
                 Boundrybox Regression</li>
               <li><strong>Fast RCNN</strong>: Image, CNN Architecture, Roi Pooling, Fully CL, Only Classifcation,
                 Boundary BOx</li>
-              <li><strong>RCNN</strong>: Image, REgion Proposal Network, Output to ROI Pooling, Fully CL, Clasification,
+              <li><strong>RCNN</strong>: Image, REgion Proposal Network, Output to ROI Pooling, Fully CL,
+                Clasification,
                 Boundary Box</li>
 
             </ul>
@@ -532,16 +603,19 @@
           <h3 class="h3 service-title">🚀Image Segmentation :</h3>
           <div class="blog">
             <ul>
-              <li><strong>Methods & Techniques</strong>: Edge, Semantic, Panoptic, Clustering, Instance, Thresholding,
+              <li><strong>Methods & Techniques</strong>: Edge, Semantic, Panoptic, Clustering, Instance,
+                Thresholding,
                 Region-Based, Graph-Based etc.</li>
-              <li><strong>Evaluation</strong>: Accuracy, Intersection over Union, Dice Coefficient, Precision and Recall
+              <li><strong>Evaluation</strong>: Accuracy, Intersection over Union, Dice Coefficient, Precision and
+                Recall
               </li>
               <li><strong>Thresholding</strong>: Otsu, Adaptive</li>
               <li><strong>Edge Detection-Based</strong>: Canny Edge, Sobar Edge, Laplacian of Gaussian (LoG)</li>
               <li><strong>Region-Based Methods</strong>: Region Growing, Region Splitting and Merging</li>
               <li><strong>Clustering Methods</strong>: Normalized Cuts, Graph Cuts</li>
               <li><strong>Deep Learning-Based Models</strong>: Fully Convolutional Networks (FCN), U-Net, SegNet,
-                DeepLab, Mask R-CNN, PSPNet (Pyramid Scene Parsing Network), BiSeNet (Bilateral Segmentation Network),
+                DeepLab, Mask R-CNN, PSPNet (Pyramid Scene Parsing Network), BiSeNet (Bilateral Segmentation
+                Network),
                 HRNet (High-Resolution Network), RefineNet, DenseASPP (Dense Atrous Spatial Pyramid Pooling)</li>
               <li><strong>Specialized Models</strong>: Gated-SCNN, OCRNet (Object-Contextual Representations), CCNet
                 (Criss-Cross Network), PointRend, HRNet-OCR</li>
@@ -571,20 +645,23 @@
           <h3 class="h3 service-title">🚀Object Tracking :</h3>
           <div class="blog">
             <ul>
-              <li><strong>Key Concepts</strong>: Single Obect, Multiple Object, Occlusion, Appearence Variation, scale Variation, Background Clutter, Real time Processing</li>
+              <li><strong>Key Concepts</strong>: Single Obect, Multiple Object, Occlusion, Appearence Variation,
+                scale Variation, Background Clutter, Real time Processing</li>
               <li><strong>Key components</strong>: Object Detection, Feature Extraction, Motion Estimation</li>
-              <li><strong>Algorithm</strong>: Template Matching, mean shift, Cam Shift, Kalam Filter, Partical Filter, Correlation Filters, Deep Learning-based Trackers</li>
+              <li><strong>Algorithm</strong>: Template Matching, mean shift, Cam Shift, Kalam Filter, Partical
+                Filter, Correlation Filters, Deep Learning-based Trackers</li>
               <li><strong>Evaluation Matrix</strong>: Precision, Recall, IOU, FPS</li>
               <li><strong>Dataset for Object tracking</strong>: OTB, VOT, MOT, COCO</li>
-              <li><strong>Model</strong>: Siamese Network, SiamRPN(Siamese Region Proposal Network), DeepSort(Deep Simple Online and Realtime Tracking), Tracktor, CenterTrack, FairMOT, Bytetrack, Transtrack </li>
-              <li><strong>Important Things to check</strong>: Config File, Yaml File, Label File, Checkpoint file</li>
-              
+              <li><strong>Model</strong>: Siamese Network, SiamRPN(Siamese Region Proposal Network), DeepSort(Deep
+                Simple Online and Realtime Tracking), Tracktor, CenterTrack, FairMOT, Bytetrack, Transtrack </li>
+              <li><strong>Important Things to check</strong>: Config File, Yaml File, Label File, Checkpoint file
+              </li>
+
             </ul>
           </div> <br>
 
           <h3 class="h3 service-title">🚀Deep Sort :</h3>
-          <div class="file"
-            data-url="https://raw.githubusercontent.com/24x7-dev-player/Deep-Learning/main/deepsort.py"
+          <div class="file" data-url="https://raw.githubusercontent.com/24x7-dev-player/Deep-Learning/main/deepsort.py"
             data-lang="python">
             <pre class="pre1"><code class="language-python"></code></pre>
             <button class="load-more">Load More</button>
@@ -594,7 +671,8 @@
           <h3 class="h3 service-title">🚀Generative Adversarial Networks :</h3>
           <div class="blog">
             <ul>
-              <li><strong>Components</strong>: Generator (G), Discriminator (D), Minimax Game, Challenges, Applications,  </li>
+              <li><strong>Components</strong>: Generator (G), Discriminator (D), Minimax Game, Challenges,
+                Applications, </li>
               <li><strong>Loss function</strong>: Generator Loss, Discriminator Loss</li>
               <li><strong>Variants</strong>: DCGAN, CycleGAN, StyleGAN, ConditionGAN, SRGAN, ESRGAN, etc. </li>
             </ul>
@@ -621,7 +699,8 @@
           <h3 class="h3 service-title">🚀More Things :</h3>
           <div class="blog">
             <ul>
-              <li><strong>Object Different Techinique</strong>: Masking, Structural Similarity index(SSIM), Absolute Difference, Absolute Diff. with contours, Pixel Wise Comparision</li>
+              <li><strong>Object Different Techinique</strong>: Masking, Structural Similarity index(SSIM), Absolute
+                Difference, Absolute Diff. with contours, Pixel Wise Comparision</li>
             </ul>
           </div> <br>
 
