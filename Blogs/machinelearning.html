@@ -219,6 +219,12 @@
               <span class="badge badge-lightgreen">K-Mean from Scratch</span>
               <span class="badge badge-gold">DBSCAN</span>
               <span class="badge badge-lightpink">Hierarchical Clustring</span>
+              <span class="badge badge-silver">Gaussian Mixture Models</span>
+              <span class="badge badge-olive">T-SNE</span>
+              <span class="badge badge-crimson">Recommendation System</span>
+
+
+
             </p>
           </div>
         </div> <br>
@@ -243,156 +249,138 @@
             </ul>
           </div> <br>
           <h3 class="h3 service-title">🚀K-Mean Code :</h3>
-            <div class="file"
-              data-url="https://raw.githubusercontent.com/24x7-dev-player/Machine-learning/main/kmean/kmeans.py"
-              data-lang="python">
-              <pre class="pre1"><code class="language-python"></code></pre>
-              <button class="load-more">Load More</button>
-              <button class="close-file">Close File</button>
-            </div><br>
-            <h3 class="h3 service-title">🚀K-Mean from Scratch :</h3>
+          <div class="file"
+            data-url="https://raw.githubusercontent.com/24x7-dev-player/Machine-learning/main/kmean/kmeans.py"
+            data-lang="python">
+            <pre class="pre1"><code class="language-python"></code></pre>
+            <button class="load-more">Load More</button>
+            <button class="close-file">Close File</button>
+          </div><br>
+          <h3 class="h3 service-title">🚀K-Mean from Scratch :</h3>
 
-            <div class="file"
-              data-url="https://raw.githubusercontent.com/24x7-dev-player/Machine-learning/main/kmean/kmeanscratch.py"
-              data-lang="python">
-              <pre class="pre1"><code class="language-python"></code></pre>
-              <button class="load-more">Load More</button>
-              <button class="close-file">Close File</button>
-            </div><br>
+          <div class="file"
+            data-url="https://raw.githubusercontent.com/24x7-dev-player/Machine-learning/main/kmean/kmeanscratch.py"
+            data-lang="python">
+            <pre class="pre1"><code class="language-python"></code></pre>
+            <button class="load-more">Load More</button>
+            <button class="close-file">Close File</button>
+          </div><br>
 
-            <h3 class="h3 service-title">🚀DBSCAN :</h3>
-            <div class="blog">
-              <ul>
-                <li><strong>Density Based Algorithm</strong>: DBSCAN and OPTICS</li>
-                <li><strong>Key Concepts</strong>: Minpts & Epsilon, Core, Border, Noice Points, Density Connected
-                  points,
-                  Direct Density Reachable, Advantages and Disadvantages </li>
-                <li><strong>Hyperparameter</strong>: Eps & MinPts</li>
-                <li><strong>Application areas</strong>: Geography data, Anomaly, Image processing, bioinformative,
-                  Astronomy, Traffic analysis, Data mining, Social network, Customer Segmentation</li>
-              </ul>
-            </div> <br>
-            <div class="file"
-              data-url="https://raw.githubusercontent.com/24x7-dev-player/Machine-learning/main/dbscan/dbscan_demo.py"
-              data-lang="python">
-              <pre class="pre1"><code class="language-python"></code></pre>
-              <button class="load-more">Load More</button>
-              <button class="close-file">Close File</button>
-            </div><br>
+          <h3 class="h3 service-title">🚀DBSCAN :</h3>
+          <div class="blog">
+            <ul>
+              <li><strong>Density Based Algorithm</strong>: DBSCAN and OPTICS</li>
+              <li><strong>Key Concepts</strong>: Minpts & Epsilon, Core, Border, Noice Points, Density Connected
+                points,
+                Direct Density Reachable, Advantages and Disadvantages </li>
+              <li><strong>Hyperparameter</strong>: Eps & MinPts</li>
+              <li><strong>Application areas</strong>: Geography data, Anomaly, Image processing, bioinformative,
+                Astronomy, Traffic analysis, Data mining, Social network, Customer Segmentation</li>
+            </ul>
+          </div> <br>
+          <div class="file"
+            data-url="https://raw.githubusercontent.com/24x7-dev-player/Machine-learning/main/dbscan/dbscan_demo.py"
+            data-lang="python">
+            <pre class="pre1"><code class="language-python"></code></pre>
+            <button class="load-more">Load More</button>
+            <button class="close-file">Close File</button>
+          </div><br>
 
-            <h3 class="h3 service-title">🚀Hierarchical Clustring :</h3>
-            <div class="blog">
-              <ul>
-                <li><strong>Types</strong>: Agglomerative (Bottom-up Approach) and Divisive (Top-Down apprach)</li>
-                <li><strong>Alogorithm</strong>: Initialization, Compute distance Matrix, Find the closest, Merge
-                  Cluster,
-                  Update Distance Matrix, Repeat</li>
-                <li><strong>key Concepts</strong>: linkage, Proximity, Dendogram, Advantages, Disadvantages</li>
-                <li><strong>Find number of Clusters</strong>: Dendogram</li>
-                <li><strong>Linkage</strong>: Hyperparameter, Min(Single Linkage), Max(Complete Linkage), Average
-                  Method,
-                  Ward
-                  Method</li>
-            </div> <br>
-            <div class="file"
-              data-url="https://raw.githubusercontent.com/24x7-dev-player/Machine-learning/main/Hierarchical%20Clustering/agglomerative_clustering.py"
-              data-lang="python">
-              <pre class="pre1"><code class="language-python"></code></pre>
-              <button class="load-more">Load More</button>
-              <button class="close-file">Close File</button>
-            </div><br>
-
-
-            <h3 class="h3 service-title">🚀 Gaussian Mixture Models:</h3>
-            <div class="blog">
-              <ul>
-                <li><strong>Key Concepts</strong>: Model based Clustering, EM Algorithm, KDE, Soft vs Hard </li>
-                <li><strong>Covarience Type</strong>: Spherical, Diagonal, Tied, Full</li>
-                <li><strong>Hyperparameter</strong>: Covarience type, Decide N Component (AIC & BIC) </li>
-            </div> <br>
-            <div class="code-window">
-              <pre>
-              from sklearn.mixture import GaussianMixture
-              import numpy as np
-              X = np.random.rand(100, 2)
-              gmm = GaussianMixture(n_components=2, random_state=0).fit(X)
-              labels = gmm.predict(X)
-        </pre>
-            </div> <br>
-
-            <h3 class="h3 service-title">🚀 TSNE:</h3>
-            <div class="blog">
-              <ul>
-                <li><strong>Key Concepts</strong>: Stochastic Neighborhood Embedding, Linear data, preserves local
-                  structure, KL Divergence, Cost function, Pair wise Similarity, T distribution, Gradient descent, Sigma
-                </li>
-                <li><strong>Other techniques</strong>: Multiple Dimensional Scaling, Sammon Mapping, Graph based
-                  techniques</li>
-                <li><strong>Hyperparameters</strong>: Number of Iteration, perplexity, Learning Rate</li>
+          <h3 class="h3 service-title">🚀Hierarchical Clustring :</h3>
+          <div class="blog">
+            <ul>
+              <li><strong>Types</strong>: Agglomerative (Bottom-up Approach) and Divisive (Top-Down apprach)</li>
+              <li><strong>Alogorithm</strong>: Initialization, Compute distance Matrix, Find the closest, Merge
+                Cluster,
+                Update Distance Matrix, Repeat</li>
+              <li><strong>key Concepts</strong>: linkage, Proximity, Dendogram, Advantages, Disadvantages</li>
+              <li><strong>Find number of Clusters</strong>: Dendogram</li>
+              <li><strong>Linkage</strong>: Hyperparameter, Min(Single Linkage), Max(Complete Linkage), Average
+                Method,
+                Ward
+                Method</li>
+          </div> <br>
+          <div class="file"
+            data-url="https://raw.githubusercontent.com/24x7-dev-player/Machine-learning/main/Hierarchical%20Clustering/agglomerative_clustering.py"
+            data-lang="python">
+            <pre class="pre1"><code class="language-python"></code></pre>
+            <button class="load-more">Load More</button>
+            <button class="close-file">Close File</button>
+          </div><br>
 
 
-            </div> <br>
-            <div class="code-window">
-              <pre>
-              data = load_iris()
-              X = data.data
-              tsne = TSNE(n_components=2, random_state=42)
-              X_tsne = tsne.fit_transform(X)
-              plt.scatter(X_tsne[:, 0], X_tsne[:, 1], c=data.target, cmap='viridis')
-              plt.show()
-        </pre>
-            </div> <br>
+          <h3 class="h3 service-title">🚀Gaussian Mixture Models :</h3>
+          <div class="blog">
+            <ul>
+              <li><strong>Key Concepts</strong>: Model based Clustering, EM Algorithm, KDE, Soft vs Hard </li>
+              <li><strong>Covarience Type</strong>: Spherical, Diagonal, Tied, Full</li>
+              <li><strong>Hyperparameter</strong>: Covarience type, Decide N Component (AIC & BIC) </li>
+          </div> <br>
+          <div class="file"
+            data-url="https://raw.githubusercontent.com/24x7-dev-player/Machine-learning/main/Gaussian%20Mixture/gaussian_mixture_models.py"
+            data-lang="python">
+            <pre class="pre1"><code class="language-python"></code></pre>
+            <button class="load-more">Load More</button>
+            <button class="close-file">Close File</button>
+          </div><br>
+
+          <h3 class="h3 service-title">🚀T-SNE :</h3>
+          <div class="blog">
+            <ul>
+              <li><strong>Key Concepts</strong>: Stochastic Neighborhood Embedding, Linear data, preserves local
+                structure, KL Divergence, Cost function, Pair wise Similarity, T distribution, Gradient descent, Sigma
+              </li>
+              <li><strong>Other techniques</strong>: Multiple Dimensional Scaling, Sammon Mapping, Graph based
+                techniques</li>
+              <li><strong>Hyperparameters</strong>: Number of Iteration, perplexity, Learning Rate</li>
+          </div> <br>
+          <div class="file"
+            data-url="https://raw.githubusercontent.com/24x7-dev-player/Machine-learning/main/TSNE/tsne.py"
+            data-lang="python">
+            <pre class="pre1"><code class="language-python"></code></pre>
+            <button class="load-more">Load More</button>
+            <button class="close-file">Close File</button>
+          </div><br>
 
 
 
 
-            <h3 class="h3 service-title">🚀 Recommendation System :</h3>
-            <div class="blog">
-              <ul>
-                <li><strong>Types</strong>: Collaborative Based(User Based, Item Based), Content based(Similarity
-                  Based), Hybrid System</li>
-                <li><strong>Key Concepts</strong>: Similarity based Algorithm, Matrix Factorization PCA, SVD, LDA, NMF,
-                  Clustering as Matrix Factorization, Hyperparameters Tuning, Word Vectors as Matrix Factorization,
-                  Eigen Faces, Distance Matrix, Word Embedding</li>
-            </div> <br>
+          <h3 class="h3 service-title">🚀Recommendation System :</h3>
+          <div class="blog">
+            <ul>
+              <li><strong>Types</strong>: Collaborative Based(User Based, Item Based), Content based(Similarity
+                Based), Hybrid System, Cluster based</li>
+              <li><strong>Key Concepts</strong>: Similarity based Algorithm, Matrix Factorization PCA, SVD, LDA, NMF,
+                Clustering as Matrix Factorization, Hyperparameters Tuning, Word Vectors as Matrix Factorization,
+                Eigen Faces, Distance Matrix, Word Embedding</li>
+          </div> <br>
 
 
-            <div class="blog">
-              <div class="testimonials-text" data-testimonials-text>
-                <p>
-                  <span class="badge badge-primary">Introduction</span>
-                  <span class="badge badge-secondary">Bagging</span>
-                </p>
-              </div>
-            </div> <br>
-            <section class="about-text with-line">
-            </section>
-    
-            <section class="about-text">
-    
-    
-    
-              <h3 class="h3 service-title">🚀Introducation</h3>
-              <div class="blog">
-                <ul>
-                  <li><strong>Types</strong>: Voting, Bagging, Boosting, stacking</li>
-                  <li><strong>Bagging</strong>: Random forest</li>
-                  <li><strong>Boosting</strong>: Adaboosting, Gradient Boosting, Xgboost</li>
-                  <li><strong>Benifits</strong>: Improvement in performance, Bias variance</li>
-                </ul>
-              </div> <br>
-    
-    
-              <h3 class="h3 service-title">🚀Bagging</h3>
-              <div class="blog">
-                <ul>
-                  <li><strong>Key concepts</strong>: Bootstraping, Aggregation, OOB samples </li>
-                  <li><strong>Types</strong>: Pasting(raw Sampling), Random Subspaces, Random Patches </li>
-                  <li><strong>Tips</strong>: Better result in pasting, 0.25 to 0.50 for raw sampling, Random patches and subspace needs high dimensional data, Hyperparameter Tuning in base model</li>
-                </ul>
-              </div> <br>
-              <div class="code-window">
-                <pre>
+
+
+
+          <h3 class="h3 service-title">🚀Introducation</h3>
+          <div class="blog">
+            <ul>
+              <li><strong>Types</strong>: Voting, Bagging, Boosting, stacking</li>
+              <li><strong>Bagging</strong>: Random forest</li>
+              <li><strong>Boosting</strong>: Adaboosting, Gradient Boosting, Xgboost</li>
+              <li><strong>Benifits</strong>: Improvement in performance, Bias variance</li>
+            </ul>
+          </div> <br>
+
+
+          <h3 class="h3 service-title">🚀Bagging</h3>
+          <div class="blog">
+            <ul>
+              <li><strong>Key concepts</strong>: Bootstraping, Aggregation, OOB samples </li>
+              <li><strong>Types</strong>: Pasting(raw Sampling), Random Subspaces, Random Patches </li>
+              <li><strong>Tips</strong>: Better result in pasting, 0.25 to 0.50 for raw sampling, Random patches and
+                subspace needs high dimensional data, Hyperparameter Tuning in base model</li>
+            </ul>
+          </div> <br>
+          <div class="code-window">
+            <pre>
                   #BAGGING
                   from sklearn.ensemble import BaggingClassifier
                   from sklearn.tree import DecisionTreeClassifier
@@ -400,8 +388,8 @@
                   bagging_clf = BaggingClassifier(base_clf, n_estimators=50)
                   bagging_clf.fit(X_train, y_train)
                 </pre>
-              </div> <br>
-    
+          </div> <br>
+
 
 
 
