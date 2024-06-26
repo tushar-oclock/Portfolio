@@ -231,6 +231,9 @@
               <span class="badge badge-crimson">Automatic Select Imputer</span>
               <span class="badge badge-beige">Iterative Imputer</span>
               <span class="badge badge-cyan">KNN Imputer</span>
+              <span class="badge badge-lime">Feature Scaling</span>
+              <span class="badge badge-teal">Standardization</span>
+              <span class="badge badge-pink">Min Max and More</span>
 
             </p>
           </div>
@@ -271,7 +274,7 @@
                 cases, Binning, </li>
               <li><strong>Binning Types</strong>: Custom, Uniform, Quantile, K-mean, Decision Tree based, Threshold
                 Binning</li>
-                
+
             </ul>
           </div> <br>
 
@@ -321,31 +324,31 @@
           </div><br>
 
           <div class="file"
-          data-url="https://raw.githubusercontent.com/24x7-dev-player/Data-Engineering/main/sklearn_deep_dive.py"
-          data-lang="python">
-          <pre class="pre1"><code class="language-python"></code></pre>
-          <button class="load-more">Load More</button>
-          <button class="close-file">Close File</button>
-        </div><br>
+            data-url="https://raw.githubusercontent.com/24x7-dev-player/Data-Engineering/main/sklearn_deep_dive.py"
+            data-lang="python">
+            <pre class="pre1"><code class="language-python"></code></pre>
+            <button class="load-more">Load More</button>
+            <button class="close-file">Close File</button>
+          </div><br>
 
 
-        <h3 class="h3 service-title">🚀Discretization :</h3>
-        <div class="file"
-          data-url="https://raw.githubusercontent.com/24x7-dev-player/Data-Engineering/main/discretization.py"
-          data-lang="python">
-          <pre class="pre1"><code class="language-python"></code></pre>
-          <button class="load-more">Load More</button>
-          <button class="close-file">Close File</button>
-        </div><br>
+          <h3 class="h3 service-title">🚀Discretization :</h3>
+          <div class="file"
+            data-url="https://raw.githubusercontent.com/24x7-dev-player/Data-Engineering/main/discretization.py"
+            data-lang="python">
+            <pre class="pre1"><code class="language-python"></code></pre>
+            <button class="load-more">Load More</button>
+            <button class="close-file">Close File</button>
+          </div><br>
 
-        <h3 class="h3 service-title">🚀Binning :</h3>
-        <div class="file"
-          data-url="https://raw.githubusercontent.com/24x7-dev-player/Data-Engineering/main/binning.py"
-          data-lang="python">
-          <pre class="pre1"><code class="language-python"></code></pre>
-          <button class="load-more">Load More</button>
-          <button class="close-file">Close File</button>
-        </div><br>
+          <h3 class="h3 service-title">🚀Binning :</h3>
+          <div class="file"
+            data-url="https://raw.githubusercontent.com/24x7-dev-player/Data-Engineering/main/binning.py"
+            data-lang="python">
+            <pre class="pre1"><code class="language-python"></code></pre>
+            <button class="load-more">Load More</button>
+            <button class="close-file">Close File</button>
+          </div><br>
 
 
           <h3 class="h3 service-title">🚀Handling Missing Values :</h3>
@@ -399,13 +402,15 @@
 
 
 
-
-
-          <h3 class="h3 service-title">🚀 Feature Scaling :</h3>
+          <h3 class="h3 service-title">🚀Feature Scaling :</h3>
           <div class="blog">
             <ul>
-              <li><strong>Standardization:</strong> Adjusts the values to have a mean of 0 and a standard deviation of
-                1.</li>
+              <li><strong>algorithm Affected</strong>: Gradient Descent, SVM, Distance Based, Dimenionality Reduction
+              </li>
+              <li><strong>Not Algorithm Affected</strong>: Tree Based, Naive Based </li>
+              <li><strong>Not Algorithm Affected</strong>: Normalization and Standarization </li>
+              <li><strong>Standardization:</strong> Adjusts the values to have a mean of 0 and a standard deviation 1
+              </li>
               <li><strong>Min-Max Scaling:</strong> Rescales the values to a range between 0 and 1.</li>
               <li><strong>Robust Scaler:</strong> Scales the data using statistics that are robust to outliers.</li>
               <li><strong>Max Absolute Scaler:</strong> Scales the data so that the maximum absolute value of each
@@ -414,16 +419,25 @@
                 squares or absolute values).</li>
             </ul>
           </div> <br>
-          <div class="code-window">
-            <pre>
-              from sklearn.preprocessing import PowerTransformer
-              from sklearn.preprocessing import StandardScaler
-              from sklearn.preprocessing import MinMaxScaler
-              from sklearn.preprocessing import RobustScaler
-              from sklearn.preprocessing import MaxAbsScaler
-              from sklearn.preprocessing import Normalizer
-            </pre>
-          </div> <br>
+          <h3 class="h3 service-title">🚀Standardization :</h3>
+          <div class="file"
+            data-url="https://raw.githubusercontent.com/24x7-dev-player/Data-Engineering/main/standardization.py"
+            data-lang="python">
+            <pre class="pre1"><code class="language-python"></code></pre>
+            <button class="load-more">Load More</button>
+            <button class="close-file">Close File</button>
+          </div><br>
+
+          <h3 class="h3 service-title">🚀Min Max and More :</h3>
+          <div class="file"
+            data-url="https://raw.githubusercontent.com/24x7-dev-player/Data-Engineering/main/min_max_scaling.py"
+            data-lang="python">
+            <pre class="pre1"><code class="language-python"></code></pre>
+            <button class="load-more">Load More</button>
+            <button class="close-file">Close File</button>
+          </div><br>
+
+
 
           <h3 class="h3 service-title">🚀 Feature Transformation :</h3>
           <div class="blog">
@@ -510,7 +524,7 @@
             </pre>
           </div> <br>
 
-          <h3 class="h3 service-title">🚀 Feature Selection :</h3>
+          <h3 class="h3 service-title">🚀Feature Selection :</h3>
           <div class="blog">
             <ul>
               <li><strong class="green">Filter Methods : </strong></li>
