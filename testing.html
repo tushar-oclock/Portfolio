@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Chart Example</title>
+  <script src="https://cdn.jsdelivr.net/npm/chart.js@3.8.0/dist/chart.min.js"></script>
+  <style>
+    #graph-container {
+      width: 600px;
+      height: 400px;
+    }
+  </style>
+</head>
+<body>
+  <canvas id="graph-container"></canvas>
+  <svg width="600" height="400">
+    <circle cx="100" cy="100" r="40" stroke="black" stroke-width="2" fill="lightgray" />
+    <text x="100" y="105" text-anchor="middle" fill="black">Node 1</text>
+    
+    <line x1="140" y1="100" x2="220" y2="100" stroke="black" stroke-width="2"/>
+    
+    <circle cx="300" cy="100" r="40" stroke="black" stroke-width="2" fill="lightgray" />
+    <text x="300" y="105" text-anchor="middle" fill="black">Node 2</text>
+    
+    <!-- Add more nodes and connectors as needed -->
+  </svg>
+</html>
