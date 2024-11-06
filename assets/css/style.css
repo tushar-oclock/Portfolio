@@ -57,7 +57,6 @@
    */
 
 
-
   /* font-size */
   --fs-1: 24px;
   --fs-2: 18px;
@@ -649,7 +648,7 @@ main {
   overflow-x: auto;
 
   scroll-behavior: smooth;
-  overscroll-behavior-inline: contain;
+  overscroll-behavior-inline: smooth;
   scroll-snap-type: inline mandatory;
 }
 
@@ -703,7 +702,7 @@ main {
   justify-content: center;
   align-items: center;
   overflow-y: auto;
-  overscroll-behavior: contain;
+  overscroll-behavior: smooth;
   z-index: 20;
   pointer-events: none;
   visibility: hidden;
@@ -2809,7 +2808,9 @@ strong {
 
 html {
   overflow-y: scroll;
+  scroll-behavior: smooth;
 }
+
 
 
 .green {
@@ -2859,12 +2860,11 @@ html {
   background-size: 80%;
   background-repeat: no-repeat;
   background-size: cover;
-  font-size: 18px;
+  font-size: 19px;
   /* animation: upDown 3s ease-in-out infinite; */
 }
 
 @media (max-width: 600px) {
-
   .code-container,
   .abouttext1 {
     font-size: 14.5px;
@@ -3112,10 +3112,39 @@ html {
 
 
 math * {
-  padding-top: 2px; 
-  margin-top: 2px;
+  padding-top: 1px; 
+  margin-top: 1px;
 }
 
 .test-shine{
   border-radius: 40px;
+}
+
+
+
+
+.navbar-link {
+  position: relative;
+}
+
+.tooltip {
+  visibility: hidden;
+  background-color: #333;
+  color: #fff;
+  text-align: center;
+  padding: 5px 10px;
+  border-radius: 4px;
+  position: absolute;
+  bottom: 60px; /* Adjust as needed */
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 12px;
+  white-space: nowrap;
+  opacity: 0;
+  transition: opacity 0.3s;
+}
+
+.navbar-link:hover .tooltip {
+  visibility: visible;
+  opacity: 1;
 }

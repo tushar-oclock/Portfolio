@@ -56,8 +56,8 @@ const professions = [
   { name: "ML Engineer", color: "crimson" },
   { name: "MLOPS Engineer", color: "mediumspringgreen" },
   { name: "Web Developer", color: "mediumvioletred" },
-  { name: "AIOPS Engineer", color: "khaki" },
-  { name: "LLMOPS Engineer", color: "plum" },
+  { name: "Android Developer", color: "khaki" },
+  { name: "Prompt Engineer", color: "plum" },
   { name: "Python Developer", color: "lime" },
 ];
 function updateBadge(index) {
@@ -105,25 +105,29 @@ setInterval(updateAge, 100);
 updateAge();
 
 
-// Page Up and Down
-function createScrollButton(id, scrollValue, scrollDirection) {
+// Smooth Scroll Function for Top and Bottom Buttons
+function createScrollButton(id, scrollDirection) {
   const button = document.createElement('button');
   button.id = id;
   button.className = 'scroll-button ' + scrollDirection;
   button.innerHTML = `<img src="./assets/images/sidebar/${scrollDirection === 'scroll-top' ? 'chevron-angle-svgrepo-com.svg' : 'down-arrow-download-svgrepo-com.svg'}" alt="design icon" width="40">`;
   
   button.addEventListener('click', function() {
-    const targetScrollValue = scrollDirection === 'scroll-bottom' ? document.documentElement.scrollHeight : scrollValue;
+    // Scroll to the top or bottom based on scroll direction
     window.scrollTo({
-      top: targetScrollValue,
+      top: scrollDirection === 'scroll-top' ? 0 : document.documentElement.scrollHeight,
       behavior: 'smooth'
     });
   });
   
   document.body.appendChild(button);
 }
-createScrollButton('scrollTopButton', 0, 'scroll-top');
-createScrollButton('scrollBottomButton', 0, 'scroll-bottom');
+
+// Call functions to create scroll buttons
+createScrollButton('scrollTopButton', 'scroll-top');
+createScrollButton('scrollBottomButton', 'scroll-bottom');
+
+
 
 
 // Drop Down in MOBILE VIEW
