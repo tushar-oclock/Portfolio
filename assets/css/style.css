@@ -3138,7 +3138,7 @@ math * {
   bottom: 60px; /* Adjust as needed */
   left: 50%;
   transform: translateX(-50%);
-  font-size: 12px;
+  font-size: 15px;
   white-space: nowrap;
   opacity: 0;
   transition: opacity 0.3s;
