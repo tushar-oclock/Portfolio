@@ -1840,7 +1840,7 @@ textarea.form-input::-webkit-resizer {
 
   .project-list,
   .blog-posts-list {
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 1fr 1fr 1fr;
   }
 
 
@@ -1977,7 +1977,7 @@ textarea.form-input::-webkit-resizer {
    */
 
   .blog-banner-box {
-    height: 230px;
+    /* height: 230px; */
   }
 
 }
