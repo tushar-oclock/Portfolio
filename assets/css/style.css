@@ -1696,11 +1696,11 @@ textarea.form-input::-webkit-resizer {
   }
 
   .blog-posts-list {
-    gap: 30px;
+    /* gap: 30px; */
   }
 
   .blog-content {
-    padding: 25px;
+    padding: 10px;
   }
 
 
@@ -1977,7 +1977,7 @@ textarea.form-input::-webkit-resizer {
    */
 
   .blog-banner-box {
-    /* height: 230px; */
+    height: 115px;
   }
 
 }
