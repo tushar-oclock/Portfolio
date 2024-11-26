@@ -165,3 +165,19 @@ document.addEventListener("DOMContentLoaded", function () {
     }
   });
 });
+
+document.addEventListener('mousemove', (event) => {
+  const tailDot = document.createElement('div');
+  tailDot.classList.add('tail-dot');
+
+  // Position the tail dot at the cursor's location
+  tailDot.style.left = `${event.pageX}px`;
+  tailDot.style.top = `${event.pageY}px`;
+
+  document.body.appendChild(tailDot);
+
+  // Remove the dot after the animation ends
+  setTimeout(() => {
+    tailDot.remove();
+  }, 500);
+});
