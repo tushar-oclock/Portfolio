@@ -3095,7 +3095,7 @@ html {
   position: absolute;
   width: 8px;
   height: 8px;
-  background-color: rgb(255, 255, 255);
+  background-color: cornsilk;
   border-radius: 50%;
   pointer-events: none;
   animation: fade 0.5s ease-out forwards;
@@ -3109,7 +3109,7 @@ html {
   }
   to {
     opacity: 0;
-    transform: scale(0.8);
+    transform: scale(0.5);
   }
 }
 
