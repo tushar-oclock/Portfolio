@@ -3092,25 +3092,25 @@ html {
 
 /* Tail animation dots */
 .tail-dot {
-  position: fixed; /* Use fixed to ensure dots are tied to viewport */
-  width: 8px;
-  height: 8px;
+  position: fixed; /* Use fixed to ensure dots are tied to the viewport */
+  width: 8px; /* Initial width */
+  height: 8px; /* Initial height */
   background-color: cornsilk;
   border-radius: 50%;
   pointer-events: none; /* Ensure dots don’t interfere with mouse events */
-  animation: fade 0.5s ease-out forwards;
+  animation: fade 0.5s ease-out forwards; /* Ensure animation lasts 0.5s */
   z-index: 9999; /* Keep above all content */
 }
 
-/* Tail fade-out animation */
+/* Tail fade-out animation with shrinking effect */
 @keyframes fade {
   from {
     opacity: 1;
-    transform: scale(1);
+    transform: scale(1); /* Start with normal size */
   }
   to {
     opacity: 0;
-    transform: scale(0.5);
+    transform: scale(0.3, 0.02); /* Shrink the tail in both X and Y axis */
   }
 }
 

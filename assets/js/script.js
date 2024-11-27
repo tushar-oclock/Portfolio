@@ -179,12 +179,16 @@ document.addEventListener('mousemove', (event) => {
   tailDot.style.left = `${x - dotSize / 2}px`;
   tailDot.style.top = `${y - dotSize / 2}px`;
 
+  // Set a fixed animation duration (e.g., 0.5 seconds)
+  const animationDuration = 0.5; // Duration of the tail animation in seconds
+  tailDot.style.animationDuration = `${animationDuration}s`;
+
   document.body.appendChild(tailDot);
 
   // Remove the dot after the animation ends
   setTimeout(() => {
     tailDot.remove();
-  }, 500);
+  }, animationDuration * 400); // Ensure removal happens after the animation ends
 });
 
 
