@@ -170,9 +170,14 @@ document.addEventListener('mousemove', (event) => {
   const tailDot = document.createElement('div');
   tailDot.classList.add('tail-dot');
 
-  // Position the tail dot at the cursor's location
-  tailDot.style.left = `${event.pageX}px`;
-  tailDot.style.top = `${event.pageY}px`;
+  const dotSize = 8; // Same size as defined in CSS
+
+  // Use `fixed` positioning to tie dots to viewport
+  const x = Math.max(0, Math.min(event.clientX, window.innerWidth - dotSize));
+  const y = Math.max(0, Math.min(event.clientY, window.innerHeight - dotSize));
+
+  tailDot.style.left = `${x - dotSize / 2}px`;
+  tailDot.style.top = `${y - dotSize / 2}px`;
 
   document.body.appendChild(tailDot);
 

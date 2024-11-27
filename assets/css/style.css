@@ -3085,20 +3085,21 @@ html {
 
 
 
+/* Custom cursor */
 * {
   cursor: url('cat.png') 32 32, auto !important;
 }
 
-
 /* Tail animation dots */
 .tail-dot {
-  position: absolute;
+  position: fixed; /* Use fixed to ensure dots are tied to viewport */
   width: 8px;
   height: 8px;
   background-color: cornsilk;
   border-radius: 50%;
-  pointer-events: none;
+  pointer-events: none; /* Ensure dots don’t interfere with mouse events */
   animation: fade 0.5s ease-out forwards;
+  z-index: 9999; /* Keep above all content */
 }
 
 /* Tail fade-out animation */
@@ -3112,6 +3113,8 @@ html {
     transform: scale(0.5);
   }
 }
+
+
 
 
 
