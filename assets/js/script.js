@@ -199,13 +199,22 @@ const playPauseBtn = document.getElementById('playPauseBtn');
 const songIcon = document.getElementById('songIcon');
 const audioPlayer = document.getElementById('audioPlayer');
 
-// Automatically play the audio on page load
+// Ensure audio starts automatically when the page loads
 window.addEventListener('load', () => {
+  audioPlayer.muted = true; // Start with muted audio
   const playPromise = audioPlayer.play();
+
   if (playPromise !== undefined) {
-    playPromise.catch(error => {
-      console.log('Autoplay was blocked. Waiting for user interaction to start audio.');
-    });
+    playPromise
+      .then(() => {
+        console.log('Audio started playing automatically.');
+        setTimeout(() => {
+          audioPlayer.muted = false; // Unmute audio after playback starts
+        }, 100);
+      })
+      .catch(() => {
+        console.log('Autoplay blocked by the browser. Waiting for user interaction.');
+      });
   }
 });
 
@@ -213,9 +222,9 @@ window.addEventListener('load', () => {
 playPauseBtn.addEventListener('click', () => {
   if (audioPlayer.paused) {
     audioPlayer.play();
-    songIcon.src = 'assets/images/song.svg'; // Icon for playing
+    console.log('Audio is playing.');
   } else {
     audioPlayer.pause();
-    songIcon.src = 'assets/images/song.svg'; // Icon for pausing
+    console.log('Audio is paused.');
   }
 });

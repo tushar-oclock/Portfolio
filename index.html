@@ -29,19 +29,23 @@
     <img src="assets/images/cat.gif" alt="GIF">
   </div>
 
-  <!-- Audio controls at the top-left corner -->
-  <div class="audio-controls">
-    <button id="playPauseBtn">
-      <!-- Single SVG icon (Initially play state) -->
-      <img id="songIcon" src="assets/images/song.svg" alt="Song Icon" />
-    </button>
-  </div>
+<!-- Audio controls at the top-left corner -->
+<div class="audio-controls">
+  <button id="playPauseBtn">
+    <!-- Single SVG icon -->
+    <img id="songIcon" src="assets/images/song.svg" alt="Song Icon" />
+  </button>
+</div>
 
-  <!-- Audio element with looping enabled -->
-  <audio id="audioPlayer" loop autoplay>
-    <source src="assets/images/Heartbeat.mp3" type="audio/mp3">
-    Your browser does not support the audio element.
-  </audio>
+<!-- Audio element with looping enabled -->
+<audio id="audioPlayer" loop autoplay>
+  <source src="assets/images/Heartbeat.mp3" type="audio/mp3">
+  Your browser does not support the audio element.
+</audio>
+
+
+
+
 
   <div class="video-container">
     <video autoplay loop muted id="background-video">
