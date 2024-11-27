@@ -196,35 +196,34 @@ window.onload = function () {
 
 
 const playPauseBtn = document.getElementById('playPauseBtn');
-const songIcon = document.getElementById('songIcon');
-const audioPlayer = document.getElementById('audioPlayer');
+  const songIcon = document.getElementById('songIcon');
+  const audioPlayer = document.getElementById('audioPlayer');
 
-// Ensure audio starts automatically when the page loads
-window.addEventListener('load', () => {
-  audioPlayer.muted = true; // Start with muted audio
-  const playPromise = audioPlayer.play();
+  // Ensure audio starts automatically when the page loads
+  window.addEventListener('load', () => {
+    const playPromise = audioPlayer.play();
 
-  if (playPromise !== undefined) {
-    playPromise
-      .then(() => {
-        console.log('Audio started playing automatically.');
-        setTimeout(() => {
-          audioPlayer.muted = false; // Unmute audio after playback starts
-        }, 100);
-      })
-      .catch(() => {
-        console.log('Autoplay blocked by the browser. Waiting for user interaction.');
-      });
-  }
-});
+    if (playPromise !== undefined) {
+      playPromise
+        .then(() => {
+          console.log('Audio started playing automatically.');
+          setTimeout(() => {
+            audioPlayer.muted = false; // Unmute audio after playback starts
+          }, 100);
+        })
+        .catch(() => {
+          console.log('Autoplay blocked by the browser. Waiting for user interaction.');
+        });
+    }
+  });
 
-// Toggle play/pause on button click
-playPauseBtn.addEventListener('click', () => {
-  if (audioPlayer.paused) {
-    audioPlayer.play();
-    console.log('Audio is playing.');
-  } else {
-    audioPlayer.pause();
-    console.log('Audio is paused.');
-  }
-});
+  // Toggle play/pause on button click
+  playPauseBtn.addEventListener('click', () => {
+    if (audioPlayer.paused) {
+      audioPlayer.play();
+      console.log('Audio is playing.');
+    } else {
+      audioPlayer.pause();
+      console.log('Audio is paused.');
+    }
+  });
