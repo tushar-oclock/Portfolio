@@ -186,3 +186,31 @@ document.addEventListener('mousemove', (event) => {
     tailDot.remove();
   }, 500);
 });
+
+
+window.onload = function () {
+  setTimeout(function () {
+      document.getElementById("gif-container").style.display = "block";
+  }, 2000); // Delay in milliseconds (e.g., 2000ms = 2 seconds)
+}
+
+
+const playPauseBtn = document.getElementById('playPauseBtn');
+const songIcon = document.getElementById('songIcon');
+const audioPlayer = document.getElementById('audioPlayer');
+
+// Initially, the song will play automatically because of the autoplay attribute
+
+// Toggle play/pause when the button is clicked
+playPauseBtn.addEventListener('click', function() {
+  if (audioPlayer.paused) {
+    audioPlayer.play();
+    // Change the SVG to a "pause" version
+    songIcon.src = 'assets/images/song.svg';  // You can modify the SVG here if needed for pause icon
+    // Alternatively, modify the content of the SVG inline using JavaScript for more complex toggles
+  } else {
+    audioPlayer.pause();
+    // Change the SVG back to "play" version
+    songIcon.src = 'assets/images/song.svg';  // Use same or alternate SVG as needed for play
+  }
+});

@@ -3188,3 +3188,41 @@ math * {
   visibility: visible;
   opacity: 1;
 }
+
+
+#gif-container {
+  position: fixed;
+  top: 100px;
+  right: 0;
+  z-index: 9999; /* Ensures it's always on top */
+}
+
+#gif-container img {
+  width: 150px; /* You can adjust the size */
+  height: auto;
+}
+
+
+/* Position the audio controls at the top left */
+.audio-controls {
+  position: fixed;
+  top: 10px;
+  left: 10px;
+  z-index: 1000;
+}
+
+.audio-controls button {
+  background-color: transparent;
+  border: none;
+  margin: 0 5px;
+  cursor: pointer;
+}
+
+.audio-controls img {
+  width: 60px;
+  height: 40px;
+}
+
+.audio-controls button:focus {
+  outline: none;
+}
