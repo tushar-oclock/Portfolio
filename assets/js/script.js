@@ -199,18 +199,23 @@ const playPauseBtn = document.getElementById('playPauseBtn');
 const songIcon = document.getElementById('songIcon');
 const audioPlayer = document.getElementById('audioPlayer');
 
-// Initially, the song will play automatically because of the autoplay attribute
+// Automatically play the audio on page load
+window.addEventListener('load', () => {
+  const playPromise = audioPlayer.play();
+  if (playPromise !== undefined) {
+    playPromise.catch(error => {
+      console.log('Autoplay was blocked. Waiting for user interaction to start audio.');
+    });
+  }
+});
 
-// Toggle play/pause when the button is clicked
-playPauseBtn.addEventListener('click', function() {
+// Toggle play/pause on button click
+playPauseBtn.addEventListener('click', () => {
   if (audioPlayer.paused) {
     audioPlayer.play();
-    // Change the SVG to a "pause" version
-    songIcon.src = 'assets/images/song.svg';  // You can modify the SVG here if needed for pause icon
-    // Alternatively, modify the content of the SVG inline using JavaScript for more complex toggles
+    songIcon.src = 'assets/images/song.svg'; // Icon for playing
   } else {
     audioPlayer.pause();
-    // Change the SVG back to "play" version
-    songIcon.src = 'assets/images/song.svg';  // Use same or alternate SVG as needed for play
+    songIcon.src = 'assets/images/song.svg'; // Icon for pausing
   }
 });

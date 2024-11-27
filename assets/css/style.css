@@ -3221,6 +3221,7 @@ math * {
 .audio-controls img {
   width: 60px;
   height: 40px;
+  margin-top: 20px;
 }
 
 .audio-controls button:focus {
