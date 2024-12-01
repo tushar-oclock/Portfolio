@@ -2638,7 +2638,7 @@ img:not(.no-hover-effect):hover {
   /* Adjust this value as needed */
   border-radius: 10px;
   color: mediumspringgreen;
-  font-size: 12px;
+  font-size: 14px;
   font-family: monospace;
 }
 
@@ -2926,10 +2926,11 @@ html {
 .popup {
   visibility: hidden;
   background-color: #121212;
-  color: darkorange;
+  color: white;
   text-align: center;
   padding: 5px;
   border-radius: 6px;
+  font-size: 14px;
 
 
   position: absolute;
