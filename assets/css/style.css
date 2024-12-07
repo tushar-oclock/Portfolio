@@ -3193,17 +3193,3 @@ math * {
   opacity: 1;
 }
 
-
-#gif-container {
-  position: fixed;
-  top: 200px;
-  left: 0;
-  z-index: 9999; /* Ensures it's always on top */
-}
-
-#gif-container img {
-  width: 150px; /* You can adjust the size */
-  height: auto;
-}
-
-
